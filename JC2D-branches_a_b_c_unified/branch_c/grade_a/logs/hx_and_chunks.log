@@ -1,0 +1,32 @@
+===== HX100 =====
+
+real	0m28.575s
+user	0m19.735s
+sys	0m4.128s
+HX100 OK
+===== HX50 =====
+
+real	0m11.581s
+user	0m10.431s
+sys	0m1.149s
+HX50 OK
+===== REGEN NO-HX + 5-KIND CHAIN =====
+generated: A1DispatchBase, A1Dispatch0..7, A1DispatchAsm
+--- base ---
+OK base
+--- chunk 0 ---
+OK 0
+--- chunk 1 ---
+OK 1
+--- chunk 2 ---
+OK 2
+--- chunk 3 ---
+OK 3
+--- chunk 4 ---
+OK 4
+--- chunk 5 ---
+OK 5
+--- chunk 6 ---
+OK 6
+--- chunk 7 ---
+FAILED 7

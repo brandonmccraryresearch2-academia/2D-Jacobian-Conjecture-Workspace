@@ -1,3 +1,3 @@
 'BranchC.RankCheck.col_2400' depends on axioms: [propext]
 'BranchC.RankCheck.slot_2400' depends on axioms: [propext]
-RCCheck06: exit 0, wall 38.8 s, cpu 36.8 s, max RSS 1729 MB
+RCCheck06: exit 0, wall 67.3 s, cpu 47.0 s, max RSS 1478 MB

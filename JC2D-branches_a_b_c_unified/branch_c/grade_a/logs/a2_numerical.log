@@ -1,0 +1,21 @@
+tl_Psi: 110 terms
+tl_Phi1: 175 terms
+tl_Phi2: 175 terms
+tl_Theta1: 260 terms
+tl_Theta2: 260 terms
+tl_Theta3: 260 terms
+eval Psi: 22 nonzero monomials
+eval Phi1: 35 nonzero monomials
+eval Phi2: 35 nonzero monomials
+eval Theta1: 52 nonzero monomials
+eval Theta2: 52 nonzero monomials
+eval Theta3: 52 nonzero monomials
+sanity: pivcols match M cols; INVERSE colv == M pivot columns
+scale Psi = 17276  (checked on 22 monomials)
+scale Phi1 = 19847  (checked on 35 monomials)
+scale Phi2 = 22078  (checked on 35 monomials)
+scale Theta1 = 13509  (checked on 52 monomials)
+scale Theta2 = 15117  (checked on 52 monomials)
+scale Theta3 = 29273  (checked on 52 monomials)
+pivot columns checked: 3199, mismatches: 0
+A2 NUMERICAL CHECK: PASS

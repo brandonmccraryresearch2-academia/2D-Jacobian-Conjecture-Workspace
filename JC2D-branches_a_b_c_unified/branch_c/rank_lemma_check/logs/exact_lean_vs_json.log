@@ -16,4 +16,4 @@ Lean cond_Omega = o1 (S2 - kappa T2^2)^2 exactly, o1 != 0: True; o1 rational: Fa
 control: one numeral of cond_Psi + 1 -> proportional False (must be False)
 control: kappa + 1 -> Omega identity False (must be False)
 ALL PROPORTIONAL; CONTROLS REJECTED
-exact_lean_vs_json: exit 0, wall 0.4 s, cpu 0.3 s, max RSS 35 MB
+exact_lean_vs_json: exit 0, wall 0.5 s, cpu 0.5 s, max RSS 33 MB

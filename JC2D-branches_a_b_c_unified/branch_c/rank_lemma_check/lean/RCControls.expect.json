@@ -1,0 +1,14 @@
+{
+ "column": 2561,
+ "entry": 23,
+ "pass": {
+  "16": "ctrl_pass"
+ },
+ "fail": {
+  "17": "ctrl_fail_entry",
+  "18": "ctrl_fail_coeff",
+  "19": "ctrl_fail_index",
+  "20": "ctrl_fail_drop",
+  "21": "ctrl_fail_slot"
+ }
+}

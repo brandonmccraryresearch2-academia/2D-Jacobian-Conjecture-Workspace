@@ -1,0 +1,27 @@
+RCCommon: built
+RCData00: built
+RCData01: built
+RCData02: built
+RCData03: built
+RCData04: built
+RCData05: built
+RCData06: built
+RCData07: built
+RCCheck00: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck01: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck02: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck03: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck04: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck05: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck06: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+RCCheck07: exit 0 True; errors 0; axioms ['[propext]', '[propext]']: ok
+theorems in the check modules: 6398 (2 x 3199 packed columns: True)
+control ctrl_fail_entry (line 17): rejected
+control ctrl_fail_coeff (line 18): rejected
+control ctrl_fail_index (line 19): rejected
+control ctrl_fail_drop (line 20): rejected
+control ctrl_fail_slot (line 21): rejected
+control ctrl_pass (line 16): passes; axioms ['[propext]']
+controls on column 2561: ALL AS REQUIRED
+RESULT: PASS
+check_logs: exit 0, wall 0.6 s, cpu 0.6 s, max RSS 33 MB

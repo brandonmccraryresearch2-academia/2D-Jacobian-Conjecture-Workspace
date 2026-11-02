@@ -1,0 +1,4 @@
+/home/hatch/workspace/research/2D-Jacobian-Conjecture-Workspace/JC2D-branches_a_b_c_unified/branch_c/grade_a/lean/GradeA/NoCarryBridge.lean:141:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/home/hatch/workspace/research/2D-Jacobian-Conjecture-Workspace/JC2D-branches_a_b_c_unified/branch_c/grade_a/lean/GradeA/NoCarryBridge.lean:142:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/home/hatch/workspace/research/2D-Jacobian-Conjecture-Workspace/JC2D-branches_a_b_c_unified/branch_c/grade_a/lean/GradeA/NoCarryBridge.lean:174:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/home/hatch/workspace/research/2D-Jacobian-Conjecture-Workspace/JC2D-branches_a_b_c_unified/branch_c/grade_a/lean/GradeA/NoCarryBridge.lean:176:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead

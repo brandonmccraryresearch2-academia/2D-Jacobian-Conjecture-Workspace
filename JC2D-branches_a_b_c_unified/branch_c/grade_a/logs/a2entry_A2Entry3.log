@@ -1,0 +1,48 @@
+GradeA/A2Entry.lean:108:31: warning: This simp argument is unused:
+  Polynomial.eval₂_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_C, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:108:53: warning: This simp argument is unused:
+  Polynomial.eval₂_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:109:4: warning: This simp argument is unused:
+  Polynomial.eval₂_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_C]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:123:8: warning: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+GradeA/A2Entry.lean:135:8: warning: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+GradeA/A2Entry.lean:138:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+GradeA/A2Entry.lean:140:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:188:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+GradeA/A2Entry.lean:195:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+GradeA/A2Entry.lean:195:21: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+GradeA/A2Entry.lean:196:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:196:21: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:197:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:217:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead

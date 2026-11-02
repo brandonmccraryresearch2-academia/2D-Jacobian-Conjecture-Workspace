@@ -8,4 +8,4 @@ p = 1000003, w0 = 806739, kappa mod p = 993853, 20 random points (seed 20261006)
   cond_Omega at S2 = kappa: values [0] (must be [0]); nonzero at S2 = kappa + 1 at every point: True
 control: S2 = kappa + 1 -> some ratio not constant: True (must be True)
 ALL RATIOS CONSTANT; CONTROL REJECTED
-compare_lean_conds_1000003: exit 0, wall 0.4 s, cpu 0.5 s, max RSS 45 MB
+compare_lean_conds_1000003: exit 0, wall 0.6 s, cpu 0.8 s, max RSS 46 MB

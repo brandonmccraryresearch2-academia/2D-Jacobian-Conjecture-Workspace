@@ -1,0 +1,7 @@
+(1) FLINT factorization of R over Z: content 1, factors [('x^5 + (-1)*x^4 + 3*x^3 + 3*x^2 + 26', 1)]: irreducible
+(2) R mod 67: factor degrees [5]: irreducible
+(3) R mod 5: degrees [2, 3] (squarefree True); R mod 23: degrees [1, 4] (squarefree True); common subset sums [0, 5]: only 0 and 5
+primes < 400 modulo which R is irreducible: [67, 71, 79, 97, 109, 137, 149, 157, 173, 179, 191, 263, 269, 281, 283, 331, 353, 373]
+control: R - 26 = x^5 + (-1)*x^4 + 3*x^3 + 3*x^2 is rejected as reducible: True
+R IRREDUCIBLE OVER Q: True
+check_R: exit 0, wall 0.1 s, cpu 0.1 s, max RSS 23 MB

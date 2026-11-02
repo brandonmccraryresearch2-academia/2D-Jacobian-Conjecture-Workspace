@@ -1,0 +1,4 @@
+GradeA/A2ProbeDedup25.lean:9:21: error(lean.invalidField): Invalid field `eraseDup`: The environment does not contain `List.eraseDup`, so it is not possible to project the field `eraseDup` from an expression
+  unionTuples c
+of type
+  List (Nat × Nat × Nat × Nat × Nat)

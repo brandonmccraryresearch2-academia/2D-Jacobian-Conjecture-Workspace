@@ -24,4 +24,4 @@ control ctrl_fail_slot (line 21): rejected
 control ctrl_pass (line 16): passes; axioms ['[propext]']
 controls on column 2561: ALL AS REQUIRED
 RESULT: PASS
-check_logs: exit 0, wall 0.6 s, cpu 0.6 s, max RSS 33 MB
+check_logs: exit 0, wall 1.0 s, cpu 0.8 s, max RSS 33 MB

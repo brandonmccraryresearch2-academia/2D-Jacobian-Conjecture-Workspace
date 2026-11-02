@@ -1,0 +1,9 @@
+A2Assembly.lean:61:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A2Assembly.lean:61:21: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A2Assembly.lean:64:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A2Assembly.lean:64:21: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A2Assembly.lean:126:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A2Assembly.lean:126:22: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A2Assembly.lean:128:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A2Assembly.lean:128:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'BranchC.A2Assembly.A2' depends on axioms: [propext, Classical.choice, Quot.sound]

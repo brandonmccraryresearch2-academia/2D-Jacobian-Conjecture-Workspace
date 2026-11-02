@@ -1,0 +1,11 @@
+p = 1000003, w0 = 806739, kappa mod p = 993853, 20 random points (seed 20261006)
+  Psi     cond_Psi / F_Psi: constant 315243
+  Phi1    cond_Phi1 / F_Phi1: constant 791794
+  Phi2    cond_Phi2 / F_Phi2: constant 479436
+  Theta1  cond_Theta1 / F_Theta1: constant 329764
+  Theta2  cond_Theta2 / F_Theta2: constant 136661
+  Theta3  cond_Theta3 / F_Theta3: constant 858430
+  cond_Omega at S2 = kappa: values [0] (must be [0]); nonzero at S2 = kappa + 1 at every point: True
+control: S2 = kappa + 1 -> some ratio not constant: True (must be True)
+ALL RATIOS CONSTANT; CONTROL REJECTED
+compare_lean_conds_1000003: exit 0, wall 0.4 s, cpu 0.5 s, max RSS 45 MB

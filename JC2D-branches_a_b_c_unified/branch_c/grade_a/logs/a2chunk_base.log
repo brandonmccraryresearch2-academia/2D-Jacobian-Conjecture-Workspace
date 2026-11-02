@@ -1,0 +1,2 @@
+GradeA/A2TupleCheckBase.lean:119:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2TupleCheckBase.lean:136:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead

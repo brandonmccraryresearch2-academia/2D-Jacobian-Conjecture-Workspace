@@ -1,0 +1,2 @@
+RESULT: PASS
+run.sh: exit 0 (details in logs/run.log)

@@ -1,0 +1,563 @@
+=== resume9 start Sun Nov  1 05:50:26 CST 2026 ===
+existing chunk oleans: 281
+SKIP A2TupleCheckBase.lean
+SKIP A2TupleCheck000.lean
+SKIP A2TupleCheck001.lean
+SKIP A2TupleCheck002.lean
+SKIP A2TupleCheck003.lean
+SKIP A2TupleCheck004.lean
+SKIP A2TupleCheck005.lean
+SKIP A2TupleCheck006.lean
+SKIP A2TupleCheck007.lean
+SKIP A2TupleCheck008.lean
+SKIP A2TupleCheck009.lean
+SKIP A2TupleCheck010.lean
+SKIP A2TupleCheck011.lean
+SKIP A2TupleCheck012.lean
+SKIP A2TupleCheck013.lean
+SKIP A2TupleCheck014.lean
+SKIP A2TupleCheck015.lean
+SKIP A2TupleCheck016.lean
+SKIP A2TupleCheck017.lean
+SKIP A2TupleCheck018.lean
+SKIP A2TupleCheck019.lean
+SKIP A2TupleCheck020.lean
+SKIP A2TupleCheck021.lean
+SKIP A2TupleCheck022.lean
+SKIP A2TupleCheck023.lean
+SKIP A2TupleCheck024.lean
+SKIP A2TupleCheck025.lean
+SKIP A2TupleCheck026.lean
+SKIP A2TupleCheck027.lean
+SKIP A2TupleCheck028.lean
+SKIP A2TupleCheck029.lean
+SKIP A2TupleCheck030.lean
+SKIP A2TupleCheck031.lean
+SKIP A2TupleCheck032.lean
+SKIP A2TupleCheck033.lean
+SKIP A2TupleCheck034.lean
+SKIP A2TupleCheck035.lean
+SKIP A2TupleCheck036.lean
+SKIP A2TupleCheck037.lean
+SKIP A2TupleCheck038.lean
+SKIP A2TupleCheck039.lean
+SKIP A2TupleCheck040.lean
+SKIP A2TupleCheck041.lean
+SKIP A2TupleCheck042.lean
+SKIP A2TupleCheck043.lean
+SKIP A2TupleCheck044.lean
+SKIP A2TupleCheck045.lean
+SKIP A2TupleCheck046.lean
+SKIP A2TupleCheck047.lean
+SKIP A2TupleCheck048.lean
+SKIP A2TupleCheck049.lean
+SKIP A2TupleCheck050.lean
+SKIP A2TupleCheck051.lean
+SKIP A2TupleCheck052.lean
+SKIP A2TupleCheck053.lean
+SKIP A2TupleCheck054.lean
+SKIP A2TupleCheck055.lean
+SKIP A2TupleCheck056.lean
+SKIP A2TupleCheck057.lean
+SKIP A2TupleCheck058.lean
+SKIP A2TupleCheck059.lean
+SKIP A2TupleCheck060.lean
+SKIP A2TupleCheck061.lean
+SKIP A2TupleCheck062.lean
+SKIP A2TupleCheck063.lean
+SKIP A2TupleCheck064.lean
+SKIP A2TupleCheck065.lean
+SKIP A2TupleCheck066.lean
+SKIP A2TupleCheck067.lean
+SKIP A2TupleCheck068.lean
+SKIP A2TupleCheck069.lean
+SKIP A2TupleCheck070.lean
+SKIP A2TupleCheck071.lean
+SKIP A2TupleCheck072.lean
+SKIP A2TupleCheck073.lean
+SKIP A2TupleCheck074.lean
+SKIP A2TupleCheck075.lean
+SKIP A2TupleCheck076.lean
+SKIP A2TupleCheck077.lean
+SKIP A2TupleCheck078.lean
+SKIP A2TupleCheck079.lean
+SKIP A2TupleCheck080.lean
+SKIP A2TupleCheck081.lean
+SKIP A2TupleCheck082.lean
+SKIP A2TupleCheck083.lean
+SKIP A2TupleCheck084.lean
+SKIP A2TupleCheck085.lean
+SKIP A2TupleCheck086.lean
+SKIP A2TupleCheck087.lean
+SKIP A2TupleCheck088.lean
+SKIP A2TupleCheck089.lean
+SKIP A2TupleCheck090.lean
+SKIP A2TupleCheck091.lean
+SKIP A2TupleCheck092.lean
+SKIP A2TupleCheck093.lean
+SKIP A2TupleCheck094.lean
+SKIP A2TupleCheck095.lean
+SKIP A2TupleCheck096.lean
+SKIP A2TupleCheck097.lean
+SKIP A2TupleCheck098.lean
+SKIP A2TupleCheck099.lean
+SKIP A2TupleCheck100.lean
+SKIP A2TupleCheck101a.lean
+SKIP A2TupleCheck101b.lean
+SKIP A2TupleCheck102.lean
+SKIP A2TupleCheck103.lean
+SKIP A2TupleCheck104.lean
+SKIP A2TupleCheck105a.lean
+SKIP A2TupleCheck105b.lean
+SKIP A2TupleCheck106.lean
+SKIP A2TupleCheck107a.lean
+SKIP A2TupleCheck107b.lean
+SKIP A2TupleCheck108.lean
+SKIP A2TupleCheck109.lean
+SKIP A2TupleCheck110.lean
+SKIP A2TupleCheck111a.lean
+SKIP A2TupleCheck111b.lean
+SKIP A2TupleCheck112.lean
+SKIP A2TupleCheck113a.lean
+SKIP A2TupleCheck113b.lean
+SKIP A2TupleCheck114a.lean
+SKIP A2TupleCheck114b.lean
+SKIP A2TupleCheck115a.lean
+SKIP A2TupleCheck115b.lean
+SKIP A2TupleCheck116a.lean
+SKIP A2TupleCheck116b.lean
+SKIP A2TupleCheck117a.lean
+SKIP A2TupleCheck117b.lean
+SKIP A2TupleCheck118a.lean
+SKIP A2TupleCheck118b.lean
+SKIP A2TupleCheck119a.lean
+SKIP A2TupleCheck119b.lean
+SKIP A2TupleCheck120a.lean
+SKIP A2TupleCheck120b.lean
+SKIP A2TupleCheck121a.lean
+SKIP A2TupleCheck121b.lean
+SKIP A2TupleCheck122a.lean
+SKIP A2TupleCheck122b.lean
+SKIP A2TupleCheck123a.lean
+SKIP A2TupleCheck123b.lean
+SKIP A2TupleCheck124a.lean
+SKIP A2TupleCheck124b.lean
+SKIP A2TupleCheck125a.lean
+SKIP A2TupleCheck125b.lean
+SKIP A2TupleCheck126a.lean
+SKIP A2TupleCheck126b.lean
+SKIP A2TupleCheck127a.lean
+SKIP A2TupleCheck127b.lean
+SKIP A2TupleCheck128a.lean
+SKIP A2TupleCheck128b.lean
+SKIP A2TupleCheck129a.lean
+SKIP A2TupleCheck129b.lean
+SKIP A2TupleCheck130a.lean
+SKIP A2TupleCheck130b.lean
+SKIP A2TupleCheck131a.lean
+SKIP A2TupleCheck131b.lean
+SKIP A2TupleCheck132a.lean
+SKIP A2TupleCheck132b.lean
+SKIP A2TupleCheck133a.lean
+SKIP A2TupleCheck133b.lean
+SKIP A2TupleCheck134a.lean
+SKIP A2TupleCheck134b.lean
+SKIP A2TupleCheck135a.lean
+SKIP A2TupleCheck135b.lean
+SKIP A2TupleCheck136a.lean
+SKIP A2TupleCheck136b.lean
+SKIP A2TupleCheck137a.lean
+SKIP A2TupleCheck137b.lean
+SKIP A2TupleCheck138a.lean
+SKIP A2TupleCheck138b.lean
+SKIP A2TupleCheck139a.lean
+SKIP A2TupleCheck139b.lean
+SKIP A2TupleCheck140a.lean
+SKIP A2TupleCheck140b.lean
+SKIP A2TupleCheck141a.lean
+SKIP A2TupleCheck141b.lean
+SKIP A2TupleCheck142a.lean
+SKIP A2TupleCheck142b.lean
+SKIP A2TupleCheck143a.lean
+SKIP A2TupleCheck143b.lean
+SKIP A2TupleCheck144a.lean
+SKIP A2TupleCheck144b.lean
+SKIP A2TupleCheck145a.lean
+SKIP A2TupleCheck145b.lean
+SKIP A2TupleCheck146a.lean
+SKIP A2TupleCheck146b.lean
+SKIP A2TupleCheck147a.lean
+SKIP A2TupleCheck147b.lean
+SKIP A2TupleCheck148a.lean
+SKIP A2TupleCheck148b.lean
+SKIP A2TupleCheck149a.lean
+SKIP A2TupleCheck149b.lean
+SKIP A2TupleCheck150a.lean
+SKIP A2TupleCheck150b.lean
+SKIP A2TupleCheck151a.lean
+SKIP A2TupleCheck151b.lean
+SKIP A2TupleCheck152a.lean
+SKIP A2TupleCheck152b.lean
+SKIP A2TupleCheck153a.lean
+SKIP A2TupleCheck153b.lean
+SKIP A2TupleCheck154a.lean
+SKIP A2TupleCheck154b.lean
+SKIP A2TupleCheck155a.lean
+SKIP A2TupleCheck155b.lean
+SKIP A2TupleCheck156a.lean
+SKIP A2TupleCheck156b.lean
+SKIP A2TupleCheck157a.lean
+SKIP A2TupleCheck157b.lean
+SKIP A2TupleCheck158a.lean
+SKIP A2TupleCheck158b.lean
+SKIP A2TupleCheck159a.lean
+SKIP A2TupleCheck159b.lean
+SKIP A2TupleCheck160a.lean
+SKIP A2TupleCheck160b.lean
+SKIP A2TupleCheck161a.lean
+SKIP A2TupleCheck161b.lean
+SKIP A2TupleCheck162a.lean
+SKIP A2TupleCheck162b.lean
+SKIP A2TupleCheck163a.lean
+SKIP A2TupleCheck163b.lean
+SKIP A2TupleCheck164a.lean
+SKIP A2TupleCheck164b.lean
+SKIP A2TupleCheck165a.lean
+SKIP A2TupleCheck165b.lean
+SKIP A2TupleCheck166a.lean
+SKIP A2TupleCheck166b.lean
+SKIP A2TupleCheck167a.lean
+SKIP A2TupleCheck167b.lean
+SKIP A2TupleCheck168a.lean
+SKIP A2TupleCheck168b.lean
+SKIP A2TupleCheck169a.lean
+SKIP A2TupleCheck169b.lean
+SKIP A2TupleCheck170a.lean
+SKIP A2TupleCheck170b.lean
+SKIP A2TupleCheck171a.lean
+SKIP A2TupleCheck171b.lean
+SKIP A2TupleCheck172a.lean
+SKIP A2TupleCheck172b.lean
+SKIP A2TupleCheck173a.lean
+SKIP A2TupleCheck173b.lean
+SKIP A2TupleCheck174a.lean
+SKIP A2TupleCheck174b.lean
+SKIP A2TupleCheck175a.lean
+SKIP A2TupleCheck175b.lean
+SKIP A2TupleCheck176a.lean
+SKIP A2TupleCheck176b.lean
+SKIP A2TupleCheck177a.lean
+SKIP A2TupleCheck177b.lean
+SKIP A2TupleCheck178a.lean
+SKIP A2TupleCheck178b.lean
+SKIP A2TupleCheck179a.lean
+SKIP A2TupleCheck179b.lean
+SKIP A2TupleCheck180a.lean
+SKIP A2TupleCheck180b.lean
+SKIP A2TupleCheck181a.lean
+SKIP A2TupleCheck181b.lean
+SKIP A2TupleCheck182a.lean
+SKIP A2TupleCheck182b.lean
+SKIP A2TupleCheck183a.lean
+SKIP A2TupleCheck183b.lean
+SKIP A2TupleCheck184a.lean
+SKIP A2TupleCheck184b.lean
+SKIP A2TupleCheck185a.lean
+SKIP A2TupleCheck185b.lean
+SKIP A2TupleCheck186a.lean
+SKIP A2TupleCheck186b.lean
+SKIP A2TupleCheck187a.lean
+SKIP A2TupleCheck187b.lean
+SKIP A2TupleCheck188a.lean
+SKIP A2TupleCheck188b.lean
+SKIP A2TupleCheck189a.lean
+SKIP A2TupleCheck189b.lean
+SKIP A2TupleCheck190a.lean
+SKIP A2TupleCheck190b.lean
+SKIP A2TupleCheck191a.lean
+SKIP A2TupleCheck191b.lean
+SKIP A2TupleCheck192a.lean
+SKIP A2TupleCheck192b.lean
+SKIP A2TupleCheck193a.lean
+SKIP A2TupleCheck193b.lean
+SKIP A2TupleCheck194a.lean
+COMPILE A2TupleCheck194b.lean Sun Nov  1 05:50:26 CST 2026
+DONE A2TupleCheck194b.lean rc=0 Sun Nov  1 05:51:28 CST 2026
+COMPILE A2TupleCheck195a.lean Sun Nov  1 05:51:28 CST 2026
+DONE A2TupleCheck195a.lean rc=0 Sun Nov  1 05:52:06 CST 2026
+COMPILE A2TupleCheck195b.lean Sun Nov  1 05:52:06 CST 2026
+DONE A2TupleCheck195b.lean rc=0 Sun Nov  1 05:52:43 CST 2026
+COMPILE A2TupleCheck196a.lean Sun Nov  1 05:52:43 CST 2026
+DONE A2TupleCheck196a.lean rc=0 Sun Nov  1 05:53:20 CST 2026
+COMPILE A2TupleCheck196b.lean Sun Nov  1 05:53:20 CST 2026
+DONE A2TupleCheck196b.lean rc=0 Sun Nov  1 05:53:59 CST 2026
+COMPILE A2TupleCheck197a.lean Sun Nov  1 05:53:59 CST 2026
+DONE A2TupleCheck197a.lean rc=0 Sun Nov  1 05:54:36 CST 2026
+COMPILE A2TupleCheck197b.lean Sun Nov  1 05:54:36 CST 2026
+DONE A2TupleCheck197b.lean rc=0 Sun Nov  1 05:55:12 CST 2026
+COMPILE A2TupleCheck198a.lean Sun Nov  1 05:55:12 CST 2026
+DONE A2TupleCheck198a.lean rc=0 Sun Nov  1 05:55:47 CST 2026
+COMPILE A2TupleCheck198b.lean Sun Nov  1 05:55:47 CST 2026
+DONE A2TupleCheck198b.lean rc=0 Sun Nov  1 05:56:20 CST 2026
+COMPILE A2TupleCheck199a.lean Sun Nov  1 05:56:20 CST 2026
+DONE A2TupleCheck199a.lean rc=0 Sun Nov  1 05:56:55 CST 2026
+COMPILE A2TupleCheck199b.lean Sun Nov  1 05:56:55 CST 2026
+DONE A2TupleCheck199b.lean rc=0 Sun Nov  1 05:57:31 CST 2026
+COMPILE A2TupleCheck200a.lean Sun Nov  1 05:57:31 CST 2026
+DONE A2TupleCheck200a.lean rc=0 Sun Nov  1 05:58:08 CST 2026
+COMPILE A2TupleCheck200b.lean Sun Nov  1 05:58:08 CST 2026
+DONE A2TupleCheck200b.lean rc=0 Sun Nov  1 05:58:47 CST 2026
+COMPILE A2TupleCheck201a.lean Sun Nov  1 05:58:47 CST 2026
+DONE A2TupleCheck201a.lean rc=0 Sun Nov  1 05:59:25 CST 2026
+COMPILE A2TupleCheck201b.lean Sun Nov  1 05:59:25 CST 2026
+DONE A2TupleCheck201b.lean rc=0 Sun Nov  1 06:00:06 CST 2026
+COMPILE A2TupleCheck202a.lean Sun Nov  1 06:00:06 CST 2026
+DONE A2TupleCheck202a.lean rc=0 Sun Nov  1 06:00:45 CST 2026
+COMPILE A2TupleCheck202b.lean Sun Nov  1 06:00:45 CST 2026
+DONE A2TupleCheck202b.lean rc=0 Sun Nov  1 06:01:24 CST 2026
+COMPILE A2TupleCheck203a.lean Sun Nov  1 06:01:24 CST 2026
+DONE A2TupleCheck203a.lean rc=0 Sun Nov  1 06:02:03 CST 2026
+COMPILE A2TupleCheck203b.lean Sun Nov  1 06:02:03 CST 2026
+DONE A2TupleCheck203b.lean rc=0 Sun Nov  1 06:02:35 CST 2026
+COMPILE A2TupleCheck204a.lean Sun Nov  1 06:02:35 CST 2026
+DONE A2TupleCheck204a.lean rc=0 Sun Nov  1 06:02:54 CST 2026
+COMPILE A2TupleCheck204b.lean Sun Nov  1 06:02:54 CST 2026
+DONE A2TupleCheck204b.lean rc=0 Sun Nov  1 06:03:14 CST 2026
+COMPILE A2TupleCheck205a.lean Sun Nov  1 06:03:14 CST 2026
+DONE A2TupleCheck205a.lean rc=0 Sun Nov  1 06:03:37 CST 2026
+COMPILE A2TupleCheck205b.lean Sun Nov  1 06:03:37 CST 2026
+DONE A2TupleCheck205b.lean rc=0 Sun Nov  1 06:03:59 CST 2026
+COMPILE A2TupleCheck206a.lean Sun Nov  1 06:03:59 CST 2026
+DONE A2TupleCheck206a.lean rc=0 Sun Nov  1 06:04:21 CST 2026
+COMPILE A2TupleCheck206b.lean Sun Nov  1 06:04:21 CST 2026
+DONE A2TupleCheck206b.lean rc=0 Sun Nov  1 06:04:45 CST 2026
+COMPILE A2TupleCheck207a.lean Sun Nov  1 06:04:45 CST 2026
+DONE A2TupleCheck207a.lean rc=0 Sun Nov  1 06:05:09 CST 2026
+COMPILE A2TupleCheck207b.lean Sun Nov  1 06:05:09 CST 2026
+DONE A2TupleCheck207b.lean rc=0 Sun Nov  1 06:05:33 CST 2026
+COMPILE A2TupleCheck208a.lean Sun Nov  1 06:05:33 CST 2026
+DONE A2TupleCheck208a.lean rc=0 Sun Nov  1 06:05:58 CST 2026
+COMPILE A2TupleCheck208b.lean Sun Nov  1 06:05:58 CST 2026
+DONE A2TupleCheck208b.lean rc=0 Sun Nov  1 06:06:23 CST 2026
+COMPILE A2TupleCheck209a.lean Sun Nov  1 06:06:23 CST 2026
+DONE A2TupleCheck209a.lean rc=0 Sun Nov  1 06:06:49 CST 2026
+COMPILE A2TupleCheck209b.lean Sun Nov  1 06:06:49 CST 2026
+DONE A2TupleCheck209b.lean rc=0 Sun Nov  1 06:07:16 CST 2026
+COMPILE A2TupleCheck210a.lean Sun Nov  1 06:07:16 CST 2026
+DONE A2TupleCheck210a.lean rc=0 Sun Nov  1 06:07:39 CST 2026
+COMPILE A2TupleCheck210b.lean Sun Nov  1 06:07:39 CST 2026
+DONE A2TupleCheck210b.lean rc=0 Sun Nov  1 06:08:01 CST 2026
+COMPILE A2TupleCheck211a.lean Sun Nov  1 06:08:01 CST 2026
+DONE A2TupleCheck211a.lean rc=0 Sun Nov  1 06:08:25 CST 2026
+COMPILE A2TupleCheck211b.lean Sun Nov  1 06:08:25 CST 2026
+DONE A2TupleCheck211b.lean rc=0 Sun Nov  1 06:08:49 CST 2026
+COMPILE A2TupleCheck212a.lean Sun Nov  1 06:08:49 CST 2026
+DONE A2TupleCheck212a.lean rc=0 Sun Nov  1 06:09:14 CST 2026
+COMPILE A2TupleCheck212b.lean Sun Nov  1 06:09:14 CST 2026
+DONE A2TupleCheck212b.lean rc=0 Sun Nov  1 06:09:42 CST 2026
+COMPILE A2TupleCheck213a.lean Sun Nov  1 06:09:42 CST 2026
+DONE A2TupleCheck213a.lean rc=0 Sun Nov  1 06:10:12 CST 2026
+COMPILE A2TupleCheck213b.lean Sun Nov  1 06:10:12 CST 2026
+DONE A2TupleCheck213b.lean rc=0 Sun Nov  1 06:10:40 CST 2026
+COMPILE A2TupleCheck214a.lean Sun Nov  1 06:10:40 CST 2026
+DONE A2TupleCheck214a.lean rc=0 Sun Nov  1 06:11:07 CST 2026
+COMPILE A2TupleCheck214b.lean Sun Nov  1 06:11:07 CST 2026
+DONE A2TupleCheck214b.lean rc=0 Sun Nov  1 06:11:33 CST 2026
+COMPILE A2TupleCheck215a.lean Sun Nov  1 06:11:33 CST 2026
+DONE A2TupleCheck215a.lean rc=0 Sun Nov  1 06:12:00 CST 2026
+COMPILE A2TupleCheck215b.lean Sun Nov  1 06:12:00 CST 2026
+DONE A2TupleCheck215b.lean rc=0 Sun Nov  1 06:12:28 CST 2026
+COMPILE A2TupleCheck216a.lean Sun Nov  1 06:12:28 CST 2026
+DONE A2TupleCheck216a.lean rc=0 Sun Nov  1 06:12:57 CST 2026
+COMPILE A2TupleCheck216b.lean Sun Nov  1 06:12:57 CST 2026
+DONE A2TupleCheck216b.lean rc=0 Sun Nov  1 06:13:27 CST 2026
+COMPILE A2TupleCheck217a.lean Sun Nov  1 06:13:27 CST 2026
+DONE A2TupleCheck217a.lean rc=0 Sun Nov  1 06:13:57 CST 2026
+COMPILE A2TupleCheck217b.lean Sun Nov  1 06:13:57 CST 2026
+DONE A2TupleCheck217b.lean rc=0 Sun Nov  1 06:14:29 CST 2026
+COMPILE A2TupleCheck218a.lean Sun Nov  1 06:14:29 CST 2026
+DONE A2TupleCheck218a.lean rc=0 Sun Nov  1 06:15:01 CST 2026
+COMPILE A2TupleCheck218b.lean Sun Nov  1 06:15:01 CST 2026
+DONE A2TupleCheck218b.lean rc=0 Sun Nov  1 06:15:32 CST 2026
+COMPILE A2TupleCheck219a.lean Sun Nov  1 06:15:32 CST 2026
+DONE A2TupleCheck219a.lean rc=0 Sun Nov  1 06:16:04 CST 2026
+COMPILE A2TupleCheck219b.lean Sun Nov  1 06:16:04 CST 2026
+DONE A2TupleCheck219b.lean rc=0 Sun Nov  1 06:16:37 CST 2026
+COMPILE A2TupleCheck220a.lean Sun Nov  1 06:16:37 CST 2026
+DONE A2TupleCheck220a.lean rc=0 Sun Nov  1 06:17:12 CST 2026
+COMPILE A2TupleCheck220b.lean Sun Nov  1 06:17:12 CST 2026
+DONE A2TupleCheck220b.lean rc=0 Sun Nov  1 06:17:48 CST 2026
+COMPILE A2TupleCheck221a.lean Sun Nov  1 06:17:48 CST 2026
+DONE A2TupleCheck221a.lean rc=0 Sun Nov  1 06:18:21 CST 2026
+COMPILE A2TupleCheck221b.lean Sun Nov  1 06:18:21 CST 2026
+DONE A2TupleCheck221b.lean rc=0 Sun Nov  1 06:18:54 CST 2026
+COMPILE A2TupleCheck222a.lean Sun Nov  1 06:18:54 CST 2026
+DONE A2TupleCheck222a.lean rc=0 Sun Nov  1 06:19:29 CST 2026
+COMPILE A2TupleCheck222b.lean Sun Nov  1 06:19:29 CST 2026
+DONE A2TupleCheck222b.lean rc=0 Sun Nov  1 06:20:04 CST 2026
+COMPILE A2TupleCheck223a.lean Sun Nov  1 06:20:04 CST 2026
+DONE A2TupleCheck223a.lean rc=0 Sun Nov  1 06:20:38 CST 2026
+COMPILE A2TupleCheck223b.lean Sun Nov  1 06:20:38 CST 2026
+DONE A2TupleCheck223b.lean rc=0 Sun Nov  1 06:21:16 CST 2026
+COMPILE A2TupleCheck224a.lean Sun Nov  1 06:21:16 CST 2026
+DONE A2TupleCheck224a.lean rc=0 Sun Nov  1 06:21:43 CST 2026
+COMPILE A2TupleCheck224b.lean Sun Nov  1 06:21:43 CST 2026
+DONE A2TupleCheck224b.lean rc=0 Sun Nov  1 06:22:05 CST 2026
+COMPILE A2TupleCheck225a.lean Sun Nov  1 06:22:05 CST 2026
+DONE A2TupleCheck225a.lean rc=0 Sun Nov  1 06:22:27 CST 2026
+COMPILE A2TupleCheck225b.lean Sun Nov  1 06:22:27 CST 2026
+DONE A2TupleCheck225b.lean rc=0 Sun Nov  1 06:22:51 CST 2026
+COMPILE A2TupleCheck226a.lean Sun Nov  1 06:22:51 CST 2026
+DONE A2TupleCheck226a.lean rc=0 Sun Nov  1 06:23:14 CST 2026
+COMPILE A2TupleCheck226b.lean Sun Nov  1 06:23:14 CST 2026
+DONE A2TupleCheck226b.lean rc=0 Sun Nov  1 06:23:39 CST 2026
+COMPILE A2TupleCheck227a.lean Sun Nov  1 06:23:39 CST 2026
+DONE A2TupleCheck227a.lean rc=0 Sun Nov  1 06:24:04 CST 2026
+COMPILE A2TupleCheck227b.lean Sun Nov  1 06:24:04 CST 2026
+DONE A2TupleCheck227b.lean rc=0 Sun Nov  1 06:24:30 CST 2026
+COMPILE A2TupleCheck228a.lean Sun Nov  1 06:24:30 CST 2026
+DONE A2TupleCheck228a.lean rc=0 Sun Nov  1 06:24:59 CST 2026
+COMPILE A2TupleCheck228b.lean Sun Nov  1 06:24:59 CST 2026
+DONE A2TupleCheck228b.lean rc=0 Sun Nov  1 06:25:28 CST 2026
+COMPILE A2TupleCheck229a.lean Sun Nov  1 06:25:28 CST 2026
+DONE A2TupleCheck229a.lean rc=0 Sun Nov  1 06:25:54 CST 2026
+COMPILE A2TupleCheck229b.lean Sun Nov  1 06:25:54 CST 2026
+DONE A2TupleCheck229b.lean rc=0 Sun Nov  1 06:26:20 CST 2026
+COMPILE A2TupleCheck230a.lean Sun Nov  1 06:26:20 CST 2026
+DONE A2TupleCheck230a.lean rc=0 Sun Nov  1 06:26:45 CST 2026
+COMPILE A2TupleCheck230b.lean Sun Nov  1 06:26:45 CST 2026
+DONE A2TupleCheck230b.lean rc=0 Sun Nov  1 06:27:13 CST 2026
+COMPILE A2TupleCheck231a.lean Sun Nov  1 06:27:13 CST 2026
+DONE A2TupleCheck231a.lean rc=0 Sun Nov  1 06:27:41 CST 2026
+COMPILE A2TupleCheck231b.lean Sun Nov  1 06:27:41 CST 2026
+DONE A2TupleCheck231b.lean rc=0 Sun Nov  1 06:28:10 CST 2026
+COMPILE A2TupleCheck232a.lean Sun Nov  1 06:28:10 CST 2026
+DONE A2TupleCheck232a.lean rc=0 Sun Nov  1 06:28:39 CST 2026
+COMPILE A2TupleCheck232b.lean Sun Nov  1 06:28:39 CST 2026
+DONE A2TupleCheck232b.lean rc=0 Sun Nov  1 06:29:08 CST 2026
+COMPILE A2TupleCheck233a.lean Sun Nov  1 06:29:08 CST 2026
+DONE A2TupleCheck233a.lean rc=0 Sun Nov  1 06:29:38 CST 2026
+COMPILE A2TupleCheck233b.lean Sun Nov  1 06:29:38 CST 2026
+DONE A2TupleCheck233b.lean rc=0 Sun Nov  1 06:30:09 CST 2026
+COMPILE A2TupleCheck234a.lean Sun Nov  1 06:30:09 CST 2026
+DONE A2TupleCheck234a.lean rc=0 Sun Nov  1 06:30:38 CST 2026
+COMPILE A2TupleCheck234b.lean Sun Nov  1 06:30:38 CST 2026
+DONE A2TupleCheck234b.lean rc=0 Sun Nov  1 06:31:08 CST 2026
+COMPILE A2TupleCheck235a.lean Sun Nov  1 06:31:08 CST 2026
+DONE A2TupleCheck235a.lean rc=0 Sun Nov  1 06:31:40 CST 2026
+COMPILE A2TupleCheck235b.lean Sun Nov  1 06:31:40 CST 2026
+DONE A2TupleCheck235b.lean rc=0 Sun Nov  1 06:32:10 CST 2026
+COMPILE A2TupleCheck236a.lean Sun Nov  1 06:32:10 CST 2026
+DONE A2TupleCheck236a.lean rc=0 Sun Nov  1 06:32:43 CST 2026
+COMPILE A2TupleCheck236b.lean Sun Nov  1 06:32:43 CST 2026
+DONE A2TupleCheck236b.lean rc=0 Sun Nov  1 06:33:17 CST 2026
+COMPILE A2TupleCheck237a.lean Sun Nov  1 06:33:17 CST 2026
+DONE A2TupleCheck237a.lean rc=0 Sun Nov  1 06:33:50 CST 2026
+COMPILE A2TupleCheck237b.lean Sun Nov  1 06:33:50 CST 2026
+DONE A2TupleCheck237b.lean rc=0 Sun Nov  1 06:34:23 CST 2026
+COMPILE A2TupleCheck238a.lean Sun Nov  1 06:34:23 CST 2026
+DONE A2TupleCheck238a.lean rc=0 Sun Nov  1 06:34:56 CST 2026
+COMPILE A2TupleCheck238b.lean Sun Nov  1 06:34:56 CST 2026
+DONE A2TupleCheck238b.lean rc=0 Sun Nov  1 06:35:32 CST 2026
+COMPILE A2TupleCheck239a.lean Sun Nov  1 06:35:32 CST 2026
+DONE A2TupleCheck239a.lean rc=0 Sun Nov  1 06:36:07 CST 2026
+COMPILE A2TupleCheck239b.lean Sun Nov  1 06:36:07 CST 2026
+DONE A2TupleCheck239b.lean rc=0 Sun Nov  1 06:36:42 CST 2026
+COMPILE A2TupleCheck240a.lean Sun Nov  1 06:36:42 CST 2026
+DONE A2TupleCheck240a.lean rc=0 Sun Nov  1 06:37:18 CST 2026
+COMPILE A2TupleCheck240b.lean Sun Nov  1 06:37:18 CST 2026
+DONE A2TupleCheck240b.lean rc=0 Sun Nov  1 06:37:51 CST 2026
+COMPILE A2TupleCheck241a.lean Sun Nov  1 06:37:51 CST 2026
+DONE A2TupleCheck241a.lean rc=0 Sun Nov  1 06:38:19 CST 2026
+COMPILE A2TupleCheck241b.lean Sun Nov  1 06:38:19 CST 2026
+DONE A2TupleCheck241b.lean rc=0 Sun Nov  1 06:38:43 CST 2026
+COMPILE A2TupleCheck242a.lean Sun Nov  1 06:38:43 CST 2026
+DONE A2TupleCheck242a.lean rc=0 Sun Nov  1 06:39:07 CST 2026
+COMPILE A2TupleCheck242b.lean Sun Nov  1 06:39:07 CST 2026
+DONE A2TupleCheck242b.lean rc=0 Sun Nov  1 06:39:33 CST 2026
+COMPILE A2TupleCheck243a.lean Sun Nov  1 06:39:33 CST 2026
+DONE A2TupleCheck243a.lean rc=0 Sun Nov  1 06:39:58 CST 2026
+COMPILE A2TupleCheck243b.lean Sun Nov  1 06:39:58 CST 2026
+DONE A2TupleCheck243b.lean rc=0 Sun Nov  1 06:40:25 CST 2026
+COMPILE A2TupleCheck244a.lean Sun Nov  1 06:40:25 CST 2026
+DONE A2TupleCheck244a.lean rc=0 Sun Nov  1 06:40:53 CST 2026
+COMPILE A2TupleCheck244b.lean Sun Nov  1 06:40:53 CST 2026
+DONE A2TupleCheck244b.lean rc=0 Sun Nov  1 06:41:22 CST 2026
+COMPILE A2TupleCheck245a.lean Sun Nov  1 06:41:22 CST 2026
+DONE A2TupleCheck245a.lean rc=0 Sun Nov  1 06:41:50 CST 2026
+COMPILE A2TupleCheck245b.lean Sun Nov  1 06:41:50 CST 2026
+DONE A2TupleCheck245b.lean rc=0 Sun Nov  1 06:42:20 CST 2026
+COMPILE A2TupleCheck246a.lean Sun Nov  1 06:42:20 CST 2026
+DONE A2TupleCheck246a.lean rc=0 Sun Nov  1 06:42:50 CST 2026
+COMPILE A2TupleCheck246b.lean Sun Nov  1 06:42:50 CST 2026
+DONE A2TupleCheck246b.lean rc=0 Sun Nov  1 06:43:18 CST 2026
+COMPILE A2TupleCheck247a.lean Sun Nov  1 06:43:18 CST 2026
+DONE A2TupleCheck247a.lean rc=0 Sun Nov  1 06:43:49 CST 2026
+COMPILE A2TupleCheck247b.lean Sun Nov  1 06:43:49 CST 2026
+DONE A2TupleCheck247b.lean rc=0 Sun Nov  1 06:44:19 CST 2026
+COMPILE A2TupleCheck248a.lean Sun Nov  1 06:44:19 CST 2026
+DONE A2TupleCheck248a.lean rc=0 Sun Nov  1 06:44:49 CST 2026
+COMPILE A2TupleCheck248b.lean Sun Nov  1 06:44:49 CST 2026
+DONE A2TupleCheck248b.lean rc=0 Sun Nov  1 06:45:23 CST 2026
+COMPILE A2TupleCheck249a.lean Sun Nov  1 06:45:23 CST 2026
+DONE A2TupleCheck249a.lean rc=0 Sun Nov  1 06:45:56 CST 2026
+COMPILE A2TupleCheck249b.lean Sun Nov  1 06:45:56 CST 2026
+DONE A2TupleCheck249b.lean rc=0 Sun Nov  1 06:46:29 CST 2026
+COMPILE A2TupleCheck250a.lean Sun Nov  1 06:46:29 CST 2026
+DONE A2TupleCheck250a.lean rc=0 Sun Nov  1 06:47:02 CST 2026
+COMPILE A2TupleCheck250b.lean Sun Nov  1 06:47:02 CST 2026
+DONE A2TupleCheck250b.lean rc=0 Sun Nov  1 06:47:34 CST 2026
+COMPILE A2TupleCheck251a.lean Sun Nov  1 06:47:34 CST 2026
+DONE A2TupleCheck251a.lean rc=0 Sun Nov  1 06:48:08 CST 2026
+COMPILE A2TupleCheck251b.lean Sun Nov  1 06:48:08 CST 2026
+DONE A2TupleCheck251b.lean rc=0 Sun Nov  1 06:48:42 CST 2026
+COMPILE A2TupleCheck252a.lean Sun Nov  1 06:48:42 CST 2026
+DONE A2TupleCheck252a.lean rc=0 Sun Nov  1 06:49:18 CST 2026
+COMPILE A2TupleCheck252b.lean Sun Nov  1 06:49:18 CST 2026
+DONE A2TupleCheck252b.lean rc=0 Sun Nov  1 06:49:53 CST 2026
+COMPILE A2TupleCheck253a.lean Sun Nov  1 06:49:53 CST 2026
+DONE A2TupleCheck253a.lean rc=0 Sun Nov  1 06:50:30 CST 2026
+COMPILE A2TupleCheck253b.lean Sun Nov  1 06:50:30 CST 2026
+DONE A2TupleCheck253b.lean rc=0 Sun Nov  1 06:51:02 CST 2026
+COMPILE A2TupleCheck254a.lean Sun Nov  1 06:51:02 CST 2026
+DONE A2TupleCheck254a.lean rc=0 Sun Nov  1 06:51:30 CST 2026
+COMPILE A2TupleCheck254b.lean Sun Nov  1 06:51:30 CST 2026
+DONE A2TupleCheck254b.lean rc=0 Sun Nov  1 06:51:59 CST 2026
+COMPILE A2TupleCheck255a.lean Sun Nov  1 06:51:59 CST 2026
+DONE A2TupleCheck255a.lean rc=0 Sun Nov  1 06:52:30 CST 2026
+COMPILE A2TupleCheck255b.lean Sun Nov  1 06:52:30 CST 2026
+DONE A2TupleCheck255b.lean rc=0 Sun Nov  1 06:52:59 CST 2026
+COMPILE A2TupleCheck256a.lean Sun Nov  1 06:52:59 CST 2026
+DONE A2TupleCheck256a.lean rc=0 Sun Nov  1 06:53:39 CST 2026
+COMPILE A2TupleCheck256b.lean Sun Nov  1 06:53:39 CST 2026
+DONE A2TupleCheck256b.lean rc=0 Sun Nov  1 06:54:25 CST 2026
+COMPILE A2TupleCheck257a.lean Sun Nov  1 06:54:25 CST 2026
+DONE A2TupleCheck257a.lean rc=0 Sun Nov  1 06:55:08 CST 2026
+COMPILE A2TupleCheck257b.lean Sun Nov  1 06:55:08 CST 2026
+DONE A2TupleCheck257b.lean rc=0 Sun Nov  1 06:55:54 CST 2026
+COMPILE A2TupleCheck258a.lean Sun Nov  1 06:55:54 CST 2026
+DONE A2TupleCheck258a.lean rc=0 Sun Nov  1 06:56:39 CST 2026
+COMPILE A2TupleCheck258b.lean Sun Nov  1 06:56:39 CST 2026
+DONE A2TupleCheck258b.lean rc=0 Sun Nov  1 06:57:29 CST 2026
+COMPILE A2TupleCheck259a.lean Sun Nov  1 06:57:29 CST 2026
+DONE A2TupleCheck259a.lean rc=0 Sun Nov  1 06:58:20 CST 2026
+COMPILE A2TupleCheck259b.lean Sun Nov  1 06:58:20 CST 2026
+DONE A2TupleCheck259b.lean rc=0 Sun Nov  1 06:59:13 CST 2026
+COMPILE A2TupleCheck260a.lean Sun Nov  1 06:59:13 CST 2026
+DONE A2TupleCheck260a.lean rc=0 Sun Nov  1 07:00:09 CST 2026
+COMPILE A2TupleCheck260b.lean Sun Nov  1 07:00:09 CST 2026
+DONE A2TupleCheck260b.lean rc=0 Sun Nov  1 07:01:02 CST 2026
+COMPILE A2TupleCheck261a.lean Sun Nov  1 07:01:02 CST 2026
+DONE A2TupleCheck261a.lean rc=0 Sun Nov  1 07:01:53 CST 2026
+COMPILE A2TupleCheck261b.lean Sun Nov  1 07:01:53 CST 2026
+DONE A2TupleCheck261b.lean rc=0 Sun Nov  1 07:02:44 CST 2026
+COMPILE A2TupleCheck262a.lean Sun Nov  1 07:02:44 CST 2026
+DONE A2TupleCheck262a.lean rc=0 Sun Nov  1 07:03:33 CST 2026
+COMPILE A2TupleCheck262b.lean Sun Nov  1 07:03:33 CST 2026
+DONE A2TupleCheck262b.lean rc=0 Sun Nov  1 07:04:29 CST 2026
+COMPILE A2TupleCheck263a.lean Sun Nov  1 07:04:29 CST 2026
+DONE A2TupleCheck263a.lean rc=0 Sun Nov  1 07:05:21 CST 2026
+COMPILE A2TupleCheck263b.lean Sun Nov  1 07:05:21 CST 2026
+/bin/bash: line 9:  7999 Killed                  $LEAN -o "$base.olean" "$f" > "$LOGDIR/$base.log" 2>&1
+DONE A2TupleCheck263b.lean rc=137 Sun Nov  1 07:06:06 CST 2026
+CHAIN STOPPED at A2TupleCheck263b.lean rc=137

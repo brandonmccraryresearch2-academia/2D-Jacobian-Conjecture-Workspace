@@ -1,0 +1,13 @@
+/- A2 tuple-check chunk 265a2 (core-only, Nat-bounded, deduped). -/
+import GradeA.A2TupleCheckBase
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 4000000
+
+namespace BranchC.A2Check
+
+theorem boundChunk265a2 : (2652 + 3 : Nat) < 3199 := by decide
+theorem colCheckChunk265a2 : ∀ (j : Nat) (hj : j < 3),
+    (dedup5 (unionTuples ⟨2652 + j, Nat.lt_trans (Nat.add_lt_add_left hj 2652) boundChunk265a2⟩)).all (checkFun ⟨2652 + j, Nat.lt_trans (Nat.add_lt_add_left hj 2652) boundChunk265a2⟩) = true ∧ linkFun ⟨2652 + j, Nat.lt_trans (Nat.add_lt_add_left hj 2652) boundChunk265a2⟩ = true := by
+  decide +kernel
+
+end BranchC.A2Check

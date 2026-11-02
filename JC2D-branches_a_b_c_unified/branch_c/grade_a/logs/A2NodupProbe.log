@@ -1,0 +1,6 @@
+A2NodupProbe.lean:109:37: warning: Variable name `c₂` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _c₂
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

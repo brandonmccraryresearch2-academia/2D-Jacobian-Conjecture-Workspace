@@ -1,0 +1,10 @@
+=== A1 reimport RESUME start Sun Nov  1 19:13:51 UTC 2026 (from HXc27; all earlier steps rc=0) ===
+COMPILE A1DispatchHXc27 Sun Nov  1 19:13:51 UTC 2026
+DONE A1DispatchHXc27 rc=0 Sun Nov  1 19:35:38 UTC 2026
+COMPILE A1DispatchAsm Sun Nov  1 19:35:38 UTC 2026
+DONE A1DispatchAsm rc=0 Sun Nov  1 19:35:42 UTC 2026
+COMPILE A1DispatchHXAsm Sun Nov  1 19:35:42 UTC 2026
+DONE A1DispatchHXAsm rc=0 Sun Nov  1 19:35:44 UTC 2026
+COMPILE A1Instantiation Sun Nov  1 19:35:44 UTC 2026
+DONE A1Instantiation rc=0 Sun Nov  1 19:47:15 UTC 2026
+COMPILE A1AxiomsCheck Sun Nov  1 19:47:15 UTC 2026

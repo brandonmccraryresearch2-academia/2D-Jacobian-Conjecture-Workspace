@@ -1,0 +1,29 @@
+run.sh, 2026-10-06T22:46:15Z; python 3.11.15 | python-flint 0.9.0 | numpy 2.4.4
+check_R: exit 0, wall 0.1 s, cpu 0.1 s, max RSS 23 MB
+exact_lean_vs_json: exit 0, wall 0.4 s, cpu 0.3 s, max RSS 35 MB
+compare_lean_conds_32003: exit 0, wall 0.4 s, cpu 0.5 s, max RSS 45 MB
+compare_lean_conds_1000003: exit 0, wall 0.4 s, cpu 0.5 s, max RSS 45 MB
+build_matrix: exit 0, wall 0.7 s, cpu 0.9 s, max RSS 76 MB
+make_inverse: exit 0, wall 46.7 s, cpu 46.9 s, max RSS 645 MB
+gen_lean: exit 0, wall 0.9 s, cpu 1.0 s, max RSS 156 MB
+generated Lean files: byte-identical to logs/MANIFEST.sha256
+lean: Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+RCCommon: exit 0, wall 0.4 s, cpu 0.4 s, max RSS 454 MB
+RCData00: exit 0, wall 23.2 s, cpu 23.1 s, max RSS 547 MB
+RCData01: exit 0, wall 23.3 s, cpu 23.2 s, max RSS 547 MB
+RCData02: exit 0, wall 23.7 s, cpu 23.5 s, max RSS 555 MB
+RCData03: exit 0, wall 23.9 s, cpu 23.7 s, max RSS 555 MB
+RCData04: exit 0, wall 23.6 s, cpu 23.4 s, max RSS 557 MB
+RCData05: exit 0, wall 23.0 s, cpu 23.0 s, max RSS 555 MB
+RCData06: exit 0, wall 23.3 s, cpu 23.1 s, max RSS 549 MB
+RCData07: exit 0, wall 24.3 s, cpu 24.3 s, max RSS 549 MB
+RCCheck00: exit 0, wall 22.5 s, cpu 21.5 s, max RSS 1312 MB
+RCCheck01: exit 0, wall 23.0 s, cpu 22.2 s, max RSS 1324 MB
+RCCheck02: exit 0, wall 23.5 s, cpu 21.4 s, max RSS 1319 MB
+RCCheck03: exit 0, wall 29.3 s, cpu 28.2 s, max RSS 1499 MB
+RCCheck04: exit 0, wall 31.2 s, cpu 30.3 s, max RSS 1577 MB
+RCCheck05: exit 0, wall 31.4 s, cpu 30.2 s, max RSS 1573 MB
+RCCheck06: exit 0, wall 38.8 s, cpu 36.8 s, max RSS 1729 MB
+RCCheck07: exit 0, wall 38.8 s, cpu 40.6 s, max RSS 1769 MB
+RCControls: exit 1, wall 6.0 s, cpu 6.2 s, max RSS 645 MB
+check_logs: exit 0, wall 0.6 s, cpu 0.6 s, max RSS 33 MB

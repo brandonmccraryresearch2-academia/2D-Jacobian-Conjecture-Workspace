@@ -1,0 +1,9 @@
+import GradeA.A2TupleCheckBase
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 4000000
+namespace BranchC.A2Check
+theorem boundChunk090 : (900 + 10 : Nat) < 3199 := by decide
+theorem probeNatChunk090 : ∀ (j : Nat) (hj : j < 10),
+    (dedup5 (unionTuples ⟨900 + j, Nat.lt_trans (Nat.add_lt_add_left hj 900) boundChunk090⟩)).all (checkFun ⟨900 + j, Nat.lt_trans (Nat.add_lt_add_left hj 900) boundChunk090⟩) = true ∧ linkFun ⟨900 + j, Nat.lt_trans (Nat.add_lt_add_left hj 900) boundChunk090⟩ = true := by
+  decide +kernel
+end BranchC.A2Check

@@ -1,0 +1,25 @@
+import RCData00
+import RCData01
+import RCData02
+import RCData03
+import RCData04
+import RCData05
+import RCData06
+import RCData07
+
+set_option maxRecDepth 100000
+
+/-! negative controls: each `ctrl_fail_*` must be rejected by the kernel; `ctrl_pass` must pass -/
+
+namespace BranchC.RankCheck
+
+theorem ctrl_pass : colOK 2561 (30361 * Cpk_23 + 22368 * Cpk_381 + 29724 * Cpk_379 + 349 * Cpk_105 + 4381 * Cpk_103 + 3830 * Cpk_385 + 23959 * Cpk_383 + 16131 * Cpk_2 + 16803 * Cpk_3 + 30578 * Cpk_388 + 8646 * Cpk_386 + 31808 * Cpk_0 + 12289 * Cpk_1 + 21203 * Cpk_389 + 30252 * Cpk_27 + 26505 * Cpk_109 + 31753 * Cpk_107 + 15953 * Cpk_113 + 25316 * Cpk_111 + 2078 * Cpk_6 + 27029 * Cpk_7 + 12710 * Cpk_116 + 8183 * Cpk_114 + 20172 * Cpk_4 + 24616 * Cpk_5 + 22776 * Cpk_117 + 30438 * Cpk_31 + 14029 * Cpk_943 + 24745 * Cpk_944 + 22397 * Cpk_10 + 24167 * Cpk_11 + 779 * Cpk_945 + 800 * Cpk_946 + 22089 * Cpk_8 + 7840 * Cpk_9 + 7412 * Cpk_942 + 26102 * Cpk_20 + 7112 * Cpk_13 + 29240 * Cpk_14 + 8113 * Cpk_15 + 12845 * Cpk_16 + 31618 * Cpk_12 + 6546 * Cpk_34 + 7282 * Cpk_2304 + 6692 * Cpk_2035 + 1898 * Cpk_35 + 15594 * Cpk_39 + 22354 * Cpk_17 + 25030 * Cpk_18 + 17824 * Cpk_947 + 14030 * Cpk_21 + 21255 * Cpk_19) = true := by decide +kernel
+theorem ctrl_fail_entry : colOK 2561 (30361 * (Cpk_23 + 2 ^ (40 * 7)) + 22368 * Cpk_381 + 29724 * Cpk_379 + 349 * Cpk_105 + 4381 * Cpk_103 + 3830 * Cpk_385 + 23959 * Cpk_383 + 16131 * Cpk_2 + 16803 * Cpk_3 + 30578 * Cpk_388 + 8646 * Cpk_386 + 31808 * Cpk_0 + 12289 * Cpk_1 + 21203 * Cpk_389 + 30252 * Cpk_27 + 26505 * Cpk_109 + 31753 * Cpk_107 + 15953 * Cpk_113 + 25316 * Cpk_111 + 2078 * Cpk_6 + 27029 * Cpk_7 + 12710 * Cpk_116 + 8183 * Cpk_114 + 20172 * Cpk_4 + 24616 * Cpk_5 + 22776 * Cpk_117 + 30438 * Cpk_31 + 14029 * Cpk_943 + 24745 * Cpk_944 + 22397 * Cpk_10 + 24167 * Cpk_11 + 779 * Cpk_945 + 800 * Cpk_946 + 22089 * Cpk_8 + 7840 * Cpk_9 + 7412 * Cpk_942 + 26102 * Cpk_20 + 7112 * Cpk_13 + 29240 * Cpk_14 + 8113 * Cpk_15 + 12845 * Cpk_16 + 31618 * Cpk_12 + 6546 * Cpk_34 + 7282 * Cpk_2304 + 6692 * Cpk_2035 + 1898 * Cpk_35 + 15594 * Cpk_39 + 22354 * Cpk_17 + 25030 * Cpk_18 + 17824 * Cpk_947 + 14030 * Cpk_21 + 21255 * Cpk_19) = true := by decide +kernel
+theorem ctrl_fail_coeff : colOK 2561 (30362 * Cpk_23 + 22368 * Cpk_381 + 29724 * Cpk_379 + 349 * Cpk_105 + 4381 * Cpk_103 + 3830 * Cpk_385 + 23959 * Cpk_383 + 16131 * Cpk_2 + 16803 * Cpk_3 + 30578 * Cpk_388 + 8646 * Cpk_386 + 31808 * Cpk_0 + 12289 * Cpk_1 + 21203 * Cpk_389 + 30252 * Cpk_27 + 26505 * Cpk_109 + 31753 * Cpk_107 + 15953 * Cpk_113 + 25316 * Cpk_111 + 2078 * Cpk_6 + 27029 * Cpk_7 + 12710 * Cpk_116 + 8183 * Cpk_114 + 20172 * Cpk_4 + 24616 * Cpk_5 + 22776 * Cpk_117 + 30438 * Cpk_31 + 14029 * Cpk_943 + 24745 * Cpk_944 + 22397 * Cpk_10 + 24167 * Cpk_11 + 779 * Cpk_945 + 800 * Cpk_946 + 22089 * Cpk_8 + 7840 * Cpk_9 + 7412 * Cpk_942 + 26102 * Cpk_20 + 7112 * Cpk_13 + 29240 * Cpk_14 + 8113 * Cpk_15 + 12845 * Cpk_16 + 31618 * Cpk_12 + 6546 * Cpk_34 + 7282 * Cpk_2304 + 6692 * Cpk_2035 + 1898 * Cpk_35 + 15594 * Cpk_39 + 22354 * Cpk_17 + 25030 * Cpk_18 + 17824 * Cpk_947 + 14030 * Cpk_21 + 21255 * Cpk_19) = true := by decide +kernel
+theorem ctrl_fail_index : colOK 2562 (30361 * Cpk_23 + 22368 * Cpk_381 + 29724 * Cpk_379 + 349 * Cpk_105 + 4381 * Cpk_103 + 3830 * Cpk_385 + 23959 * Cpk_383 + 16131 * Cpk_2 + 16803 * Cpk_3 + 30578 * Cpk_388 + 8646 * Cpk_386 + 31808 * Cpk_0 + 12289 * Cpk_1 + 21203 * Cpk_389 + 30252 * Cpk_27 + 26505 * Cpk_109 + 31753 * Cpk_107 + 15953 * Cpk_113 + 25316 * Cpk_111 + 2078 * Cpk_6 + 27029 * Cpk_7 + 12710 * Cpk_116 + 8183 * Cpk_114 + 20172 * Cpk_4 + 24616 * Cpk_5 + 22776 * Cpk_117 + 30438 * Cpk_31 + 14029 * Cpk_943 + 24745 * Cpk_944 + 22397 * Cpk_10 + 24167 * Cpk_11 + 779 * Cpk_945 + 800 * Cpk_946 + 22089 * Cpk_8 + 7840 * Cpk_9 + 7412 * Cpk_942 + 26102 * Cpk_20 + 7112 * Cpk_13 + 29240 * Cpk_14 + 8113 * Cpk_15 + 12845 * Cpk_16 + 31618 * Cpk_12 + 6546 * Cpk_34 + 7282 * Cpk_2304 + 6692 * Cpk_2035 + 1898 * Cpk_35 + 15594 * Cpk_39 + 22354 * Cpk_17 + 25030 * Cpk_18 + 17824 * Cpk_947 + 14030 * Cpk_21 + 21255 * Cpk_19) = true := by decide +kernel
+theorem ctrl_fail_drop : colOK 2561 (30361 * Cpk_23 + 22368 * Cpk_381 + 29724 * Cpk_379 + 349 * Cpk_105 + 4381 * Cpk_103 + 3830 * Cpk_385 + 23959 * Cpk_383 + 16131 * Cpk_2 + 16803 * Cpk_3 + 30578 * Cpk_388 + 8646 * Cpk_386 + 31808 * Cpk_0 + 12289 * Cpk_1 + 21203 * Cpk_389 + 30252 * Cpk_27 + 26505 * Cpk_109 + 31753 * Cpk_107 + 15953 * Cpk_113 + 25316 * Cpk_111 + 2078 * Cpk_6 + 27029 * Cpk_7 + 12710 * Cpk_116 + 8183 * Cpk_114 + 20172 * Cpk_4 + 24616 * Cpk_5 + 22776 * Cpk_117 + 30438 * Cpk_31 + 14029 * Cpk_943 + 24745 * Cpk_944 + 22397 * Cpk_10 + 24167 * Cpk_11 + 779 * Cpk_945 + 800 * Cpk_946 + 22089 * Cpk_8 + 7840 * Cpk_9 + 7412 * Cpk_942 + 26102 * Cpk_20 + 7112 * Cpk_13 + 29240 * Cpk_14 + 8113 * Cpk_15 + 12845 * Cpk_16 + 31618 * Cpk_12 + 6546 * Cpk_34 + 7282 * Cpk_2304 + 6692 * Cpk_2035 + 1898 * Cpk_35 + 15594 * Cpk_39 + 22354 * Cpk_17 + 25030 * Cpk_18 + 17824 * Cpk_947 + 14030 * Cpk_21) = true := by decide +kernel
+theorem ctrl_fail_slot : slotOK (Cpk_23 + 2 ^ 15 * 2 ^ (40 * 5)) = true := by decide +kernel
+
+#print axioms ctrl_pass
+
+end BranchC.RankCheck

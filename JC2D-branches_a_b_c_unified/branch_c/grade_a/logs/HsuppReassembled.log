@@ -1,0 +1,58 @@
+Hsupp.lean:66:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℤ[X]
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Hsupp.lean:66:55: error: failed to prove index is valid, possible solutions:
+  - Use `have`-expressions to prove the index is valid
+  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid
+  - Use `a[i]?` notation instead, result is an `Option` type
+  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid
+X : ?m.1
+c : Fin 3199
+d : Fin 5 →₀ ℕ
+⊢ ?m.17 ℤ X
+Hsupp.lean:71:45: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  GetElem Type x✝ ?m.57 ?m.58
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Hsupp.lean:63:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Hsupp.lean:147:74: error: Application type mismatch: The argument
+  wdeg
+has type
+  ℕ × ℕ × ℕ × ℕ × ℕ → ℕ
+of sort `Type` but is expected to have type
+  ?m.37 ∈ ?m.36
+of sort `Prop` in the application
+  List.mem_map_of_mem wdeg
+Hsupp.lean:151:74: error: Application type mismatch: The argument
+  qexp
+has type
+  ℕ × ℕ × ℕ × ℕ × ℕ → ℕ
+of sort `Type` but is expected to have type
+  ?m.71 ∈ ?m.70
+of sort `Prop` in the application
+  List.mem_map_of_mem qexp
+Hsupp.lean:175:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ b ≤ 5
+  0 ≤ a ≤ 24
+where
+ a := ↑(wdeg u)
+ b := ↑(qexp u)
+Hsupp.lean:179:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℤ[X]
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Hsupp.lean:179:55: error: failed to prove index is valid, possible solutions:
+  - Use `have`-expressions to prove the index is valid
+  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid
+  - Use `a[i]?` notation instead, result is an `Option` type
+  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid
+X : ?m.1
+c : Fin 3199
+d : Fin 5 →₀ ℕ
+⊢ ?m.17 ℤ X

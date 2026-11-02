@@ -1,0 +1,12 @@
+/- Probe: checkFun half over deduplicated union, columns 0-24, Fin form. -/
+import GradeA.A2TupleCheckBase
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 4000000
+
+namespace BranchC.A2Check
+
+theorem probeDedup25 : ∀ c : Fin 3199, 0 ≤ c.val → c.val < 25 →
+    ((unionTuples c).eraseDup).all (checkFun c) = true := by
+  decide +kernel
+
+end BranchC.A2Check

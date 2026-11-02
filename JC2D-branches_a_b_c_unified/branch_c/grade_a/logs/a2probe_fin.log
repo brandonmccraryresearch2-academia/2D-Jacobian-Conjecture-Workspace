@@ -1,0 +1,1 @@
+GradeA/A2ProbeFin.lean:3:2: error: (kernel) deep recursion detected, use `set_option maxRecDepth <num>` to increase the limit

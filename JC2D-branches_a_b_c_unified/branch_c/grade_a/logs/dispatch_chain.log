@@ -1,0 +1,5 @@
+=== base ===
+OK base
+=== chunk 0 ===
+/bin/bash: line 1:  6806 Killed                  LEAN_PATH=$BC/rank_lemma_check/lean:$BC/grade_a/lean/GradeA ~/.elan/bin/lean -o A1Dispatch$c.olean A1Dispatch$c.lean > $BC/grade_a/logs/dispatch$c.log 2>&1
+FAILED 0

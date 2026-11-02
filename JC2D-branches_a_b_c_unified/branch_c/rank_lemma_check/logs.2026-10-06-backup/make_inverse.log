@@ -1,0 +1,8 @@
+rank 3199 of 3199 rows (FULL ROW RANK); 3199 pivot columns; sha256 of the pivot list 00e40995b010f30a (14.3 s)
+C = M_S^(-1) mod 32003: 14.7 s
+C * M_S == I (FLINT): True (12.7 s)
+C: 9151397 nonzero entries of 10233601 (89.4%); sha256 6cffa0100555b7b8
+M_S: 105807 nonzero entries; column supports 22..52; row supports 1..102
+block-triangular form of M_S: 341 diagonal blocks, the largest of size 2859 (340 of size 1)
+total 46.5 s
+make_inverse: exit 0, wall 46.7 s, cpu 46.9 s, max RSS 645 MB

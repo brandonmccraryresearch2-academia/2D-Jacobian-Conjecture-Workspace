@@ -1,0 +1,74 @@
+=== Probe MultDeg start 23:31 CST ===
+Probe MultDeg rc=137
+=== Probe MultQ start 23:58 CST ===
+=== Probe MultQ start 00:29 CST ===
+Probe MultQ rc=137
+=== Probe Filtered start 00:57 CST ===
+Probe Filtered rc=137
+=== remaining probes done ===
+=== Split HsuppSplitMultDeg start 01:26 CST ===
+=== NOTE 03:21 CST: previous split run killed by runtime restart (fresh boot, oom_kill counter reset to 0); relaunching ===
+=== Split HsuppSplitMultDeg start 03:22 CST ===
+Split HsuppSplitMultDeg rc=137
+=== Split HsuppSplitMultQ start 04:05 CST ===
+Split HsuppSplitMultQ rc=0
+=== Split HsuppSplitFiltered start 04:25 CST ===
+=== Split HsuppSplitFiltered start 06:28 CST ===
+Split HsuppSplitFiltered rc=137
+=== Split HsuppSplitMultDegLow start 06:49 CST ===
+Split HsuppSplitMultDegLow rc=0
+=== Split HsuppSplitMultDegHigh start 07:05 CST ===
+Split HsuppSplitMultDegHigh rc=137
+=== filtered+bisect done ===
+=== Split HsuppSplitMultDegQ1 start 07:26 CST ===
+Split HsuppSplitMultDegQ1 rc=0
+=== Split HsuppSplitMultDegQ2 start 07:44 CST ===
+Split HsuppSplitMultDegQ2 rc=137
+=== Split HsuppSplitFilteredLow start 07:58 CST ===
+Split HsuppSplitFilteredLow rc=0
+=== Split HsuppSplitFilteredHigh start 08:09 CST ===
+Split HsuppSplitFilteredHigh rc=0
+=== quarters+halves done ===
+=== Split HsuppSplitCommon start 08:21 CST ===
+Split HsuppSplitCommon rc=0
+=== Split HsuppSplitMultDegE1 start 08:21 CST ===
+Split HsuppSplitMultDegE1 rc=0
+=== Split HsuppSplitMultDegE2 start 08:33 CST ===
+Split HsuppSplitMultDegE2 rc=137
+=== Split HsuppSplitMultQ start 08:44 CST ===
+Split HsuppSplitMultQ rc=0
+=== Split HsuppSplitMultDegLow start 09:06 CST ===
+Split HsuppSplitMultDegLow rc=0
+=== Split HsuppSplitMultDegQ1 start 09:19 CST ===
+=== NOTE 09:20 CST: previous run killed by runtime restart during Q1 regen (fresh boot, oom_kill reset to 0); relaunching remaining + E2 pairs ===
+=== Split HsuppSplitMultDegQ1 start 09:21 CST ===
+Split HsuppSplitMultDegQ1 rc=0
+=== Split HsuppSplitFilteredLow start 09:44 CST ===
+Split HsuppSplitFilteredLow rc=0
+=== Split HsuppSplitFilteredHigh start 09:57 CST ===
+Split HsuppSplitFilteredHigh rc=0
+=== Split HsuppSplitFilteredAsm start 10:07 CST ===
+Split HsuppSplitFilteredAsm rc=1
+=== Split HsuppSplitMultDegP1 start 10:22 CST ===
+Split HsuppSplitMultDegP1 rc=137
+=== Split HsuppSplitMultDegP2 start 10:33 CST ===
+Split HsuppSplitMultDegP2 rc=137
+=== relaunch-0920 done ===
+=== Split HsuppSplitFilteredAsm start 10:48 CST ===
+Split HsuppSplitFilteredAsm rc=137
+=== Split HsuppSplitMultDeg50 start 11:09 CST ===
+Split HsuppSplitMultDeg50 rc=0
+=== Split HsuppSplitMultDegAsm2 start 11:30 CST ===
+Split HsuppSplitMultDegAsm2 rc=0
+=== asm+50 done ===
+=== Split HsuppSplitFilteredInd start 11:45 CST ===
+Split HsuppSplitFilteredInd rc=137
+=== Probe HsuppProbeIndB start 12:17 CST ===
+Probe HsuppProbeIndB rc=0
+=== Probe HsuppProbeIndA start 12:17 CST ===
+Probe HsuppProbeIndA rc=137
+=== ind probes done ===
+=== Split HsuppSplitFilteredInd2 start 12:34 CST ===
+Split HsuppSplitFilteredInd2 rc=1
+=== Split HsuppSplitFilteredInd2 retry start 12:46 CST ===
+Split HsuppSplitFilteredInd2 retry rc=0

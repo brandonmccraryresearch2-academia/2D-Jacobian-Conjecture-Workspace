@@ -386,4 +386,4 @@ but function has type
   decide (slotOK (Cpk_23 + 2 ^ 15 * 2 ^ (40 * 5)) = true) = true →
     decide (slotOK (Cpk_23 + 2 ^ 15 * 2 ^ (40 * 5)) = true) = true
 'BranchC.RankCheck.ctrl_pass' depends on axioms: [propext]
-RCControls: exit 1, wall 6.0 s, cpu 6.2 s, max RSS 645 MB
+RCControls: exit 1, wall 10.1 s, cpu 7.9 s, max RSS 683 MB

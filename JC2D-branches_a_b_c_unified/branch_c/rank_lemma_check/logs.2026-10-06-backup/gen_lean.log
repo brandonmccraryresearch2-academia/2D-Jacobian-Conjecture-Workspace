@@ -1,0 +1,3 @@
+n = 3199, p = 32003, at most 52 terms per column; 8 data + 8 check modules, 6398 theorems, 97.0 MB of Lean; sha256 of the packed columns 42bd1d3477c5ae8e4e64bfd30e5779a33702e057bbbaec5b3cffee2236f6d6ca
+controls on column 2561 (entry Cpk_23): 5 must fail, 1 must pass
+gen_lean: exit 0, wall 0.9 s, cpu 1.0 s, max RSS 156 MB

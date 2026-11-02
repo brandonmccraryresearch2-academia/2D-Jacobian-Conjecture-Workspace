@@ -1,0 +1,158 @@
+GradeA/A2Entry.lean:28:35: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℤ[X]
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+GradeA/A2Entry.lean:28:56: error: failed to prove index is valid, possible solutions:
+  - Use `have`-expressions to prove the index is valid
+  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid
+  - Use `a[i]?` notation instead, result is an `Option` type
+  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid
+X : ?m.1
+⊢ ?m.9 ℤ X
+GradeA/A2Entry.lean:47:2: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+n : Fin 6
+this✝ : n ∈ Fintype.elems
+a✝ : List (Fin 6)
+this : List.Mem n a✝
+⊢ List.finRange 6 = a✝ → this✝ ≍ this → sorry
+GradeA/A2Entry.lean:47:18: error: Tactic `rfl` failed: The left-hand side
+  true
+is not definitionally equal to the right-hand side
+  Function.const Lean.Name () `GradeA.A2Entry.46.35.46.67.35.67._sorry._@.GradeA.A2Entry.4150220473._hygCtx._hyg.14
+
+n : Fin 6
+⊢ sorry
+GradeA/A2Entry.lean:99:2: error: Type mismatch
+  Nat.le_add_left ?m.31 ?m.32
+has type
+  ?m.31 ≤ ?m.32 + ?m.31
+but is expected to have type
+  i ∈ b.support → b i ≤ a i + b i
+GradeA/A2Entry.lean:107:5: error: Function expected at
+  eval₂RingHom
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Int.castRingHom (ZMod 32003))
+
+Hint: The identifier `eval₂RingHom` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+GradeA/A2Entry.lean:107:81: error: unsolved goals
+x✝ : Sort u_1
+eval₂RingHom : x✝
+t : Term
+⊢ sorry () = ↑t.c * 11147 ^ t.i
+GradeA/A2Entry.lean:108:8: warning: This simp argument is unused:
+  Term.coeffX
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_C, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:108:31: warning: This simp argument is unused:
+  Polynomial.eval₂_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_C, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:108:53: warning: This simp argument is unused:
+  Polynomial.eval₂_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:109:4: warning: This simp argument is unused:
+  Polynomial.eval₂_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_C]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:123:8: warning: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+GradeA/A2Entry.lean:121:17: error: unsolved goals
+case cons
+d : Fin 5 →₀ ℕ
+t : Term
+ts : List Term
+ih : (polyOfTerms ts).coeff d = (List.map (fun t => t.poly.coeff d) ts).sum
+⊢ t.poly.coeff d + (List.map (fun t => t.poly.coeff d) ts).sum = (List.map (fun t => t.poly.coeff d) (t :: ts)).sum
+GradeA/A2Entry.lean:127:5: error: Function expected at
+  eval₂RingHom
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Int.castRingHom (ZMod 32003))
+
+Hint: The identifier `eval₂RingHom` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+GradeA/A2Entry.lean:130:8: error: unsolved goals
+case nil
+x✝ : Sort u_1
+eval₂RingHom : x✝
+d : Fin 5 →₀ ℕ
+⊢ sorry () = 0
+GradeA/A2Entry.lean:132:10: error: Function expected at
+  eval₂RingHom
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  (Int.castRingHom (ZMod 32003))
+GradeA/A2Entry.lean:134:8: warning: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+GradeA/A2Entry.lean:130:17: warning: This simp argument is unused:
+  polyOfTerms
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:148:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Term.mono ?t
+in the target expression
+  finsuppOfTuple (mono5 t) + finsuppOfTuple (multTuple c) = finsuppOfTuple (rowTuple r)
+
+case mp
+c r : Fin 3199
+h : multMono c ≤ rowMono r
+t : Term
+ht : t.mono = rowMono r - multMono c
+⊢ finsuppOfTuple (mono5 t) + finsuppOfTuple (multTuple c) = finsuppOfTuple (rowTuple r)
+GradeA/A2Entry.lean:152:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  finsuppOfTuple (mono5 ?t)
+in the target expression
+  t.mono + multMono c = rowMono r
+
+c r : Fin 3199
+h : multMono c ≤ rowMono r
+t : Term
+ht : mono5 t + multTuple c = rowTuple r
+⊢ t.mono + multMono c = rowMono r
+GradeA/A2Entry.lean:159:5: error: Function expected at
+  eval₂RingHom
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Int.castRingHom (ZMod 32003))
+
+Hint: The identifier `eval₂RingHom` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

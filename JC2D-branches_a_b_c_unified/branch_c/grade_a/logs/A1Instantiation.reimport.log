@@ -1,0 +1,16 @@
+A1Instantiation.lean:166:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+A1Instantiation.lean:232:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A1Instantiation.lean:234:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A1Instantiation.lean:237:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A1Instantiation.lean:237:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A1Instantiation.lean:346:15: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A1Instantiation.lean:346:28: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A1Instantiation.lean:348:15: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A1Instantiation.lean:348:28: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'BranchC.A1Inst.A1' depends on axioms: [propext, Classical.choice, Quot.sound]

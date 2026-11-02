@@ -4,4 +4,4 @@
 primes < 400 modulo which R is irreducible: [67, 71, 79, 97, 109, 137, 149, 157, 173, 179, 191, 263, 269, 281, 283, 331, 353, 373]
 control: R - 26 = x^5 + (-1)*x^4 + 3*x^3 + 3*x^2 is rejected as reducible: True
 R IRREDUCIBLE OVER Q: True
-check_R: exit 0, wall 0.1 s, cpu 0.1 s, max RSS 23 MB
+check_R: exit 0, wall 0.1 s, cpu 0.1 s, max RSS 22 MB

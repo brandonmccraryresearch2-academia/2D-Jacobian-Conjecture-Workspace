@@ -1,0 +1,76 @@
+GradeA/A2Entry.lean:108:31: warning: This simp argument is unused:
+  Polynomial.eval₂_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_C, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:108:53: warning: This simp argument is unused:
+  Polynomial.eval₂_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:109:4: warning: This simp argument is unused:
+  Polynomial.eval₂_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.coeffX, evalTerm, Polynomial.eval₂_mul, Polynomial.eval₂_C]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GradeA/A2Entry.lean:123:8: warning: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+GradeA/A2Entry.lean:135:8: warning: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+GradeA/A2Entry.lean:138:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+GradeA/A2Entry.lean:140:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:140:21: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:140:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if t.mono = d then ?m.127 else ?m.128
+in the target expression
+  (eval₂RingHom (Int.castRingHom (ZMod 32003)) 11147) 0 +
+      (List.map (fun t => if t.mono = d then evalTerm t else 0) ts).sum =
+    (List.map (fun t => if t.mono = d then evalTerm t else 0) (t :: ts)).sum
+
+case neg
+d : Fin 5 →₀ ℕ
+t : Term
+ts : List Term
+ih :
+  (eval₂RingHom (Int.castRingHom (ZMod 32003)) 11147) ((polyOfTerms ts).coeff d) =
+    (List.map (fun t => if t.mono = d then evalTerm t else 0) ts).sum
+hd : ¬t.mono = d
+⊢ (eval₂RingHom (Int.castRingHom (ZMod 32003)) 11147) 0 +
+      (List.map (fun t => if t.mono = d then evalTerm t else 0) ts).sum =
+    (List.map (fun t => if t.mono = d then evalTerm t else 0) (t :: ts)).sum
+GradeA/A2Entry.lean:176:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+GradeA/A2Entry.lean:178:10: error(lean.unknownIdentifier): Unknown constant `List.sum_congr`
+GradeA/A2Entry.lean:179:10: error: No goals to be solved
+GradeA/A2Entry.lean:183:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:188:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+GradeA/A2Entry.lean:188:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if ?m.133 then ?t else ?e
+in the target expression
+  t = 0
+
+case neg
+r c : Fin 3199
+h : ¬multMono c ≤ rowMono r
+t : ZMod 32003
+a✝ : t ∈ List.map (fun t => if mono5 t + multTuple c = rowTuple r then evalTerm t else 0) (colTerms c)
+⊢ t = 0
