@@ -5,7 +5,15 @@
 **Author:** Brandon D. McCrary (ORCID: 0009-0008-2804-7165)
 **Date:** October 1, 2026
 
-### Status (review of 2026-10-12, corrected 2026-10-13)
+### Status (review of 2026-10-12, corrected 2026-10-13; paper update 2026-11-04)
+
+**2026-11-04:** the current paper is now `paper/two_dicritical_closure_rewrite.tex`
+/ `.pdf` (November 2 rewrite); the October 1 draft (`paper/two_dicritical_closure.tex`
+/ `.pdf`) is SUPERSEDED/WITHDRAWN but retained byte-identical — see
+`paper/SUPERSEDED_2026-11-04.md` and `BUILD_STATUS.md`. The finalized unified
+paper is recorded alongside it as `paper/combined_paper_final_2026-11-04.tex`
+/ `.pdf`. The two-dicritical Lean count is unchanged: 21 of 21 theorems on the
+standard axioms (VM re-verification, `BUILD_STATUS.md` 2026-11-04 entry).
 
 The theorem below is **claimed. As worded it is false, one of its theorems is false as stated, and its proof is
 incomplete** (`../JC2D-branches_a_b_c_unified/reviews/REVIEW_2026-10-12_handoff.md`, §5 and §9; `lean/README.md`):

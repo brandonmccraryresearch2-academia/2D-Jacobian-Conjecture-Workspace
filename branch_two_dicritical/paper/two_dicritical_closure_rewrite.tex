@@ -1,0 +1,1129 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{neonmagenta}{HTML}{FF10F0}
+\usepackage{enumitem}
+\usepackage{seqsplit}
+\usepackage{fvextra}
+% Allow long filenames to break across lines
+\newcommand{\filename}[1]{\texttt{\seqsplit{#1}}}
+% fvextra Verbatim for code listings (Unicode-safe)
+\newcounter{codelisting}
+\newenvironment{codelisting}[2]{%
+  \refstepcounter{codelisting}\label{#2}%
+  \begin{center}\textit{\small Listing \thecodelisting: #1}\end{center}%
+  \Verbatim[breaklines=true,breakanywhere=true,fontsize=\footnotesize,frame=single,framesep=4pt,rulecolor=\color{gray!50},fillcolor=\color{gray!5}]%
+}{%
+  \endVerbatim%
+}
+% Fonts: Fira Sans (text), Fira Mono (code), Fira Math (math) are primary.
+% Where a glyph is missing from the Fira fonts, it is substituted from
+% Noto Sans (text) or Noto Sans Math (math and listing symbols):
+%  - U+2208 (in) is missing from Fira Mono; in text/listings it is taken
+%    from Noto Sans Math. Fira Math has it, so math-mode \in is Fira.
+%  - U+2090 (subscript a) is missing from Fira Mono; in text/listings it
+%    is taken from Noto Sans. In math it stays a roman subscript.
+%  - Math glyphs missing from Fira Math are substituted by range from
+%    Noto Sans Math (range assignments added below the \setmathfont line
+%    for exactly the codepoints the Fira Math coverage lacks).
+\setmainfont{Fira Sans}[BoldFont={Fira Sans Bold},ItalicFont={Fira Sans Italic},BoldItalicFont={Fira Sans Bold Italic}]
+\setmonofont{Fira Mono}[BoldFont={Fira Mono Bold}]
+\setmathfont{Fira Math}[Scale=1.15]
+% Math glyphs missing from Fira Math are substituted by range from Noto Sans Math:
+% U+2216 (setminus) is absent from Fira Math.
+\setmathfont{Noto Sans Math}[range={"2216},Scale=1.15]
+\newfontfamily\notosans{Noto Sans}
+\newfontfamily\notosansmath{Noto Sans Math}
+\catcode`\∈=\active
+\protected\def∈{\ifmmode\in\else{\notosansmath\char"2208}\fi}
+\catcode`\ₐ=\active
+\protected\defₐ{\ifmmode{}_{\mathrm{a}}\else{\notosans\char"2090}\fi}
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+
+\title{\textbf{\Large Dicriticals at Infinity of Keller Maps:}\\[0.6em]
+\large Theorem R and Local Obstructions\\[0.4em]
+\normalsize Counting Dicriticals, the Line at Infinity, First Blow-Ups, and the $m=1$ Bridge under Its Premises}
+\author{\textbf{Brandon D. McCrary}\\[0.25em]
+\textit{Independent Researcher}\\[0.25em]
+\href{https://orcid.org/0009-0008-2804-7165}{ORCID: 0009-0008-2804-7165}\\[0.6em]
+{\small \parbox{0.92\textwidth}{\centering \textbf{Computation and LaTeX Source:}\\
+{\color{neonmagenta}\hypersetup{urlcolor=neonmagenta}\href{https://github.com/brandonmccraryresearch-cloud/2D-Jacobian-Conjecture-Workspace}{\nolinkurl{https://github.com/brandonmccraryresearch-cloud/2D-Jacobian-Conjecture-Workspace}}}}}}
+\date{November 2, 2026}
+\maketitle
+
+\begin{center}
+\small\textbf{Revision note.} This paper supersedes the October 1, 2026 draft
+\textit{No Keller Map Admits Two Dicritical Divisors: Closure of the Two-Dicritical Line
+for the Planar Jacobian Conjecture}. That draft's main theorem is \textbf{false as worded},
+and its claims of closure and of unconditional status are \textbf{withdrawn} here. The
+corrections follow the restatement note of October 13, 2026
+(\filename{branch\_two\_dicritical/RESTATEMENT.md}, unpublished working note): the corrected
+target is Theorem~R, stated as \textbf{open} in \S\ref{sec:statement}, and every result below
+is labelled with its status and evidence grade. Nothing in this revision proves the planar
+Jacobian conjecture. The exposition is expanded, in the step-by-step style of \S 5 of
+Guccione--Guccione--Horruitiner--Valqui~\cite{GGHV}, so that each derivation shows its
+intermediate equations rather than only its conclusion.
+\end{center}
+
+\begin{abstract}
+Let $F = (P,Q) \colon \mathbb{A}^2 \to \mathbb{A}^2$ be a Keller map, that is,
+$[P,Q] := P_x Q_y - P_y Q_x \in K^\times$ for $K$ algebraically closed of characteristic $0$,
+and let $\lambda P + \mu Q$ be its pencil. The October 1 draft of this paper claimed that no
+Keller map admits two distinct dicritical divisors, unconditionally. That claim is false: every
+Keller map of degree at least $2$ has at least two exceptional dicriticals in total
+(Corollary~\ref{cor:count-fails}), and the draft's $E_1$ degree obstruction
+theorem is false as stated, with an explicit Keller
+counterexample in \S\ref{sec:e1}.
+
+The corrected target is \textbf{Theorem~R} (\S\ref{sec:statement}), which is \textbf{open}:
+for every Keller map, the pencil $\lambda P + \mu Q$ has at most one dicritical divisor
+\textbf{at infinity}. Theorem~R is equivalent to the planar Jacobian conjecture
+(Proposition~\ref{prop:equiv}). This paper proves, or records as sketch or fixed-degree
+computation, only the following steps toward it, each labelled with its grade:
+\begin{itemize}[nosep]
+\item the count of dicriticals (Proposition~\ref{prop:count}, grade B) and the position a
+counterexample's dicriticals would occupy (\S\ref{sec:where});
+\item the line at infinity is not dicritical for a non-affine Keller map
+(Lemma~\ref{lem:linf}, grade B), and no first blow-up at infinity is dicritical
+(Lemma~\ref{lem:e1}, algebra grade A, chart step grade B), so every dicritical at infinity
+of a non-affine Keller map has depth at least $2$;
+\item the $m = 1$ bridge equations collapse under two stated premises (P1) and (P2)
+(Theorem~\ref{thm:bridge}, equations grade A, geometric reading grade B), where (P2) is
+\textbf{not} derived and remains open;
+\item the constant-leading-form argument for $m \geq 2$ on $E_k$, $k \geq 2$, as a
+\textbf{proof sketch for free centers only} (Proposition~\ref{prop:constant-form}, grade C);
+\item the adjacent $m = 1$ case as a computation at $d = 3$ only (grade C).
+\end{itemize}
+What remains open is collected in \S\ref{sec:open} (obligations O1--O6) and the tests any
+proof must pass (T1--T4). \S\ref{sec:correspondence} maps each archived script to the exact
+statement it certifies, under the corrected statements.
+\end{abstract}
+
+\vspace{1.2cm}
+\hrule
+\vspace{1.4cm}
+
+\section{Introduction: setting, definitions, and the corrected statement}\label{sec:statement}
+
+\subsection{Context}
+
+The planar Jacobian conjecture asserts that a polynomial map
+$(P,Q) \colon \mathbb{C}^2 \to \mathbb{C}^2$ with
+$[P,Q] := P_x Q_y - P_y Q_x \in \mathbb{C}^\times$ is invertible. A \emph{Keller map} is
+such a pair with constant nonzero Jacobian. This paper studies the dicritical divisors of the
+pencil $\lambda P + \mu Q$ of a Keller map, and in particular how many of them can lie at
+infinity. The October 1 draft claimed this line of work was closed. It was not, and this
+revision says exactly what is proved, what is only sketched or computed at fixed degree, and
+what is open.
+
+Throughout, $K$ is an algebraically closed field of characteristic $0$; statements over any
+field of characteristic $0$ reduce to its algebraic closure. We write
+$F = (P,Q) \colon \mathbb{A}^2 \to \mathbb{A}^2$ for a Keller map, so
+$[P,Q] = P_x Q_y - P_y Q_x \in K^\times$.
+
+\subsection{Standard facts used}
+
+We use the following standard facts, labelled (F1)--(F3) as in the restatement note:
+\begin{itemize}[nosep]
+\item[(F1)] $F$ is \'{e}tale. Its generic degree $e = [K(x,y) : K(P,Q)]$ is at least $1$.
+\item[(F2)] The \emph{non-properness set} $S_F$ is the set of points of the target over which
+$F$ is not proper. It is either empty or a curve whose components are rational
+(Jelonek~\cite{Jelonek1993}, for dominant maps $\mathbb{A}^n \to \mathbb{A}^n$).
+\item[(F3)] $F$ is an automorphism if and only if $S_F = \emptyset$. Indeed, if
+$S_F = \emptyset$ then $F$ is a finite \'{e}tale cover of the simply connected
+$\mathbb{A}^2$, hence an isomorphism; if $F$ is not an automorphism then $e \geq 2$, since
+with $e = 1$ the map $F$ is birational and \'{e}tale, hence an open immersion by Zariski's
+main theorem, so it is injective, and then bijective
+(Bia\l{}ynicki-Birula--Rosenlicht~\cite{BBR1962}).
+\end{itemize}
+
+\subsection{Compactification, the pencil, and the standard definition}
+
+Source and target are $\mathbb{A}^2 \subset \mathbb{P}^2$, with lines at infinity $L_\infty$
+and $L'_\infty$. Let $\sigma \colon X \to \mathbb{P}^2$ be a sequence of point blow-ups over
+$L_\infty$ such that $G = \bar{F} \circ \sigma \colon X \to \mathbb{P}^2$ is a morphism. The
+\emph{curves at infinity} of $X$ are the components of $X \setminus \mathbb{A}^2$: the strict
+transform of $L_\infty$ and the exceptional curves.
+
+For $c \in \mathbb{A}^2$ (target), $\Lambda_c$ is the pencil whose members are $F^{-1}(\ell)$
+for the lines $\ell \ni c$. Its members are the fibers of
+$\varphi_c = \pi_c \circ F$, where $\pi_c$ is the projection from $c$. The paper's pencil
+$\lambda P + \mu Q$ is $\Lambda_0$.
+
+\begin{definition}[Dicritical divisor, standard definition]\label{def:dicritical}
+A divisor $E$ over the source plane is \emph{dicritical} for $\Lambda_c$ if $\varphi_c$ is
+not constant on $E$. Its \emph{degree} $m(E)$ is the degree of
+$\varphi_c|_E \colon E \to \mathbb{P}^1$. The divisor $E$ is \emph{at infinity} if its center
+on $\mathbb{P}^2$ lies on $L_\infty$; $L_\infty$ itself counts. Otherwise $E$ is
+\emph{affine}. The \emph{depth} of $L_\infty$ is $0$; the exceptional curve of the blow-up at
+a point $p$ has depth one more than the largest depth of the curves through $p$. Thus $E_1$
+over a point of $L_\infty$ has depth $1$. A point of an exceptional curve is a
+\emph{satellite} point if it lies on another component of the total transform of $L_\infty$,
+and \emph{free} otherwise.
+\end{definition}
+
+\begin{remark}
+The October 1 draft defined dicriticals as ``exceptional divisors on which the pulled-back
+pencil has no base points.'' That is not the standard notion, and it is replaced by
+Definition~\ref{def:dicritical} throughout this revision.
+\end{remark}
+
+\subsection{Counting dicriticals}
+
+\begin{proposition}[The count]\label{prop:count}
+\textit{Status: grade B, proof by hand from \textnormal{(F1)--(F3)}.}
+Let $F$ be a Keller map and $c \in \mathbb{A}^2 \setminus S_F$.
+\begin{enumerate}[label=(\alph*),nosep]
+\item The affine dicriticals of $\Lambda_c$ are exactly the $e$ exceptional curves $E_q$ of
+the blow-ups at the points $q \in F^{-1}(c)$. Each has degree $1$.
+\item The dicriticals at infinity are the curves at infinity $D$ of $X$ for which $G(D)$ is a
+curve. Then $G(D)$ is $L'_\infty$ or a component of $\bar{S}_F$, and
+\begin{equation}\label{eq:count-degree}
+m(D) = \deg\big(D \to G(D)\big) \cdot \deg G(D).
+\end{equation}
+\item $L'_\infty$ and every component of $\bar{S}_F$ are $G(D)$ for at least one such $D$.
+So the number $N_\infty(c)$ of dicriticals at infinity satisfies
+\begin{equation}\label{eq:count-lower}
+N_\infty(c) \geq 1 + \#\{\text{components of } S_F\}.
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+We prove (a), (b), (c) in order, spelling out each step.
+
+\emph{Part (a).} Since $c \notin S_F$, the map $F$ is proper over a neighbourhood of $c$.
+By (F1), $F$ is \'{e}tale, so the fiber $F^{-1}(c)$ has exactly $e$ points, and $F$ is a local
+isomorphism at each of them. Fix $q \in F^{-1}(c)$. Near $q$, the map $\varphi_c$ is the
+projection from the point $c$ composed with a local isomorphism. One blow-up at $q$ resolves
+it: in the blow-up chart, the exceptional curve $E_q$ parametrizes the directions through $q$,
+and $\varphi_c$ restricts to the projection itself, hence maps $E_q$ isomorphically onto
+$\mathbb{P}^1$. So $E_q$ is dicritical of degree $1$. At every other affine point,
+$\varphi_c$ is regular, so no other affine divisor is dicritical. This gives exactly the $e$
+exceptional curves $E_q$, each of degree $1$.
+
+\emph{Part (b).} Let $D$ be a curve at infinity. First, $G(D)$ is not the point $c$: the map $G$
+sends no curve at infinity into $\mathbb{A}^2 \setminus S_F$, and $c \notin S_F$ by hypothesis.
+If $G(D)$ is a point different from $c$, then $\varphi_c = \pi_c \circ G$ is constant on $D$,
+since $\pi_c$ sends every point other than $c$ to a single point of $\mathbb{P}^1$ only after
+fixing the line through $c$ --- more precisely, $\pi_c$ is constant on no curve through a point
+other than $c$ except by collapsing it, and here $G(D)$ is a single point $\neq c$, so
+$\varphi_c|_D$ is that constant value. Hence $D$ is not dicritical in this case.
+
+If instead $G(D)$ is a curve, then either $G(D) = L'_\infty$, or $G(D)$ meets
+$\mathbb{A}^2$. In the second case, every point of $G(D) \cap \mathbb{A}^2$ is a limit of $F$
+along a path to infinity, so it lies in $S_F$; since $G(D)$ is irreducible, $G(D)$ is a
+component of the closure $\bar{S}_F$. Neither $L'_\infty$ nor a component of $S_F$ is a line
+through $c$. Therefore the projection $\pi_c$ restricted to the curve $G(D)$ has degree
+$\deg G(D)$, and composing with $D \to G(D)$ gives
+\[
+m(D) = \deg(\varphi_c|_D) = \deg\big(D \to G(D)\big) \cdot \deg G(D),
+\]
+which is \eqref{eq:count-degree}. So $D$ is dicritical exactly when $G(D)$ is a curve, with
+the stated degree.
+
+\emph{Part (c).} The map $G$ is proper and surjective, so $L'_\infty$ is dominated by some
+curve at infinity: there is $D$ with $G(D) = L'_\infty$. By the description of $S_F$ as
+$G(X \setminus \mathbb{A}^2) \cap \mathbb{A}^2$, each component of $S_F$ is likewise
+dominated by a curve at infinity. Counting the distinct images $L'_\infty$ and the components
+of $S_F$ gives the lower bound \eqref{eq:count-lower}.
+\end{proof}
+
+\begin{corollary}[Automorphisms]\label{cor:automorphisms}
+\textit{Status: grade B.}
+If $F$ is an automorphism, then $\Lambda_c$ has exactly two dicriticals for every $c$: one
+affine, over $F^{-1}(c)$, and one at infinity, the unique curve $D$ with
+$G(D) = L'_\infty$ (here $G$ is birational). Both have degree $1$.
+\end{corollary}
+
+\begin{proof}
+If $F$ is an automorphism, then $e = 1$ and $S_F = \emptyset$ by (F3). Part (a) of
+Proposition~\ref{prop:count} gives exactly one affine dicritical, over the single point
+$F^{-1}(c)$, of degree $1$. Part (c) with $S_F = \emptyset$ gives at least one dicritical at
+infinity, with image $L'_\infty$; since $G$ is birational, there is exactly one such curve,
+and \eqref{eq:count-degree} gives its degree as $1 \cdot 1 = 1$.
+\end{proof}
+
+\subsection{The October 1 main theorem is false}
+
+\begin{corollary}[The theorem as worded fails]\label{cor:count-fails}
+\textit{Status: grade B in general; exact in the examples below.}
+Every Keller map of degree at least $2$ has at least two exceptional dicriticals in
+$\Lambda_0$, after a translation of the target that puts $0$ in
+$F(\mathbb{A}^2) \setminus S_F$. An automorphism needs no translation. Hence the October 1
+draft's theorem (``no two distinct dicritical divisors,'' with no at-infinity restriction) is
+false for every Keller map of degree at least $2$. If only exceptional curves count as
+divisors of the resolution, it holds exactly for affine maps, whose dicritical at infinity is
+$L_\infty$ itself; if $L_\infty$ counts, it fails for them too.
+\end{corollary}
+
+\begin{proof}
+Let $F$ have degree at least $2$. Translate the target so that $0 \notin S_F$ and
+$0 \in F(\mathbb{A}^2)$; then $F^{-1}(0)$ is nonempty. By Proposition~\ref{prop:count}(a),
+each point of $F^{-1}(0)$ contributes an affine dicritical of degree $1$, and by part (c)
+there is at least one dicritical at infinity. That is already two dicriticals in total. The
+example below exhibits both of them explicitly for an automorphism, where no translation is
+needed.
+\end{proof}
+
+\begin{example}[Two dicriticals of an automorphism]\label{ex:automorphism}
+Take
+\begin{equation}\label{eq:auto-map}
+P = x - y^2, \qquad Q = y.
+\end{equation}
+We compute the Jacobian step by step. First the partial derivatives:
+\[
+P_x = 1, \qquad P_y = -2y, \qquad Q_x = 0, \qquad Q_y = 1.
+\]
+Hence
+\[
+[P,Q] = P_x Q_y - P_y Q_x = 1 \cdot 1 - (-2y) \cdot 0 = 1 \in K^\times,
+\]
+so $F = (P,Q)$ is a Keller map. It is an automorphism: solving $P = x - y^2$ and $Q = y$
+gives $y = Q$ and $x = P + Q^2$, so the inverse is $(P,Q) \mapsto (P + Q^2, Q)$, and indeed
+$P + Q^2 = (x - y^2) + y^2 = x$.
+
+\emph{The affine dicritical.} The fiber over $0$ is the single point $(0,0)$, since
+$Q = y = 0$ and $P = x - y^2 = 0$ force $x = 0$. Blow up $\mathbb{A}^2$ at the origin and
+use the chart
+\[
+x = s, \qquad y = s t,
+\]
+so the exceptional divisor $E$ is $\{s = 0\}$ with coordinate $t$. Substituting:
+\begin{align}
+P &= s - (st)^2 = s - s^2 t^2 = s\,(1 - s t^2), \\
+Q &= s t.
+\end{align}
+The map $\varphi_0$ is the projection from $0$, so on this chart it is the ratio
+\[
+\varphi_0 = [P : Q] = [\,s(1 - s t^2) : s t\,] = [\,1 - s t^2 : t\,].
+\]
+Restricting to the exceptional divisor, where $s = 0$, gives
+\[
+\varphi_0|_E = [1 : t],
+\]
+which is non-constant in $t$. Hence $E$ is dicritical, of degree $1$.
+
+\emph{The dicritical at infinity.} By Corollary~\ref{cor:automorphisms}, $\Lambda_0$ has
+exactly one dicritical at infinity, the unique curve $D$ with $G(D) = L'_\infty$, also of
+degree $1$. Together with the affine dicritical above, this is two distinct dicriticals.
+The October 1 theorem, which forbade two distinct dicritical divisors without any
+at-infinity restriction, is therefore false, already for automorphisms.
+\end{example}
+
+\subsection{The corrected statement: Theorem R}
+
+\begin{theorem}[Theorem R --- the corrected main theorem; OPEN]\label{thm:R}
+\textit{Status: open, not proved in this paper or elsewhere.}
+For every Keller map $(P,Q)$, the pencil $\lambda P + \mu Q$ has at most one dicritical
+divisor at infinity.
+\end{theorem}
+
+\begin{proposition}\label{prop:onedic}
+\textit{Status: grade B.}
+Let $F$ be a Keller map and $c \notin S_F$. Then $\Lambda_c$ has at most one dicritical at
+infinity if and only if $F$ is an automorphism. In that case it has exactly one, of degree $1$.
+\end{proposition}
+
+\begin{proof}
+If $F$ is an automorphism, Corollary~\ref{cor:automorphisms} gives exactly one dicritical at
+infinity, of degree $1$. Conversely, suppose $\Lambda_c$ has at most one dicritical at
+infinity. By Proposition~\ref{prop:count}(c), the number of dicriticals at infinity is at
+least $1 + \#\{\text{components of } S_F\}$. At most one therefore forces
+$\#\{\text{components of } S_F\} = 0$, that is, $S_F = \emptyset$. By (F3), $F$ is an
+automorphism.
+\end{proof}
+
+\begin{proposition}[Theorem R is equivalent to the planar Jacobian conjecture]\label{prop:equiv}
+\textit{Status: grade B.}
+Theorem~R holds for all Keller maps if and only if the planar Jacobian conjecture holds.
+\end{proposition}
+
+\begin{proof}
+If the conjecture holds, then every Keller map is an automorphism, and
+Corollary~\ref{cor:automorphisms} gives exactly one dicritical at infinity, in particular at
+most one. So Theorem~R holds.
+
+Conversely, let $F$ be a Keller map and pick $c \notin S_F$. Such a $c$ exists because $S_F$
+is either empty or a curve, never the whole target. Then $F - c$ is a Keller map with
+$0 \notin S_{F-c}$, and its pencil $\lambda (P - c_1) + \mu (Q - c_2)$ is $\Lambda_c(F)$.
+Applying Theorem~R to $F - c$ and Proposition~\ref{prop:onedic} to $\Lambda_c(F)$ makes $F$
+an automorphism. Since $F$ was arbitrary, the conjecture holds.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{prop:equiv} sets the bar for this paper: a complete proof of the corrected
+theorem would be a proof of the conjecture. Everything that follows is therefore measured
+against that bar, and no step below is presented as closing it.
+\end{remark}
+
+\subsection{Where a counterexample's dicriticals would sit}\label{sec:where}
+
+Let $F$ be a Keller map that is not an automorphism, and let $c \notin S_F$. Then
+$\Lambda_c$ has:
+\begin{itemize}[nosep]
+\item $e \geq 2$ affine dicriticals, by (F3) and Proposition~\ref{prop:count}(a);
+\item at least one $E_\infty$ with $G(E_\infty) = L'_\infty$, of degree
+$\deg(E_\infty \to L'_\infty)$;
+\item at least one $E_S$ over each component $C$ of $S_F$, of degree
+$\deg(E_S \to C) \cdot \deg C$, by \eqref{eq:count-degree}.
+\end{itemize}
+$E_\infty$ always exists, so Theorem~R amounts to showing that $E_S$ cannot exist. The two
+halves of the October 1 draft, read against this picture, were: the first half claimed there
+is no dicritical of degree $m \geq 2$ for any Keller map, which applied to $E_S$ would
+already exclude every counterexample whose $S_F$ has a component of degree at least $2$; the
+second half claimed there are no two dicriticals of degree $1$, which would handle the rest.
+Either half, to succeed, must apply to $E_\infty$ and $E_S$ wherever they sit in the
+resolution tree: over any point of $L_\infty$, at any depth, and after free or satellite
+blow-ups. Sections~\ref{sec:depth01}--\ref{sec:bridge} record how far each half actually goes.
+
+\section{Dicriticals at infinity of small depth}\label{sec:depth01}
+
+This section proves the two depth $0$ and depth $1$ steps toward Theorem~R, each with every
+intermediate computation shown, and then records the constant-leading-form argument in its
+honest state: a sketch for free centers only. The conclusion of this section is that every
+dicritical at infinity of a non-affine Keller map has depth at least $2$. Nothing here touches
+depth $2$ or beyond, except for the sketch in \S\ref{sec:constant-form}, whose limits are
+stated there.
+
+\subsection{The line at infinity}\label{sec:linf}
+
+\begin{lemma}[The line at infinity]\label{lem:linf}
+\textit{Status: grade B, proof by hand; the binary-form step is executed in
+\filename{base\_point\_at\_infinity\_check.py}, check $1$.}
+For a non-affine Keller map, $L_\infty$ is not dicritical for any $\Lambda_c$.
+\end{lemma}
+
+\begin{proof}
+Let $d = \max(\deg P, \deg Q) \geq 2$, the non-affine case. Write $P_d$ and $Q_d$ for the
+homogeneous components of degree $d$ of $P$ and $Q$ (zero if the corresponding degree is
+smaller than $d$). The restriction $\varphi_c|_{L_\infty}$ is the rational function
+$P_d / Q_d$ on $L_\infty \cong \mathbb{P}^1$, where the point $c$ contributes only a constant
+shift that does not affect constancy. We show this ratio is constant, in two cases.
+
+\emph{Case 1: unequal degrees.} Suppose $\deg P \neq \deg Q$, say $\deg P > \deg Q$ (the other
+case is symmetric). Then on $L_\infty$, the term of highest degree in the pencil is $P_d$
+alone, so $P_d / Q_d$ is $\infty$ wherever $Q_d$ vanishes to lower order, and the restriction
+is the constant $\infty$. Explicitly: homogenizing, the leading part of a member
+$\lambda P + \mu Q$ at infinity is $\lambda P_d$ (since $\deg Q < d$), so the pencil has the
+single point at infinity determined by $P_d$ as its value, independent of the member. The
+restriction is constant, so $L_\infty$ is not dicritical. The case $\deg Q > \deg P$ gives
+the constant $0$ by the same computation.
+
+\emph{Case 2: equal degrees.} Suppose $\deg P = \deg Q = d$. The Jacobian $[P,Q]$ is a nonzero
+constant, so in particular its homogeneous component of degree $2d - 2$ vanishes. That
+component is exactly $[P_d, Q_d]$, because differentiating lowers degree by $1$ in each factor
+and the bracket of the top components is the top component of the bracket:
+\begin{equation}\label{eq:top-bracket}
+[P,Q]_{2d-2} = [P_d, Q_d] = 0.
+\end{equation}
+So it suffices to prove the following binary-form lemma.
+
+\begin{lemma}[Proportionality of binary forms with vanishing bracket]\label{lem:binary}
+Let $f, g$ be binary forms (homogeneous polynomials in two variables) of the same degree
+$\geq 1$. If $[f,g] = 0$, then $f = r g$ for some constant $r \in K$.
+\end{lemma}
+
+\begin{proof}[Proof of Lemma~\ref{lem:binary}, step by step]
+Work in the rational function field and set $h = f / g$, a rational function of degree $0$,
+meaning $h(tx, ty) = h(x,y)$ for all $t$. Differentiating this homogeneity relation with
+respect to $t$ at $t = 1$ gives Euler's relation for $h$:
+\begin{equation}\label{eq:euler-h}
+x h_x + y h_y = 0.
+\end{equation}
+Next, the bracket is bilinear and satisfies the quotient rule in the first argument:
+\[
+[h, g] = \frac{[f,g]}{g} - \frac{f [g,g]}{g^2} = \frac{[f,g]}{g} = 0,
+\]
+using $[g,g] = 0$ and the hypothesis $[f,g] = 0$. Writing the bracket out,
+\begin{equation}\label{eq:bracket-hg}
+h_x g_y - h_y g_x = 0.
+\end{equation}
+Now suppose $(h_x, h_y) \neq (0,0)$. Equation~\eqref{eq:bracket-hg} says the vector
+$(h_x, h_y)$ is proportional to $(g_x, g_y)$: both are orthogonal to the same direction, so
+there is a scalar $\lambda$ with $(g_x, g_y) = \lambda (h_x, h_y)$ wherever the vectors are
+defined. Equation~\eqref{eq:euler-h} says $(h_x, h_y)$ is proportional to $(-y, x)$: indeed,
+$x h_x + y h_y = 0$ means $(h_x, h_y)$ is orthogonal to $(x,y)$, and in two variables the
+orthogonal direction is spanned by $(-y, x)$. Combining the two proportionalities,
+$(g_x, g_y)$ is proportional to $(-y, x)$, so
+\[
+x g_x + y g_y = 0.
+\]
+But Euler for the homogeneous form $g$ of degree $\deg g \geq 1$ says
+\[
+x g_x + y g_y = (\deg g) \cdot g \neq 0.
+\]
+This is a contradiction. Hence the supposition is false, and $(h_x, h_y) = (0,0)$. In
+characteristic $0$, a rational function with vanishing partial derivatives is constant, so
+$h = r$ for some $r \in K$, that is, $f = r g$.
+\end{proof}
+
+Returning to Case 2: Lemma~\ref{lem:binary} applied to $f = P_d$, $g = Q_d$ gives
+$P_d = r Q_d$, so $\varphi_c|_{L_\infty} = P_d / Q_d = r$ is constant. Hence $L_\infty$ is not
+dicritical. This completes both cases.
+\end{proof}
+
+\subsection{First blow-ups at infinity}\label{sec:e1lemma}
+
+\begin{lemma}[First blow-ups at infinity]\label{lem:e1}
+\textit{Status: algebra grade A, in \filename{lean/TwoDicritical/E1Keller.lean}
+(\texttt{e1\_lead\_proportional}, \texttt{jac2\_eq\_zero\_of\_natDegree\_zero}); chart step
+grade B, executed in \filename{lean/check\_e1\_index.py}, check $5$, not Lean-formalized.}
+For a Keller map, the exceptional curve of the blow-up at any point of $L_\infty$ is not
+dicritical. This holds for every degree $m$, not only for $m = 2$.
+\end{lemma}
+
+\begin{proof}
+A linear change of coordinates keeps the Keller condition (the Jacobian transforms by the
+constant determinant of the change), so we may move the point of $L_\infty$ to
+$[1 : 0 : 0]$. Let $E_1$ be the exceptional curve of the blow-up at this point, with the
+chart coordinate $t_1$ on $E_1$ as in \filename{lean/check\_e1\_index.py}. The proof has three
+steps: the restriction formula, the Wronskian computation, and the degenerate cases.
+
+\emph{Step 1: the restriction formula.} Suppose $P$ and $Q$ have the same $x$-degree
+$n \geq 1$, with $x^n$-coefficients $A, D \in K[y]$, so that
+\begin{equation}\label{eq:lead-expansion}
+P = A(y)\, x^n + (\text{terms of $x$-degree} < n), \qquad
+Q = D(y)\, x^n + (\text{terms of $x$-degree} < n).
+\end{equation}
+In the $E_1$ chart, the ratio $P/Q$ restricts to $E_1$ as
+\begin{equation}\label{eq:e1-restriction}
+\frac{P}{Q}\bigg|_{E_1} = \frac{A(1/t_1)}{D(1/t_1)}.
+\end{equation}
+The reason is that on $E_1$ only the top $x$-degree terms survive: lower $x$-degree terms
+vanish to higher order along $E_1$, and the chart coordinate $t_1$ inverts the $y$-variable,
+which is why $A$ and $D$ are evaluated at $1/t_1$. If instead the $x$-degrees of $P$ and $Q$
+differ, say $\deg_x P > \deg_x Q$, then the numerator dominates and the restriction is the
+constant $\infty$; if $\deg_x P < \deg_x Q$, it is the constant $0$. In both differing cases
+$E_1$ is already not dicritical, so only the equal-degree case remains.
+
+\emph{Step 2: the Wronskian computation.} Differentiate the expansions
+\eqref{eq:lead-expansion} term by term. The top $x$-degree contributions are:
+\begin{align}
+P_x &= n A(y)\, x^{n-1} + (\text{$x$-degree} < n-1), \\
+P_y &= A'(y)\, x^{n} + (\text{$x$-degree} < n), \\
+Q_x &= n D(y)\, x^{n-1} + (\text{$x$-degree} < n-1), \\
+Q_y &= D'(y)\, x^{n} + (\text{$x$-degree} < n).
+\end{align}
+Now form the Jacobian and collect the top $x$-degree. The product $P_x Q_y$ has top
+$x$-degree $(n-1) + n = 2n - 1$, with coefficient
+\[
+(n A) \cdot D' = n A D'.
+\]
+The product $P_y Q_x$ likewise has top $x$-degree $n + (n-1) = 2n - 1$, with coefficient
+\[
+A' \cdot (n D) = n A' D.
+\]
+Every other product of a term from $P_x, P_y$ with a term from $Q_x, Q_y$ has $x$-degree
+strictly less than $2n - 1$: lowering the $x$-degree of either factor by at least $1$ lowers
+the total by at least $1$. Therefore the $x^{2n-1}$-coefficient of $[P,Q]$ is exactly
+\begin{equation}\label{eq:wronskian-coeff}
+[P,Q]_{x^{2n-1}} = n\,\big(A D' - A' D\big).
+\end{equation}
+Since $(P,Q)$ is Keller, $[P,Q]$ is a nonzero constant, so every coefficient of a positive
+power of $x$ in $[P,Q]$ vanishes. In particular the coefficient \eqref{eq:wronskian-coeff}
+vanishes, and since $n \geq 1$,
+\[
+A D' - A' D = 0.
+\]
+This is the vanishing of the Wronskian of $A$ and $D$. In characteristic $0$ it forces $A$
+and $D$ to be proportional: indeed, where $D \neq 0$,
+\[
+\left(\frac{A}{D}\right)' = \frac{A' D - A D'}{D^2} = 0,
+\]
+so $A/D$ is constant, say $A = r D$ for $r \in K$. (This is the Lean lemma
+\texttt{e1\_lead\_proportional}.) Substituting into the restriction formula
+\eqref{eq:e1-restriction} gives
+\[
+\frac{P}{Q}\bigg|_{E_1} = \frac{r D(1/t_1)}{D(1/t_1)} = r,
+\]
+a constant. Hence $E_1$ is not dicritical in the equal-degree case either.
+
+\emph{Step 3: the degenerate case.} If both $x$-degrees are $0$, then $P, Q \in K[y]$ are
+functions of $y$ alone, so $P_x = Q_x = 0$ and $[P,Q] = 0$. This contradicts the Keller
+condition $[P,Q] \in K^\times$ (Lean lemma \texttt{jac2\_eq\_zero\_of\_natDegree\_zero}). So
+this case cannot occur for a Keller map.
+
+Since a linear change of coordinates moves any point of $L_\infty$ to $[1:0:0]$ while
+preserving the Keller condition, the same conclusion holds over every point at infinity.
+\end{proof}
+
+\begin{corollary}[Depth at least $2$]\label{cor:depth2}
+\textit{Status: follows from Lemmas~\ref{lem:linf} and~\ref{lem:e1}.}
+Every dicritical at infinity of a non-affine Keller map has depth at least $2$.
+\end{corollary}
+
+\begin{proof}
+Depth $0$ is $L_\infty$ itself, excluded by Lemma~\ref{lem:linf} for non-affine maps.
+Depth $1$ curves are the exceptional curves of blow-ups at points of $L_\infty$, excluded by
+Lemma~\ref{lem:e1}. The smallest remaining depth is $2$.
+\end{proof}
+
+\subsection{The constant-leading-form argument: a sketch for free centers only}\label{sec:constant-form}
+
+\begin{proposition}[Constant leading form --- proof sketch]\label{prop:constant-form}
+\textit{Status: grade C, proof sketch; free centers only. This is not a proof for satellite
+chains or for depth $\geq 2$ in general (obligation O3).}
+Suppose $E_k$ ($k \geq 2$) is dicritical of order $m \geq 1$ for the pencil. Then after the
+standard normalization, the leading coefficient satisfies $\deg_{u'} U(u',0) = 0$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Let $E_k$ ($k \geq 2$) be an exceptional divisor in the resolution, with local coordinates
+$(u',v')$ in which $E_k = \{v' = 0\}$. For a polynomial $S \in K[x,y]$ of degree $d$, write
+the pullback as
+\begin{equation}\label{eq:pullback}
+S = {v'}^{-\nu}\,U(u',v')\cdot(\text{monomial in }u'),
+\end{equation}
+where $\nu = \nu_{E_k}(S)$ is the order of vanishing and $U$ is a unit (nonzero at the
+center). The dicritical condition of order $m$ requires the $u'$-degree of the pencil
+restriction to equal $m$.
+
+Track the unit $U$ through the blow-up sequence, one blow-up at a time. Consider a single
+blow-up at a center with $u_0 \neq 0$ (a \emph{free} center: the center does not lie on another
+component of the total transform, so the local coordinate $u'$ is nonzero there). In the
+blow-up chart, substituting the center shifts the leading coefficient by the constant factor
+$u_0^{-2}$: schematically, if before the blow-up the leading term is $c \cdot {u'}^j$, then
+after the blow-up it is $c\, u_0^{-2} \cdot {u''}^{j}$ in the new coordinate $u''$, with the
+same exponent $j$ and a nonzero constant multiple. The point is that multiplication by the
+nonzero constant $u_0^{-2}$ changes no $u'$-degree: the exponent $j$ is carried through
+unchanged, and no new $u'$-dependence is created, because the center coordinate $u_0$ is a
+nonzero constant rather than a function of $u'$.
+
+Repeating this step along the chain: each blow-up at a center with $u_0 \neq 0$ multiplies
+the leading coefficient by a nonzero constant and preserves its $u'$-degree. A direct
+computation in the normalized chart then shows the $u'$-degree of $U(u',0)$ is $0$. The
+verification of the degree count is in \filename{general\_constant\_form.py}
+(\S\ref{sec:correspondence}).
+
+\emph{Where the sketch stops.} The step above uses $u_0 \neq 0$ at every blow-up. If a center
+lies on another component of the total transform (a satellite center), then the corresponding
+coordinate vanishes at the center, the factor is no longer a nonzero constant, and the
+degree-tracking argument as written does not go through. The sketch therefore covers free
+chains only. It does not prove that no $E_k$ ($k \geq 2$) is dicritical of order
+$m \geq 2$ in general, and it is not presented as doing so: the general $m \geq 2$ statement
+at depth $\geq 2$ is obligation O3 in \S\ref{sec:open}. The middle-divisor ($E_2$) and leaf
+cases ($E_3$, $E_4$) are checked separately as computations in \filename{middle\_e2.py},
+\filename{leaf\_e3.py}, and \filename{leaf\_e4.py}; those are fixed instances, not the
+general argument.
+\end{proof}
+
+\begin{remark}
+In the October 1 draft, Proposition~\ref{prop:constant-form} was followed by a corollary
+claiming no $E_k$ ($k \geq 2$) is dicritical of order $m \geq 2$ for any Keller map, and that
+corollary was then used to close the $m \geq 2$ half of the main theorem. That inference is
+withdrawn: a sketch for free centers does not yield the general corollary, and the general
+corollary is not claimed anywhere in this revision.
+\end{remark}
+
+\section{The first exceptional divisor: a false obstruction and its correction}\label{sec:e1}
+
+This section does two things the October 1 draft got backwards. First, it exhibits the draft's
+$E_1$ degree obstruction as false, shows the exact step where its proof goes wrong, and
+computes the counterexample in full. Second, it records the corrected statement, which was
+already proved as Lemma~\ref{lem:e1} in \S\ref{sec:e1lemma}: first blow-ups at infinity are
+never dicritical for a Keller map, for every degree $m$. The correction is strictly stronger
+than the draft's claim in scope (every $m$, not only $m = 2$) and strictly weaker in what it
+asserts about $E_1$ itself (it does not claim anything about a hypothetical $m = 2$ open
+subset, which, as the counterexample shows, contains Keller pairs).
+
+\subsection{What the October 1 draft claimed}
+
+The draft's $E_1$ degree obstruction theorem read, in substance: let
+$P, Q$ lie in the $E_1$ $m = 2$ open subset, meaning $\nu_{E_1} = -2$ and both pencil
+restrictions have exact degree $2$; then $[P,Q]$ is never a nonzero constant. Its proof argued
+as follows: every monomial $x^J y^K$ allowed by the order condition $\nu_{E_1} \geq -2$
+satisfies $J + K \geq 2$; hence $P_x, P_y, Q_x, Q_y$ have no constant term; hence $[P,Q]$ has
+minimum total degree $2$ and cannot be a nonzero constant. Every step after the first
+sentence is correct arithmetic. The first sentence is false, and this subsection shows why,
+step by step.
+
+\subsection{The order condition, computed correctly}
+
+\begin{lemma}[The $E_1$ order condition]\label{lem:e1-order}
+In the $E_1$ chart, the valuation satisfies
+\begin{equation}\label{eq:e1-valuation}
+\nu_{E_1}(x^i y^j) = -i.
+\end{equation}
+Consequently $\nu_{E_1} \geq -2$ holds for a monomial $x^i y^j$ if and only if $i \leq 2$,
+that is, if and only if the $x$-degree is at most $2$. It says nothing about the total degree
+$i + j$.
+\end{lemma}
+
+\begin{proof}
+Equation~\eqref{eq:e1-valuation} is the normalization of the $E_1$ valuation used in the
+$E_1$ chart (see \filename{lean/check\_e1\_index.py} and
+\filename{lean/TwoDicritical/E1Keller.lean}): the variable $x$ has a pole of order $1$ along
+$E_1$, contributing $-1$ per power of $x$, while $y$ contributes $0$. Hence for the monomial
+$x^i y^j$,
+\[
+\nu_{E_1}(x^i y^j) = i \cdot \nu_{E_1}(x) + j \cdot \nu_{E_1}(y) = i \cdot (-1) + j \cdot 0 = -i.
+\]
+The inequality $\nu_{E_1} \geq -2$ is therefore
+\[
+-i \geq -2 \quad\Longleftrightarrow\quad i \leq 2.
+\]
+In words: the condition bounds the $x$-degree by $2$. It does not bound $j$, and it does not
+bound the total degree $i + j$ from below: the monomial $y$ itself, with $i = 0$ and $j = 1$,
+satisfies $\nu_{E_1}(y) = 0 \geq -2$ while having total degree $1$. The draft's claim that
+every allowed monomial has $J + K \geq 2$ is thus false on its face, once the valuation is
+written out.
+\end{proof}
+
+\subsection{How the mix-up happened}
+
+The draft's error is an index mix-up, identified in the Lean analysis
+(\filename{lean/README.md}, item 2). The computation \filename{e1\_solitary.py} indexes its
+unknowns $p[J,K]$ by the homogeneous monomial $X^{d-J-K} Y^J Z^K$, that is, by the affine
+monomial
+\[
+x^{d-J-K} y^J.
+\]
+The draft's proof, and the scripts \filename{e1\_keller\_search.py} and the Lean file
+\filename{lean/TwoDicritical/E1Obstruction.lean}, read $p[J,K]$ as the monomial $x^J y^K$
+instead. Under that misreading, the condition on the indices becomes a condition on the total
+degree $J + K$, and the draft concluded that every allowed monomial has total degree at least
+$2$. At $d = 4$, both index sets have $12$ monomials, so the count agreed and the mix-up
+was hidden: the $12$-dimensional span at $d = 4$ is real, but it is a span of monomials of
+$x$-degree at most $2$, not of total degree at least $2$. The file
+\filename{lean/TwoDicritical/E1Obstruction.lean} proves a true lemma about the misread set of
+monomials (if every monomial of $P$ and $Q$ has total degree at least $2$, then $[P,Q]$ has
+no constant term), but that set is not the $E_1$ condition, so the lemma does not prove
+anything about $E_1$.
+
+\subsection{The counterexample, computed in full}
+
+\begin{example}[A Keller pair in the draft's $E_1$ open subset]\label{ex:e1-counter}
+\textit{Status: grade A in Lean (\filename{lean/TwoDicritical/E1Keller.lean},
+\texttt{thm\_e1\_false}); the computation below is exact.}
+Set
+\begin{equation}\label{eq:e1-counter}
+P = (x + y^2)^2 + y, \qquad Q = P + x + y^2.
+\end{equation}
+We expand $P$ first, term by term:
+\[
+P = x^2 + 2 x y^2 + y^4 + y.
+\]
+Its partial derivatives are:
+\begin{align}
+P_x &= 2x + 2y^2 = 2\,(x + y^2), \\
+P_y &= 4x y + 4y^3 + 1 = 4y\,(x + y^2) + 1.
+\end{align}
+Now compute $[P,Q]$. Since $Q = P + x + y^2$ and $[P,P] = 0$, bilinearity of the bracket
+gives
+\[
+[P,Q] = [P, x] + [P, y^2].
+\]
+Each bracket is computed separately. For $[P,x]$: $x$ has derivatives $1$ and $0$, so
+\[
+[P,x] = P_x \cdot 0 - P_y \cdot 1 = -P_y = -\big(4y(x+y^2) + 1\big).
+\]
+For $[P, y^2]$: $y^2$ has derivatives $0$ and $2y$, so
+\[
+[P, y^2] = P_x \cdot 2y - P_y \cdot 0 = 2y P_x = 2y \cdot 2(x+y^2) = 4y(x+y^2).
+\]
+Adding the two contributions, the $4y(x+y^2)$ terms cancel exactly:
+\begin{equation}\label{eq:e1-bracket}
+[P,Q] = -\big(4y(x+y^2) + 1\big) + 4y(x+y^2) = -1 \in K^\times.
+\end{equation}
+So $(P,Q)$ is a Keller pair.
+
+It lies in the draft's $E_1$ $m = 2$ open subset at $d = 4$: its $x$-degree is $2$ (the term
+$x^2$), so $\nu_{E_1} = -2$ by Lemma~\ref{lem:e1-order}, and each pencil restriction is the
+function $C(t_1) = t_1^2$ of exact degree $2$ (this is the membership statement formalized as
+\texttt{thm\_e1\_false} in \filename{lean/TwoDicritical/E1Keller.lean}, with the open subset
+denoted \texttt{E1Open4} there). Yet $[P,Q] = -1$ is a nonzero constant, contradicting the
+draft's theorem directly.
+
+Two further observations pin down the failure. First, $P$ contains the monomial $y$, of total
+degree $1$: the draft's claimed lower bound $J + K \geq 2$ fails for a monomial that is
+actually present. Second, $P/Q$ restricts to $1$ on $E_1$ for this pair, so $E_1$ is not
+dicritical for them at all: the draft's ``open subset'' does not even capture an $m = 2$
+dicritical. The draft's proof argued about the wrong monomials, and its conclusion is false.
+\end{example}
+
+\begin{remark}[Withdrawn theorem]
+The draft's $E_1$ degree obstruction theorem and its corollary (``no dicritical of order
+$m \geq 2$ exists for any Keller map'') are both withdrawn. The corollary depended on the false theorem for the $E_1$ case and on the
+free-only sketch of Proposition~\ref{prop:constant-form} for the $E_k$, $k \geq 2$, case;
+neither leg supports it as stated.
+\end{remark}
+
+\subsection{The corrected \texorpdfstring{$E_1$}{E1} statement}
+
+The intended conclusion of the draft's $E_1$ argument --- that the first blow-up cannot be
+dicritical for a Keller map --- is true, and it is Lemma~\ref{lem:e1} of
+\S\ref{sec:e1lemma}, proved there for every degree $m$. To recap the logic in one place: the
+restriction of $P/Q$ to $E_1$ is $A(1/t_1)/D(1/t_1)$ when the $x$-degrees agree (and $0$ or
+$\infty$ when they differ), and the Keller condition forces the Wronskian $AD' - A'D$ to
+vanish via the $x^{2n-1}$-coefficient \eqref{eq:wronskian-coeff}, hence $A = rD$ and the
+restriction is the constant $r$. The algebra is Lean-grade-A; the chart step is executed, not
+Lean-formalized (obligation O5). No $m = 2$ open subset, and no total-degree argument, is
+used anywhere in the corrected proof.
+
+\section{The \texorpdfstring{$m=1$}{m=1} bridge, under its premises}\label{sec:bridge}
+
+This section keeps the October 1 draft's Vandermonde and block-rank argument, which is correct
+as linear algebra, but restates its scope exactly. The argument proves a collapse of a system
+of equations. Whether that system is the system of two $m = 1$ dicriticals depends on two
+premises, (P1) and (P2), stated below. Premise (P2) is not derived anywhere in this paper; it
+is an open obligation (O2). The theorem of this section is therefore a theorem about equations
+under premises, not an unconditional geometric statement, and its corollaries are fenced
+accordingly.
+
+\subsection{The chart and the two premises}
+
+Read through its chart, the bridge concerns the following geometry. The paper's pullback is
+\[
+S^h\big(1, b, b^2(a + \tilde{a} b)\big),
+\]
+the chart at the point $w_2 = a$ of $E_2$ over $[1 : 0 : 0]$, where $w_2 = x / y^2$. The two
+centers $a_3 \neq a_4$ are points of this $E_2$. The bridge argument rests on:
+\begin{itemize}[nosep]
+\item[(P1)] the two dicriticals lie over two distinct \emph{free} points of this $E_2$;
+\item[(P2)] every member of the pencil has pole order at most $1$ on them.
+\end{itemize}
+Premise (P1) is part of the geometric reading of the equations: the chart above is the chart
+at a free point of $E_2$, and the argument is set in that chart. Premise (P2) is a hypothesis
+on the members, not a consequence of the definitions used here: the paper defines $m$ as the
+degree of $\varphi_c|_E$, and degree $1$ does not force pole order $1$
+(\filename{lean/check\_satellite.py}, check $7$). Deriving (P2) from the definition of $m$,
+or supplying a separate argument for higher pole order, is obligation O2 in
+\S\ref{sec:open}. Nothing in this section assumes (P2) silently: every statement that needs
+it says so.
+
+\subsection{Setup of the equations}
+
+Consider two distinct centers $a_3 \neq a_4$ (both nonzero), each requiring order
+$\operatorname{ord}_b(S) \geq 2d - 1$ (the $m = 1$ condition, under (P2)). For
+$S = \sum p_{JK} x^J y^K$, the pullback at center $a$ is
+\begin{equation}\label{eq:bridge-pullback}
+S_a(b) = \sum_{J,K} p_{JK}\,(a + \tilde{a} b)^{d-J-K}\, b^{2d-2J-K},
+\end{equation}
+and we require the coefficients of $b^0, \dots, b^{2d-2}$ to vanish at $a = a_3$ and at
+$a = a_4$. The exponent $d - J - K$ is the remaining degree after the monomial $x^J y^K$ is
+factored out, and the exponent $2d - 2J - K$ is the $b$-order contributed by that monomial in
+the chart; the condition $\operatorname{ord}_b(S) \geq 2d - 1$ is exactly the vanishing of
+all coefficients below $b^{2d-1}$.
+
+\begin{theorem}[Bridge collapse, under (P1) and (P2)]\label{thm:bridge}
+\textit{Status: equations grade A, in \filename{lean/TwoDicritical/BridgeCollapse.lean};
+geometric reading grade B, executed in \filename{lean/check\_satellite.py}.}
+For arbitrary distinct nonzero $a_3, a_4$ and arbitrary $d \geq 2$, the simultaneous
+conditions $\operatorname{ord}_b(S) \geq 2d - 1$ at both centers force $p_{JK} = 0$ whenever
+$J \geq 1$. The nullspace is exactly $\operatorname{span}\{1, y\}$.
+\end{theorem}
+
+In particular, every $P, Q$ in the span is a function of $y$ alone, so $[P,Q] \equiv 0$: no
+Keller pair exists in the system of equations. Whether this rules out two geometric $m = 1$
+dicriticals depends on (P1) and (P2); see \S\ref{sec:bridge-scope}.
+
+\subsection{Descending induction on weighted degree}
+
+Order monomials by the weighted degree $W = 2J + K$, descending. For fixed $W$, write the
+variables as $(J_k, K_k)$, $k = 1, \dots, n$, ordered by descending $J_k$. Define
+\begin{equation}\label{eq:ek-def}
+e_k = d - J_k - K_k = d - W + J_k.
+\end{equation}
+Since $W$ is fixed and the $J_k$ are strictly decreasing by the ordering, the $e_k$ are
+strictly decreasing, hence distinct. This distinctness is the whole input to the rank lemma
+below, so we record it explicitly: for $k < l$,
+\[
+e_k - e_l = J_k - J_l > 0.
+\]
+
+The equations for weight $W$ come from the pairs $(t, i)$ with $2d - t + i = W$, where $t$ is
+the $b$-power and $i$ the $\tilde{a}$-power, at both centers. To see why, expand the factor
+$(a + \tilde{a} b)^{e_k}$ in \eqref{eq:bridge-pullback} by the binomial theorem, term by
+term:
+\[
+(a + \tilde{a} b)^{e_k} = \sum_{i \geq 0} \binom{e_k}{i} a^{e_k - i} (\tilde{a} b)^i.
+\]
+Multiplying by $b^{2d - 2J_k - K_k}$ and using $W = 2J_k + K_k$, the monomial $p_{J_k K_k}$
+contributes to the coefficient of $b^t$ exactly the terms with $2d - W + i = t$, that is,
+$i = t - (2d - W)$. Collecting over $k$ gives the $(t, i, a)$ equation:
+\begin{equation}\label{eq:block}
+\sum_{k=1}^n p_{J_k K_k}\binom{e_k}{i} a^{e_k-i} = 0, \qquad a \in \{a_3, a_4\}.
+\end{equation}
+Crucially, the equations \eqref{eq:block} for weight $W$ involve only variables of weight
+exactly $W$ at the top: variables of weight $> W$ contribute to higher $b$-powers or have
+already been eliminated, as the induction below makes precise.
+
+\begin{lemma}[Block full rank]\label{lem:block-rank}
+For distinct $e_1, \dots, e_n$ and $m \geq n$, the $2m \times n$ matrix with entries
+$\binom{e_k}{i} a^{e_k-i}$ ($i = 0, \dots, m-1$, $a \in \{a_3, a_4\}$) has rank $n$.
+\end{lemma}
+
+\begin{proof}
+We reduce the matrix in three explicit steps, each preserving rank.
+
+\emph{Step 1: factor the columns and rows.} Factor column $k$ by $a^{e_k} \neq 0$ (note $a$
+is $a_3$ or $a_4$, both nonzero by hypothesis) and row $(i, a)$ by $a^{-i} \neq 0$. Rank is
+preserved under nonzero column and row scalings. After this step, the entry in row
+$(i, a)$, column $k$ is $\binom{e_k}{i}$, independent of $a$. The two centers now give two
+copies of the same rows, so it suffices to show that the $m \times n$ matrix
+$[\binom{e_k}{i}]$ ($i = 0, \dots, m-1$) has rank $n$; taking the first $n$ rows
+($i = 0, \dots, n-1$) suffices, since $m \geq n$.
+
+\emph{Step 2: triangularize by row operations.} For fixed $i$, the binomial coefficient
+$\binom{e}{i}$, viewed as a function of $e$, is a polynomial in $e$ of exact degree $i$:
+\[
+\binom{e}{i} = \frac{e (e-1) \cdots (e - i + 1)}{i!}
+= \frac{1}{i!} e^i + (\text{terms of degree} < i \text{ in } e).
+\]
+Hence row $i$ of the matrix $[\binom{e_k}{i}]$ equals $\frac{1}{i!}$ times the row
+$[e_k^i]$ plus a linear combination of the rows $[e_k^j]$ for $j < i$. Proceeding from
+$i = 0$ upward, subtract suitable multiples of earlier rows from row $i$ to kill all
+lower-degree terms: row $0$ is already $[1]$; row $1$ is $[e_k] + (\text{constant row})$,
+so subtracting the constant multiple of row $0$ leaves $[e_k]$; row $2$ is
+$\frac{1}{2}[e_k^2] + (\text{combination of rows } 0, 1)$, so subtracting leaves
+$\frac{1}{2}[e_k^2]$; and so on. These are elementary row operations, so they preserve rank
+and multiply the determinant by $1$. After all $n$ steps, the matrix is the scaled
+Vandermonde matrix $[e_k^i / i!]$ ($i = 0, \dots, n-1$).
+
+\emph{Step 3: the Vandermonde determinant.} The determinant of $[e_k^i]$ is the classical
+Vandermonde product $\prod_{j < k} (e_k - e_j)$, nonzero because the $e_k$ are distinct
+(shown above from the ordering by $J_k$). Factoring $1/i!$ out of row $i$ gives
+\begin{equation}\label{eq:vandermonde-det}
+\det[\binom{e_k}{i}] = \frac{\prod_{j<k}(e_k - e_j)}{\prod_{i=0}^{n-1} i!} \neq 0.
+\end{equation}
+A nonzero $n \times n$ minor means the matrix has rank $n$. The $n = 3$ case is verified
+symbolically in \filename{m1\_block\_rank.py}, giving
+$-(e_1-e_2)(e_1-e_3)(e_2-e_3)/2$, which agrees with \eqref{eq:vandermonde-det} since
+$\prod_{i=0}^{2} i! = 0! \cdot 1! \cdot 2! = 2$ and the sign is the ordering of the factors.
+This completes the proof.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:bridge}]
+Descend on $W$ from $2d$ to $2$, maintaining the inductive hypothesis that all variables
+with weight $> W$ are zero. The base case is $W = 2d$: there are no variables of weight
+$> 2d$ (since $W = 2J + K \leq 2d$ for monomials of degree at most $d$), so the hypothesis
+holds vacuously.
+
+For the inductive step at weight $W$, the equations \eqref{eq:block} for weight $W$ involve
+only variables of weight $\geq W$: a variable of weight $W' > W$ contributes to $b$-powers
+above those in the weight-$W$ system, and by the inductive hypothesis all such variables are
+already $0$. Hence the weight-$W$ system is exactly the block system of
+Lemma~\ref{lem:block-rank}, which has full column rank $n$. Therefore
+$p_{J_k K_k} = 0$ for all $k$, that is, all variables of weight $W$ vanish. This restores the
+hypothesis for the next lower weight.
+
+Descending to $W = 2$ eliminates every variable with $J \geq 1$: any monomial with $J \geq 1$
+has $W = 2J + K \geq 2$, and the descent covers all weights $W \geq 2$. The only monomials
+with $W < 2$ are $(J,K) = (0,0)$ with $W = 0$ and $(J,K) = (0,1)$ with $W = 1$. These are never
+constrained by the descent, so the nullspace is exactly $\operatorname{span}\{1, y\}$.
+\end{proof}
+
+\subsection{Computational verification}
+
+The induction is verified computationally, at the fixed degrees and instances stated (these
+are checks of the linear algebra, not replacements for the proof above):
+\begin{itemize}[nosep]
+\item Symbolic nullspace at general $a_3 \neq a_4$: $d = 2$ gives nullity $2$; $d = 3$ gives
+nullity $2$ (\filename{m1\_bridge\_general.py}).
+\item Numeric nullspace at $a_3 = 2$, $a_4 = 5$: nullity $2$ for $d = 2, \dots, 8$
+(\filename{m1\_induction.py}).
+\item Block-triangular structure exhibited at $d = 6$ (\filename{m1\_triangular.py}).
+\item Vandermonde determinant verified symbolically (\filename{m1\_block\_rank.py}).
+\end{itemize}
+
+\subsection{Scope of the bridge result}\label{sec:bridge-scope}
+
+Under premises (P1) and (P2), the bridge has the following consequences, and no others are
+claimed:
+\begin{itemize}[nosep]
+\item With a single center imposed, the same block argument gives the larger nullspace
+$\operatorname{span}\{1, y, x - a y^2\}$ (\filename{lean/TwoDicritical/OneCenter.lean},
+\texttt{bridge\_one\_center}). So one such dicritical already forces degree at most $2$:
+no pencil of degree at least $3$ has even one dicritical of this chart type.
+\item In degree $2$, the automorphism $(x - a y^2, y)$ has exactly one such dicritical,
+consistent with Theorem~R (it has one dicritical at infinity, as
+Corollary~\ref{cor:automorphisms} requires, and no second).
+\item The bridge as proved here says nothing about pencils of degree at least $3$ beyond the
+one-center remark above, because (P2) is not derived: a dicritical of degree $1$ with pole
+order greater than $1$ is not governed by the system \eqref{eq:block}. Nor does it cover
+dicriticals over satellite points, over different points of $L_\infty$, or at different
+depths; those are obligation O1.
+\end{itemize}
+
+\subsection{The adjacent case: a computation at \texorpdfstring{$d = 3$}{d=3} only}
+
+The adjacent $m = 1$ case --- two dicriticals sharing a curve in the resolution tree rather
+than lying over two free points of one $E_2$ --- is treated in this paper only by computation
+at $d = 3$ (\filename{e3\_adjacent.py}, \filename{routeB\_cancellation.py}), covering the
+$E_2$--$E_3$ adjacent pair at that degree. \textit{Status: grade C, fixed-degree
+computation.} There is no argument here for other degrees; the general adjacent case is
+obligation O4 in \S\ref{sec:open}. In the October 1 draft, this computation was cited as
+closing the adjacent case for every degree. That citation is withdrawn.
+
+\section{What remains open}\label{sec:open}
+
+This section replaces the October 1 draft's ``Proof of the main theorem,'' which assembled
+the false $E_1$ theorem, the free-only constant-form sketch, the premises-dependent bridge,
+and the $d = 3$ adjacent computation into a contradiction, via a case split (``an adjacent
+pair or a bridge'') that was asserted, not proved. No such assembly is attempted here. The
+obligations below are what a proof of Theorem~R still needs; the tests after them are checks
+any proposed proof must pass.
+
+\subsection{Obligations}
+
+\begin{itemize}[nosep]
+\item[\textbf{O1.}] \textbf{The case split.} The positions of two dicriticals in a resolution
+tree are more varied than ``an adjacent pair or a bridge'': dicriticals can lie over
+\emph{different points} of $L_\infty$ (a pencil can have several base points at infinity in
+general, as the non-Keller map $(x, xy)$ shows, and whether a Keller counterexample's pencil
+can must be settled); over \emph{satellite points} (the point $a = \infty$ of $E_2$ in
+$(x + y^3, y)$, and deeper ones); and at \emph{different depths}. A proof must cover every
+configuration of $E_\infty$ and $E_S$ from \S\ref{sec:where}.
+\item[\textbf{O2.}] \textbf{Premise (P2).} Derive pole order at most $1$ from the definition of
+$m$, or restate the bridge with (P2) as a hypothesis and supply a separate argument for
+higher pole order. Until then, the bridge governs only the system
+\eqref{eq:bridge-pullback}--\eqref{eq:block} under (P1) and (P2).
+\item[\textbf{O3.}] \textbf{$m \geq 2$ at depth $\geq 2$.} Prove the constant-leading-form
+statement of Proposition~\ref{prop:constant-form} for every chain of centers, satellite ones
+included. Today there is a sketch for free chains only.
+\item[\textbf{O4.}] \textbf{The adjacent case} for every degree, not only $d = 3$.
+\item[\textbf{O5.}] \textbf{Two small formalizations:} the chart step of Lemma~\ref{lem:e1}
+and the binary-form step of Lemma~\ref{lem:linf} in Lean. The algebra of Lemma~\ref{lem:e1}
+is formalized; the chart step is executed, not formalized.
+\item[\textbf{O6.}] \textbf{The Keller condition must be used globally.} Theorem~R is false
+without it. The map $(x, xy)$, with Jacobian $x$, has two dicriticals at infinity in
+$\Lambda_{(1,1)}$, over $[1 : 0 : 0]$ and $[0 : 1 : 0]$; the second maps onto the line $u = 0$
+of non-proper values (\filename{restatement\_checks.py}, check $2$). Any argument that never
+uses $[P,Q] \in K^\times$ cannot prove Theorem~R. This is a standing check on every step
+above: Lemmas~\ref{lem:linf} and~\ref{lem:e1} use the Keller condition (vanishing of
+$[P_d, Q_d]$, vanishing of the Wronskian coefficient), while the bridge's linear algebra and
+the constant-form sketch must be read with their premises attached.
+\end{itemize}
+
+\subsection{Tests any proof must pass}
+
+\begin{itemize}[nosep]
+\item[\textbf{T1.}] Automorphisms have exactly one dicritical at infinity, of degree $1$
+(Corollary~\ref{cor:automorphisms}), but its position varies: over the free point $a$ of
+$E_2$ for $(x - a y^2, y)$ (where $P/Q = \tilde{a}/a$ there), and over the satellite point
+$a = \infty$ of $E_2$, at depth $5$, for $(x + y^3, y)$. A lemma that rules out a dicritical
+in either position is false.
+\item[\textbf{T2.}] The identity. Its dicritical at infinity is $L_\infty$ itself;
+Lemma~\ref{lem:linf} excludes only non-affine maps.
+\item[\textbf{T3.}] Non-Keller maps can have two dicriticals at infinity (O6).
+\item[\textbf{T4.}] Every Keller map of degree at least $2$ has two exceptional dicriticals in
+total (Corollary~\ref{cor:count-fails}), so only the count \emph{at infinity} can be
+bounded. Any argument that bounds the total count is refuted by Example~\ref{ex:automorphism}.
+\end{itemize}
+
+\section{Script-to-arithmetic correspondence}\label{sec:correspondence}
+
+Each script below was actually executed; outputs are archived in \filename{outputs/}. The
+table maps every script to the exact paper statement it certifies, \emph{under the corrected
+statements of this revision}. The grade column follows the restatement note, \S 8: A means
+machine-checked, B means a proof by hand from stated facts or an exact computation outside
+Lean, C means a sketch or a computation at fixed degrees. A script that certified a withdrawn
+statement is listed with what it actually certifies now, not with the draft's reading of it.
+
+\begin{center}
+\small
+\begin{tabular}{llll}
+\textbf{Script} & \textbf{Paper locus} & \textbf{Certifies} & \textbf{Grade} \\ \midrule
+\filename{general\_constant\_form.py} & Prop.~\ref{prop:constant-form} & Leading-unit degree count, free chains only & C \\
+\filename{middle\_e2.py} & Prop.~\ref{prop:constant-form} & $E_2$ instance of the sketch & C \\
+\filename{leaf\_e3.py} & Prop.~\ref{prop:constant-form} & $E_3$ leaf instance of the sketch & C \\
+\filename{leaf\_e4.py} & Prop.~\ref{prop:constant-form} & $E_4$ leaf instance of the sketch & C \\
+\filename{e1\_solitary.py} & \S\ref{sec:e1} & $12$-monomial count at $d = 4$ (indexing as computed) & C \\
+\filename{e1\_global.py} & \S\ref{sec:e1} & Explicit pair, $\nu = -2$, $\deg = 2$ (membership data) & C \\
+\filename{e1\_keller\_search.py} & \S\ref{sec:e1} & Searched the misread monomial set; superseded & --- \\
+\filename{m1\_bridge\_general.py} & Thm.~\ref{thm:bridge} & Symbolic nullspace, $d = 2, 3$ & B \\
+\filename{m1\_induction.py} & \S\ref{sec:bridge} & Nullity $2$ for $d = 2, \dots, 8$ & C \\
+\filename{m1\_triangular.py} & \S\ref{sec:bridge} & Block-triangular structure at $d = 6$ & C \\
+\filename{m1\_block\_rank.py} & Lem.~\ref{lem:block-rank} & Vandermonde determinant $\neq 0$ & B \\
+\filename{at\_degree\_bound.py} & Prop.~\ref{prop:constant-form} & Finite bridge table, $m \leq 4$ & C \\
+\filename{at\_degree\_bound\_m5.py} & Prop.~\ref{prop:constant-form} & Finite bridge table, $m \leq 5$ & C \\
+\filename{mixed\_poles.py} & Prop.~\ref{prop:constant-form} & Mixed $(2,3)$ bridge instance & C \\
+\filename{depth5\_global.py} & Prop.~\ref{prop:constant-form} & Depth-$5$ enumeration & C \\
+\filename{depth6\_enum.py} & Prop.~\ref{prop:constant-form} & Depth-$6$ enumeration & C \\
+\filename{routeB\_cancellation.py} & \S\ref{sec:bridge} & Adjacent $m = 1$ at $d = 3$ only & C \\
+\filename{e3\_adjacent.py} & \S\ref{sec:bridge} & $E_2$--$E_3$ adjacent pair at $d = 3$ & C \\
+\end{tabular}
+\end{center}
+
+The Lean evidence, which is not a script in the table above, is:
+\begin{itemize}[nosep]
+\item \filename{lean/TwoDicritical/E1Keller.lean}: \texttt{thm\_e1\_false} (the draft's $E_1$
+theorem is false, Example~\ref{ex:e1-counter}); \texttt{e1\_lead\_proportional} and
+\texttt{jac2\_eq\_zero\_of\_natDegree\_zero} (the algebra of Lemma~\ref{lem:e1}); grade A for
+the algebra.
+\item \filename{lean/TwoDicritical/BridgeCollapse.lean} and
+\filename{lean/TwoDicritical/OneCenter.lean}: the bridge equations and the one-center span
+(Theorem~\ref{thm:bridge}, \S\ref{sec:bridge-scope}); grade A for the equations.
+\item \filename{lean/check\_e1\_index.py} (check $5$) and
+\filename{lean/check\_satellite.py} (check $7$): the $E_1$ chart step and the
+degree-versus-pole-order distinction; executed checks, grade B.
+\item \filename{base\_point\_at\_infinity\_check.py} (check $1$) and
+\filename{restatement\_checks.py} (check $2$): the binary-form step of
+Lemma~\ref{lem:linf} and the non-Keller example of O6; executed checks, grade B.
+\end{itemize}
+
+\section{Computational archive}\label{sec:archive}
+
+All scripts used in this work are archived in \filename{scripts/} with their outputs in
+\filename{outputs/}, as archived with the October 1 draft:
+\begin{itemize}[nosep]
+\item 18 Python scripts (SymPy-based), each with a header stating its epistemic status;
+\item 18 output files recording exact stdout and exit codes;
+\item All scripts exited with code $0$ on re-execution (October 1, 2026).
+\end{itemize}
+This revision changes no script and claims no new re-execution: the corrections are to the
+statements the scripts are read as certifying (\S\ref{sec:correspondence}), not to the
+scripts themselves.
+
+\subsection*{Reproducibility}
+All artifacts are archived in \href{https://github.com/brandonmccraryresearch-cloud/2D-Jacobian-Conjecture-Workspace}{the public repository}, directory \filename{branch\_two\_dicritical/}. Each script runs with \filename{\textasciitilde/miniconda3/envs/physics/bin/python} (Python 3.12, SymPy). The verification script \filename{verify\_all.sh} re-runs every script and checks exit codes.
+
+\section{Computational and AI-assisted research disclosure}\label{sec:disclosure}
+
+Muse (Meta), the author's personal AI assistant, assisted with computational scripting,
+manuscript drafting, and proof verification; all script outputs were verified by actual
+execution. The author (B.~D.~McCrary) directed the investigation, verified the results, and
+takes responsibility for the manuscript. This revision was drafted with the same assistance:
+the October 1 draft was corrected against the October 13, 2026 restatement note, the
+derivations were expanded step by step, and no new theorem, computation, or script output
+was introduced. The mathematical argument stands on the artifacts above, not on these
+attributions.
+
+\begin{thebibliography}{9}
+\bibitem{GGHV} Guccione, J.~A., Guccione, J.~J., Horruitiner, R., Valqui, C. \textit{The Jacobian conjecture for the degree pair $(72,108)$.} arXiv:2204.14178v1 (2022).
+\bibitem{JC125note} McCrary, B.~D., Muse. \textit{The $(72,108)$ Candidate for the Planar Jacobian Conjecture: A Containment Note.} Zenodo, 2026. \href{https://doi.org/10.5281/zenodo.22941057}{doi:10.5281/zenodo.22941057}.
+\bibitem{Jelonek1993} Jelonek, Z. \textit{The set of points at which a polynomial map is not proper.} Ann.\ Polon.\ Math.\ 58 (1993), no.~3, 259--266. doi:10.4064/ap-58-3-259-266.
+\bibitem{Chau2008} Nguyen Van Chau. \textit{Plane Jacobian problem for rational polynomials.} arXiv:0801.4138.
+\bibitem{Chau2009} Nguyen Van Chau. \textit{Pencil of irreducible rational curves and plane Jacobian conjecture.} arXiv:0905.3939.
+\bibitem{AH2015} Abhyankar, S.~S., Heinzer, W.~J. \textit{Existence of dicritical divisors revisited.} arXiv:1508.06015.
+\bibitem{AbhyankarSurvey} \textit{Abhyankar's work on dicritical divisors.} arXiv:1707.06733. A survey; it states no equivalence between dicriticals and the conjecture.
+\bibitem{BBR1962} Bia\l{}ynicki-Birula, A., Rosenlicht, M. \textit{Injective morphisms of real algebraic varieties.} Proc.\ Amer.\ Math.\ Soc.\ 13 (1962), 200--203.
+\bibitem{Restatement} McCrary, B.~D. \textit{The two-dicritical theorem, restated.} Unpublished working note, \filename{branch\_two\_dicritical/RESTATEMENT.md}, October 13, 2026. Not published or deposited.
+\end{thebibliography}
+
+\end{document}

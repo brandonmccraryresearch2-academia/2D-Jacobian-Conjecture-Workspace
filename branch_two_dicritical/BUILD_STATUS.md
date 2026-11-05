@@ -104,3 +104,52 @@ Each point was re-derived and executed here before it was accepted.
   - the non-Keller map (x, xy) has two dicriticals at infinity.
 - `README.md`, `lean/README.md`: pointers to the restatement.
 - `CHECKSUMS.md5` / `.sha256` regenerated with the same rule.
+
+## 2026-11-04 (LEG 4 repo update; VM runs on lean-build-3 / lean-build-2)
+
+- Two-dicritical Lean re-verified on the VM (`lean/logs` source:
+  `~/workspace/research/tooling/logs_gcp_phase3/logs/td_build.log`,
+  marker `td_build.done`): source scan PASS (no sorry, admit,
+  native_decide or axiom); all 8 modules compile (exit 0 each);
+  **21 of 21 theorems on the standard axioms** (`[propext,
+  Classical.choice, Quot.sound]` or a subset), closing line
+  "TWO-DICRITICAL LEAN: ALL CHECKS PASSED". This matches the
+  2026-10-13 count (21 theorems); no new Lean theorem was added by
+  this repo update.
+- Paper, current: `paper/two_dicritical_closure_rewrite.tex` (1,129
+  lines; SHA-256 `8e47f7be9008b033d4d3337fab32fe2b337d16d878bfe7868b7825298a5850b5`)
+  and `paper/two_dicritical_closure_rewrite.pdf` (19 pages; SHA-256
+  `872a9852df6fe0c2bedaef8f1de82d8d727f6ce9e3cb9ec0535766a7cb77f36e`),
+  the November 2, 2026 rewrite, copied byte-identical from the
+  workspace combined-paper directory.
+- Paper, superseded: the October 1, 2026 draft
+  (`paper/two_dicritical_closure.tex` / `.pdf`) is marked
+  SUPERSEDED/WITHDRAWN in `paper/SUPERSEDED_2026-11-04.md` and kept
+  byte-identical (SHA-256 tex
+  `095456b4f61467a66ca9ef667a48e938462f2b554ccc9f9e655f75f97529f183`,
+  pdf `06358880b1599fa3bfa959decedd51298e111d31403626735a0863177b045aca`).
+  It was never deleted.
+- Combined-paper record, alongside the two-dicritical paper (this
+  directory has no repo-root `paper/`; each branch keeps its own
+  `paper/`, so the combined record lives here):
+  `paper/combined_paper_final_2026-11-04.tex` (2,503 lines; SHA-256
+  `23f750a90ff28ac999fcb0d72691b80ddb8e66364f6de7f28ec45d54b61f70d2`)
+  and `paper/combined_paper_final_2026-11-04.pdf` (67 pages; SHA-256
+  `6351588296980897d644d5d7e2e364ea237e036ed778e7f33b21a7afcbf9b6ad`;
+  XeLaTeX exit 0, 0 errors, 0 undefined references), plus
+  `paper/validation_report_2026-11-04.md` (27 corrections; Part II
+  reconciled to the unconditional branch-(c) elimination via
+  `challenge_target` + `branch_c_eliminated`; case (1) = WITH the
+  (0,8)/(0,12) vertices = NewtonNFc = branch (c); case (2) = WITHOUT =
+  NewtonNF2 = branches (a),(b)). The pre-final draft files were left
+  byte-identical in the workspace and are not committed here.
+- Grade-A status (NOT green — see
+  `../JC2D-branches_a_b_c_unified/branch_c/grade_a/GRADE_A_STATUS_2026-11-04.md`):
+  R109Data port PASSED standalone; full `gradea_build` FAILED at
+  IrreducibleR109 (exit 1, 13 error lines, all in IrreducibleR109.lean
+  itself, none in the R109 port); K5Field, Transfer, Macaulay, Axioms
+  NOT RUN. The three modified grade_a files were left uncommitted.
+- `CHECKSUMS.md5` / `.sha256` regenerated with the same rule (every
+  file except the two checksum files, sorted by path); this also picks
+  up `lean/LEAN_SCOPING.md` and `lean/TwoDicritical/E1Valuation.lean`,
+  which were present but unrecorded in the previous checksum files.

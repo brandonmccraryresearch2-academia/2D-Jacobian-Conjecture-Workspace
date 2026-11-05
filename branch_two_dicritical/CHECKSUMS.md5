@@ -1,7 +1,8 @@
-180c974c47206c74a8a1828952033c90  ./BUILD_STATUS.md
+bcfd451cc0bcfdafd9e7b889dae3aa59  ./BUILD_STATUS.md
 c20fea0823d9d258027f51608b2f5075  ./CORRESPONDENCE.md
-db8bfc7bd8718bf1d2dc8741967c144c  ./README.md
+4d049d925980fbb948c8751c798ace60  ./README.md
 0e52414cb8706596e2b1f817387950f8  ./RESTATEMENT.md
+a8efe9372292d68ee805adf720fdd8f7  ./lean/LEAN_SCOPING.md
 8822b08140e85b853c4f0d3534ffe923  ./lean/README.md
 72113021a8774be34cba25d475a3bf43  ./lean/TwoDicritical/Axioms.lean
 1384681e3e10e9820fbd273865b0a0e2  ./lean/TwoDicritical/BlockRank.lean
@@ -9,8 +10,9 @@ db8bfc7bd8718bf1d2dc8741967c144c  ./README.md
 664e4c568ed0e04f3ab9ecd6e1215c69  ./lean/TwoDicritical/CenterHypotheses.lean
 34a30d95b043d15187fac7123a82b767  ./lean/TwoDicritical/E1Keller.lean
 b9959361b5dd99fe0c00213a3b253191  ./lean/TwoDicritical/E1Obstruction.lean
+2377735d800d8e0febee8bf66a528bcc  ./lean/TwoDicritical/E1Valuation.lean
 f91d9422cd4e64df4ed5960d4a8e1277  ./lean/TwoDicritical/OneCenter.lean
-bd3deab53574936cd4c8e3069329f1f1  ./lean/build.sh
+68b79059aa0f4b6fd854bd97dc525e1e  ./lean/build.sh
 073dfcada3b7036e849f4b9cd227de5c  ./lean/check_bridgeEq.py
 a60585d53c99f4803f55304a867dac4f  ./lean/check_center_nonzero.py
 1c271f09bf24d91475cab2884e94055b  ./lean/check_e1_index.py
@@ -38,8 +40,14 @@ e50faf45dcea6f716ddfbaaee7db8e8f  ./outputs/m1_triangular.out
 a16faf520c98951b85d4a436d6feb2e1  ./outputs/middle_e2.out
 7cf15946b646bb0b80d83c8d99bf4cb9  ./outputs/mixed_poles.out
 587246a923950baa3b5e46ae10a4f914  ./outputs/routeB_cancellation.out
+b3f7c9f6f3761f7d0ac90789b9479971  ./paper/SUPERSEDED_2026-11-04.md
+d0b76db3521153781ff935d218a02427  ./paper/combined_paper_final_2026-11-04.pdf
+3ee925d7ba630bc2f64eb4a1bd377c7d  ./paper/combined_paper_final_2026-11-04.tex
 5ef121241a27195be3bb382c06059dd4  ./paper/two_dicritical_closure.pdf
 e70e43efbf4f6bcc551907b6012c2efe  ./paper/two_dicritical_closure.tex
+13762d93c8666f61f27ac3a90ee9d1b2  ./paper/two_dicritical_closure_rewrite.pdf
+7308afde5a7963abfcd5c4190382c478  ./paper/two_dicritical_closure_rewrite.tex
+839eb03028a450b8b62c3ceba7c8039e  ./paper/validation_report_2026-11-04.md
 d8d0ba973faddee1e8e7652e0a1cdbf7  ./restatement_checks.log
 efa3aa889ac3053510c9a9c575a72f5e  ./restatement_checks.py
 03407f7c30a68b519359a6ed967b7776  ./scripts/at_degree_bound.py
