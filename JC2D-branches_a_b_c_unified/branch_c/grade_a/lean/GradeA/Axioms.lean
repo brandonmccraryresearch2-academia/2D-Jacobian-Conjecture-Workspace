@@ -1,4 +1,6 @@
 import GradeA.Macaulay
+import GradeA.IrreducibleR109
+import GradeA.K5Field
 
 /-! The axioms of the grade-A modules' results (`build.sh` checks that each line names only the standard three
 axioms, or a subset). -/
