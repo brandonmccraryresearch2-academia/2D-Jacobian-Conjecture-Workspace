@@ -336,6 +336,14 @@ for the full values). No file was edited in filing.
   `[propext, Classical.choice, Quot.sound]` (the permitted triple), per
   `logs/bridge_challenge_target_2026-11-04.log`.
 - **Logs:** `logs/bridge_challenge_target_2026-11-04.log` (9 lines).
+- **Incorporation (2026-11-06):** filed as tracked module `GradeA.Bridge`
+  (`JC2D-branches_a_b_c_unified/branch_c/grade_a/lean/GradeA/Bridge.lean`,
+  sha256 `96e992d6f4cf2bbfcac33c71e8393700bc2783fc3d6fb5b747a99fc40a1d5c16`),
+  compiled and audited by `grade_a/build_bridge.sh`; theorems byte-identical
+  to this file (header comment only changed). Re-verified on lean-build-3
+  (Lean 4.34.0): baseline re-check + `build_bridge.sh` run 2, all exit 0,
+  `challenge_target` on the permitted triple. Status:
+  `grade_a/BRIDGE_STATUS_2026-11-06.md`. This leg copy stays as filed.
 
 ### 14. `composition_2026-11-04.lean` — 811 bytes, 18 lines, sha256 `59d78bcfc4735084`
 
@@ -362,6 +370,14 @@ for the full values). No file was edited in filing.
   `[propext, Classical.choice, Quot.sound]` (the permitted triple), per
   `logs/branch_c_eliminated_2026-11-04.log` (1 line).
 - **Logs:** `logs/branch_c_eliminated_2026-11-04.log`.
+- **Incorporation (2026-11-06):** filed as tracked module `GradeA.Composition`
+  (`JC2D-branches_a_b_c_unified/branch_c/grade_a/lean/GradeA/Composition.lean`,
+  sha256 `b21a892926dc8d936407c74f6d98bf8393787d3bc1ebd823a56e268bf8587faf`),
+  compiled and audited by `grade_a/build_bridge.sh`; theorem byte-identical
+  to this file (header comment + one import line changed). Re-verified on
+  lean-build-3 (Lean 4.34.0): baseline re-check + `build_bridge.sh` run 2,
+  all exit 0, `branch_c_eliminated` on the permitted triple. Status:
+  `grade_a/BRIDGE_STATUS_2026-11-06.md`. This leg copy stays as filed.
 
 ## Verification logs (`lean/logs/`, 25 files)
 

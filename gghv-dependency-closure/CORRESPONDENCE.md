@@ -53,8 +53,8 @@ below.
 | `d1_ggvstar_2026-11-05.lean` | [GGV*] machinery: [GGV6] Thm 7.3; Prop 3.29, 1.13, 2.1, 2.11, 6.1; Cor 7.2; Thm 7.6 | Thm 7.3 combination + `F₉` arithmetic; Prop 3.29 (conditional); Prop 1.13 both directions; Prop 2.1(1); (8, 24) row conditional on [GGV5] Prop 6.1 | Kernel-verified conditionally; 71 axiom lines: 37 triple, 12 `[propext, Quot.sound]`, 14 `[propext]`, 8 zero. Correction: `N₁ = 6`, `N₂ = 3` (integers), not `5/3`, `3/2`. Carried: Thm 7.6(5) (numbering unresolved), Prop 2.11(3), Prop 2.1(2b), Prop 3.12, enumeration, 4 of 5 red rows. |
 | `d1_d2combine_2026-11-05.lean` | [GGV1] D2 combine (pairwise → combined bracket) + dependents | Bridge lemma (combined top coefficient = endpoint coefficients × cross product, `k = 1` reduced/`Nodup`); combined-form `extremos`; D2 power laws (`pscale`/`pbracket`); `common_power_coprime`; Remark conditionally on `alineados(2a)`; `mayores` T-termination (Stage D); `lema_geometrico_1`, `lema_geometrico_2` | Kernel-verified (Remark only conditionally); 72 axiom lines: 39 triple, 11 `[propext, Quot.sound]`, 14 `[propext]`, 8 zero. |
 | `d1_d2combine_axioms_2026-11-05.lean` | Same as `d1_d2combine` | The D2 combine development with a 127-line `#print axioms` block appended (126 distinct names; `stFace_swap` printed twice) | Kernel-verified; run log 126 verdict lines: 67 triple, 30 `[propext, Quot.sound]`, 20 `[propext]`, 9 zero; 0 errors. File header text is stale (describes the extremos base). |
-| `bridge_attempt_2026_11_04.lean` | GGHV Prop. 4.3 case (1) — the certificate interface | `bridge_Fpoly` (`Fpoly = Fpoly2`, six generators in order 0–5); `hsupp_chart`; `hA2_chart`; `challenge_target : ChartEmptyC_T1ne0 L` at `ρ = Fin 3199`, `p = 32003`, `w₀ = 11147` | Kernel-verified, **no hypotheses**; `challenge_target` on the permitted triple. R109Data/K5 not needed. |
-| `composition_2026-11-04.lean` | GGHV Prop. 4.3 case (1) — elimination | `branch_c_eliminated`: `¬ ∃ (P Q : MvPolynomial (Fin 2) L) (lam : L), lam ≠ 0 ∧ NewtonNFc P Q ∧ jac P Q = C lam * X 0 ^ 2`, over any field of characteristic 0 | Kernel-verified, **no hypotheses**; on the permitted triple. With the branches (a),(b) `main_theorem` (case (2)), the Prop. 4.3 split is fully eliminated in Lean. Does **not** claim (72, 108) excluded unconditionally or JC(2). |
+| `bridge_attempt_2026_11_04.lean` | GGHV Prop. 4.3 case (1) — the certificate interface | `bridge_Fpoly` (`Fpoly = Fpoly2`, six generators in order 0–5); `hsupp_chart`; `hA2_chart`; `challenge_target : ChartEmptyC_T1ne0 L` at `ρ = Fin 3199`, `p = 32003`, `w₀ = 11147` | Kernel-verified, **no hypotheses**; `challenge_target` on the permitted triple. R109Data/K5 not needed. Filed as tracked module `GradeA.Bridge` (`branch_c/grade_a/lean/GradeA/Bridge.lean`, `build_bridge.sh`) 2026-11-06; re-verified on lean-build-3. |
+| `composition_2026-11-04.lean` | GGHV Prop. 4.3 case (1) — elimination | `branch_c_eliminated`: `¬ ∃ (P Q : MvPolynomial (Fin 2) L) (lam : L), lam ≠ 0 ∧ NewtonNFc P Q ∧ jac P Q = C lam * X 0 ^ 2`, over any field of characteristic 0 | Kernel-verified, **no hypotheses**; on the permitted triple. With the branches (a),(b) `main_theorem` (case (2)), the Prop. 4.3 split is fully eliminated in Lean. Does **not** claim (72, 108) excluded unconditionally or JC(2). Filed as tracked module `GradeA.Composition` (`branch_c/grade_a/lean/GradeA/Composition.lean`, `build_bridge.sh`) 2026-11-06; re-verified on lean-build-3. |
 
 ## Singular scripts → recomputations
 
@@ -88,9 +88,15 @@ equations from the C/F/D expansions (the elimination shows only that *if* the
   `lean/composition_2026-11-04.lean` sit **outside** that bundle: they close
   branch (c) unconditionally in Lean (see the `branch_c_eliminated` row
   above) by instantiating the bundle's certificate interface at the concrete
-  data. The branch-(c) correspondence guide
+  data. Since 2026-11-06 they are also filed as tracked modules alongside
+  grade A — `grade_a/lean/GradeA/Bridge.lean` (`GradeA.Bridge`,
+  `challenge_target`) and `grade_a/lean/GradeA/Composition.lean`
+  (`GradeA.Composition`, `branch_c_eliminated`), compiled and audited by
+  `grade_a/build_bridge.sh` (status: `grade_a/BRIDGE_STATUS_2026-11-06.md`);
+  the `lean/` copies stay as the filed leg record. The branch-(c)
+  correspondence guide
   (`JC2D-branches_a_b_c_unified/branch_c/correspondence_guide/CORRESPONDENCE_GUIDE.md`)
-  records this in its §1 addendum; the guide's source freeze is unchanged.
+  records this in its §1 addenda; the guide's source freeze is unchanged.
 - **Branches (a),(b).** The (a),(b) elimination is recorded in the
   branch-(a,b) correspondence guides and is not repeated here; the
   dependency-closure legs above use its results only where stated (the

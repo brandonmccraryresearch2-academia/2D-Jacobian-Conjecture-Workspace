@@ -42,6 +42,26 @@ is unchanged. This eliminates GGHV Proposition 4.3 case (1) (with the
 (case (2)), the Prop. 4.3 split is fully eliminated in Lean. It does not
 claim (72, 108) excluded unconditionally or JC(2).
 
+### Addendum 2026-11-06 — the bridge and composition as tracked modules
+
+The two leg files above are now also filed as tracked Lean modules in the
+tree, alongside grade A: `grade_a/lean/GradeA/Bridge.lean` (module
+`GradeA.Bridge`: `bridge_Fpoly`, `hsupp_chart`, `hA2_chart`,
+`challenge_target`) and `grade_a/lean/GradeA/Composition.lean` (module
+`GradeA.Composition`: `branch_c_eliminated`), compiled and audited by
+`grade_a/build_bridge.sh` (stages the filed oleans, fresh-compiles the eight
+chart modules, scans, compiles the two modules, audits the `#print axioms`
+lines; default bundle project `../bundle_v3_1/jacobian_lean`). The module
+theorems are byte-identical to the 2026-11-04 scratch proofs; only the
+headers changed, plus one import line (`import bridge_attempt_2026_11_04` →
+`import GradeA.Bridge`). Re-verified 2026-11-06 on lean-build-3 (Lean 4.34.0):
+baseline parent re-check of the scratch-identical copies plus
+`build_bridge.sh` against the actual module files — all modules exit 0, both
+theorems on the permitted triple `[propext, Classical.choice, Quot.sound]`.
+Status record: `grade_a/BRIDGE_STATUS_2026-11-06.md`. The leg files at
+`gghv-dependency-closure/lean/` stay in place as the filed record, and the
+frozen bundle is untouched.
+
 ### Source data (§2)
 - **Source-gating**: All base objects verified against GGHV v1, Proposition 4.3, case (1). The pipeline's generators were found to certify a differently parametrized ideal than `lower_c`'s; step 1 was redone for `lower_c` (`chart_certificates/step1/`, `logs/run_step1.log`).
 - **Step-1 scripts** (`chart_certificates/step1/`): `certB_lowerc.py` (exact over K₅, t₁ = 0 slice), `modp_chart.py`
