@@ -1,0 +1,28 @@
+// (ii) Route B — Groebner elimination of the full 9-equation S6 ideal.
+// Independent of the substitution/resultant route: eliminate all of
+// dm2,dm3,dm4,dm5,dm6,dm7,dm8,dm10 at once and inspect the elimination ideal.
+ring R = 0, (d0,d1,dm1,dm2,dm3,dm4,dm5,dm6,dm7,dm8,dm10,y), dp;
+poly D2_1 = 2*d0*dm1 + 2*d1*dm2 + 2*dm4;
+poly D2_2 = dm1^2 + 2*d0*dm2 + 2*d1*dm3 + 2*dm5;
+poly D2_3 = 2*dm1*dm2 + 2*d0*dm3 + 2*d1*dm4 + 2*dm6;
+poly D2_4 = dm2^2 + 2*dm1*dm3 + 2*d0*dm4 + 2*d1*dm5 + 2*dm7;
+poly D2_5 = 2*dm2*dm3 + 2*dm1*dm4 + 2*d0*dm5 + 2*d1*dm6 + 2*dm8;
+poly D2_7 = 2*dm10 + 2*dm3*dm4 + 2*dm2*dm5 + 2*dm1*dm6 + 2*d0*dm7 + 2*d1*dm8;
+poly Q1 = 3*d0^2*dm1 + 3*d1*dm1^2 + 6*d0*d1*dm2 + 3*dm2^2 + 3*d1^2*dm3 + 6*dm1*dm3 + 6*d0*dm4 + 6*d1*dm5 + 3*dm7;
+poly Q2 = 3*d0*dm1^2 + 3*d0^2*dm2 + 6*d1*dm1*dm2 + 6*d0*d1*dm3 + 6*dm2*dm3 + 3*d1^2*dm4 + 6*dm1*dm4 + 6*d0*dm5 + 6*d1*dm6 + 3*dm8;
+poly Q4 = 3*dm10 + 3*dm1^2*dm2 + 3*d0*dm2^2 + 6*d0*dm1*dm3 + 6*d1*dm2*dm3 + 3*d0^2*dm4 + 6*d1*dm1*dm4 + 6*dm3*dm4 + 6*d0*d1*dm5 + 6*dm2*dm5 + 3*d1^2*dm6 + 6*dm1*dm6 + 6*d0*dm7 + 6*d1*dm8 + (1/2)*y^9;
+ideal I = D2_1, D2_2, D2_3, D2_4, D2_5, D2_7, Q1, Q2, Q4;
+timer = 1;
+ideal E = eliminate(I, dm2*dm3*dm4*dm5*dm6*dm7*dm8*dm10);
+print("ELIM_IDEAL_SIZE:");
+print(size(E));
+print("ELIM_IDEAL_GENS:");
+print(E);
+poly target = 9*y^9*d1*dm1^6 + y^27 + 27*d0*dm1^9;
+print("reduce(target, E):");
+print(reduce(target, E));
+print("reduce(dm1*target, E):");
+print(reduce(dm1*target, E));
+print("reduce(dm1^3*target, E):");
+print(reduce(dm1^3*target, E));
+quit;

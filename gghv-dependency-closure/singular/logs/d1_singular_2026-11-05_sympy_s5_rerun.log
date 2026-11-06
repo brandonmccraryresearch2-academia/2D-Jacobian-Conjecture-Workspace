@@ -1,0 +1,25 @@
+D2_1 -> dm4: dm4 = -d0*dm1 - d1*dm2
+D2_2 -> dm5: dm5 = -d0*dm2 - d1*dm3 - dm1**2/2
+D2_3 -> dm6: dm6 = d0*d1*dm1 - d0*dm3 + d1**2*dm2 - dm1*dm2
+D2_4 -> dm7: dm7 = d0**2*dm1 + 2*d0*d1*dm2 + d1**2*dm3 + d1*dm1**2/2 - dm1*dm3 - dm2**2/2
+D2_5 -> dm8: dm8 = d0**2*dm2 - d0*d1**2*dm1 + 2*d0*d1*dm3 + 3*d0*dm1**2/2 - d1**3*dm2 + 2*d1*dm1*dm2 - dm2*dm3
+Q1 -> dm3: dm3 = -d1*dm1/2 - dm2**2/(2*dm1)
+D2_7 -> dm10: dm10 = -d0**3*dm1 - 3*d0**2*d1*dm2 + d0*d1**3*dm1 - 3*d0*d1**2*dm3 - 7*d0*d1*dm1**2/2 + 2*d0*dm1*dm3 + d0*dm2**2 + d1**4*dm2 - 7*d1**2*dm1*dm2/2 + 2*d1*dm2*dm3 - d1*dm2**3/(2*dm1) + 3*dm1**2*dm2/2
+
+Q2 after substitutions (in dm2, dm1, d0, d1):
+-3*(d0*dm1**3 + d1*dm1**2*dm2 + dm2**3)/(2*dm1)
+
+Q4 after substitutions (in dm2, dm1, d0, d1, C3, F):
+(2*C3**23*F*dm1 + 3*d0*d1*dm1**3 + 3*d1**2*dm1**2*dm2 + 3*d1*dm2**3 - 3*dm1**3*dm2)/(2*dm1)
+
+Resultant w.r.t. dm2, factored:
+-27*(8*C3**69*F**3 + 18*C3**23*F*d1*dm1**6 + 27*d0*dm1**9)/(64*dm1**3)
+
+Target principal equation:
+8*C3**69*F**3 + 18*C3**23*F*d1*dm1**6 + 27*d0*dm1**9
+
+Resultant / target:
+-27/(64*dm1**3)
+
+CHECK PASSED: resultant = -27/(64*dm1^3) x the paper's principal equation.
+Remaining quotient factor: -27/(64*dm1**3)

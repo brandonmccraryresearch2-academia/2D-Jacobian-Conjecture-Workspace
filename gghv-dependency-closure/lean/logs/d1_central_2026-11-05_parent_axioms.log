@@ -1,0 +1,97 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/central_ax.lean:1383:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/central_ax.lean:1431:5: warning: Variable name `hsR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/central_ax.lean:1432:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/central_ax.lean:1475:5: warning: Variable name `heR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _heR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/central_ax.lean:1476:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/central_ax.lean:1972:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:1987:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/central_ax.lean:2011:24: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2017:24: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2144:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2151:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2151:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2155:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2155:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2164:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2168:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2207:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2225:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2225:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2229:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2229:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2240:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2245:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2492:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2494:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2495:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2497:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2560:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2560:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2561:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2563:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2651:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2651:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2654:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2654:20: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2691:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2691:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2693:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2693:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2877:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2879:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2881:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2885:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2886:50: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2892:16: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/central_ax.lean:2894:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2895:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/central_ax.lean:2840:32: warning: Variable name `hndX` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hndX
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'central_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_dichotomy_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_four_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'valF_from_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'endnote_D_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coeffAt_pmul_top_gen2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eq_one_one_of_dirVal' depends on axioms: [propext]
+'central_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_dichotomy_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_four_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'valF_from_def' depends on axioms: [propext, Classical.choice, Quot.sound]

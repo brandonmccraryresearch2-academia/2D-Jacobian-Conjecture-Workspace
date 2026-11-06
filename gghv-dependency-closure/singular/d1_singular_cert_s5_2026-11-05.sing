@@ -1,0 +1,17 @@
+// Part12 / GGHV section 5: D3 certificate identity check, extracted verbatim from /home/hatch/workspace/research/jc2-72-108-exact-certificates/Lean4/JC2/GGHV/Part12_D3CertificateS5.lean
+ring R = 0, (d0,d1,dm1,dm2,dm3,dm4,dm5,dm6,dm7,dm8,dm10,C3,F), dp;
+poly LHS = dm1 * (18 * C3 ^ 23 * F * d1 * dm1 ^ 6 + 8 * C3 ^ 69 * F ^ 3 + 27 * d0 * dm1 ^ 9);
+poly RHS = (-12 * C3 ^ 46 * F ^ 2 * d0 ^ 2 * dm1 - 12 * C3 ^ 46 * F ^ 2 * d1 * dm1 ^ 2 - 12 * C3 ^ 46 * F ^ 2 * dm1 * dm3 - 18 * C3 ^ 23 * F * d0 ^ 2 * dm1 ^ 3 * dm2 - 18 * C3 ^ 23 * F * d1 * dm1 ^ 4 * dm2 - 18 * C3 ^ 23 * F * dm1 ^ 3 * dm2 * dm3 - 27 * d0 ^ 2 * d1 * dm1 ^ 7 - 27 * d0 ^ 2 * dm1 ^ 5 * dm2 ^ 2 - 27 * d0 * dm1 ^ 7 * dm2 - 27 * d1 ^ 2 * dm1 ^ 8 - 27 * d1 * dm1 ^ 7 * dm3 - 27 * d1 * dm1 ^ 6 * dm2 ^ 2 + 27 * dm1 ^ 9 - 27 * dm1 ^ 5 * dm2 ^ 2 * dm3) * (2 * d0 * dm1 + 2 * d1 * dm2 + 2 * dm4)
+      + (-24 * C3 ^ 46 * F ^ 2 * d0 * d1 * dm1 - 12 * C3 ^ 46 * F ^ 2 * dm1 * dm2 - 36 * C3 ^ 23 * F * d0 * d1 * dm1 ^ 3 * dm2 - 18 * C3 ^ 23 * F * dm1 ^ 3 * dm2 ^ 2 - 54 * d0 * d1 ^ 2 * dm1 ^ 7 - 54 * d0 * d1 * dm1 ^ 5 * dm2 ^ 2 + 27 * d0 * dm1 ^ 8 - 54 * d1 * dm1 ^ 7 * dm2 - 27 * dm1 ^ 5 * dm2 ^ 3) * (dm1 ^ 2 + 2 * d0 * dm2 + 2 * d1 * dm3 + 2 * dm5)
+      + (-12 * C3 ^ 46 * F ^ 2 * d1 ^ 2 * dm1 - 12 * C3 ^ 46 * F ^ 2 * dm1 ^ 2 - 18 * C3 ^ 23 * F * d1 ^ 2 * dm1 ^ 3 * dm2 - 18 * C3 ^ 23 * F * dm1 ^ 4 * dm2 - 27 * d1 ^ 3 * dm1 ^ 7 - 27 * d1 ^ 2 * dm1 ^ 5 * dm2 ^ 2 - 27 * dm1 ^ 6 * dm2 ^ 2) * (2 * dm1 * dm2 + 2 * d0 * dm3 + 2 * d1 * dm4 + 2 * dm6)
+      + (-24 * C3 ^ 46 * F ^ 2 * d0 * dm1 - 36 * C3 ^ 23 * F * d0 * dm1 ^ 3 * dm2 - 54 * d0 * d1 * dm1 ^ 7 - 54 * d0 * dm1 ^ 5 * dm2 ^ 2 - 27 * dm1 ^ 7 * dm2) * (dm2 ^ 2 + 2 * dm1 * dm3 + 2 * d0 * dm4 + 2 * d1 * dm5 + 2 * dm7)
+      + (-24 * C3 ^ 46 * F ^ 2 * d1 * dm1 - 36 * C3 ^ 23 * F * d1 * dm1 ^ 3 * dm2 - 54 * d1 ^ 2 * dm1 ^ 7 - 54 * d1 * dm1 ^ 5 * dm2 ^ 2 + 27 * dm1 ^ 8) * (2 * dm2 * dm3 + 2 * dm1 * dm4 + 2 * d0 * dm5 + 2 * d1 * dm6 + 2 * dm8)
+      + (-12 * C3 ^ 46 * F ^ 2 * dm1 - 18 * C3 ^ 23 * F * dm1 ^ 3 * dm2 - 27 * d1 * dm1 ^ 7 - 27 * dm1 ^ 5 * dm2 ^ 2) * (2 * dm10 + 2 * dm3 * dm4 + 2 * dm2 * dm5 + 2 * dm1 * dm6 + 2 * d0 * dm7 + 2 * d1 * dm8)
+      + (8 * C3 ^ 46 * F ^ 2 * d0 * dm1 + 12 * C3 ^ 23 * F * d0 * dm1 ^ 3 * dm2 + 18 * d0 * d1 * dm1 ^ 7 + 18 * d0 * dm1 ^ 5 * dm2 ^ 2 + 18 * dm1 ^ 7 * dm2) * (3 * d0 ^ 2 * dm1 + 3 * d1 * dm1 ^ 2 + 6 * d0 * d1 * dm2 + 3 * dm2 ^ 2 + 3 * d1 ^ 2 * dm3 + 6 * dm1 * dm3 + 6 * d0 * dm4 + 6 * d1 * dm5 + 3 * dm7)
+      + (8 * C3 ^ 46 * F ^ 2 * d1 * dm1 + 12 * C3 ^ 23 * F * d1 * dm1 ^ 3 * dm2 + 18 * d1 ^ 2 * dm1 ^ 7 + 18 * d1 * dm1 ^ 5 * dm2 ^ 2 - 18 * dm1 ^ 8) * (3 * d0 * dm1 ^ 2 + 3 * d0 ^ 2 * dm2 + 6 * d1 * dm1 * dm2 + 6 * d0 * d1 * dm3 + 6 * dm2 * dm3 + 3 * d1 ^ 2 * dm4 + 6 * dm1 * dm4 + 6 * d0 * dm5 + 6 * d1 * dm6 + 3 * dm8)
+      + (8 * C3 ^ 46 * F ^ 2 * dm1 + 12 * C3 ^ 23 * F * dm1 ^ 3 * dm2 + 18 * d1 * dm1 ^ 7 + 18 * dm1 ^ 5 * dm2 ^ 2) * (3 * dm10 + 3 * dm1 ^ 2 * dm2 + 3 * d0 * dm2 ^ 2 + 6 * d0 * dm1 * dm3 + 6 * d1 * dm2 * dm3 + 3 * d0 ^ 2 * dm4 + 6 * d1 * dm1 * dm4 + 6 * dm3 * dm4 + 6 * d0 * d1 * dm5 + 6 * dm2 * dm5 + 3 * d1 ^ 2 * dm6 + 6 * dm1 * dm6 + 6 * d0 * dm7 + 6 * d1 * dm8 + F * C3 ^ 23);
+print("CERT_DIFF:");
+print(LHS - RHS);
+print("CERT_IS_ZERO (1=yes):");
+print((LHS - RHS) == 0);
+quit;

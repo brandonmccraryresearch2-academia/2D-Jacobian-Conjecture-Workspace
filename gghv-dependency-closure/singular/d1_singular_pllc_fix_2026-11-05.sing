@@ -1,0 +1,16 @@
+// (v) PLLC membership re-check with component-wise comparison
+// (Singular does not support list == list).
+ring R = 0, (x), dp;
+proc pllcFilter(int a, int b)
+{
+  return ((b < a) && (b <= (a - b - 1)^2) && ((b + gcd(a, b)) != a));
+}
+list C;
+int a; int b;
+for (a = 0; a <= 9; a++) { for (b = 0; b <= a; b++) { if (pllcFilter(a,b)) { C = C + list(list(a,b)); } } }
+print("size(C) (expect 18):"); print(size(C));
+int found83 = 0; int found84 = 0; int i;
+for (i = 1; i <= size(C); i++) { if ((C[i][1] == 8) && (C[i][2] == 3)) { found83 = 1; } if ((C[i][1] == 8) && (C[i][2] == 4)) { found84 = 1; } }
+print("(8,3) in C? (expect 1):"); print(found83);
+print("(8,4) in C? (expect 0):"); print(found84);
+quit;

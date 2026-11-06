@@ -53,8 +53,9 @@ conjecture to Prop. 4.3 are outside scope.
 | `JC2D-branches_a_b_c_unified/reviews/` | Reviews of the work, with their evidence (the review of 2026-10-12 covers PRs #12–#15 and the A1–A5 and two-dicritical drafts) |
 | `REPRODUCTION_GUIDE.md`, `REPRODUCTION_ANSWER_KEY.md`, `reproduction_key_checks.py` | Protocol for re-running the project's own scripts on another machine (reproducibility, I1), with its answer key and comparator |
 | `branch_two_dicritical/` | **Claimed** theorem: no Keller map admits two dicritical divisors. As worded the statement is false, and the proof is incomplete (see the status section below). 6-page paper, 18 executed SymPy scripts with outputs, `verify_all.sh`, `CORRESPONDENCE.md` mapping each script to its paper statement |
+| `combined_paper_final_2026-11-04.tex`, `combined_paper_final_2026-11-04.pdf` | Combined a/b/c elimination paper (final, 2026-11-04), 67 pages, at the repository root — the canonical latest copy. The copy in `branch_two_dicritical/paper/` is archival; the two are byte-identical (`cmp` verified 2026-11-05). |
 | `tier1_blind_gghv43_nf2/` | Independent blind verification of GGHV Proposition 4.3, normal form (2): verdict DO NOT EXIST (run 2026-09-25, logged in `LOG.md`) |
-| `gghv-dependency-closure/` | GGHV dependency-closure programme, Phase 2: the scoping + integrative synthesis report and annotated bibliography (2026-11-05) — see "GGHV dependency closure" below |
+| `gghv-dependency-closure/` | GGHV dependency-closure programme: Phase 2 scoping + integrative synthesis report and annotated bibliography (2026-11-05); Phase 1 Lean modules under `lean/` (14 files + `MANIFEST.md` + 25 verification logs); Singular recomputations under `singular/` (11 scripts + 12 logs + `MANIFEST.md`); the statement-to-file map is `CORRESPONDENCE.md` — see "GGHV dependency closure" below |
 | `environment.yml`, `lean.toml`, `setup.sh` | Compute environment setup (conda environment, Lean 4 toolchain) |
 
 ## Status of each line of work
@@ -243,6 +244,17 @@ conclusion of any leg.
   including Gröbner `eliminate` of the full 9-equation ideal, which is
   PRINCIPAL with generator exactly the target; §3 numerics; the §2 table;
   [GGV5] enumeration arithmetic.
+
+**Filed modules.** The Phase 1 scratch legs are filed as tracked modules
+under `gghv-dependency-closure/lean/` (14 Lean files — the ten D1 legs, the
+D2 combine leg with its axioms companion, and the bridge/composition that
+eliminate branch (c) — plus `MANIFEST.md` with per-file theorems, grades,
+axiom counts, and carried premises, and 25 verification logs under `logs/`)
+and `gghv-dependency-closure/singular/` (11 recomputation scripts, 12 run
+logs under `logs/`, plus `MANIFEST.md`). The statement-to-file map is
+`gghv-dependency-closure/CORRESPONDENCE.md`. The grade-A modules the bridge
+and composition import are not duplicated there; they live at
+`JC2D-branches_a_b_c_unified/branch_c/grade_a/`.
 
 **Still open** (as Lean proofs or as settled text): combined-form
 `esquina(1)`/`(2)` restatements (base merge); the $(7,21)$ coefficient
@@ -494,10 +506,12 @@ All papers are typeset with Fira Sans (text), Fira Mono (code), and Fira Math
 |---|---|---|
 | Branch (a),(b) elimination (v19, revised 2026-10-05 to 2026-10-07) | `JC2D-branches_a_b_c_unified/branches_a_b/paper/branch_ab_elimination_v3.pdf` (same file in `branch_ab_v19/paper/`) | 34 |
 | Branch (c) elimination | `JC2D-branches_a_b_c_unified/branch_c/paper/branch_c_elimination.pdf` | 18 |
-| No Keller map admits two dicritical divisors | `branch_two_dicritical/paper/two_dicritical_closure.pdf` | 6 |
+| No Keller map admits two dicritical divisors (Oct 1 draft; superseded, retained) | `branch_two_dicritical/paper/two_dicritical_closure.pdf` | 6 |
+| Dicriticals at Infinity of Keller Maps (Nov 2 rewrite; current version of the two-dicritical paper) | `branch_two_dicritical/paper/two_dicritical_closure_rewrite.pdf` | 19 |
+| Combined a/b/c elimination paper (final, 2026-11-04) | `combined_paper_final_2026-11-04.pdf` at the repository root (canonical latest); archival copy in `branch_two_dicritical/paper/` | 67 |
 
 Page counts verified 2026-11-05 with `pdfinfo` against the on-disk PDFs
-listed above (34, 18, and 6 pages respectively).
+listed above (34, 18, 6, 19, and 67 pages respectively).
 
 ## Reproducibility
 

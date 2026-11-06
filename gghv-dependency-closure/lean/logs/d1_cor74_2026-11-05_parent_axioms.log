@@ -1,0 +1,235 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/cor74_ax.lean:1383:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:1431:5: warning: Variable name `hsR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:1432:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:1475:5: warning: Variable name `heR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _heR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:1476:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:1972:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:1987:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/cor74_ax.lean:2011:24: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2017:24: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2144:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2151:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2151:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2155:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2155:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2164:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2168:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2207:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2225:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2225:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2229:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2229:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2240:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2245:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2492:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2494:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2495:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2497:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2560:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2560:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2561:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2563:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2651:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2651:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2654:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2654:20: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2691:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2691:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2693:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2693:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2877:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2879:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2881:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2885:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2886:50: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2892:16: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:2894:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2895:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:2840:32: warning: Variable name `hndX` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hndX
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'central_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_dichotomy_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_four_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'valF_from_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'endnote_D_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coeffAt_pmul_top_gen2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eq_one_one_of_dirVal' depends on axioms: [propext]
+/tmp/cor74_ax.lean:3452:5: warning: Variable name `hpow` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hpow
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3495:17: warning: Variable name `hmn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3496:13: warning: Variable name `hpq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hpq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3497:23: warning: Variable name `hdir` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdir
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3500:5: warning: Variable name `hcond3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcond3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3507:5: warning: Variable name `hal0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3508:5: warning: Variable name `hal1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3511:5: warning: Variable name `hgcd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hgcd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3512:29: warning: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3547:17: warning: Variable name `hmn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3548:13: warning: Variable name `hpq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hpq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3549:23: warning: Variable name `hdir` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdir
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3552:5: warning: Variable name `hcond3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcond3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3559:5: warning: Variable name `hal0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3560:5: warning: Variable name `hal1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3563:5: warning: Variable name `hgcd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hgcd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3564:29: warning: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/cor74_ax.lean:3881:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:3881:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:3886:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:3886:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:3949:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:3949:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:3954:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:3954:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:3974:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:3974:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/cor74_ax.lean:3979:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/cor74_ax.lean:3979:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'exists_pow_eq_of_isAlgClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'valuaciones_G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'fraction_of_ck3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cor74_exponent' depends on axioms: [propext]
+'cor74_assembly' depends on axioms: [propext, Quot.sound]
+'cor74_F_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cor74_F1_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell721_normalization' depends on axioms: [propext, Quot.sound]
+'mem_map_range_cast' depends on axioms: [propext, Quot.sound]
+'suppR18_eq_mink' depends on axioms: [propext, Quot.sound]
+'faceTerms_swap' depends on axioms: [propext]
+'enFace_swap' depends on axioms: [propext]
+'stFace_swap' depends on axioms: [propext]
+'succ_pred5_iff' does not depend on any axioms
+'dirLt_iff_cross' does not depend on any axioms
+'ell721_endpoints' depends on axioms: [propext, Quot.sound]
+'pred_interval_24' depends on axioms: [propext]
+'pred_interval_28' depends on axioms: [propext]
+'pred_not_succ_dirLt_24' depends on axioms: [propext]
+'pred_not_succ_dirLt_28' depends on axioms: [propext]
+'maxVertDir_swap' depends on axioms: [propext]
+'enFaceAux_swap' depends on axioms: [propext]
+'stFaceAux_swap' depends on axioms: [propext]
+'stFace_swap' depends on axioms: [propext]
+'cor74_F_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cor74_F1_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell721_normalization' depends on axioms: [propext, Quot.sound]
+'exists_pow_eq_of_isAlgClosed' depends on axioms: [propext, Classical.choice, Quot.sound]

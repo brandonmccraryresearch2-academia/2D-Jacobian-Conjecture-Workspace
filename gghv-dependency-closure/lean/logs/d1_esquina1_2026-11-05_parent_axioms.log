@@ -1,0 +1,108 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/esquina1_ax.lean:1596:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:1644:5: warning: Variable name `hsR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:1645:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:1688:5: warning: Variable name `heR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _heR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:1689:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:1793:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/esquina1_ax.lean:1794:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:1800:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/esquina1_ax.lean:1801:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:1807:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/esquina1_ax.lean:1808:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:1962:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/esquina1_ax.lean:1962:35: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/esquina1_ax.lean:1963:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:1963:47: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:1950:17: warning: This simp argument is unused:
+  hxs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/esquina1_ax.lean:2023:5: warning: Variable name `hP0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:2024:5: warning: Variable name `hcross` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcross
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:2271:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:2284:5: warning: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:2284:18: warning: Variable name `hb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:2568:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/esquina1_ax.lean:2577:5: warning: Variable name `hs2P` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs2P
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:2578:5: warning: Variable name `hs2Q` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs2Q
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:3297:5: warning: Variable name `hmn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:3298:31: warning: Variable name `h1neg` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h1neg
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/esquina1_ax.lean:3313:37: warning: Variable name `hQ2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'esquina_item1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'esquina_esta_en_dir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'esquina_eqq13' depends on axioms: [propext, Classical.choice, Quot.sound]

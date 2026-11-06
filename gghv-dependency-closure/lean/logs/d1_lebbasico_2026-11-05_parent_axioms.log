@@ -1,0 +1,4 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+'le_bbasico' depends on axioms: [propext, Classical.choice, Quot.sound]
+'le_basico_full' depends on axioms: [propext, Classical.choice, Quot.sound]

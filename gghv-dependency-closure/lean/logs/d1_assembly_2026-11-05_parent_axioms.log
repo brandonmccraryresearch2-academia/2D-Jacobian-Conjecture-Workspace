@@ -1,0 +1,5 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+'theorem21_minimal' depends on axioms: [propext]
+'discard_84_row' does not depend on any axioms
+'table_cases' depends on axioms: [propext]

@@ -1,0 +1,33 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/d1_lebasico_full_test.lean:1049:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/d1_lebasico_full_test.lean:1078:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/d1_lebasico_full_test.lean:1125:28: error: Application type mismatch: The argument
+  hnone
+has type
+  enFace ρ1.1 ρ1.2 terms = some e
+but is expected to have type
+  some e = some e
+in the application
+  Exists.intro e hnone
+/tmp/d1_lebasico_full_test.lean:1144:28: error: Application type mismatch: The argument
+  hnone
+has type
+  stFace ρ2.1 ρ2.2 terms = some s
+but is expected to have type
+  some s = some s
+in the application
+  Exists.intro s hnone
+LEAN_EXIT=1

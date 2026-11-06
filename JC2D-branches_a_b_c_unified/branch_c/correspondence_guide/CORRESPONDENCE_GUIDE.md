@@ -19,6 +19,29 @@ not working copies.
 - **Statement**: `ChartEmptyC_T1ne0 L → ¬∃ P Q λ, λ ≠ 0 ∧ NewtonNFc P Q ∧ [P,Q] = λx²`, over any characteristic-zero field L, with no `sorry` and only the standard axioms (`propext`, `Classical.choice`, `Quot.sound`).
 - **Logical status**: Branch (c) is closed **under the computational premises of the paper's §10** (`branch_c/GUIDE.md` §5.9; grade B, outside Lean). Not closed by Lean alone.
 
+### Addendum 2026-11-04 — branch (c) eliminated unconditionally in Lean
+
+The "not closed by Lean alone" statement above is superseded. On 2026-11-04,
+branch (c) was eliminated unconditionally in Lean: `branch_c_eliminated`
+(`gghv-dependency-closure/lean/composition_2026-11-04.lean`, 18 lines, no
+hypotheses, axioms exactly `[propext, Classical.choice, Quot.sound]`) states
+that no Keller pair with Newton normal form (c) exists over any field of
+characteristic 0. It is `main_theorem_c_of_chartEmpty_T1ne0` (bundle
+`Combine`) applied to `challenge_target`
+(`gghv-dependency-closure/lean/bridge_attempt_2026_11_04.lean`, 54 lines), the
+certificate interface instantiated at the concrete data ρ = Fin 3199,
+p = 32003, w₀ = 11147, via the bridge `Fpoly = Fpoly2` (the same six
+`polyOfTerms` generators in the same order: 0 = Psi, 1 = Phi1, 2 = Phi2,
+3 = Theta1, 4 = Theta2, 5 = Theta3) and the A1, A2, and six data hypotheses;
+R109Data and K5 were not needed. Verification logs:
+`gghv-dependency-closure/lean/logs/bridge_challenge_target_2026-11-04.log`
+and `gghv-dependency-closure/lean/logs/branch_c_eliminated_2026-11-04.log`.
+These two files sit outside the frozen v3.1 bundle; the source freeze above
+is unchanged. This eliminates GGHV Proposition 4.3 case (1) (with the
+(0, 8)/(0, 12) vertices); together with the branches (a),(b) `main_theorem`
+(case (2)), the Prop. 4.3 split is fully eliminated in Lean. It does not
+claim (72, 108) excluded unconditionally or JC(2).
+
 ### Source data (§2)
 - **Source-gating**: All base objects verified against GGHV v1, Proposition 4.3, case (1). The pipeline's generators were found to certify a differently parametrized ideal than `lower_c`'s; step 1 was redone for `lower_c` (`chart_certificates/step1/`, `logs/run_step1.log`).
 - **Step-1 scripts** (`chart_certificates/step1/`): `certB_lowerc.py` (exact over K₅, t₁ = 0 slice), `modp_chart.py`

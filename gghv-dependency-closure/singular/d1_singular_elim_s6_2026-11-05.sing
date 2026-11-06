@@ -1,0 +1,51 @@
+// (ii) GGHV section 6 elimination, Route A' — Singular-native.
+// Sequential polynomial substitutions (each eliminated variable occurs linearly
+// with constant coefficient 2 in its equation; substitutions derived inside
+// Singular via subst(...,var,0)/2), then resultants eliminating dm3, then dm2.
+// Equations transcribed from elimination_s6.py (original Q4, (1/2)y^9 term).
+// Singular 4.3.1, char 0.
+ring R = 0, (d0,d1,dm1,dm2,dm3,dm4,dm5,dm6,dm7,dm8,dm10,y), dp;
+poly D2_1 = 2*d0*dm1 + 2*d1*dm2 + 2*dm4;
+poly D2_2 = dm1^2 + 2*d0*dm2 + 2*d1*dm3 + 2*dm5;
+poly D2_3 = 2*dm1*dm2 + 2*d0*dm3 + 2*d1*dm4 + 2*dm6;
+poly D2_4 = dm2^2 + 2*dm1*dm3 + 2*d0*dm4 + 2*d1*dm5 + 2*dm7;
+poly D2_5 = 2*dm2*dm3 + 2*dm1*dm4 + 2*d0*dm5 + 2*d1*dm6 + 2*dm8;
+poly D2_7 = 2*dm10 + 2*dm3*dm4 + 2*dm2*dm5 + 2*dm1*dm6 + 2*d0*dm7 + 2*d1*dm8;
+poly Q1 = 3*d0^2*dm1 + 3*d1*dm1^2 + 6*d0*d1*dm2 + 3*dm2^2 + 3*d1^2*dm3 + 6*dm1*dm3 + 6*d0*dm4 + 6*d1*dm5 + 3*dm7;
+poly Q2 = 3*d0*dm1^2 + 3*d0^2*dm2 + 6*d1*dm1*dm2 + 6*d0*d1*dm3 + 6*dm2*dm3 + 3*d1^2*dm4 + 6*dm1*dm4 + 6*d0*dm5 + 6*d1*dm6 + 3*dm8;
+poly Q4 = 3*dm10 + 3*dm1^2*dm2 + 3*d0*dm2^2 + 6*d0*dm1*dm3 + 6*d1*dm2*dm3 + 3*d0^2*dm4 + 6*d1*dm1*dm4 + 6*dm3*dm4 + 6*d0*d1*dm5 + 6*dm2*dm5 + 3*d1^2*dm6 + 6*dm1*dm6 + 6*d0*dm7 + 6*d1*dm8 + (1/2)*y^9;
+poly s4 = -subst(D2_1, dm4, 0)/2;
+poly s5 = -subst(D2_2, dm5, 0)/2;
+poly s6 = -subst(D2_3, dm6, 0)/2;
+poly s6p = subst(s6, dm4, s4);
+poly s7 = -subst(D2_4, dm7, 0)/2;
+poly s7p = subst(subst(s7, dm4, s4), dm5, s5);
+poly s8 = -subst(D2_5, dm8, 0)/2;
+poly s8p = subst(subst(subst(s8, dm4, s4), dm5, s5), dm6, s6p);
+poly s10 = -subst(D2_7, dm10, 0)/2;
+poly s10p = subst(subst(subst(subst(subst(s10, dm4, s4), dm5, s5), dm6, s6p), dm7, s7p), dm8, s8p);
+print("s4 ="); print(s4);
+print("s5 ="); print(s5);
+print("s6p ="); print(s6p);
+print("Q1 linear in dm3? diff check (diff of Q1s wrt dm3 twice must be 0):");
+poly Q1s = subst(subst(subst(subst(subst(subst(Q1, dm4, s4), dm5, s5), dm6, s6p), dm7, s7p), dm8, s8p), dm10, s10p);
+poly Q2s = subst(subst(subst(subst(subst(subst(Q2, dm4, s4), dm5, s5), dm6, s6p), dm7, s7p), dm8, s8p), dm10, s10p);
+poly Q4s = subst(subst(subst(subst(subst(subst(Q4, dm4, s4), dm5, s5), dm6, s6p), dm7, s7p), dm8, s8p), dm10, s10p);
+print("Q1s ="); print(Q1s);
+print("Q2s ="); print(Q2s);
+print("Q4s ="); print(Q4s);
+print("diff(diff(Q1s,dm3),dm3) ="); print(diff(diff(Q1s, dm3), dm3));
+print("diff(diff(Q2s,dm3),dm3) ="); print(diff(diff(Q2s, dm3), dm3));
+print("diff(diff(Q4s,dm3),dm3) ="); print(diff(diff(Q4s, dm3), dm3));
+poly R13 = resultant(Q1s, Q2s, dm3);
+poly R14 = resultant(Q1s, Q4s, dm3);
+print("R13 ="); print(R13);
+print("R14 ="); print(R14);
+poly Res = resultant(R13, R14, dm2);
+print("R factored ="); print(factorize(Res));
+poly target = 9*y^9*d1*dm1^6 + y^27 + 27*d0*dm1^9;
+print("target factored ="); print(factorize(target));
+print("reduce(dm1^k * Res by target), k=0..6 (0 means divisible):");
+int k;
+for (k = 0; k <= 6; k++) { print("k=" + string(k) + ":"); print(reduce(dm1^k * Res, ideal(target))); }
+quit;

@@ -1,0 +1,37 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/extremos_ax.lean:1383:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/extremos_ax.lean:1431:5: warning: Variable name `hsR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/extremos_ax.lean:1432:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/extremos_ax.lean:1475:5: warning: Variable name `heR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _heR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/extremos_ax.lean:1476:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'extremos_alineados' depends on axioms: [propext, Classical.choice, Quot.sound]
+'extremos_noalineados_st' depends on axioms: [propext, Classical.choice, Quot.sound]
+'extremos_noalineados_en' depends on axioms: [propext, Classical.choice, Quot.sound]
+'en_sum_eq_one_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bracket_val_le' depends on axioms: [propext, Quot.sound]

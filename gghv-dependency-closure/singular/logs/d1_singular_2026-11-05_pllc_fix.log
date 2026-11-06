@@ -1,0 +1,6 @@
+size(C) (expect 18):
+18
+(8,3) in C? (expect 1):
+1
+(8,4) in C? (expect 0):
+0

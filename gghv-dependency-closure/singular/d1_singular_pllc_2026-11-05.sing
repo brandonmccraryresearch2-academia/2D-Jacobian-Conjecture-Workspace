@@ -1,0 +1,35 @@
+// (v) [GGV5] PLLC first-stage filter + direction assignment, recomputed in Singular.
+// Mirrors Part29/Part30 definitions exactly (Nat truncated subtraction is exact
+// here since the filter requires b < a). Singular 4.3.1.
+ring R = 0, (x), dp;
+proc pllcFilter(int a, int b)
+{
+  return ((b < a) && (b <= (a - b - 1)^2) && ((b + gcd(a, b)) != a));
+}
+proc pllcDir(int a, int b)
+{
+  if (b == 0) { return (list(0, -1)); }
+  if (a > 2*b) { return (list(1, -2)); }
+  return (list(1, -1));
+}
+print("pllcFilter(8,3) (expect 1):"); print(pllcFilter(8,3));
+print("pllcFilter(8,4) (expect 0):"); print(pllcFilter(8,4));
+print("pllcDir(8,3) (expect (1,-2)):");
+print(pllcDir(8,3));
+print("pllcDir(8,4) (expect (1,-1)):");
+print(pllcDir(8,4));
+print("4+gcd(8,4) (expect 8: the 3.29 failure for (8,4)):");
+print(4+gcd(8,4));
+list C;
+int a; int b;
+for (a = 0; a <= 9; a++) { for (b = 0; b <= a; b++) { if (pllcFilter(a,b)) { C = C + list(list(a,b)); } } }
+print("pllcCandidates(9) =");
+print(C);
+print("size (count of candidates, a<=9):"); print(size(C));
+print("(8,3) in C? (expect 1):");
+int found83 = 0; int found84 = 0; int i;
+for (i = 1; i <= size(C); i++) { if (C[i] == list(8,3)) { found83 = 1; } if (C[i] == list(8,4)) { found84 = 1; } }
+print(found83);
+print("(8,4) in C? (expect 0):");
+print(found84);
+quit;
