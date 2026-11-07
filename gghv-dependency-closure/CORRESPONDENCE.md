@@ -181,8 +181,10 @@ det jsons (`rows.json`, `piv.json`, `pivcols.json`, `colv.json`,
 `det_p32003.json`, `det_p1000003.json`) + `summary.json` /
 `globals.txt`. Indices + modular determinants DONE (p=32003 →
 29127; p=1000003 → 262898; both routes agree); the K₅ determinant
-value is NOT done; §6.3(a) satisfaction is Brandon's judgement call;
-outside-project rebuild NOT DONE. I1 identification, not a kernel
+value is NOT done — full leg-9 multimodular run ordered 2026-11-07.
+§6.3(a) outside-rebuild clause REMOVED by Brandon's ruling
+2026-11-07 (protocol §6.3 amendment), so satisfaction now turns on
+the K₅ value. I1 identification, not a kernel
 proof. The 79 MB `INVERSE.pkl` is already tracked in the repo and is
 referenced by path + sha256 only, never re-filed.
 
