@@ -1,0 +1,4 @@
+matrix M1000003.pkl: p=1000003 w0=806739 rows=3199 cols=6054; pivcols labels match p=32003
+FLINT det(M_S) mod 1000003 = 262898  (4.8s)
+NumPy-LU det(M_S) mod 1000003 = 262898  (201.4s)
+DET OK: routes agree, det != 0

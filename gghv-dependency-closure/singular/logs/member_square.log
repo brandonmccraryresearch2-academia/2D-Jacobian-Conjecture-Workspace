@@ -1,0 +1,8 @@
+GB_SIZE:
+591
+reduce(T,GJ):
+729*d0^2*al^18+324*d1*dm1*dm2^2*al^9-324*dm1*dm3^2*al^9+36*dm1^4*dm2^2+72*dm1^5*dm3
+reduce(y^2*al^10*T,GJ):
+729*d0^2*dm1*al^27-324*dm1^2*dm3^2*al^18-324*d1^2*dm1*dm2^2*dm3^2*al^9-1296*d0*dm1*dm2*dm3^3*al^9-648*d1*dm2^2*dm3^3*al^9+324*d1*dm1*dm3^4*al^9+648*dm3^5*al^9-2592*d1*dm1*dm2^2*dm3^3*al^5*lm+1296*d1*dm1^2*dm3^4*al^5*lm+144*d1*dm1^9*al*lm^2+2592*dm1*dm3^5*al^5*lm+288*dm1^8*dm3*al*lm^2+864*d1*dm1^6*dm3^2*al*lm^2-24*d1^2*dm1^9-36*d1^3*dm1^6*dm2^2+1728*dm1^5*dm3^3*al*lm^2+4*dm1^10-144*d1*dm1^8*dm3-360*d1^2*dm1^5*dm2^2*dm3-36*d1^2*dm1^6*dm3^2-216*d1^3*dm1^3*dm2^2*dm3^2-192*dm1^7*dm3^2-1152*d1*dm1^4*dm2^2*dm3^2-216*d1*dm1^5*dm3^3-1728*d0*d1*dm1^3*dm2*dm3^3-1728*d1^2*dm1^2*dm2^2*dm3^3+216*d1^2*dm1^3*dm3^4-1152*dm1^3*dm2^2*dm3^3-288*dm1^4*dm3^4-3456*d0*dm1^2*dm2*dm3^4-1728*d1*dm1*dm2^2*dm3^4+864*d1*dm1^2*dm3^5+1728*dm1*dm3^6
+reduce(y^9*T,GJ):
+0

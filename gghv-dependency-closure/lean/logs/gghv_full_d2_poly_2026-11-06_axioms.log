@@ -1,0 +1,74 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:68:14: warning: This simp argument is unused:
+  Finsupp.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finsupp.single_apply, hki, hkj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:68:33: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finsupp.sub_apply, hki, hkj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:75:16: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:76:14: warning: This simp argument is unused:
+  Finsupp.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [h0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:79:16: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:80:14: warning: This simp argument is unused:
+  Finsupp.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [h0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:68:69: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:68:69: warning: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:168:4: warning: This simp argument is unused:
+  MvPolynomial.pderiv_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pbracket, map_add, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_pow, MvPolynomial.pderiv_one, h00,
+    h11, h01, h10]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'pderiv_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pderiv_comm01' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_antisymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_leibniz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_jacobi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'joseph_counterexample_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]

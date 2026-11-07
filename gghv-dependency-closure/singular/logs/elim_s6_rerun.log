@@ -1,0 +1,51 @@
+s4 =
+-d0*dm1-d1*dm2
+s5 =
+-1/2*dm1^2-d0*dm2-d1*dm3
+s6p =
+d0*d1*dm1+d1^2*dm2-dm1*dm2-d0*dm3
+Q1 linear in dm3? diff check (diff of Q1s wrt dm3 twice must be 0):
+Q1s =
+3/2*d1*dm1^2+3/2*dm2^2+3*dm1*dm3
+Q2s =
+-3/2*d0*dm1^2+3*dm2*dm3
+Q4s =
+1/2*y^9-3/2*dm1^2*dm2-3/2*d0*dm2^2-3*d0*dm1*dm3-3*d1*dm2*dm3
+diff(diff(Q1s,dm3),dm3) =
+0
+diff(diff(Q2s,dm3),dm3) =
+0
+diff(diff(Q4s,dm3),dm3) =
+0
+R13 =
+-9/2*d0*dm1^3-9/2*d1*dm1^2*dm2-9/2*dm2^3
+R14 =
+3/2*dm1*y^9+9/2*d0*d1*dm1^3+9/2*d1^2*dm1^2*dm2-9/2*dm1^3*dm2+9/2*d1*dm2^3
+R factored =
+[1]:
+   _[1]=-19683/64
+   _[2]=y^27+9*d1*dm1^6*y^9+27*d0*dm1^9
+   _[3]=dm1
+[2]:
+   1,1,3
+target factored =
+[1]:
+   _[1]=1
+   _[2]=y^27+9*d1*dm1^6*y^9+27*d0*dm1^9
+[2]:
+   1,1
+reduce(dm1^k * Res by target), k=0..6 (0 means divisible):
+k=0:
+0
+k=1:
+0
+k=2:
+0
+k=3:
+0
+k=4:
+0
+k=5:
+0
+k=6:
+0

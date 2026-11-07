@@ -1,0 +1,16 @@
+// Leg D: membership check for the square identity T via Groebner-basis reduce.
+// J = (principal S1, extra identities S2, S3, monomial S4, final combo S5).
+ring R = 0, (d0,d1,dm1,dm2,dm3,dm4,dm5,dm6,dm7,dm8,dm10,y,al,lm), dp;
+poly S1 = 9*y^9*d1*dm1^6 + y^27 + 27*d0*dm1^9;
+poly S2 = 3*dm1^2*dm2 - y^9;
+poly S3 = 2*dm3*y^9 - 3*d0*dm1^4;
+poly S4 = dm1 - al*y^2;
+poly S5 = -dm1^3 - 6*d0*dm1*dm2 - 3*d1*dm2^2 + 3*dm3^2 + 2*lm*y^8;
+ideal J = S1, S2, S3, S4, S5;
+ideal GJ = groebner(J);
+poly T = (27*al^9*d0 - 2*y^9)^2 - 108*al^10*(al^3*y^8 - 2*lm*y^10);
+print("GB_SIZE:"); print(size(GJ));
+print("reduce(T,GJ):"); print(reduce(T, GJ));
+print("reduce(y^2*al^10*T,GJ):"); print(reduce(y^2*al^10*T, GJ));
+print("reduce(y^9*T,GJ):"); print(reduce(y^9*T, GJ));
+quit;

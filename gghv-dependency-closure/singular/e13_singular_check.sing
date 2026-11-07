@@ -1,0 +1,23 @@
+// E13 second-tool check (tool 2 of 2): Singular 4.3.1, char 0.
+// Same claims as e13_sympy_check.py, checked independently in Singular.
+ring R = 0, y, dp;
+poly C3 = y^8*(y+1);
+poly C3p = diff(C3, y);
+print("C3p - (9y+8)y^7 ="); print(C3p - (9*y+8)*y^7);
+poly ginner = 35 - 42*y + 54*y^2 - 81*y^3 + 243*y^4;
+poly f1 = (-1/910)*y^9*(y+1)^2*ginner;
+print("deg f1 ="); print(deg(f1));
+poly lhs = y^9*(y+1)^2;
+poly rhs = 6*y*(y+1)*diff(f1,y) - 10*(9*y+8)*f1;
+print("ODE_DIFF ="); print(lhs - rhs);
+poly q = f1 / C3;
+print("f1/C3 remainder check: f1 - q*C3 ="); print(f1 - q*C3);
+print("deg f ="); print(deg(q));
+print("f - y(y+1)g ="); print(q - y*(y+1)*((-1/910)*ginner));
+poly fp = diff(q, y);
+print("gcd(f, f') ="); print(gcd(q, fp));
+print("gcd is 1?"); print(gcd(q, fp) == 1);
+print("g(0) ="); print(subst((-1/910)*ginner, y, 0));
+print("g(-1) ="); print(subst((-1/910)*ginner, y, -1));
+print("discriminant-ish: resultant(f, f') ="); print(resultant(q, fp, y));
+quit;

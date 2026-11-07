@@ -1,0 +1,12 @@
+{
+  "prime": 32003,
+  "tag": "p32003",
+  "det_flint": 29127,
+  "det_flint_seconds": 4.586328744888306,
+  "nonzero": true,
+  "detC_flint": 9069,
+  "detC_times_detMS_mod_p": 1,
+  "det_numpy": 29127,
+  "det_numpy_seconds": 193.36938881874084,
+  "routes_agree": true
+}

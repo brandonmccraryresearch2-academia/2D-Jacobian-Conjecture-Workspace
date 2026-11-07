@@ -1,0 +1,298 @@
+/tmp/laurent.lean:176:0: warning: automatically included section variable(s) unused in theorem `ValCore.sum_le`:
+  [Nontrivial R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:409:0: warning: automatically included section variable(s) unused in theorem `valCore_ratFunc_intDegree`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:428:0: warning: automatically included section variable(s) unused in theorem `w21Rat_y`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:461:0: warning: automatically included section variable(s) unused in theorem `lp_support_nonempty`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:467:0: warning: automatically included section variable(s) unused in theorem `lp_coeff_add`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:470:0: warning: automatically included section variable(s) unused in theorem `lp_coeff_neg`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:474:6: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/tmp/laurent.lean:472:0: warning: automatically included section variable(s) unused in theorem `lpMaxDeg_zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:478:6: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/tmp/laurent.lean:476:0: warning: automatically included section variable(s) unused in theorem `lpMinDeg_zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:484:6: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:492:0: warning: automatically included section variable(s) unused in theorem `lp_support_C`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:501:23: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:513:20: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:518:23: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:547:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:550:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:556:6: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:556:20: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:556:33: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:590:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:593:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:606:6: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:606:20: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:606:33: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:619:10: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:619:24: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:619:37: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:626:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:651:10: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:659:10: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:659:24: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:659:37: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/tmp/laurent.lean:849:21: warning: Variable name `hPsupp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hPsupp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/laurent.lean:849:61: warning: Variable name `hPneg` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hPneg
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/laurent.lean:1019:26: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/laurent.lean:1077:0: warning: automatically included section variable(s) unused in theorem `mono_eq_single`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1081:0: warning: automatically included section variable(s) unused in theorem `mono_coeff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1092:0: warning: automatically included section variable(s) unused in theorem `lpDeriv_zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1094:0: warning: automatically included section variable(s) unused in theorem `lpDeriv_add`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1102:0: warning: automatically included section variable(s) unused in theorem `lpDeriv_C_mul_T`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1128:0: warning: automatically included section variable(s) unused in theorem `C_mul_T_mul_C_mul_T`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1134:0: warning: automatically included section variable(s) unused in theorem `C_mul_T_smul`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1157:0: warning: automatically included section variable(s) unused in theorem `hasseDeriv_single_one`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1180:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/laurent.lean:1180:36: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/laurent.lean:1181:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1181:33: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1190:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/laurent.lean:1190:19: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/laurent.lean:1191:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1191:19: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1184:0: warning: automatically included section variable(s) unused in theorem `smul_single`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1198:0: warning: automatically included section variable(s) unused in theorem `derivX_add`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/tmp/laurent.lean:1271:58: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1350:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:1394:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:1379:0: warning: automatically included section variable(s) unused in theorem `exists_F`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/laurent.lean:1500:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/laurent.lean:1511:6: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => C.coeff (_a.untop hx) = C.coeff (-3)
+Error: Application type mismatch: The argument
+  hx
+has type
+  orderTop C ≠ ⊤
+but is expected to have type
+  _a ≠ ⊤
+in the application
+  _a.untop hx
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+R : Type u_2
+inst✝¹ : CommRing R
+inst✝ : IsDomain R
+C : R⸨X⸩
+h3 : IsUnit (C.coeff (-3))
+hlt : ∀ m < -3, C.coeff m = 0
+hCne : C ≠ 0
+hord : HahnSeries.order C = -3
+hx : orderTop C ≠ ⊤
+⊢ C.coeff ((orderTop C).untop hx) = C.coeff (-3)
+/tmp/laurent.lean:1541:35: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1543:27: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/laurent.lean:1559:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1559:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if n = 0 then ?m.117 else ?m.118
+in the target expression
+  (fun n => Pcoef n + if n = 0 then 2 / 3 * α₁ else 0) n = 0
+
+case refine_2
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : CharZero K
+Pcoef : ℤ → RatFunc K
+α₁ : RatFunc K
+hPsupp : ∀ (n : ℤ), 6 < n → Pcoef n = 0
+hPneg : ∀ n < 0, Pcoef n = 0
+n : ℤ
+hn : 6 < n
+⊢ (fun n => Pcoef n + if n = 0 then 2 / 3 * α₁ else 0) n = 0
+/tmp/laurent.lean:1562:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/laurent.lean:1562:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if n = 0 then ?m.130 else ?m.131
+in the target expression
+  (fun n => Pcoef n + if n = 0 then 2 / 3 * α₁ else 0) n = 0
+
+case refine_3
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : CharZero K
+Pcoef : ℤ → RatFunc K
+α₁ : RatFunc K
+hPsupp : ∀ (n : ℤ), 6 < n → Pcoef n = 0
+hPneg : ∀ n < 0, Pcoef n = 0
+n : ℤ
+hn : n < 0
+⊢ (fun n => Pcoef n + if n = 0 then 2 / 3 * α₁ else 0) n = 0
+/tmp/laurent.lean:1630:26: error: Application type mismatch: The argument
+  α₂
+has type
+  K[T;T⁻¹]
+but is expected to have type
+  K[T;T⁻¹]⸨X⸩ˣ
+in the application
+  GGV1InputsLp C (↑u) α₂
+/tmp/laurent.lean:1665:71: error: Application type mismatch: The argument
+  α₂
+has type
+  K[T;T⁻¹]
+but is expected to have type
+  K[T;T⁻¹]⸨X⸩ˣ
+in the application
+  GGV1InputsLp C (↑u) α₂
+/tmp/laurent.lean:1678:28: error(lean.unknownIdentifier): Unknown identifier `exists_F_lp`
+/tmp/laurent.lean:1678:9: error: Tactic `rcases` failed: `x✝ : ?m.259` is not an inductive datatype

@@ -125,3 +125,74 @@ the §6 `k = 2` derivation + non-square contradiction; §5 rescaling + the
 degree-78 endgame as Lean proofs; the 9 equations' D2 derivation; [GGV5]
 completeness; Joseph Lemma 2.2 (not located); `Lema Joseph` (not proved);
 the published [GGV1] §7 text (missing).
+
+---
+
+## Phase 4 — the GGHV paper proved in full (filed 2026-11-07)
+
+**Honest headline: the paper is NOT proved unconditionally.** No
+numbered environment is fully proved unconditionally; Theorem 2.1 is
+CONDITIONAL from the 20-field `MinimalPremises2`. Nothing here proves
+JC(2), proves Theorem R, or excludes (72, 108) unconditionally. The
+definitive per-item verdict record is
+`gghv_full_assembly_inventory.md`; the independent validation is
+`validation_g1/g1_validation_report_2026-11-07.md` (CONDITIONAL GO).
+The per-file record — byte sizes, SHA-256, axiom lists, verification
+logs, carried premises, exclusions — is in `lean/MANIFEST.md` (§ Phase
+4) and `singular/MANIFEST.md` (§ Phase 4); this section is the map.
+
+| File (`lean/`) | Paper statement | Headline theorem(s) | Grade and axioms |
+|---|---|---|---|
+| `gghv_full_s2s3_2026-11-06.lean` | GGHV §2 table + §3 discards | `gghv_table_full` []; `discard_84_row` / `discard_120_row` [] | KERNEL table arithmetic; red rows CONDITIONAL (carried to Leg F); completeness BLOCKED. 21 theorems: 10 [] + 4 [propext] + 5 [triple] + 2 [propext, Quot.sound]. Leg A's header claim about the [GGV5] TeX §6 is WRONG (inventory §8) — do not repeat it. |
+| `gghv_full_s4_2026-11-06.lean` | GGHV §4, Props 4.1–4.4 + PSP algorithm (E5–E9) | `prop41_conditional`; `prop42_conditional`; `prop43_conditional`; `prop44_conditional`; `psp_183` | E5–E8 CONDITIONAL on named `Prop4xPremises`; E9 KERNEL output, correctness CONDITIONAL. `prop41`/`prop43` [propext, Quot.sound]; `prop42`/`prop44` [triple]; `psp_183` [propext]. Second tool 20/20 ALL PASS. |
+| `gghv_full_s5_2026-11-06.lean` | GGHV §5, Thm 5.1 + `calculo de C` (E10–E17) | `thm51_conditional`; `cor52_conditional`; `e13_f_separable`; `e16_principal` | E10 CONDITIONAL; E11 PARTIAL; E12 PARTIAL; E13 KERNEL; E14 CONDITIONAL; E15 KERNEL arithmetic + CONDITIONAL bounds; E16 KERNEL (elimination only), derivation OPEN; E17 CONDITIONAL. 39 decls: 30 [triple] + 5 [propext, Quot.sound] + 2 [propext] + 2 []. |
+| `gghv_full_s5_axioms_2026-11-06.lean` | (axioms-print companion to the §5 file) | 39 `#print axioms` lines | No new theorems. Log `s5_axioms.log`. |
+| `gghv_full_s6_2026-11-06.lean` | GGHV §6, Thm 6.1 + `calculo de C para 7` (E18–E23) | `s6_theorem61`; `s6_principal_eq`; `e23_ode_unique`; `e20_assembly` | E18 CONDITIONAL; E19 PARTIAL; E20 KERNEL modulo Ptcoef input data; E21 CONDITIONAL; E22 KERNEL (elimination/displays only), derivation OPEN; E23 PARTIAL. 80 theorems: 64 [triple], 8 [propext, Quot.sound], 8 []. **C1(a): `e19_bound_step_21/_1m1/finite_bounds` are kernel-proved implications, NEVER instantiable with v_{2,1}/v_{1,−1} (ValAxioms uninstantiable) — do not cite as instantiated.** |
+| `gghv_full_s6_2026-11-06_axioms.lean` | (axioms-print companion to the §6 file) | 80 `#print axioms` lines | No new theorems. Log `s6_axioms3.log`. |
+| `gghv_full_esquina3l_2026-11-06.lean` | [GGV1] esquina(3), ℓ-form (R8) | `esq3_dir_determination`; `esq3_lform_from_cube`; `esq3_lform_Q` | KERNEL arithmetic + CONDITIONAL ℓ-form assembly. Endpoint/Q theorems re-printed by the assembly R8 run with identical lists. `esq3_lform_from_cube` CONDITIONAL on the common-power + cube premises (carried). |
+| `gghv_full_central_gaps_2026-11-06.lean` | [GGV1] `central` gaps (R9) | `central_cancellation`; `joseph_counting_contradiction` | KERNEL + CONDITIONAL. `central_eq_central_from_joseph22` [propext] on the named `Joseph22HomogForm` premise. Joseph Lemma 2.2 itself NOT FOUND. |
+| `gghv_full_esquina_combined_2026-11-06.lean` | Combined-form esquina(1)/(2) (R10) | `esquina2_combined`; `esquina1_bundle_iff` | KERNEL. `esquina2_*` [triple]; `esquina1_bundle_iff` []. |
+| `gghv_full_721_coeff_2026-11-06.lean` | The (7,21) coefficient identity (R11) | `face721_*`; `face721_factor_count` | KERNEL. `face721_*` [triple]; `face721_factor_count` [propext]. |
+| `gghv_full_remark_facelaws_2026-11-06.lean` | Remark "a remark" face laws + alineados(2a) (R12) | `alineados_2a_from_2b`; `remark_ratio` | KERNEL. Mostly [triple]; `tpow_exp_smul` [propext, Quot.sound]. |
+| `gghv_full_d1_theory_2026-11-06.lean` | D1 full theory (R13) | `dirLt_trans_halfplane`; `succOp_spec` | KERNEL. `stFace`/`enFace` ↔ CCW bridge still open. |
+| `gghv_full_d2_poly_2026-11-06.lean` | D2 polynomial bracket (R14) | `pderiv_comm`; `pbracket_jacobi` | KERNEL, all [triple]. Translation chain rule CONDITIONAL on the `pderiv`/`aeval` commutation. |
+| `gghv_full_mn_gt1_2026-11-06.lean` | m,n > 1 as literally written (R15) | `mn_gt1_dir_mem` | KERNEL as documented deviation: the paper states m,n ∈ ℕ but esquina(2)'s proof needs m,n > 1 — a genuine minor gap as literally written. |
+| `gghv_full_hybrid_slip_2026-11-06.lean` | Hybrid-vs-slip (R16) | `hybrid_slot_249/288/927/721` | KERNEL arithmetic [triple]; the hybrid-vs-slip question itself stays OPEN (published §7 NOT FOUND). |
+| `gghv_full_mayores_2026-11-06.lean` | `mayores` full statement (R17) | `mayores_chain_terminates`; `mayores_full_conditional` | KERNEL / CONDITIONAL. |
+| `gghv_full_ggv1_2026-11-06.lean` | (Leg E index — comment-only header) | — | No theorems, no axioms log. Filed as the leg's index. |
+| `gghv_full_ggvstar_2026-11-06.lean` | [GGV2] Prop 3.12 / 3.29 / Remark 3.31 / Def 3.21 (R18/R20) | `finitas_of_data`; `prop329_of_data`; `remark331_of_data` | CONDITIONAL on named `FinitasData` premises. All [triple]. Round-5 clean pass. |
+| `gghv_full_ggvstar_ggv1_2026-11-06.lean` | [GGV1] Thm 7.6(5), Prop 2.11(3), Prop 2.1, D2 power laws (R18) | `divisibilidad_gghv_use8`; `pavadass3_of_descended`; `prop21_two_a_of_b`; `coeffAt_pmul_assoc`; `ppow_add_kt`; `ppow_mul_kt` | Thm 7.6(5) / Prop 2.11(3) CONDITIONAL; (2b)→(2a) KERNEL-clean; (2a)→(2b) BLOCKED; power laws PROVED — `coeffAt_pmul_assoc` **[propext, Quot.sound]** (G1 F1, not [triple]); `ppow_add_kt`, `ppow_mul_kt` [triple]. Round-5 clean pass. |
+| `gghv_full_ggvstar_ggv6_ggv5_2026-11-06.lean` | [GGV6] Thm 7.3, [GGV5] completeness, four red rows (R19/R20) | `ggv6_discard84_from_thm73`; `enum_complete_of_links`; `redrow_*_conditional` | Thm 7.3 NOT PROVED as a theorem; completeness BLOCKED (open links `hchain`/`hattrib`); red rows CONDITIONAL. All [triple] except `redrow_520_32_of_23` []. Round-5 clean pass. |
+| `gghv_full_laurent_2026-11-06.lean` | Laurent fragment: E11/E19/E20/E23 fold-in | `exists_sqrt_series`; `laurent_series_discharge_s6`; `exists_tilde`; `bracket_reduction_discharge` | E11 PARTIAL (generic sqrt-series lemma KERNEL; §5 instance NOT separately applied — G1 F2); E19 PARTIAL (existence + bounds KERNEL, F CONDITIONAL); E20 KERNEL modulo Ptcoef input data; E23 PARTIAL (`hdeg` carried). 87 theorems, AX_FULL_RC=0, sorryAx 0. First AX_FULL attempt failed RC=1 (wrong `#print` namespaces), fixed, final clean (C1(d)). |
+| `gghv_full_assembly_2026-11-06.lean` | Assembly: Theorem 2.1 from `MinimalPremises2` | `theorem21_minimal_v2`; `link_924_derived`; `link_927_derived` | CONDITIONAL (20-field premises; fields 9–10 refined, not discharged). All [triple] except `prop41_shape_of` / `prop41_conditional` / `prop43_conditional` [propext, Quot.sound] and `cor52_conditional` []. FULL_EXIT=0 (135 s), AXIOMS_EXIT=0 (50 s). |
+| `r8_axioms_2026-11-06.lean` | (R8 axioms-print companion) | `esq3_dir_b2/b1/b0`; `esq3_lform_endpoint_lo/hi`; `esq3_lform_Q` | [] / [propext] / [propext, Quot.sound]. rc=0, 15 s. |
+
+**Leg H — explicit maximal minor (PARTIAL, narrowed):** filed at
+`JC2D-branches_a_b_c_unified/branch_c/rank_lemma_check/` —
+`minor_spec_2026-11-06.md` + `extract_minor.py` + `det_minor.py` +
+det jsons (`rows.json`, `piv.json`, `pivcols.json`, `colv.json`,
+`det_p32003.json`, `det_p1000003.json`) + `summary.json` /
+`globals.txt`. Indices + modular determinants DONE (p=32003 →
+29127; p=1000003 → 262898; both routes agree); the K₅ determinant
+value is NOT done; §6.3(a) satisfaction is Brandon's judgement call;
+outside-project rebuild NOT DONE. I1 identification, not a kernel
+proof. The 79 MB `INVERSE.pkl` is already tracked in the repo and is
+referenced by path + sha256 only, never re-filed.
+
+**C1(c):** the E7 eliminations (branches (a)/(b)/(c)) are carried from
+the prior GradeA verification (commit 7e4db07f), NOT re-verified by
+gate G1.
+
+## Singular scripts → recomputations (Phase 4)
+
+| File (`singular/`) | Recomputation | Result |
+|---|---|---|
+| `gghv_full_singular_table_s5_2026-11-06.sing` (+ `table_filed_py` cross-check) | §2 table + §3 numerics (R21) | I1 PASS (BAD_ROWS = 0) |
+| `gghv_full_singular_ggv5_families_2026-11-06.sing` + `_py_2026-11-06.py` | [GGV5] generative step + attribution (R22) | I1 PASS (all 7 family checks = 1; cross-check ALL PASS) |
+| `gghv_full_singular_e13_ode_2026-11-06.sing` + `_sympy_2026-11-06.py` | E13 ODE / separability | I1 PASS (Singular rc=0; SymPy script rc=1 with logged DECOMPOSED defects — see `lean/MANIFEST.md` §4.3) |
+| `gghv_full_singular_nine_eq_2026-11-06.sing` + `_sympy_2026-11-06.py` | 9-equation D-scaling / displays (R23) | I1 PASS on the computational steps (both tools); two Singular script bugs REPORTED, not fixed (two-symbol C₃; 32-bit `int` overflow of 13!/14!) |
+| `e13_singular_check.sing` / `e13_sympy_check.py` | Leg C E13 second-tool check | See `singular/logs/e13_*` |
+| `legG_phi_shift_check.py` | φ-shift: x²-coefficient D₂−3t | CONFIRMED by both tools (t=D₂ → −2D₂; t=D₂/3 → 0) |
+| `lift_s6_extra.sing` / `lift_s6_square.sing` | Leg D §6 lift attempts | TIMEOUT 600 s (inconclusive) / explicit lift coefficients NOT obtained |
+| `member_s6_extra.sing` / `member_s6_square.sing` | Leg D §6 membership | Extra identities ARE in the 9-equation ideal; square identity follows up to the nonzero factor y⁹ (no explicit lift, hsq stays a premise) |
+| `jacobi_check.sing` | Leg E Jacobi identity | JACOBI = 0, BRACKET_AB = −x²−1, exit 0 |

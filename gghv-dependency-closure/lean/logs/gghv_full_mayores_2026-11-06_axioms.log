@@ -1,0 +1,14 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+'dirValQ_rat_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mayores_termination_descent' depends on axioms: [propext]
+'mayores_chain_terminates' depends on axioms: [propext, Quot.sound]
+'mayores_cocientes_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mayores_cocientes_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mayores_full_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]

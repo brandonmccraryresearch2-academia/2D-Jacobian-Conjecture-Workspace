@@ -1,0 +1,10 @@
+{
+  "prime": 1000003,
+  "tag": "p1000003",
+  "det_flint": 262898,
+  "det_flint_seconds": 4.751605987548828,
+  "nonzero": true,
+  "det_numpy": 262898,
+  "det_numpy_seconds": 201.4375684261322,
+  "routes_agree": true
+}

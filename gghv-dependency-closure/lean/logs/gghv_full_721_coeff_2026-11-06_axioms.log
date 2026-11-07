@@ -1,0 +1,15 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+'face721_base_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_monic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_natDegree_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_leading_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_factor_count' depends on axioms: [propext]
+'face721_remainder_degree' depends on axioms: [propext, Classical.choice, Quot.sound]

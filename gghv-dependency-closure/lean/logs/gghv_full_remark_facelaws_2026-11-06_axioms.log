@@ -1,0 +1,13 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+'alineados_2a_from_2b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'remark_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'remark_st_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'remark_en_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'tpow_exp_smul' depends on axioms: [propext, Quot.sound]

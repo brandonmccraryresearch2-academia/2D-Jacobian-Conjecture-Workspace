@@ -1,0 +1,9 @@
+A: coeff of x^2 in D(x-t) = D2 - 3*t
+A: equals D2 - 3*t ? True
+B: at t = D2   : d2 = -2*D2
+B: at t = D2/3 : d2 = 0
+C: series of 1/(x-D2) at oo = D2**3/x**4 + D2**2/x**3 + D2/x**2 + 1/x
+C: matches paper expansion ? True
+C: (x-D2)*partial_sum = -D2**4/x**4 + 1  (expect 1 - D2^4/x^4)
+VERDICT: A(D2-3t)=True  B(t=D2 -> -2D2)=True  B(t=D2/3 -> 0)=True  C(phi(x^-1))=True
+ALL_PASS = True

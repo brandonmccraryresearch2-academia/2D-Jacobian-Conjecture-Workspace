@@ -1,0 +1,47 @@
+=== tool versions ===
+Singular for x86_64-Linux version 4.3.1 (4313, 64 bit) Apr 27 2023 08:16:02
+with
+	GMP(6.2.1),NTL(11.5.1),FLINT(2.9.0),
+	omalloc,static readline(8),Plural,vspace(2),DBM,
+	dynamic modules,OM_NDEBUG,SING_NDEBUG,
+	CC:OPTIMIZE,GenericAdd,TableMult,no invTable,
+	eigenvalues,Gauss-Manin system,random=1794010351
+built-in modules: {}
+AC_CONFIGURE_ARGS =  '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/x86_64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libexecdir=/usr/libexec/x86_64-linux-gnu' '--enable-streamio' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -ffile-prefix-map=/build/singular-3jiyBS/singular-4.3.1-p3+ds=. -fstack-protector-strong -Wformat -Werror=format-security' 'LDFLAGS=-Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2' 'CXXFLAGS=-g -O2 -ffile-prefix-map=/build/singular-3jiyBS/singular-4.3.1-p3+ds=. -fstack-protector-strong -Wformat -Werror=format-security' 'PYTHON=/usr/bin/python3' --enable-omalloc  OMALLOC_LIBS='/build/singular-3jiyBS/singular-4.3.1-p3+ds/omalloc/libsingular-omalloc.la' OMALLOC_INCLUDES='-I/build/singular-3jiyBS/singular-4.3.1-p3+ds' --htmldir=${prefix}/share/doc/singular --with-Singular RESOURCES_LIBS='/build/singular-3jiyBS/singular-4.3.1-p3+ds/resources/libsingular-resources.la' RESOURCES_INCLUDES='-I/build/singular-3jiyBS/singular-4.3.1-p3+ds ' FACTORY_LIBS='/build/singular-3jiyBS/singular-4.3.1-p3+ds/factory/libsingular-factory.la' FACTORY_INCLUDES='-I/build/singular-3jiyBS/singular-4.3.1-p3+ds -I/build/singular-3jiyBS/singular-4.3.1-p3+ds/factory -I/build/singular-3jiyBS/singular-4.3.1-p3+ds/factory/include',
+CC = gcc,FLAGS :  -g -O2 -ffile-prefix-map=/build/singular-3jiyBS/singular-4.3.1-p3+ds=. -fstack-protector-strong -Wformat -Werror=format-security -pipe -fno-common -O3 -Wno-unused-function -Wno-trigraphs -Wno-unused-parameter -Wunknown-pragmas -Wno-unused-variable -fomit-frame-pointer -fwrapv -fvisibility=default -finline-functions -fno-exceptions -fno-threadsafe-statics -fno-enforce-eh-specs -fconserve-space -funroll-loops -pthread -pthread,
+CXX = g++,FLAGS : -g -O2 -ffile-prefix-map=/build/singular-3jiyBS/singular-4.3.1-p3+ds=. -fstack-protector-strong -Wformat -Werror=format-security -pipe -fno-common -O3 -Wno-unused-function -Wno-trigraphs -Wno-unused-parameter -Wunknown-pragmas -Wno-unused-variable -fomit-frame-pointer -fwrapv -fvisibility=default -finline-functions -fno-exceptions -fno-threadsafe-statics -fno-enforce-eh-specs -fconserve-space -funroll-loops -fno-rtti -fno-delete-null-pointer-checks -pthread,
+DEFS : ,CPPFLAGS : -Wdate-time -D_FORTIFY_SOURCE=2,
+LDFLAGS : -Wl,-z,relro -Wl,-z,now -pipe -fno-common -g -O3 -Wno-unused-function -Wno-trigraphs -Wno-unused-parameter -Wunknown-pragmas -Wno-unused-variable -fomit-frame-pointer -fwrapv -fvisibility=default -finline-functions -fno-exceptions -fno-threadsafe-statics -fno-enforce-eh-specs -fconserve-space -funroll-loops  -rdynamic -Wl,-undefined,dynamic_lookup,LIBS : -lreadline -lncurses  -lgmp -lrt  -lpthread (ver: 12.2.0)
+argv[0]   :	Singular
+SearchPath:	/usr/bin/../share/singular/LIB:/usr/bin/../share/singular/factory:/usr/libexec/x86_64-linux-gnu/singular/MOD:/usr/bin
+Singular  :	/usr/bin/Singular
+BinDir    :	/usr/bin
+ProcDir   :	/usr/libexec/x86_64-linux-gnu/singular/MOD
+RootDir   :	/usr/bin/..
+DataDir   :	/usr/bin/../share
+DefaultDir:	/usr
+InfoFile  :	/usr/bin/../share/info/singular.info
+IdxFile   :	/usr/bin/../share/singular/singular.idx
+HtmlDir   :	/usr/bin/../share/doc/singular/html
+ManualUrl :	https://www.singular.uni-kl.de/Manual/
+ExDir     :	
+Path      :	/usr/bin:/usr/libexec/x86_64-linux-gnu/singular/MOD:/usr/local/bin:/bin:/usr/games
+emacs     :	
+xemacs    :	
+SingularEmacs:	/usr/bin/Singular
+EmacsLoad :	
+EmacsDir  :	
+SingularXterm:	/usr/bin/Singular
+xterm     :	
+EmacsDir  :	
+Available HelpBrowsers: builtin, dummy, emacs, 
+Current HelpBrowser: builtin 
+                     SINGULAR                                 /  Development
+ A Computer Algebra System for Polynomial Computations       /   version 4.3.1
+                                                           0<
+ by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \   Jun 2022
+FB Mathematik der Universitaet, D-67653 Kaiserslautern        \  Debian 1:4.3.1-p3+ds-2
+Auf Wiedersehen.
+3.11.2 (main, Oct  7 2026, 12:35:07) [GCC 12.2.0]
+sympy 1.14.0
+flint 0.9.0

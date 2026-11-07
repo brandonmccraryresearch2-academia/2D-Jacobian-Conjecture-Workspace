@@ -1,0 +1,5 @@
+GLOBAL/STACK_GLOBAL references in INVERSE.pkl:
+  None
+
+Total opcodes: 474540
+First opcode: PROTO; last: STOP

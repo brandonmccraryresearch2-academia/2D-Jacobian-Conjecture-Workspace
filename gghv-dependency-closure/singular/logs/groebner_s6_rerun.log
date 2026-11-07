@@ -1,0 +1,10 @@
+ELIM_IDEAL_SIZE:
+1
+ELIM_IDEAL_GENS:
+y^27+9*d1*dm1^6*y^9+27*d0*dm1^9
+reduce(target, E):
+0
+reduce(dm1*target, E):
+0
+reduce(dm1^3*target, E):
+0

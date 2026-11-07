@@ -1,0 +1,53 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== SymPy 1.14.0 ===
+C3' = 9*y**8 + 8*y**7  == (9y+8)y^7 ? True
+deg f1 = 15
+ODE_DIFF = 0
+ODE_OK = True
+ODE_PREDIV_DIFF = 0
+DIV_REM = Poly(0, y, domain='QQ')  (must be 0)
+f = -243*y**6/910 - 81*y**5/455 + 27*y**4/910 - 6*y**3/455 + y**2/130 - y/26
+deg f = 6
+f / (y(y+1)) = -243*y**6/(910*y**2 + 910*y) - 81*y**5/(455*y**2 + 455*y) + 27*y**4/(910*y**2 + 910*y) - 6*y**3/(455*y**2 + 455*y) + y**2/(130*y**2 + 130*y) - y/(26*y**2 + 26*y)
+g(0) = -1/26  g(-1) = -1/2
+f == y(y+1)g ? True
+gcd(f, f') = Poly(1, y, domain='QQ')
+disc(f) nonzero ? True
+disc(f) = 43046721/570543675520000
+factor f over QQ: -y*(y + 1)*(243*y**4 - 81*y**3 + 54*y**2 - 42*y + 35)/910
+roots of g (numeric, distinct?): [(-0.29317540136883996-0.5703357321358647j), (-0.29317540136883996+0.5703357321358647j), (0.45984206803550665-0.3725457862044151j), (0.45984206803550665+0.3725457862044151j)]
+BEZOUT_DEG = Poly(1, y, domain='QQ')
+BEZOUT_U = 600696*y**4/455 + 339552*y**3/455 - 47088*y**2/455 + 16992*y/455 - 1112/65
+BEZOUT_V = -100116*y**5/455 - 67716*y**4/455 + 11448*y**3/455 - 1032*y**2/91 + 436*y/65 - 26
+BEZOUT_CHECK = 1
+ALL_PASS = True
+sympy rc=0
+=== Singular 4.3.1 ===
+C3p - (9y+8)y^7 =
+0
+deg f1 =
+15
+ODE_DIFF =
+0
+f1/C3 remainder check: f1 - q*C3 =
+0
+deg f =
+6
+f - y(y+1)g =
+0
+gcd(f, f') =
+1
+gcd is 1?
+1
+g(0) =
+-1/26
+g(-1) =
+-1/2
+discriminant-ish: resultant(f, f') =
+10460353203/519194744723200000
+singular rc=0

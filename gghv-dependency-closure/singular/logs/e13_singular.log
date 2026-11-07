@@ -1,0 +1,49 @@
+                     SINGULAR                                 /  Development
+ A Computer Algebra System for Polynomial Computations       /   version 4.3.1
+                                                           0<
+ by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \   Jun 2022
+FB Mathematik der Universitaet, D-67653 Kaiserslautern        \  Debian 1:4.3.1-p3+ds-2
+=== E13: C3 and its derivative ===
+C3P_MINUS_FORMULA (expect 0):
+0
+=== E13: ODE check, paper form 1 (TeX 1590) ===
+ODE_DIFF (expect 0):
+0
+=== E13: ODE check, paper form 2 (TeX 1588, multiplied by y^7) ===
+ODE_DIFF_FORM2 (expect 0):
+0
+=== E13: degrees ===
+DEG_F1 (expect 15):
+15
+DEG_C3 (expect 9):
+9
+=== E13: f = f1 / C3 ===
+F1_MINUS_C3_F (expect 0):
+0
+F:
+-243/910y6-81/455y5+27/910y4-6/455y3+1/130y2-1/26y
+DEG_F (expect 6):
+6
+F_MINUS_Y_YPLUS1_G (expect 0):
+0
+DEG_G (expect 4):
+4
+G_AT_0 (expect 35/(-910) != 0, i.e. y does not divide g):
+-1/26
+G_AT_MINUS1 (expect -200/(-910) != 0, i.e. y+1 does not divide g):
+-1/2
+=== E13: separability (no multiple roots) ===
+GCD_F_FP (expect 1):
+1
+GCD_G_GP (expect 1: g has 4 distinct roots):
+1
+GCD_F1_F1P (expect 1 up to the y^9(y+1)^2 factor being removed: f1 itself has multiple roots, f must not):
+y9+y8
+=== E13: bracket step (TeX 1568-1586) ===
+BRACKET_MINUS_RHS (expect 0: pure Leibniz identity, holds for ANY f1):
+-1/2x7y18-x7y17-1/2x7y16
+BRACKET2_MINUS_2X10C3CUBED (expect 0: holds IFF f1 satisfies the ODE):
+0
+X7C3SQ_MINUS_2BR (expect 0: x^7 C3^2 = 2[x^3 C3, x^5 f1] iff ODE holds):
+0
+Auf Wiedersehen.

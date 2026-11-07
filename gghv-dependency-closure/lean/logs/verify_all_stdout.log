@@ -1,0 +1,341 @@
+=== VM status ===
+lean-build-3 status: RUNNING
+VM already running; waiting 60 s for ssh readiness...
+=== scp probe ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL probe ===
+FULL probe: exit 1, 17 s
+/tmp/probe_api_2026-11-06.lean:4:8: error(lean.unknownIdentifier): Unknown constant `MvPolynomial.pderiv_add`
+/tmp/probe_api_2026-11-06.lean:13:8: error(lean.unknownIdentifier): Unknown constant `Polynomial.Monic.natDegree`
+/tmp/probe_api_2026-11-06.lean:15:8: error(lean.unknownIdentifier): Unknown constant `MvPolynomial.pderiv_pderiv_comm`
+/tmp/probe_api_2026-11-06.lean:22:8: error(lean.unknownIdentifier): Unknown constant `Polynomial.add_pow`
+/tmp/probe_api_2026-11-06.lean:23:8: error(lean.unknownIdentifier): Unknown constant `MvPolynomial.pderiv_smul`
+/tmp/probe_api_2026-11-06.lean:24:8: error(lean.unknownIdentifier): Unknown constant `MvPolynomial.pderiv_neg`
+/tmp/probe_api_2026-11-06.lean:25:8: error(lean.unknownIdentifier): Unknown constant `MvPolynomial.pderiv_zero`
+=== scp R8 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R8 ===
+FULL R8: exit 1, 18 s
+/tmp/gghv_full_esquina3l_2026-11-06.lean:107:17: error: No goals to be solved
+=== scp R9 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R9 ===
+FULL R9: exit 0, 18 s
+=== scp R10 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R10 ===
+FULL R10: exit 1, 18 s
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:50:23: error: unexpected token ':'; expected ')'
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:31:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:31:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:32:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:32:29: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:33:13: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:33:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:37:21: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:37:36: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:41:21: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:41:36: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:50:18: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:35:2: error: unsolved goals
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:33:44: error: unsolved goals
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:86:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:86:32: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:87:13: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:87:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:88:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06.lean:88:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+=== scp R11 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R11 ===
+FULL R11: exit 1, 17 s
+/tmp/gghv_full_721_coeff_2026-11-06.lean:58:25: error: unsolved goals
+/tmp/gghv_full_721_coeff_2026-11-06.lean:66:75: error: unsolved goals
+/tmp/gghv_full_721_coeff_2026-11-06.lean:115:46: error: unsolved goals
+=== scp R12 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R12 ===
+FULL R12: exit 1, 14 s
+/tmp/gghv_full_remark_facelaws_2026-11-06.lean:55:47: error(lean.unknownIdentifier): Unknown constant `Nat.pos_iff.mp`
+/tmp/gghv_full_remark_facelaws_2026-11-06.lean:58:2: error: No goals to be solved
+/tmp/gghv_full_remark_facelaws_2026-11-06.lean:65:47: error(lean.unknownIdentifier): Unknown constant `Nat.pos_iff.mp`
+/tmp/gghv_full_remark_facelaws_2026-11-06.lean:66:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+/tmp/gghv_full_remark_facelaws_2026-11-06.lean:73:47: error(lean.unknownIdentifier): Unknown constant `Nat.pos_iff.mp`
+/tmp/gghv_full_remark_facelaws_2026-11-06.lean:74:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+=== scp R13 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R13 ===
+FULL R13: exit 1, 14 s
+/tmp/gghv_full_d1_theory_2026-11-06.lean:135:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_d1_theory_2026-11-06.lean:138:8: warning: declaration uses `sorry`
+/tmp/gghv_full_d1_theory_2026-11-06.lean:149:8: warning: declaration uses `sorry`
+=== scp R14 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R14 ===
+FULL R14: exit 1, 15 s
+/tmp/gghv_full_d2_poly_2026-11-06.lean:95:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'AddMonoidAlgebra.ring', which is 'noncomputable'
+/tmp/gghv_full_d2_poly_2026-11-06.lean:140:4: error: `translate` has already been declared
+/tmp/gghv_full_d2_poly_2026-11-06.lean:149:13: error: Application type mismatch: The argument
+/tmp/gghv_full_d2_poly_2026-11-06.lean:150:6: error: Type mismatch
+/tmp/gghv_full_d2_poly_2026-11-06.lean:150:19: error: Application type mismatch: The argument
+=== scp R15 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R15 ===
+FULL R15: exit 0, 17 s
+=== scp R16 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R16 ===
+FULL R16: exit 1, 17 s
+/tmp/gghv_full_hybrid_slip_2026-11-06.lean:71:0: error: unexpected end of input; expected 'lemma'
+=== scp R17 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL R17 ===
+FULL R17: exit 0, 15 s
+=== scp INDEX ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+=== FULL INDEX ===
+FULL INDEX: exit 0, 11 s
+=== AXIOMS R8 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R8: exit 1, 16 s
+/tmp/gghv_full_esquina3l_2026-11-06_ax.lean:107:17: error: No goals to be solved
+'esq3_mn_sum' depends on axioms: [propext, Quot.sound]
+'esq3_dir_determination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'esq3_phi_aligned_impossible' depends on axioms: [propext, Quot.sound]
+'esq3_phi_nonaligned_impossible' depends on axioms: [propext, Quot.sound]
+'esq3_lform_term_val' depends on axioms: [propext]
+'esq3_lform_from_cube' depends on axioms: [propext, Quot.sound]
+=== AXIOMS R9 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R9: exit 0, 15 s
+'central_cancellation' depends on axioms: [propext]
+'central_item5' depends on axioms: [propext]
+'joseph_counting_contradiction' depends on axioms: [propext, Quot.sound]
+'int_interval_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_eq_central_from_joseph22' depends on axioms: [propext]
+=== AXIOMS R10 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R10: exit 1, 17 s
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:50:23: error: unexpected token ':'; expected ')'
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:31:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:31:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:32:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:32:29: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:33:13: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:33:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:37:21: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:37:36: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:41:21: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:41:36: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:50:18: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:35:2: error: unsolved goals
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:33:44: error: unsolved goals
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:86:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:86:32: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:87:13: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:87:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:88:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:88:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:89:2: error(lean.unknownIdentifier): Unknown identifier `esquina2_set_iff.mpr`
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:93:44: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:93:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:94:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:94:27: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:95:13: error: Type mismatch
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:95:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:96:2: error(lean.unknownIdentifier): Unknown identifier `esquina2_set_iff.mp`
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:125:14: error(lean.unknownIdentifier): Unknown constant `esquina2_set_iff`
+/tmp/gghv_full_esquina_combined_2026-11-06_ax.lean:126:14: error(lean.unknownIdentifier): Unknown constant `esquina2_combined`
+=== AXIOMS R11 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R11: exit 1, 17 s
+/tmp/gghv_full_721_coeff_2026-11-06_ax.lean:58:25: error: unsolved goals
+/tmp/gghv_full_721_coeff_2026-11-06_ax.lean:66:75: error: unsolved goals
+/tmp/gghv_full_721_coeff_2026-11-06_ax.lean:115:46: error: unsolved goals
+'face721_base_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'face721_coeffs' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'face721_monic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_natDegree_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_leading_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face721_factor_count' depends on axioms: [propext]
+'face721_remainder_degree' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+=== AXIOMS R12 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R12: exit 1, 21 s
+/tmp/gghv_full_remark_facelaws_2026-11-06_ax.lean:55:47: error(lean.unknownIdentifier): Unknown constant `Nat.pos_iff.mp`
+/tmp/gghv_full_remark_facelaws_2026-11-06_ax.lean:58:2: error: No goals to be solved
+/tmp/gghv_full_remark_facelaws_2026-11-06_ax.lean:65:47: error(lean.unknownIdentifier): Unknown constant `Nat.pos_iff.mp`
+/tmp/gghv_full_remark_facelaws_2026-11-06_ax.lean:66:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+/tmp/gghv_full_remark_facelaws_2026-11-06_ax.lean:73:47: error(lean.unknownIdentifier): Unknown constant `Nat.pos_iff.mp`
+/tmp/gghv_full_remark_facelaws_2026-11-06_ax.lean:74:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+'alineados_2a_from_2b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'remark_ratio' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'remark_st_scaling' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'remark_en_scaling' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'tpow_exp_smul' depends on axioms: [propext, Quot.sound]
+=== AXIOMS R13 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R13: exit 1, 21 s
+/tmp/gghv_full_d1_theory_2026-11-06_ax.lean:135:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+'cross_dot_identity' depends on axioms: [propext, Quot.sound]
+'dirLt_trans_halfplane' depends on axioms: [propext, Classical.choice, Quot.sound]
+/tmp/gghv_full_d1_theory_2026-11-06_ax.lean:160:14: error(lean.unknownIdentifier): Unknown constant `dirLt_irrefl`
+/tmp/gghv_full_d1_theory_2026-11-06_ax.lean:160:27: error: unexpected identifier; expected command
+'succOp_eq_of_isSuccFrom' depends on axioms: [sorryAx]
+=== AXIOMS R14 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R14: exit 1, 22 s
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:95:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'AddMonoidAlgebra.ring', which is 'noncomputable'
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:140:4: error: `translate` has already been declared
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:149:13: error: Application type mismatch: The argument
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:150:6: error: Type mismatch
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:150:19: error: Application type mismatch: The argument
+'pderiv_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pderiv_comm01' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_antisymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_leibniz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pbracket_jacobi' depends on axioms: [propext, Classical.choice, Quot.sound]
+/tmp/gghv_full_d2_poly_2026-11-06_ax.lean:178:14: error(lean.unknownIdentifier): Unknown constant `pbracket_translate`
+'joseph_counterexample_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+=== AXIOMS R15 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R15: exit 0, 21 s
+'mn_gt1_dir_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'gghv_uses_dir_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+=== AXIOMS R16 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R16: exit 1, 21 s
+/tmp/gghv_full_hybrid_slip_2026-11-06_ax.lean:70:47: error: unexpected token '#print'; expected 'lemma'
+'hybrid_arith_249' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hybrid_arith_288' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hybrid_slot_249' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hybrid_slot_288' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hybrid_slot_927' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hybrid_slot_721' depends on axioms: [propext, Classical.choice, Quot.sound]
+=== AXIOMS R17 ===
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+AXIOMS R17: exit 0, 18 s
+'dirValQ_rat_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mayores_termination_descent' depends on axioms: [propext]
+'mayores_chain_terminates' depends on axioms: [propext, Quot.sound]
+'mayores_cocientes_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mayores_cocientes_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mayores_full_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+=== DONE. Logs in /home/hatch/workspace/research/tooling/phase4_legE/logs_vm ===
+total 140
+drwxrws--- 1 root nogroup  1812 Nov  6 23:47 .
+drwxrws--- 1 root nogroup  1030 Nov  6 23:35 ..
+-rw-rw---- 1 root nogroup  4891 Nov  6 23:44 gghv_full_721_coeff_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup  4296 Nov  6 23:39 gghv_full_721_coeff_2026-11-06_full.log
+-rw-rw---- 1 root nogroup   915 Nov  6 23:43 gghv_full_central_gaps_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup   602 Nov  6 23:38 gghv_full_central_gaps_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  4782 Nov  6 23:45 gghv_full_d1_theory_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup  4264 Nov  6 23:40 gghv_full_d1_theory_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  5428 Nov  6 23:46 gghv_full_d2_poly_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup  4554 Nov  6 23:40 gghv_full_d2_poly_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  1330 Nov  6 23:42 gghv_full_esquina3l_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup   880 Nov  6 23:37 gghv_full_esquina3l_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  7605 Nov  6 23:43 gghv_full_esquina_combined_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup  7138 Nov  6 23:38 gghv_full_esquina_combined_2026-11-06_full.log
+-rw-rw---- 1 root nogroup   602 Nov  6 23:42 gghv_full_ggv1_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  1170 Nov  6 23:47 gghv_full_hybrid_slip_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup   700 Nov  6 23:41 gghv_full_hybrid_slip_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  1069 Nov  6 23:47 gghv_full_mayores_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup   602 Nov  6 23:41 gghv_full_mayores_2026-11-06_full.log
+-rw-rw---- 1 root nogroup   857 Nov  6 23:46 gghv_full_mn_gt1_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup   602 Nov  6 23:40 gghv_full_mn_gt1_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  2235 Nov  6 23:44 gghv_full_remark_facelaws_2026-11-06_axioms.log
+-rw-rw---- 1 root nogroup  1819 Nov  6 23:39 gghv_full_remark_facelaws_2026-11-06_full.log
+-rw-rw---- 1 root nogroup  3880 Nov  6 23:37 probe_api_2026-11-06_full.log
+-rw-rw---- 1 root nogroup 19879 Nov  6 23:47 verify_all_stdout.log

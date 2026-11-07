@@ -1,0 +1,76 @@
+// Leg G (Singular recomputation), Phase 4 — E13 ODE second-tool check.
+// GGHV v1 TeX 1550-1597: f_1 = -(1/910) y^9 (y+1)^2 (35 - 42y + 54y^2 - 81y^3 + 243y^4)
+// is the CAS solution of y^9 (y+1)^2 = 6y(y+1) f_1' - 10(9y+8) f_1,
+// with C_3 = y^8 (y+1), C_3' = (9y+8) y^7, f = f_1 / C_3 separable,
+// y(y+1) | f, deg f = 6.
+// Status: I1 (independent recomputation), NEVER a proof / kernel verification.
+// Cross-check: gghv_full_singular_e13_sympy_2026-11-06.py (SymPy 1.14.0).
+// Filed precedents: singular/d1_singular_cert_s5_2026-11-05.sing (CERT_DIFF style).
+// Singular 4.3.1 on lean-build-3.
+
+ring R = 0, (y), dp;
+print("=== E13: C3 and its derivative ===");
+poly C3 = y^8*(y+1);
+print("C3P_MINUS_FORMULA (expect 0):");
+print(diff(C3,y) - (9*y+8)*y^7);
+
+print("=== E13: ODE check, paper form 1 (TeX 1590) ===");
+poly f1 = (-1/910)*y^9*(y+1)^2*(35 - 42*y + 54*y^2 - 81*y^3 + 243*y^4);
+poly f1p = diff(f1,y);
+poly ODE_DIFF = y^9*(y+1)^2 - (6*y*(y+1)*f1p - 10*(9*y+8)*f1);
+print("ODE_DIFF (expect 0):");
+print(ODE_DIFF);
+
+print("=== E13: ODE check, paper form 2 (TeX 1588, multiplied by y^7) ===");
+poly ODE_DIFF2 = y^16*(y+1)^2 - (6*y^8*(y+1)*f1p - 10*(9*y+8)*y^7*f1);
+print("ODE_DIFF_FORM2 (expect 0):");
+print(ODE_DIFF2);
+
+print("=== E13: degrees ===");
+print("DEG_F1 (expect 15):");
+print(deg(f1));
+print("DEG_C3 (expect 9):");
+print(deg(C3));
+
+print("=== E13: f = f1 / C3 ===");
+poly f = f1 / C3;
+print("F1_MINUS_C3_F (expect 0):");
+print(f1 - C3*f);
+print("F:");
+print(f);
+print("DEG_F (expect 6):");
+print(deg(f));
+poly g = (-1/910)*(35 - 42*y + 54*y^2 - 81*y^3 + 243*y^4);
+print("F_MINUS_Y_YPLUS1_G (expect 0):");
+print(f - y*(y+1)*g);
+print("DEG_G (expect 4):");
+print(deg(g));
+print("G_AT_0 (expect 35/(-910) != 0, i.e. y does not divide g):");
+print(subst(g,y,0));
+print("G_AT_MINUS1 (expect -200/(-910) != 0, i.e. y+1 does not divide g):");
+print(subst(g,y,-1));
+
+print("=== E13: separability (no multiple roots) ===");
+poly fp = diff(f,y);
+print("GCD_F_FP (expect 1):");
+print(gcd(f,fp));
+poly gp = diff(g,y);
+print("GCD_G_GP (expect 1: g has 4 distinct roots):");
+print(gcd(g,gp));
+print("GCD_F1_F1P (expect 1 up to the y^9(y+1)^2 factor being removed: f1 itself has multiple roots, f must not):");
+print(gcd(f1,f1p));
+
+print("=== E13: bracket step (TeX 1568-1586) ===");
+ring S = 0, (x,y), dp;
+poly C3b = y^8*(y+1);
+poly f1b = (-1/910)*y^9*(y+1)^2*(35 - 42*y + 54*y^2 - 81*y^3 + 243*y^4);
+poly br = diff(x^3*C3b,x)*diff(x^5*f1b,y) - diff(x^3*C3b,y)*diff(x^5*f1b,x);
+poly brRHS = x^7*(6*C3b*diff(f1b,y) - 10*diff(C3b,y)*f1b);
+print("BRACKET_MINUS_RHS (expect 0: pure Leibniz identity, holds for ANY f1):");
+print(br - brRHS);
+poly br2 = diff(x^6*C3b^2,x)*diff(2*x^5*f1b,y) - diff(x^6*C3b^2,y)*diff(2*x^5*f1b,x);
+print("BRACKET2_MINUS_2X10C3CUBED (expect 0: holds IFF f1 satisfies the ODE):");
+print(br2 - 2*x^10*C3b^3);
+print("X7C3SQ_MINUS_2BR (expect 0: x^7 C3^2 = 2[x^3 C3, x^5 f1] iff ODE holds):");
+print(x^7*C3b^2 - 2*br);
+quit;

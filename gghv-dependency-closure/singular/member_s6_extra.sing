@@ -1,0 +1,21 @@
+// Leg D: membership check for T1, T2 (corrected Q4x2) via Groebner-basis reduce.
+// Fast alternative to lift(): reduce(T, groebner(I)) = 0  <=>  T in I.
+ring R = 0, (d0,d1,dm1,dm2,dm3,dm4,dm5,dm6,dm7,dm8,dm10,y), dp;
+poly D2_1 = 2*d0*dm1 + 2*d1*dm2 + 2*dm4;
+poly D2_2 = dm1^2 + 2*d0*dm2 + 2*d1*dm3 + 2*dm5;
+poly D2_3 = 2*dm1*dm2 + 2*d0*dm3 + 2*d1*dm4 + 2*dm6;
+poly D2_4 = dm2^2 + 2*dm1*dm3 + 2*d0*dm4 + 2*d1*dm5 + 2*dm7;
+poly D2_5 = 2*dm2*dm3 + 2*dm1*dm4 + 2*d0*dm5 + 2*d1*dm6 + 2*dm8;
+poly D2_7 = 2*dm10 + 2*dm3*dm4 + 2*dm2*dm5 + 2*dm1*dm6 + 2*d0*dm7 + 2*d1*dm8;
+poly Q1 = 3*d0^2*dm1 + 3*d1*dm1^2 + 6*d0*d1*dm2 + 3*dm2^2 + 3*d1^2*dm3 + 6*dm1*dm3 + 6*d0*dm4 + 6*d1*dm5 + 3*dm7;
+poly Q2 = 3*d0*dm1^2 + 3*d0^2*dm2 + 6*d1*dm1*dm2 + 6*d0*d1*dm3 + 6*dm2*dm3 + 3*d1^2*dm4 + 6*dm1*dm4 + 6*d0*dm5 + 6*d1*dm6 + 3*dm8;
+poly Q4x2 = 6*dm10 + 6*dm1^2*dm2 + 6*d0*dm2^2 + 12*d0*dm1*dm3 + 12*d1*dm2*dm3 + 6*d0^2*dm4 + 12*d1*dm1*dm4 + 12*dm3*dm4 + 12*d0*d1*dm5 + 12*dm2*dm5 + 6*d1^2*dm6 + 12*dm1*dm6 + 12*d0*dm7 + 12*d1*dm8 + y^9;
+ideal I = D2_1, D2_2, D2_3, D2_4, D2_5, D2_7, Q1, Q2, Q4x2;
+ideal G = groebner(I);
+poly T1 = 3*dm1^2*dm2 - y^9;
+poly T2 = 2*dm3*y^9 - 3*d0*dm1^4;
+print("GB_SIZE:"); print(size(G));
+print("reduce(T1,G):"); print(reduce(T1, G));
+print("reduce(T2,G):"); print(reduce(T2, G));
+print("reduce(dm2*T2,G):"); print(reduce(dm2*T2, G));
+quit;

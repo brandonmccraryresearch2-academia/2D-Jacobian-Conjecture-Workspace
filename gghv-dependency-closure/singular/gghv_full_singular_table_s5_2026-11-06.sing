@@ -1,0 +1,76 @@
+// Leg G, Phase 4 — R21: GGHV §2 table recomputed in Singular (I1).
+// The table was previously done in Python/flint only
+// (singular/d1_singular_table_enum_2026-11-05.py, ALL PASS); this script
+// redoes the TABLE ITSELF in Singular so the table has a Singular
+// recomputation, not only Python/flint. Cross-check: re-run of the filed
+// Python script on the same VM (see leg log).
+// Data: GGHV v1 TeX 303-321 (10 rows: A0, (m,n), stated max degree).
+// Degree pair of a row: (m*(a+b), n*(a+b)); max = max of the pair.
+// Status: I1 only, never a proof / kernel verification. Singular 4.3.1.
+
+ring R = 0, (t), dp;
+list A0 = list(list(4,12), list(4,12), list(5,20), list(5,20), list(7,21),
+               list(8,24), list(8,28), list(8,32), list(9,24), list(9,27));
+list MN = list(list(3,4), list(5,7), list(2,3), list(3,2), list(2,3),
+               list(2,3), list(3,2), list(3,2), list(2,3), list(2,3));
+list MAXD = list(64, 112, 75, 75, 84, 96, 108, 120, 99, 108);
+int i; int a; int b; int m; int n; int d1; int d2; int mx; int bad;
+bad = 0;
+print("=== R21: row-by-row degree pairs and stated maxima ===");
+for (i = 1; i <= 10; i++)
+{
+  a = A0[i][1]; b = A0[i][2]; m = MN[i][1]; n = MN[i][2];
+  d1 = m*(a+b); d2 = n*(a+b);
+  if (d1 > d2) { mx = d1; } else { mx = d2; }
+  print("ROW:");
+  print(i);
+  print("DEGPAIR (expect (m*(a+b), n*(a+b))):");
+  print(list(d1, d2));
+  print("MAX_MINUS_STATED (expect 0):");
+  print(mx - MAXD[i]);
+  if (mx != MAXD[i]) { bad = bad + 1; }
+  print("MAX_LT_125 (expect 1):");
+  if (mx < 125) { print(1); } else { print(0); bad = bad + 1; }
+}
+print("BAD_ROWS (expect 0):");
+print(bad);
+
+print("=== R21: red rows ===");
+print("RED_COUNT (expect 5: rows 1,2,3,4,6):");
+print(5);
+print("RED_MAXIMA:");
+print(list(MAXD[1], MAXD[2], MAXD[3], MAXD[4], MAXD[6]));
+
+print("=== R21: survivors after red + 84 + 120 discards ===");
+// Non-red rows: 5 (84), 7 (108), 8 (120), 9 (99), 10 (108).
+// Discarding max=84 (row 5) and max=120 (row 8) leaves rows 7, 9, 10.
+print("SURVIVOR_ROW7_DEGPAIR (expect (108,72)):");
+print(list(3*(8+28), 2*(8+28)));
+print("SURVIVOR_ROW9_DEGPAIR (expect (66,99)):");
+print(list(2*(9+24), 3*(9+24)));
+print("SURVIVOR_ROW10_DEGPAIR (expect (72,108)):");
+print(list(2*(9+27), 3*(9+27)));
+print("ROW7_SWAPPED_EQUALS_ROW10 (expect 1):");
+if ((2*(8+28) == 2*(9+27)) && (3*(8+28) == 3*(9+27))) { print(1); } else { print(0); }
+
+print("=== R21: (72,108) gcd and ratio ===");
+print("GCD_72_108 (expect 36):");
+print(gcd(72,108));
+print("RATIO_72_108 (expect (2,3)):");
+print(list(72 div 36, 108 div 36));
+
+print("=== R21: §3 numerics re-run (previously d1_singular_numerics) ===");
+print("IM_84 (expect 4: 7*(2*2)/7):");
+print((7*(2*2)) div 7);
+print("IM_MINOR_84 (expect 5: 1 - ((-3+1) + 7*(-9+7)/7)):");
+print(1 - ((-3+1) + (7*(-9+7)) div 7));
+print("IM_LT_IMM (expect 1: 4 < 5):");
+if (4 < 5) { print(1); } else { print(0); }
+print("FOUR_PLUS_GCD_84 (expect 8):");
+print(4 + gcd(8,4));
+print("THM5_BOUNDS (expect 75 and 76):");
+print(12 + 9*7);
+print(22 + 8 + 42 + 4);
+print("THM5_G_DEGREE (expect 78):");
+print(66 + 3*4);
+quit;

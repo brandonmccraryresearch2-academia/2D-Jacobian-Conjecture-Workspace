@@ -1,0 +1,439 @@
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:141:19: warning: `Int.ofNat_eq_coe` has been deprecated: Use `Int.ofNat_eq_natCast` instead
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:270:15: warning: Variable name `hx0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:271:5: warning: Variable name `hx21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:271:24: warning: Variable name `hx1m1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx1m1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:394:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:403:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:419:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:431:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:441:10: warning: This simp argument is unused:
+  hcoeff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn, Polynomial.coeff_smul, Polynomial.coeff_X_pow, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:441:69: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hcoeff, hn, Polynomial.coeff_smul, Polynomial.coeff_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:467:0: warning: automatically included section variable(s) unused in theorem `e20_Qtilde`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:498:0: warning: automatically included section variable(s) unused in theorem `e20_assembly`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:500:5: warning: Variable name `hCt_inv` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hCt_inv
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:518:0: warning: automatically included section variable(s) unused in theorem `e21_DD_identity`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:538:5: warning: Variable name `hC3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:566:0: warning: automatically included section variable(s) unused in theorem `e21_D3`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:605:44: warning: Variable name `hd2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:688:5: warning: Variable name `hd4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:692:8: warning: This simp argument is unused:
+  hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hd3, hd2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:763:8: warning: This simp argument is unused:
+  d2sq_neg8 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:763:33: warning: This simp argument is unused:
+  d2sq_neg7 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:764:4: warning: This simp argument is unused:
+  d2sq_neg6 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:764:29: warning: This simp argument is unused:
+  d2sq_neg5 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:782:8: warning: This simp argument is unused:
+  d2sq_neg8 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:782:33: warning: This simp argument is unused:
+  d2sq_neg7 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:783:4: warning: This simp argument is unused:
+  d2sq_neg6 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:788:26: warning: This simp argument is unused:
+  d2sq_10 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4,
+    d2sq_neg4 d hd3 hd2 hd4, d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4,
+    d2sq_0 d hd3 hd2 hd4, d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4,
+    d2sq_5 d hd3 hd2 hd4, d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:804:8: warning: This simp argument is unused:
+  d2sq_neg8 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:804:33: warning: This simp argument is unused:
+  d2sq_neg7 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:810:4: warning: This simp argument is unused:
+  d2sq_9 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4,
+    d2sq_neg4 d hd3 hd2 hd4, d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4,
+    d2sq_0 d hd3 hd2 hd4, d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4,
+    d2sq_5 d hd3 hd2 hd4, d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:810:26: warning: This simp argument is unused:
+  d2sq_10 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4,
+    d2sq_neg4 d hd3 hd2 hd4, d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4,
+    d2sq_0 d hd3 hd2 hd4, d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4,
+    d2sq_5 d hd3 hd2 hd4, d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:826:8: warning: This simp argument is unused:
+  d2sq_neg8 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4, d2sq_neg4 d hd3 hd2 hd4,
+    d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4, d2sq_0 d hd3 hd2 hd4,
+    d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4, d2sq_5 d hd3 hd2 hd4,
+    d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:831:48: warning: This simp argument is unused:
+  d2sq_8 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4,
+    d2sq_neg4 d hd3 hd2 hd4, d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4,
+    d2sq_0 d hd3 hd2 hd4, d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4,
+    d2sq_5 d hd3 hd2 hd4, d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:832:4: warning: This simp argument is unused:
+  d2sq_9 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4,
+    d2sq_neg4 d hd3 hd2 hd4, d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4,
+    d2sq_0 d hd3 hd2 hd4, d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4,
+    d2sq_5 d hd3 hd2 hd4, d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_10 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:832:26: warning: This simp argument is unused:
+  d2sq_10 d hd3 hd2 hd4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [d2sq_neg8 d hd3 hd2 hd4, d2sq_neg7 d hd3 hd2 hd4, d2sq_neg6 d hd3 hd2 hd4, d2sq_neg5 d hd3 hd2 hd4,
+    d2sq_neg4 d hd3 hd2 hd4, d2sq_neg3 d hd3 hd2 hd4, d2sq_neg2 d hd3 hd2 hd4, d2sq_neg1 d hd3 hd2 hd4,
+    d2sq_0 d hd3 hd2 hd4, d2sq_1 d hd3 hd2 hd4, d2sq_2 d hd3 hd2 hd4, d2sq_3 d hd3 hd2 hd4, d2sq_4 d hd3 hd2 hd4,
+    d2sq_5 d hd3 hd2 hd4, d2sq_6 d hd3 hd2 hd4, d2sq_7 d hd3 hd2 hd4, d2sq_8 d hd3 hd2 hd4, d2sq_9 d hd3 hd2 hd4, hd2,
+    hd3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:903:5: warning: Variable name `hD33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:987:0: warning: automatically included section variable(s) unused in theorem `poly_add_ne_zero_of_degree`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:989:5: warning: Variable name `hb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1095:0: warning: automatically included section variable(s) unused in theorem `e18_final_combination`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1163:8: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1157:0: warning: automatically included section variable(s) unused in theorem `X_pow_dvd_of_sq`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1163:70: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1163:70: warning: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1396:0: warning: automatically included section variable(s) unused in theorem `IsPolyRF.zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1398:0: warning: automatically included section variable(s) unused in theorem `IsPolyRF.one`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1400:0: warning: automatically included section variable(s) unused in theorem `IsPolyRF.add`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1406:0: warning: automatically included section variable(s) unused in theorem `IsPolyRF.sub`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1412:0: warning: automatically included section variable(s) unused in theorem `IsPolyRF.mul`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1418:0: warning: automatically included section variable(s) unused in theorem `IsPolyRF.smul_const`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1522:0: warning: automatically included section variable(s) unused in theorem `s6_dm1_dvd`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/tmp/gghv_full_s6_2026-11-06_axioms.lean:1533:0: warning: automatically included section variable(s) unused in theorem `s6_dm1_monomial`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'e19_v21_31' does not depend on any axioms
+'e19_v21_b0_paper_wrong' does not depend on any axioms
+'e19_v1m1_31' does not depend on any axioms
+'e19_v21_yinv' does not depend on any axioms
+'e19_v1m1_yinv' does not depend on any axioms
+'e19_F_val' depends on axioms: [propext, Quot.sound]
+'e19_k_range' depends on axioms: [propext, Quot.sound]
+'ValAxioms.zero' depends on axioms: [propext, Quot.sound]
+'ValAxioms.inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ValAxioms.div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ValAxioms.pow_nat' depends on axioms: [propext, Quot.sound]
+'ValAxioms.zpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ValAxioms.sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e19_bound_step_21' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e19_bound_step_1m1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e19_recursion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e19_finite_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e19_b0_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e23_bracket_coeff' does not depend on any axioms
+'e23_verification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e23_monomial_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e23_ode_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e23_ode_N0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e20_Qtilde' depends on axioms: [propext, Quot.sound]
+'e20_Ctilde_sq_trunc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e20_Ctilde_cu_trunc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e20_assembly' depends on axioms: [propext, Quot.sound]
+'e21_DD_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e21_Dk_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e21_D3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_eq_zero_of_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_neg8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d2sq_10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d3cu_neg1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d3cu_neg2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d3cu_neg3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d3cu_neg4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_principal_certificate' depends on axioms: [propext, Quot.sound]
+'phi_shift_x2_paper' depends on axioms: [propext, Quot.sound]
+'phi_shift_x2_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e22_displays_from_vanishing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_principal_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'poly_add_ne_zero_of_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_k2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e18_final_combination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'square_identity_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+'X_pow_dvd_of_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_nonsquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e18_polygon_discrepancy_P' does not depend on any axioms
+'e18_polygon_discrepancy_Q' does not depend on any axioms
+'s6_theorem61_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.smul_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsPolyRF.sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'e21_membership' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_dm1_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_dm1_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'s6_theorem61' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+real	0m14.801s
+user	0m35.590s
+sys	0m1.772s

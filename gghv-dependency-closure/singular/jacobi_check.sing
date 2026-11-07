@@ -1,0 +1,20 @@
+// Second-tool check for Leg E R14 (run on lean-build-3 with Singular 4.3.1):
+// Jacobi identity for the Poisson bracket [f,g] = f_x*g_y - f_y*g_x
+// on concrete polynomials in Q[x,y]. Expected output: JACOBI = 0.
+// Also the Joseph counterexample bracket value: [y*(x^2+1)+x, x] = -(x^2+1).
+ring R = 0, (x, y), dp;
+proc pb (poly f, poly g) { return (diff(f, x) * diff(g, y) - diff(f, y) * diff(g, x)); }
+poly f = x^3*y^2 + 2*x*y^3 + x^2 + 5*y;
+poly g = x^2*y + 3*x*y^2 - y^2 + x;
+poly h = x^4 + x*y + y^3 - 2*x^2*y^2;
+poly J = pb(pb(f, g), h) + pb(pb(g, h), f) + pb(pb(h, f), g);
+print("JACOBI = ");
+print(J);
+poly A = y * (x^2 + 1) + x;
+poly B = x;
+poly brAB = pb(A, B);
+print("BRACKET_AB = ");
+print(brAB);
+print("BRACKET_AB_PLUS_X2P1 = ");
+print(brAB + (x^2 + 1));
+quit;

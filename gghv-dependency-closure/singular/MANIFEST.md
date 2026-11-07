@@ -174,3 +174,117 @@ Nothing here is a kernel proof, and nothing here discharges the [GGV5]
 enumeration completeness claim, the 9 equations' derivation from the C/F/D
 expansions, or the family-to-row attribution. Those remain carried premises
 of the dependency-closure programme. The recomputation status is I1 throughout.
+
+---
+
+## Phase 4 — full-GGHV second-tool recomputations (filed 2026-11-07)
+
+Leg G (the Singular/SymPy runner) plus the second-tool files of Legs
+C/D/E. All runs on lean-build-3. Toolchain: Singular 4.3.1 (Debian
+1:4.3.1-p3+ds-2), Python 3.11.2, SymPy 1.14.0, python-flint 0.9.0
+(measured at run time; from `/usr/bin/python3` system Python).
+Status throughout is I1 (independent recomputation), **not** kernel
+proof. Nothing here discharges the [GGV5] enumeration completeness
+claim, the 9 equations' derivation from the C/F/D expansions, or the
+family-to-row attribution. The definitive verdict record is
+`gghv_full_assembly_inventory.md`; the validation is
+`validation_g1/g1_validation_report_2026-11-07.md` (CONDITIONAL GO).
+Every file below was copied byte-identically from
+`~/workspace/research/tooling/` (verified with `cmp` at filing time).
+No file was edited in filing. Sizes + SHA-256 (first 16 hex digits).
+
+### Leg G scripts (`singular/`)
+
+| File | Bytes | sha256 | What it recomputes |
+|---|---|---|---|
+| `gghv_full_singular_table_s5_2026-11-06.sing` | 3,085 | `8de43bb60aac9f35` | §2 table + §3 numerics (R21) |
+| `gghv_full_singular_ggv5_families_2026-11-06.sing` | 7,180 | `8dd19cb93d770811` | [GGV5] generative step + attribution (R22) |
+| `gghv_full_singular_ggv5_families_py_2026-11-06.py` | 4,348 | `b7e0aa8a2541449e` | Python/flint cross-check of the above |
+| `gghv_full_singular_e13_ode_2026-11-06.sing` | 2,955 | `24414d99164b8fb9` | E13 ODE / separability (R23, E13) |
+| `gghv_full_singular_e13_sympy_2026-11-06.py` | 4,048 | `7f053f407426b8bd` | SymPy cross-check of the above |
+| `gghv_full_singular_nine_eq_2026-11-06.sing` | 9,491 | `6a99e8de2c4f3a5b` | 9-equation D-scaling / displays (R23) |
+| `gghv_full_singular_nine_eq_sympy_2026-11-06.py` | 7,422 | `fac3203b12940d0b` | SymPy cross-check of the above |
+| `run_legG_driver.sh` | 1,547 | `f783d0aed2541c2e` | Leg G run driver (1st invocation) |
+| `run_legG_driver2.sh` | 1,073 | `1c5301022f356b3c` | Leg G run driver (2nd invocation) |
+
+**Verdicts (R21–R23, from `singular/logs/`):** R21 I1 PASS (BAD_ROWS
+= 0; all 10 rows' maxima [64,112,75,75,84,96,108,120,99,108];
+survivors (108,72),(66,99),(72,108); GCD_72_108 = 36). R22 I1 PASS
+(generative step + attribution; all 7 family checks = 1; Python
+cross-check OVERALL: ALL PASS). R23 I1 PASS on the computational
+steps (D-scaling identities, displayed (D̃²)/(D̃³) expansions,
+inverse coefficients, φ-shift coefficient; Laurent bracket
+[x⁶y², (1/2)y⁻¹x⁻⁴] = x, SymPy rc=0 OVERALL ALL PASS).
+**Delimitation (R19):** the Main-algorithm chain enumeration and the
+completeness claim (listed families/chains are ALL) are NOT computable
+in Singular — they rest on the [GGV5] C++ program + SQL database,
+which are not available as a Singular computation.
+**Logged defects (not hidden):** the runner's driver-1 invocation
+bug (`Singular < script < /dev/null` made the second redirect win, so
+Singular read empty stdin — all four first Singular runs were
+banner-only and VOID; re-ran correctly as `timeout 600 Singular <
+script`; the reported verdicts are from the correct re-runs). Two
+Singular script bugs REPORTED, not fixed: (a) §5 D-scaling nonzero
+because the script uses two symbols for C₃ (`c3x` in the C-list, `c3`
+as scaling base) — SymPy (single C₃) gives 0 for all 12, mathematics
+decided; (b) (D̃²)_{−7}/_{−8} and (D̃³)_{−4} outputs corrupted by
+32-bit `int` overflow of 13!/14! in `coeffU`'s `fact`
+(13! = 6227020800 → 1932053504; 14! → 1278945280) — use a
+bigint/exact division. (D̃²)_{−7} display facts CONFIRMED: TRUE −
+DISPLAY = 2d_{−10} exactly (SymPy); the literal "2 d_{−1} 0" term is
+identically zero; the filed Gröbner script's corrected form (with
+2·dm10) is the true expansion.
+
+### Leg C / Leg D / Leg E second-tool files (`singular/`)
+
+| File | Bytes | sha256 | What it is |
+|---|---|---|---|
+| `e13_singular_check.sing` | 969 | `33cbfb80c9bb114e` | Leg C E13 Singular check |
+| `e13_sympy_check.py` | 2,330 | `c66bca66d9ebdc4b` | Leg C E13 SymPy check |
+| `legG_phi_shift_check.py` | 2,175 | `63632ee4e7158999` | φ-shift check (SymPy): x²-coefficient of φ(D) is D₂−3t; at t=D₂ it is −2D₂ (not 0); at t=D₂/3 it is 0 — the paper's stated shift is a genuine slip confined to the shift formula; the 9 equations are the d₂=0 normal form for the corrected shift |
+| `lift_s6_extra.sing` | 1,825 | `92ccdd1d85dbb054` | Leg D §6 extra lift attempt — TIMEOUT 600 s (exit 124), inconclusive; its Q4x2 carried a 6/6 transcription error (fixed to 12/12) |
+| `lift_s6_square.sing` | 1,409 | `e1b0300eb10550c4` | Leg D §6 square lift attempt — explicit lift() coefficients still NOT obtained (lift is the slow step) |
+| `member_s6_extra.sing` | 1,348 | `eff60cb022166e0c` | Leg D §6 extra membership (0.37 s, GB size 200): both extra identities ARE in the 9-equation ideal |
+| `member_s6_square.sing` | 758 | `1c54155f07769e29` | Leg D §6 square membership (0.64 s, GB size 591): reduce(T,GJ) ≠ 0, reduce(y²·al¹⁰·T,GJ) ≠ 0, reduce(y⁹·T,GJ) = 0 — T follows up to the nonzero factor y⁹, but no explicit lift coefficients, so hsq stays a named premise |
+| `jacobi_check.sing` | 775 | `790eb0465d70d26d` | Leg E R8/R14 Jacobi check: JACOBI = 0, BRACKET_AB = −x²−1, exit 0 |
+
+### Verification logs filed (`singular/logs/`, 17 files)
+
+| File | Bytes | sha256 |
+|---|---|---|
+| `versions.log` | 4,606 | `9db4c2a29b3e6cd4` |
+| `table_s5_singular.log` | 2,507 | `34ce963d9787e641` |
+| `table_filed_py.log` | 2,662 | `486a9c87609ca69c` |
+| `ggv5_families_singular.log` | 3,601 | `2c20747353f9e858` |
+| `ggv5_families_py.log` | 2,775 | `ad58f3bbd8dcf526` |
+| `e13_singular.log` | 1,527 | `5c0f550a48c57f49` |
+| `e13_sympy.log` | 25,927 | `3b81fa57a6060862` |
+| `nine_eq_singular.log` | 5,920 | `ca430b4c3c331432` |
+| `nine_eq_sympy.log` | 3,638 | `defbe6e60be0714c` |
+| `legG_log.md` | 12,271 | `aeef4aaf2ccd8bbf` |
+| `e13_second_tool_check.log` | 1,660 | `94542439da985ec1` |
+| `legG_phi_shift_check.log` | 383 | `ec7692d9ab709ea1` |
+| `cert_s6_rerun.log` | 37 | `8af3b094b930aa9f` |
+| `elim_s6_rerun.log` | 800 | `2d0951b4529de497` |
+| `groebner_s6_rerun.log` | 141 | `5962036555953f00` |
+| `member_extra.log` | 65 | `787a7d2c9b2f1117` |
+| `member_square.log` | 882 | `39108279584599ca` |
+
+Notes: E13 SymPy tail shows the dsolve Piecewise mess + OVERALL:
+FAILURES PRESENT (as reported in the inventory) — the filed SymPy
+script exits rc=1 with DECOMPOSED defects (2× gcd Poly-domain
+artifacts, value is 1; 1× bracket FAIL is a script error in BOTH
+scripts, factor 2 — the paper's identity is x⁷C₃² = 2[x³C₃, x⁵f₁]
+and the correct identities PASS in both tools; 3× dsolve FAILs are a
+SymPy 1.14.0 limitation). Leg D `cert_s6_rerun.log` (37 bytes):
+CERT_DIFF = 0, CERT_IS_ZERO = 1; `elim_s6_rerun.log`: Res =
+(−19683/64)·target·dm1³, reduce = 0 at k=0; `groebner_s6_rerun.log`:
+Gröbner reduce(dm1·target, E) = 0.
+
+### Scope guard (Phase 4)
+
+Nothing here is a kernel proof, and nothing here discharges the [GGV5]
+enumeration completeness claim, the 9 equations' derivation from the
+C/F/D expansions, or the family-to-row attribution. Those remain
+carried premises of the dependency-closure programme. The recomputation
+status is I1 throughout.

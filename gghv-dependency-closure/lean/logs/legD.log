@@ -1,0 +1,180 @@
+# Leg D (§6 systems) log — append mode
+# 2026-11-06 ~15:35 CST: leg started. Read inventory E18-E23, phase4_map, main.tex §6 (1814-2088), d1_assembly thm6 part, s6 Singular scripts + Phase-1 logs.
+# Paper slips noted (to verify, not copy): E19 (b0) v=6 vs correct 7; E20 cites §5 labels; E21 writes C_3 for y; (D̃²)_{-7} literal "2 d_{-1} 0" (= 2 d_{-10} per Singular transcription); E21/E14 D_k formula missing 1/2 on the sum (to check in Lean).
+
+2026-11-06 ~15:50 CST — file complete in draft (1,4xx lines). Added since last entry:
+- §7 E18 degrees: s6_k2 hardened (C_ofNat route for numeral natDegree/≠0 facts).
+- §8 E18 endgame: e18_final_combination (linear_combination, hand-verified
+  term-by-term), square_identity_field (field_simp+ring, multiplier 108α¹⁰y²),
+  X_pow_dvd_of_sq (prime iteration), s6_nonsquare (X⁴∣S, deg 1, coefficient
+  contradiction via antidiagonal + explicit W₀ coefficient haves).
+- §9 E18 assembly: e18_polygon_discrepancy_P/Q (decide), s6_theorem61_core
+  (CONDITIONAL on hdm1mono + hprin + hsq; Prop 4.4 reduction still Leg B).
+- §10 E21 RatFunc: IsPoly closure lemmas + e21_membership (strong induction
+  on m = 2-k; hD2 base = y∣P₅ input; hP for k≤1; D 3 = 1 is e21_D3).
+- §11 E18 monomial form: s6_dm1_dvd (from hprin), s6_dm1_monomial
+  (dvd_prime_pow + isUnit_iff; discharges hdm1mono).
+- probe_api2.lean added: RatFunc.X/C/algebraMap_eq, dvd_prime_pow, prime_X,
+  X_dvd_iff, X_pow_dvd_iff, coeff lemmas, C_ofNat, compute_degree inputs,
+  coeff_mul at small indices, (27:K[X]) facts.
+Still waiting on VM lock (legC, age >1200s). NOTHING compiled yet.
+
+2026-11-06 ~16:05 CST — review fixes + lift scripts prepared (still no VM):
+- Fixed e23_ode_unique hX2: coefficient ↑(n+1-2)+1 = ↑n now proved explicitly
+  (e2 via Nat.cast_sub); previously the branch would have ended with an
+  open goal.
+- Checked (false alarm): s6_principal_eq header is NOT duplicated — the
+  apparent double line was overlap of two sed ranges; grep shows one occurrence.
+- Verified d3cu_neg4 display doubles exactly to the 9th conjunct of
+  e22_displays_from_vanishing (linear_combination 2*hD34).
+- Verified e18_final_combination's hQ3/hD26 match d3cu_neg3/d2sq_neg6
+  displays term-for-term; linear_combination coefficients hand-checked.
+- Wrote lift_s6_extra.sing (T1 = 3 dm1² dm2 - y⁹, T2 = 2 dm3 y⁹ - 3 d0 dm1⁴
+  against the 9-equation ideal; fallback dm2*T2) and lift_s6_square.sing
+  (T = square identity against ideal (S1..S5); fallbacks y²α¹⁰T, y⁹T).
+  Square lift may be slow — RatFunc transfer of square_identity_field is
+  the fallback route.
+
+2026-11-06 ~16:33 CST — VM lock: first acquire (pid 14123, 3600s, from ~15:32 CST)
+TIMED OUT. legC held the lock the whole time (first hold ~41 min, then
+released and immediately re-acquired; second hold now ~22 min). No VM work
+done; no lock broken. Re-acquiring with a fresh 3600s and continuing to wait.
+File remains complete-but-uncompiled (1,485 lines, 85 results, no sorry).
+
+2026-11-06 ~16:40 CST — review fixes (still no VM; legC second hold ~28 min):
+- ValAxioms.sum_le: added missing `intro hf` in the insert case (induction
+  reverts hf).
+- e19_bound_step_21 / _1m1: `rw [heq] at h2` -> `rw [<- heq] at h2`
+  (h2 carries 3-(k-j), the goal carries 3-k+j).
+- e19_finite_bounds succ case: `rw [e, hrec]` -> explicit
+  `rw [e, hrec ((n:ℤ)+1) (by omega)]` (was leaving an unproven side goal)
+  + `push_cast` before constructor (↑(n+1) vs ↑n+1 in the bounds).
+- e23_ode_unique hX2: coefficient ↑(n+1-2)+1 = ↑n proved explicitly.
+- poly_add_ne_zero_of_degree: `rw [h3, hzero]` -> `rw [<- h3, hzero]`.
+- s6_k2 hT3ne: `simp at hT3` -> `simp only [natDegree_zero]` + omega
+  (simp alone may not derive False from 0 = 9+9k).
+- Log timestamps corrected: earlier entries labelled ~21:50/~22:05 CST were
+  UTC times; actual CST ~15:50/~16:05.
+
+2026-11-06 ~17:33 CST — VM lock: second acquire (pid 27511, 3600s, from ~16:33 CST)
+TIMED OUT. In that window legC's second hold ended (~57 min) and the lock
+turned over legC -> legB (~10 min) -> legA (~3 min) -> legE (holding now);
+I lost each race. No VM work done; no lock broken. Re-acquiring (third
+3600s) and continuing to wait.
+
+2026-11-06 ~18:11 CST — VM lock: third acquire (pid 14272, 3600s, from ~17:25 CST)
+TIMED OUT. In that window legE held ~48 min, then legE -> legF (~4 min) ->
+legG-runner (holding now); I lost each race. No VM work done; no lock broken.
+Re-acquiring (fourth 3600s) and continuing to wait. Turnovers are now fast
+(minutes, not tens of minutes), so the next release is the next lottery.
+
+2026-11-06 ~18:45 CST — VM lock: fourth acquire (pid 6023) WON on legF release.
+lean-build-3 RUNNING (ext IP 136.64.131.153). Lean 4.34.0 / Lake 5.0.0.
+2026-11-06 ~18:53 CST — FULL compile #1: 101 errors, max errors at line 743.
+Root cause: section variables used only in proofs are NOT in scope (Lean
+includes a section variable only if it occurs in the declaration statement).
+2026-11-06 ~18:53-19:10 CST — Fixes applied: (a) explicit (hw) binders on
+ValAxioms zero/inv/div/pow_nat/zpow/sum_le; (b) (hC)/(hP)/(hQ) binders on
+e20_Qtilde/e20_Ctilde_sq_trunc/e20_Ctilde_cu_trunc + hCt_sq.symm in
+e20_assembly; (c) (hd3)(hd2)(hd4) binders on d2sq_eq_zero_of_gt + all 19
+D2sq/D3cu display lemmas (+ d2sq_7..10 call sites); (d) exact_mod_cast
+two/three_ne_zero -> norm_num (7 sites); (e) e21_Dk_formula tail
+rw [key, <- hS]; ring; (f) d3cu second simp only -> full simp (index
+arithmetic needs evaluation before the d2sq lemmas match).
+2026-11-06 ~19:10 CST — FULL compile #2: 34 errors. Fixes: div sub_eq_add_neg;
+zpow ofNat Int.ofNat_eq_coe; zpow negSucc rfl identity; sum_le drop intro
+(introN: hf already in context); e19_finite_bounds hC21/hC1m1 bound
+j <= (n+1)-1; key field_simp closes goal (drop ring); d3cu_neg4/goal9/s6_principal_eq
+hQ4x2: 6*d0*d(-7)+6*d1*d(-8) -> 12/12 (transcription error found by hand-check
+against the Singular cert, which has 12/12; display d3cu_neg4 itself was
+correct at 6/6); natDegree_mul_le named implicits; X_pow_dvd_of_sq h1 via
+simpa/pow_dvd_pow; hS4ne zero_pow route; natDegree_pow S4 2 explicit args;
+hW0c0/c1/c2 explicit have-based computation (simp splits C(108*al^10) via
+forward C_pow, leaving ((C al)^n).coeff unevaluated); hs0/hc2 avoid simp
+exploding into al = 0 disjunctions; IsPoly -> IsPolyRF (Mathlib Dioph.lean
+owns root IsPoly + IsPoly.add).
+2026-11-06 ~19:20 CST — FULL compile #3: 6 errors. Fixes: zpow ofNat
+Int.ofNat_eq_coe+rw; X_pow_dvd_of_sq induction generalizing S; hW0c0/c1/c2
+rebuilt with hC2lam/hQc0/hQc1/hQc2 haves; IsPolyRF.sum [DecidableEq iota].
+2026-11-06 ~19:24 CST — FULL compile #4: 1 error (hQc2 zero_sub leaves
+-(2*lam) = -2*lam; fixed with ring).
+2026-11-06 ~19:25 CST — FULL compile #5: EXIT 0, 0 errors. Lean 4.34.0,
+~14 s wall (user ~33 s). File: 1,550 lines, 79 theorems.
+2026-11-06 ~19:26 CST — AXIOMS run: exit 0, 0 errors; 79 theorems:
+63 [propext, Classical.choice, Quot.sound], 8 [propext, Quot.sound],
+8 zero-axiom (decide). No outside-triple axioms, no sorryAx. (First
+axioms run had 6 bad prints: ValAxioms.* names lacked the namespace
+prefix; regenerated and re-ran clean.)
+2026-11-06 ~19:28 CST — Singular 4.3.1 (second tool) on lean-build-3:
+elim re-run exit 0: Res = (-19683/64)*target*dm1^3, reduce = 0 at k=0
+(matches Phase 1 exactly). cert re-run exit 0: CERT_DIFF = 0,
+CERT_IS_ZERO = 1. groebner re-run exit 0: reduce(dm1*target, E) = 0,
+reduce(dm1^3*target, E) = 0.
+2026-11-06 ~19:30-19:40 CST — lift_s6_extra.sing: TIMEOUT 600 s (exit 124);
+its reduce() calls were against the RAW ideal (not a GB) hence
+inconclusive, and its Q4x2 carried the same 6/6 transcription error
+(it was neither Q4 nor 2*Q4). FIXED Q4x2 to 12/12; membership check
+member_s6_extra.sing (groebner + reduce, 0.37 s, GB size 200):
+reduce(T1,G) = 0, reduce(T2,G) = 0, reduce(dm2*T2,G) = 0 — both extra
+identities ARE in the 9-equation ideal (second-tool confirmed). Explicit
+lift() coefficients still not obtained (lift is the slow step).
+2026-11-06 ~19:42 CST — member_s6_square.sing (0.64 s, GB size 591):
+reduce(T,GJ) != 0, reduce(y^2*al^10*T,GJ) != 0, reduce(y^9*T,GJ) = 0.
+So the square identity T follows from S1..S5 up to the nonzero factor
+y^9 (in K[y], y^9 != 0, so y^9*T = 0 gives T = 0) — Singular-supported,
+but no explicit lift coefficients, so hsq stays a named premise.
+2026-11-06 ~19:44 CST — Added s6_theorem61 (§12 wrapper): discharges
+hdm1mono (s6_dm1_dvd + s6_dm1_monomial) and hprin (s6_principal_eq);
+remaining premises: 9 equations + degrees + dm1 != 0 + hsq.
+(The alpha'/alpha mismatch is harmless: s6_k2 uses alpha', s6_nonsquare
+uses the given alpha and does not involve dm1.)
+2026-11-06 ~19:46 CST — FINAL full compile: EXIT 0, 0 errors, ~14 s.
+FINAL axioms run: EXIT 0, 0 errors; 80 theorems: 64 [propext,
+Classical.choice, Quot.sound], 8 [propext, Quot.sound], 8 zero-axiom.
+s6_theorem61: [propext, Classical.choice, Quot.sound]. No sorryAx
+(the single "sorry" string in the file is the word in the header comment).
+No repo commits (scratch only; incorporation after the validation gate).
+VM lock released (VM left RUNNING, not stopped); legF was queued behind.
+
+2026-11-06 ~19:29 CST — Coordinator notice 1: VM LOCK TIME-SLICING (new rule):
+acquire PER verification run only, release immediately after; never hold
+while writing proofs; max continuous hold ~30 min. Adopted for all future
+runs. (Leg C had held continuously since 22:11:17Z; Legs A, G, H timed out
+waiting; Leg G gave up after ~85 min with nothing run.)
+2026-11-06 ~19:29 CST — Coordinator notice 1, item (2): UNVERIFIED
+HYPOTHESIS from Leg G (hand arithmetic only): with phi(x)=x-t, the x^2
+coefficient of phi(D) is D2-3t; paper's t=D2 gives d2=-2D2, t=D2/3 gives
+d2=0. NOTE: this leg had ALREADY proved both identities in Lean (kernel):
+phi_shift_x2_paper, phi_shift_x2_corrected (in the compiled file, axioms
+within the triple) — the hand hypothesis matched the kernel lemmas.
+2026-11-06 ~19:50 CST — Coordinator notice 2: phi-shift CONFIRMED by tool
+(Leg C, SymPy 1.14.0, PY_RC=0, ALL_PASS=True; log
+phase4_legC/legG_phi_shift_check.log). Read the log myself: A: coeff of
+x^2 in D(x-t) = D2-3t (True); B: t=D2 -> -2D2, t=D2/3 -> 0; C: paper's
+phi(x^-1) expansion verified (True); VERDICT ALL_PASS=True. TeX grounding
+verified by my own reading: line 1617 D_3=1 (monic degree 3); line 1663
+phi(x)=x-D2; line 1668 asserts d2=0; same shift + assertion recur at TeX
+2025/2030 (section 6). VERDICT: paper's line-1663 shift and line-1668
+d2=0 claim are mutually inconsistent as written; consistent shift is
+t=D2/3. Now confirmed by TWO independent tools: Lean kernel lemmas +
+SymPy 1.14.0.
+2026-11-06 ~19:50 CST — E11 slips (Leg C flag) checked against section 6:
+(a) recursion SIGN error (TeX ~1462-1465): CONFIRMED in section 5 by my
+own derivation — the paper's own line P_{6-k} = sum_{j=0}^k C_{3-j}C_{3-k+j}
+gives 2C3*C_{3-k} = P_{6-k} - sum, but the paper writes
+2C3*C_{3-k} = -P_{6-k} - sum and C_{3-k} := -(1/(2C3))(P+sum) (both
+signs flipped). Section 6 recursion (TeX ~1877) is CORRECT as printed:
+2y*C_{3-k} = P_{6-k} - sum, C_{3-k} := (1/(2y))(P-sum) — matches kernel
+e19_recursion exactly. No sign error in section 6.
+(b) valuation product-vs-sum typo (section 5: 1477, 1493): PRESENT in
+section 6 too (e.g. v_{2,1}(C_{3-j}C_{3-k+j}) <= v(C_{3-j}) v(C_{3-k+j})
+<= 1+2j+1+2(k-j) — the numeric bound is the SUM); already slip 6 in
+this leg's report; Lean proves the additive version.
+2026-11-06 ~19:52 CST — File touch-up: comment on phi_shift_x2_vanishes
+now states explicitly that the premise is supplied by the CORRECTED shift
+t=D2/3 (Leg C SymPy-confirmed) and that E22 is conditioned on d2=0 as
+supplied by that shift, never on the paper's shift. No proof-code change.
+2026-11-06 ~19:53 CST — Verification run under time-slicing: lock acquired
+(legD, pid 16887; waited ~60 s for legF to release), FULL compile exit 0,
+0 errors; lock RELEASED immediately after (hold ~1 min for the run).
+No repo commits.

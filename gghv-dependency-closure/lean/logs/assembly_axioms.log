@@ -1,0 +1,598 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/gghv_full_assembly_2026-11-06.lean:341:45: warning: Variable name `h2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_assembly_2026-11-06.lean:1475:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_assembly_2026-11-06.lean:1479:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_assembly_2026-11-06.lean:1491:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_assembly_2026-11-06.lean:1496:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+'prop41_conditional' depends on axioms: [propext, Quot.sound]
+'prop42_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'prop43_conditional' depends on axioms: [propext, Quot.sound]
+'prop44_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'psp_183' depends on axioms: [propext]
+'sieve_table_927' depends on axioms: [propext]
+'ell721_normalization' depends on axioms: [propext, Quot.sound]
+'phiJacPair_3' does not depend on any axioms
+'phiJacPair_4' does not depend on any axioms
+/tmp/gghv_full_assembly_2026-11-06.lean:2219:20: warning: This simp argument is unused:
+  derivative_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one, C_ofNat,
+    C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2219:38: warning: This simp argument is unused:
+  C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2219:61: warning: This simp argument is unused:
+  ← C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_ofNat, C_eq_natCast, ← add_mul, ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2219:70: warning: This simp argument is unused:
+  ← add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2220:4: warning: This simp argument is unused:
+  ← mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2220:15: warning: This simp argument is unused:
+  ← C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2220:24: warning: This simp argument is unused:
+  map_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2220:33: warning: This simp argument is unused:
+  map_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, derivative_mul, derivative_pow, derivative_add, derivative_X, derivative_one,
+    derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add, map_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2227:13: warning: This simp argument is unused:
+  e13C3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2227:27: warning: This simp argument is unused:
+  e13f
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2227:33: warning: This simp argument is unused:
+  e13g
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2227:39: warning: This simp argument is unused:
+  e13U
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2227:45: warning: This simp argument is unused:
+  e13V
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2229:45: warning: This simp argument is unused:
+  ← C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← add_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2229:54: warning: This simp argument is unused:
+  ← add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2229:65: warning: This simp argument is unused:
+  ← mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2229:76: warning: This simp argument is unused:
+  ← C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← mul_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2230:13: warning: This simp argument is unused:
+  map_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← mul_add, ← C_add, map_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2239:26: warning: This simp argument is unused:
+  map_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2235:2: warning: Unused tactic linter: `repeat rw [ofNat_mul_C']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2236:2: warning: Unused tactic linter: `repeat rw [C_mul_natCast']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2237:2: warning: Unused tactic linter: `repeat rw [natCast_mul_C']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2244:13: warning: This simp argument is unused:
+  e13C3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2244:20: warning: This simp argument is unused:
+  e13f1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2244:39: warning: This simp argument is unused:
+  e13U
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2244:45: warning: This simp argument is unused:
+  e13V
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2244:51: warning: This simp argument is unused:
+  derivative_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_pow, derivative_add, derivative_sub, derivative_C,
+    derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add,
+    map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2244:67: warning: This simp argument is unused:
+  derivative_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_add, derivative_sub, derivative_C,
+    derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add,
+    map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2245:4: warning: This simp argument is unused:
+  derivative_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_sub, derivative_C,
+    derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add,
+    map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2245:20: warning: This simp argument is unused:
+  derivative_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_C,
+    derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add, ← C_add,
+    map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2245:36: warning: This simp argument is unused:
+  derivative_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2245:50: warning: This simp argument is unused:
+  derivative_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2245:64: warning: This simp argument is unused:
+  derivative_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2246:4: warning: This simp argument is unused:
+  derivative_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2246:31: warning: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, ← C_mul, ← add_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2246:45: warning: This simp argument is unused:
+  ← C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← add_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2246:54: warning: This simp argument is unused:
+  ← add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2246:65: warning: This simp argument is unused:
+  ← mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2246:76: warning: This simp argument is unused:
+  ← C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← mul_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2247:13: warning: This simp argument is unused:
+  map_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← mul_add, ← C_add, map_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2252:2: warning: Unused tactic linter: `repeat rw [ofNat_mul_C']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2253:2: warning: Unused tactic linter: `repeat rw [C_mul_natCast']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2254:2: warning: Unused tactic linter: `repeat rw [natCast_mul_C']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2301:13: warning: This simp argument is unused:
+  e13C3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2301:20: warning: This simp argument is unused:
+  e13f1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2301:33: warning: This simp argument is unused:
+  e13g
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13U, e13V, derivative_mul, derivative_pow, derivative_add, derivative_sub,
+    derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2302:64: warning: This simp argument is unused:
+  derivative_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2303:4: warning: This simp argument is unused:
+  derivative_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, C_ofNat, C_eq_natCast, ← C_mul, ← add_mul, ← mul_add,
+    ← C_add, map_neg, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2303:45: warning: This simp argument is unused:
+  ← C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← add_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2303:54: warning: This simp argument is unused:
+  ← add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← mul_add, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2303:65: warning: This simp argument is unused:
+  ← mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← C_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2303:76: warning: This simp argument is unused:
+  ← C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← mul_add, map_neg, map_one]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2304:13: warning: This simp argument is unused:
+  map_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e13C3, e13f1, e13f, e13g, e13U, e13V, derivative_mul, derivative_pow, derivative_add,
+    derivative_sub, derivative_C, derivative_X, derivative_one, derivative_ofNat, C_ofNat, C_eq_natCast, ← C_mul,
+    ← add_mul, ← mul_add, ← C_add, map_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2323:13: warning: This simp argument is unused:
+  C_mul_X_pow_mul_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [X_pow_mul_C_mul_C, C_mul_C_mul_X_pow, C_mul_X_pow_C, ← C_mul, C_mul_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2323:32: warning: This simp argument is unused:
+  X_pow_mul_C_mul_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul_X_pow_mul_C, C_mul_C_mul_X_pow, C_mul_X_pow_C, ← C_mul, C_mul_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2323:51: warning: This simp argument is unused:
+  C_mul_C_mul_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul_X_pow_mul_C, X_pow_mul_C_mul_C, C_mul_X_pow_C, ← C_mul, C_mul_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2326:35: warning: This simp argument is unused:
+  ← mul_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_assoc, ← mul_add, ← C_add, ← C_sub]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2326:55: warning: This simp argument is unused:
+  ← C_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_assoc, ← mul_add, ← mul_sub, ← C_add]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2329:13: warning: This simp argument is unused:
+  C_mul_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← mul_neg, ← map_neg, ← mul_add, ← mul_sub, ← C_add, ← C_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2329:26: warning: This simp argument is unused:
+  ← mul_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul_X_pow, ← map_neg, ← mul_add, ← mul_sub, ← C_add, ← C_sub]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2329:37: warning: This simp argument is unused:
+  ← map_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul_X_pow, ← mul_neg, ← mul_add, ← mul_sub, ← C_add, ← C_sub]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2329:48: warning: This simp argument is unused:
+  ← mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul_X_pow, ← mul_neg, ← map_neg, ← mul_sub, ← C_add, ← C_sub]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2329:70: warning: This simp argument is unused:
+  ← C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul_X_pow, ← mul_neg, ← map_neg, ← mul_add, ← mul_sub, ← C_sub]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2309:2: warning: Unused tactic linter: `repeat rw [ofNat_mul_C']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2310:2: warning: Unused tactic linter: `repeat rw [C_mul_natCast']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2311:2: warning: Unused tactic linter: `repeat rw [natCast_mul_C']` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/tmp/gghv_full_assembly_2026-11-06.lean:2574:28: warning: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'prop41_conditional' depends on axioms: [propext, Quot.sound]
+'prop42_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'prop43_conditional' depends on axioms: [propext, Quot.sound]
+'prop44_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'thm51_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cor52_conditional' does not depend on any axioms
+'prop42_shape_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+'prop41_shape_of' depends on axioms: [propext, Quot.sound]
+'link_924_derived' depends on axioms: [propext, Classical.choice, Quot.sound]
+'link_927_derived' depends on axioms: [propext, Classical.choice, Quot.sound]
+'theorem21_minimal_v2' depends on axioms: [propext, Classical.choice, Quot.sound]

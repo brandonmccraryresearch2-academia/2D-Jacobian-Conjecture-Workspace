@@ -1,0 +1,27 @@
+/tmp/gghv_full_s2s3_ax.lean:289:45: warning: Variable name `h2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'gghv_table_full' does not depend on any axioms
+'theorem21_minimal' depends on axioms: [propext]
+'theorem21_conditional_minimal' depends on axioms: [propext]
+'discard_84_row' does not depend on any axioms
+'discard_120_row' does not depend on any axioms
+'discard_924_row' does not depend on any axioms
+'discard_927_row' does not depend on any axioms
+'discard_721_via_sec3' does not depend on any axioms
+'discard_120_kernel_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'discard_84_kernel_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'red_rows_eliminated' depends on axioms: [propext]
+'survivors_exact' depends on axioms: [propext]
+'section2_survivors' does not depend on any axioms
+'pair_108_72_unique' does not depend on any axioms
+'pair_72_108_unique' does not depend on any axioms
+'im_84_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'im_minor_84_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'v_120_en_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'d0_bound' depends on axioms: [propext, Quot.sound]
+'d0_forced_4' depends on axioms: [propext, Quot.sound]
+'thm5_endgame' does not depend on any axioms

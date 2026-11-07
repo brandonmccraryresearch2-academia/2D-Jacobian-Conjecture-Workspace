@@ -1,0 +1,18 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/gghv_full_esquina3l_2026-11-06_ax.lean:116:15: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'esq3_val_8_3' does not depend on any axioms
+'esq3_mn_sum' depends on axioms: [propext, Quot.sound]
+'esq3_dir_determination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'esq3_phi_aligned_impossible' depends on axioms: [propext, Quot.sound]
+'esq3_phi_nonaligned_impossible' depends on axioms: [propext, Quot.sound]
+'esq3_lform_term_val' depends on axioms: [propext]
+'esq3_lform_from_cube' depends on axioms: [propext, Quot.sound]

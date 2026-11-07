@@ -1,0 +1,8 @@
+GB_SIZE:
+200
+reduce(T1,G):
+0
+reduce(T2,G):
+0
+reduce(dm2*T2,G):
+0

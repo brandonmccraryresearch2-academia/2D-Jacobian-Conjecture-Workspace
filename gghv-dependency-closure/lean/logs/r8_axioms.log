@@ -1,0 +1,17 @@
+Existing host keys found in /home/hatch/.ssh/google_compute_known_hosts
+WARNING: 
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/r8_axioms_2026-11-06.lean:116:15: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'esq3_dir_b2' does not depend on any axioms
+'esq3_dir_b1' does not depend on any axioms
+'esq3_dir_b0' does not depend on any axioms
+'esq3_lform_endpoint_lo' depends on axioms: [propext]
+'esq3_lform_endpoint_hi' depends on axioms: [propext]
+'esq3_lform_Q' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,4 @@
+FLINT det(M_S) mod 32003 = 29127  (4.6s)
+FLINT det(C) mod 32003 = 9069 (4.6s); det(C)*det(M_S) mod p = 1
+NumPy-LU det(M_S) mod 32003 = 29127  (193.4s)
+DET OK: routes agree, det != 0

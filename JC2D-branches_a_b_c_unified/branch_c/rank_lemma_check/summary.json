@@ -1,0 +1,32 @@
+{
+  "file_bytes": 82788865,
+  "file_sha256": "1af9b3c8a4d32a2a611b6b3958c6e3770e282d5d351b423af45ea304a44189fe",
+  "p": 32003,
+  "n_pivots": 3199,
+  "piv_min": 0,
+  "piv_max": 5307,
+  "piv_sorted": true,
+  "piv_sha256_repr_16": "00e40995b010f30a",
+  "C_shape": [
+    3199,
+    3199
+  ],
+  "C_dtype": "int64",
+  "C_nonzero": 9151397,
+  "C_total": 10233601,
+  "C_nonzero_frac": 0.8942499321597549,
+  "C_sha256_bytes_16": "6cffa0100555b7b8",
+  "C_min": 0,
+  "C_max": 32002,
+  "MS_nnz": 105807,
+  "MS_col_support_min": 22,
+  "MS_col_support_max": 52,
+  "pivcols_generators": {
+    "Phi1": 731,
+    "Phi2": 522,
+    "Psi": 1308,
+    "Theta1": 306,
+    "Theta2": 210,
+    "Theta3": 122
+  }
+}

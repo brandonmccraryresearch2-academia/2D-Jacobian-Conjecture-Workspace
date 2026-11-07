@@ -1,0 +1,175 @@
+                     SINGULAR                                 /  Development
+ A Computer Algebra System for Polynomial Computations       /   version 4.3.1
+                                                           0<
+ by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \   Jun 2022
+FB Mathematik der Universitaet, D-67653 Kaiserslautern        \  Debian 1:4.3.1-p3+ds-2
+=== R23(A) §5 D-scaling: (D^2)_{-k} - (C^2)_{-k} C3^{10+2k} ===
+D2_SCALE_K:
+1
+2*c3^13*cm4-2*c3^12*c3x*cm4
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+2
+2*c3^15*cm5-2*c3^14*c3x*cm5
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+3
+2*c3^17*cm6-2*c3^16*c3x*cm6
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+4
+2*c3^19*cm7-2*c3^18*c3x*cm7
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+5
+2*c3^21*cm8-2*c3^20*c3x*cm8
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+6
+2*c3^23*cm9-2*c3^22*c3x*cm9
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+7
+2*c3^25*cm10-2*c3^24*c3x*cm10
+// ** redefining sD2 (  poly sD2; poly sC2;)
+// ** redefining sC2 (  poly sD2; poly sC2;)
+D2_SCALE_K:
+8
+2*c3^27*cm11-2*c3^26*c3x*cm11
+=== R23(A) §5 D-scaling: (D^3)_{-k} - (C^3)_{-k} C3^{15+2k} ===
+D3_SCALE_K:
+1
+3*c3^18*cm2^2-3*c3^17*c3x*cm2^2+6*c3^18*cm1*cm3-6*c3^17*c3x*cm1*cm3+6*c3^18*c0*cm4-6*c3^17*c3x*c0*cm4+6*c3^18*c1*cm5-6*c3^17*c3x*c1*cm5+6*c3^18*c2*cm6-6*c3^17*c3x*c2*cm6+3*c3^19*cm7-3*c3^17*c3x^2*cm7
+// ** redefining sD3 (  poly sD3; poly sC3;)
+// ** redefining sC3 (  poly sD3; poly sC3;)
+D3_SCALE_K:
+2
+6*c3^20*cm2*cm3-6*c3^19*c3x*cm2*cm3+6*c3^20*cm1*cm4-6*c3^19*c3x*cm1*cm4+6*c3^20*c0*cm5-6*c3^19*c3x*c0*cm5+6*c3^20*c1*cm6-6*c3^19*c3x*c1*cm6+6*c3^20*c2*cm7-6*c3^19*c3x*c2*cm7+3*c3^21*cm8-3*c3^19*c3x^2*cm8
+// ** redefining sD3 (  poly sD3; poly sC3;)
+// ** redefining sC3 (  poly sD3; poly sC3;)
+D3_SCALE_K:
+3
+3*c3^22*cm3^2-3*c3^21*c3x*cm3^2+6*c3^22*cm2*cm4-6*c3^21*c3x*cm2*cm4+6*c3^22*cm1*cm5-6*c3^21*c3x*cm1*cm5+6*c3^22*c0*cm6-6*c3^21*c3x*c0*cm6+6*c3^22*c1*cm7-6*c3^21*c3x*c1*cm7+6*c3^22*c2*cm8-6*c3^21*c3x*c2*cm8+3*c3^23*cm9-3*c3^21*c3x^2*cm9
+// ** redefining sD3 (  poly sD3; poly sC3;)
+// ** redefining sC3 (  poly sD3; poly sC3;)
+D3_SCALE_K:
+4
+6*c3^24*cm3*cm4-6*c3^23*c3x*cm3*cm4+6*c3^24*cm2*cm5-6*c3^23*c3x*cm2*cm5+6*c3^24*cm1*cm6-6*c3^23*c3x*cm1*cm6+6*c3^24*c0*cm7-6*c3^23*c3x*c0*cm7+6*c3^24*c1*cm8-6*c3^23*c3x*c1*cm8+6*c3^24*c2*cm9-6*c3^23*c3x*c2*cm9+3*c3^25*cm10-3*c3^23*c3x^2*cm10
+=== R23(A) §6 D-scaling: (D^2)_{-k} - (C^2)_{-k} y^{4+k} ===
+D2Y_SCALE_K:
+1
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+2
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+3
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+4
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+5
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+6
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+7
+0
+// ** redefining tD2 (  poly tD2; poly tC2;)
+// ** redefining tC2 (  poly tD2; poly tC2;)
+D2Y_SCALE_K:
+8
+0
+=== R23(A) §6 D-scaling: (D^3)_{-k} - (C^3)_{-k} y^{6+k} ===
+D3Y_SCALE_K:
+1
+0
+// ** redefining tD3 (  poly tD3; poly tC3;)
+// ** redefining tC3 (  poly tD3; poly tC3;)
+D3Y_SCALE_K:
+2
+0
+// ** redefining tD3 (  poly tD3; poly tC3;)
+// ** redefining tC3 (  poly tD3; poly tC3;)
+D3Y_SCALE_K:
+3
+0
+// ** redefining tD3 (  poly tD3; poly tC3;)
+// ** redefining tC3 (  poly tD3; poly tC3;)
+D3Y_SCALE_K:
+4
+0
+=== R23(B) (D~^2)_{-k}: TRUE minus PAPER DISPLAY (expect 0 except k=7) ===
+D2M1_DIFF (k=1):
+0
+D2M2_DIFF (k=2):
+0
+D2M3_DIFF (k=3):
+0
+D2M4_DIFF (k=4):
+0
+D2M5_DIFF (k=5):
+0
+D2M6_DIFF (k=6, §6 display):
+0
+D2M7_MINUS_DISPLAY (k=7, paper display WITHOUT 2 dm10; expect 2*dm10):
+8388608/1886771*dm3*dm4+8388608/1886771*dm2*dm5+8388608/1886771*dm1*dm6+8388608/1886771*d0*dm7+8388608/1886771*d1*dm8+12162150/1886771*dm10
+D2M7_MINUS_CORRECTED (k=7, display + 2 dm10; expect 0):
+8388608/1886771*dm3*dm4+8388608/1886771*dm2*dm5+8388608/1886771*dm1*dm6+8388608/1886771*d0*dm7+8388608/1886771*d1*dm8+8388608/1886771*dm10
+D2M8_DIFF (k=8, §6 display):
+8388608/124897*dm4^2+16777216/124897*dm3*dm5+16777216/124897*dm2*dm6+16777216/124897*dm1*dm7+16777216/124897*d0*dm8+16777216/124897*d1*dm9+16777216/124897*dm11
+=== R23(B) (D~^3)_{-j}: TRUE minus PAPER DISPLAY, polynomial part (expect 0) ===
+Q3M1_DIFF (j=1):
+0
+Q3M2_DIFF (j=2):
+0
+Q3M3_DIFF (j=3, §6 display minus lambda y^8):
+0
+Q3M4_DIFF (j=4, polynomial part only):
+12582912/1886771*dm1^2*dm2+12582912/1886771*d0*dm2^2+25165824/1886771*d0*dm1*dm3+25165824/1886771*d1*dm2*dm3+12582912/1886771*d0^2*dm4+25165824/1886771*d1*dm1*dm4+25165824/1886771*d1*d0*dm5+12582912/1886771*d1^2*dm6+25165824/1886771*dm3*dm4+25165824/1886771*dm2*dm5+25165824/1886771*dm1*dm6+25165824/1886771*d0*dm7+25165824/1886771*d1*dm8+12582912/1886771*dm10
+=== R23(C) 1/E mod u^5: E * Sinv - 1 has zero u^0..u^4 coefficients ===
+INV_COEFF_U0 (expect 0):
+0
+INV_COEFF_U1 (expect 0):
+0
+INV_COEFF_U2 (expect 0):
+0
+INV_COEFF_U3 (expect 0):
+0
+INV_COEFF_U4 (expect 0):
+0
+INV_COEFF_U5 (expect dm2 - 2*d0*d1: Sinv is the inverse only mod u^5):
+0
+=== R23(D) phi-shift: phi(D) with phi(x) = x - t ===
+DSH_MINUS_FORMULA (expect 0):
+0
+X2_COEFF_GENERAL (expect D2 - 3t):
+0
+X2_COEFF_AT_T_EQ_D2 (expect -2*D2):
+-2*D2
+X2_COEFF_AT_T_EQ_D2_OVER_3 (expect 0):
+0
+=== R23(E) monomial bracket [x^6 y^2, x^a y^b] coefficient (support) ===
+BRACKET_X6Y2_X2Y3_MINUS_14X7Y4 (expect 0: coeff 6*3-2*2=14):
+0
+Auf Wiedersehen.

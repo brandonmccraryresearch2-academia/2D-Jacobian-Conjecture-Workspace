@@ -1,0 +1,7 @@
+M keys: ['W', 'cols', 'colv', 'p', 'rows', 'w0']
+p: 32003 w0: 11147 W: 24 rows: 3199 cols: 6054
+cols sha16: 3e4797dd478be218
+rows sha16: 80fed24d2a885918
+pivcols==[cols[j] for j in piv]: True
+all cols[j]==pivcols: True
+rows distinct: True | row tuples len 5: True

@@ -1,0 +1,59 @@
+[PASS] S5 (D^2)_{-1} == (C^2)_{-1} * C3**12: got 0, want 0
+[PASS] S5 (D^2)_{-2} == (C^2)_{-2} * C3**14: got 0, want 0
+[PASS] S5 (D^2)_{-3} == (C^2)_{-3} * C3**16: got 0, want 0
+[PASS] S5 (D^2)_{-4} == (C^2)_{-4} * C3**18: got 0, want 0
+[PASS] S5 (D^2)_{-5} == (C^2)_{-5} * C3**20: got 0, want 0
+[PASS] S5 (D^2)_{-6} == (C^2)_{-6} * C3**22: got 0, want 0
+[PASS] S5 (D^2)_{-7} == (C^2)_{-7} * C3**24: got 0, want 0
+[PASS] S5 (D^2)_{-8} == (C^2)_{-8} * C3**26: got 0, want 0
+[PASS] S5 (D^3)_{-1} == (C^3)_{-1} * C3**17: got 0, want 0
+[PASS] S5 (D^3)_{-2} == (C^3)_{-2} * C3**19: got 0, want 0
+[PASS] S5 (D^3)_{-3} == (C^3)_{-3} * C3**21: got 0, want 0
+[PASS] S5 (D^3)_{-4} == (C^3)_{-4} * C3**23: got 0, want 0
+[PASS] S6 (D^2)_{-1} == (C^2)_{-1} * y**5: got 0, want 0
+[PASS] S6 (D^2)_{-2} == (C^2)_{-2} * y**6: got 0, want 0
+[PASS] S6 (D^2)_{-3} == (C^2)_{-3} * y**7: got 0, want 0
+[PASS] S6 (D^2)_{-4} == (C^2)_{-4} * y**8: got 0, want 0
+[PASS] S6 (D^2)_{-5} == (C^2)_{-5} * y**9: got 0, want 0
+[PASS] S6 (D^2)_{-6} == (C^2)_{-6} * y**10: got 0, want 0
+[PASS] S6 (D^2)_{-7} == (C^2)_{-7} * y**11: got 0, want 0
+[PASS] S6 (D^2)_{-8} == (C^2)_{-8} * y**12: got 0, want 0
+[PASS] S6 (D^3)_{-1} == (C^3)_{-1} * y**7: got 0, want 0
+[PASS] S6 (D^3)_{-2} == (C^3)_{-2} * y**8: got 0, want 0
+[PASS] S6 (D^3)_{-3} == (C^3)_{-3} * y**9: got 0, want 0
+[PASS] S6 (D^3)_{-4} == (C^3)_{-4} * y**10: got 0, want 0
+[PASS] (D~^2)_{-1} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^2)_{-2} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^2)_{-3} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^2)_{-4} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^2)_{-5} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^2)_{-6} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^2)_{-7} TRUE - DISPLAY == 2 d_{-10}: got 2*dm10, want 2*dm10
+[PASS] (D~^2)_{-7} TRUE - (DISPLAY + 2 d_{-10}) == 0: got 0, want 0
+[PASS] (D~^2)_{-8} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^3)_{-1} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^3)_{-2} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^3)_{-3} TRUE - DISPLAY == 0: got 0, want 0
+[PASS] (D~^3)_{-4} TRUE - DISPLAY == 0: got 0, want 0
+1/E mod u^6 = -d0*u**3 - d1*u**2 + u**5*(2*d0*d1 - dm2) + u**4*(d1**2 - dm1) + 1
+[PASS] (D~^{-1})_{-3} == 1 (coeff u^0 in 1/E): got 1, want 1
+[PASS] (D~^{-1})_{-4} == 0 (coeff u^1 in 1/E): got 0, want 0
+[PASS] (D~^{-1})_{-1} == 0 (no u^{-2} term): got 0, want 0
+[PASS] (D~^{-1})_{-2} == 0 (no u^{-1} term): got 0, want 0
+[PASS] 1/E coeff u^0 == 1: got 1, want 1
+[PASS] 1/E coeff u^1 == 0: got 0, want 0
+[PASS] 1/E coeff u^2 == -d1: got -d1, want -d1
+[PASS] 1/E coeff u^3 == -d0: got -d0, want -d0
+[PASS] 1/E coeff u^4 == d1^2 - dm1: got d1**2 - dm1, want d1**2 - dm1
+[PASS] 1/E coeff u^5 == 2 d0 d1 - dm2 (inverse only mod u^5): got 2*d0*d1 - dm2, want 2*d0*d1 - dm2
+[PASS] phi(D) poly part == x^3 + (D2-3t) x^2 + (D1-2 D2 t+3 t^2) x + (D0-D1 t+D2 t^2-t^3): got 0, want 0
+[PASS] x^2 coeff at t=D2 == -2 D2: got -2*D2, want -2*D2
+[PASS] x^2 coeff at t=D2/3 == 0: got 0, want 0
+phi(D) as u-series (to u^4): D0 - D1*t + D2*t**2 + Dm1*u - t**3 + u**4*(Dm1*t**3 + 3*Dm2*t**2) + u**3*(Dm1*t**2 + 2*Dm2*t) + u**2*(Dm1*t + Dm2) + (D1 - 2*D2*t + 3*t**2)/u + (D2 - 3*t)/u**2 + u**(-3)
+[PASS] d_{-1} == Dm1: got Dm1, want Dm1
+[PASS] d_{-2} == Dm2 + t*Dm1: got Dm1*t + Dm2, want Dm1*t + Dm2
+[PASS] d_{-3} == t^2*Dm1 + 2 t*Dm2: got Dm1*t**2 + 2*Dm2*t, want Dm1*t**2 + 2*Dm2*t
+[PASS] d_1 (coeff u^{-1}) == D1 - 2 D2 t + 3 t^2: got D1 - 2*D2*t + 3*t**2, want D1 - 2*D2*t + 3*t**2
+[PASS] d_2 (coeff u^{-2}) == D2 - 3 t: got D2 - 3*t, want D2 - 3*t
+[PASS] [x^6 y^2, (1/2) y^{-1} x^{-4}] == x: got 0, want 0
+OVERALL: ALL PASS

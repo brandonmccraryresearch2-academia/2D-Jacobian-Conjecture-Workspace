@@ -1,0 +1,37 @@
+[PASS] table length: got 10, want 10
+[PASS] table max degrees (family formula): got [64, 112, 75, 75, 84, 96, 108, 120, 99, 108], want [64, 112, 75, 75, 84, 96, 108, 120, 99, 108]
+[PASS] table stated maxDeg == computed: got [64, 112, 75, 75, 84, 96, 108, 120, 99, 108], want [64, 112, 75, 75, 84, 96, 108, 120, 99, 108]
+[PASS] table degree pairs: got [(48, 64), (80, 112), (50, 75), (75, 50), (56, 84), (64, 96), (108, 72), (120, 80), (66, 99), (72, 108)], want [(48, 64), (80, 112), (50, 75), (75, 50), (56, 84), (64, 96), (108, 72), (120, 80), (66, 99), (72, 108)]
+[PASS] all maxDeg < 125: got True, want True
+[PASS] exactly 5 red rows: got 5, want 5
+[PASS] S2 survivors after red + 84 + 120 discards (degree pairs): got [(108, 72), (66, 99), (72, 108)], want [(108, 72), (66, 99), (72, 108)]
+[PASS] remaining max degrees (non-red rows): got [84, 108, 120, 99, 108], want [84, 108, 120, 99, 108]
+[PASS] row828 degree pair: got (108, 72), want (108, 72)
+[PASS] row828 swapped = (72,108): got (72, 108), want (72, 108)
+[PASS] (72,108) arises from two rows: (9,27) direct: got (72, 108), want (72, 108)
+[PASS] (72,108) arises from two rows: (8,28) swapped: got (72, 108), want (72, 108)
+[PASS] (5,20) A0 in exactly two rows: got [((5, 20), (2, 3), 75), ((5, 20), (3, 2), 75)], want [((5, 20), (2, 3), 75), ((5, 20), (3, 2), 75)]
+[PASS] source count 7 + 3 = 10: got 10, want 10
+[PASS] gcd(72,108): got 36, want 36
+[PASS] (72,108) reduced ratio: got (2, 3), want (2, 3)
+[PASS] pllcFilter(8,3): got True, want True
+[PASS] pllcFilter(8,4): got False, want False
+[PASS] pllcDir(8,3): got (1, -2), want (1, -2)
+[PASS] pllcDir(8,4): got (1, -1), want (1, -1)
+[PASS] (8,3) in pllcCandidates(9): got True, want True
+[PASS] (8,4) not in pllcCandidates(9): got False, want False
+pllcCandidates(9) = [(3, 1), (4, 1), (5, 1), (5, 2), (6, 1), (6, 2), (7, 1), (7, 2), (7, 3), (7, 4), (8, 1), (8, 2), (8, 3), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5)]
+[PASS] ((8,3),(1,-2)) in pfl(9): got True, want True
+[PASS] ((7,4),(1,-1)) in pfl(9): got True, want True
+[PASS] (3,1) in earlierPairs(pfl9,7,4): got True, want True
+[PASS] (8,3) not in earlierPairs(pfl9,7,4): got False, want False
+[PASS] rowMaxDeg == table max in all 10 rows: got True, want True
+[PASS] flint: gcd(72,108): got 36, want 36
+[PASS] flint: gcd(8,4): got 4, want 4
+[PASS] flint: 4+gcd(8,4): got 8, want 8
+[PASS] flint: 6*4==3*8: got 0, want 0
+[PASS] flint: 21*4==3*28: got 0, want 0
+[PASS] flint: 7*(2*2)==28: got 28, want 28
+[PASS] flint: I_M rational 7*(4/7)==4: got Fraction(4, 1), want Fraction(4, 1)
+[PASS] flint: I_m rational 1-((-3+1)+7*(-9/7+1))==5: got Fraction(5, 1), want Fraction(5, 1)
+OVERALL: ALL PASS

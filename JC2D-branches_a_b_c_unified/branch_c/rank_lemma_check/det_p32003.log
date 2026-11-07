@@ -1,0 +1,3 @@
+FLINT det(M_S) mod 32003 = 29127 (4.6s)
+FLINT det(C) mod 32003 = 9069 (4.6s); product mod p = 1
+NumPy-LU det(M_S) mod 32003 = 29127 (193.4s)

@@ -1,0 +1,301 @@
+warning: mathlib: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/mathlib' has local changes
+warning: batteries: repository '/home/brandonmccrary_research2_gmail_c/repo/JC2D-branches_a_b_c_unified/branches_a_b/lean/.lake/packages/batteries' has local changes
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:1422:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:1470:5: warning: Variable name `hsR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:1471:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:1514:5: warning: Variable name `heR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _heR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:1515:39: warning: Variable name `hcR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2023:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2038:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2062:24: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2068:24: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2195:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2202:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2202:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2206:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2206:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2215:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2219:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2258:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2276:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2276:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2280:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2280:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2291:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2296:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2545:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2547:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2548:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2550:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2613:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2613:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2614:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2616:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2705:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2705:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2708:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2708:20: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2747:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2747:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2749:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2749:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2933:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2935:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2937:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2941:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2942:50: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2948:16: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2950:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2951:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:2896:32: warning: Variable name `hndX` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hndX
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'central_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_dichotomy_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'central_four_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'valF_from_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'endnote_D_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coeffAt_pmul_top_gen2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eq_one_one_of_dirVal' depends on axioms: [propext]
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3512:5: warning: Variable name `hpow` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hpow
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3555:17: warning: Variable name `hmn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3556:13: warning: Variable name `hpq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hpq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3557:23: warning: Variable name `hdir` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdir
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3560:5: warning: Variable name `hcond3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcond3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3567:5: warning: Variable name `hal0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3568:5: warning: Variable name `hal1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3571:5: warning: Variable name `hgcd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hgcd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3572:29: warning: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3607:17: warning: Variable name `hmn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3608:13: warning: Variable name `hpq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hpq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3609:23: warning: Variable name `hdir` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdir
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3612:5: warning: Variable name `hcond3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcond3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3619:5: warning: Variable name `hal0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3620:5: warning: Variable name `hal1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hal1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3623:5: warning: Variable name `hgcd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hgcd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3624:29: warning: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3941:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3941:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3946:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:3946:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4009:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4009:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4014:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4014:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4034:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4034:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4039:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4039:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'exists_pow_eq_of_isAlgClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'valuaciones_G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'fraction_of_ck3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cor74_exponent' depends on axioms: [propext]
+'cor74_assembly' depends on axioms: [propext, Quot.sound]
+'cor74_F_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cor74_F1_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell721_normalization' depends on axioms: [propext, Quot.sound]
+'mem_map_range_cast' depends on axioms: [propext, Quot.sound]
+'suppR18_eq_mink' depends on axioms: [propext, Quot.sound]
+'faceTerms_swap' depends on axioms: [propext]
+'enFace_swap' depends on axioms: [propext]
+'stFace_swap' depends on axioms: [propext]
+'succ_pred5_iff' does not depend on any axioms
+'dirLt_iff_cross' does not depend on any axioms
+'ell721_endpoints' depends on axioms: [propext, Quot.sound]
+'pred_interval_24' depends on axioms: [propext]
+'pred_interval_28' depends on axioms: [propext]
+'pred_not_succ_dirLt_24' depends on axioms: [propext]
+'pred_not_succ_dirLt_28' depends on axioms: [propext]
+'maxVertDir_swap' depends on axioms: [propext]
+'enFaceAux_swap' depends on axioms: [propext]
+'stFaceAux_swap' depends on axioms: [propext]
+'stFace_swap' depends on axioms: [propext]
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4474:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4481:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4504:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4511:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4903:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4903:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4904:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4904:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4949:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4949:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4952:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4952:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4977:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4977:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4978:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:4978:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/tmp/gghv_full_ggvstar_ggv1_2026-11-06.lean:5007:6: warning: Variable name `e` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _e
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'divisibilidad_item5_of_base' does not depend on any axioms
+'divisibilidad_gghv_use8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'divisibilidad_gghv_use8_of_arxiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'comp_X_pow_deriv_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pavadass_descended_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pavadass3_of_descended' depends on axioms: [propext, Classical.choice, Quot.sound]
+'expAdd_assoc' depends on axioms: [propext]
+'expAdd_zero_left' depends on axioms: [propext]
+'coeffAt_pmul_one_left' depends on axioms: [propext, Quot.sound]
+'coeffAt_pmul_pmul' depends on axioms: [propext, Quot.sound]
+'coeffAt_pmul_pmul'' depends on axioms: [propext, Quot.sound]
+'coeffAt_pmul_assoc' depends on axioms: [propext, Quot.sound]
+'sum_map_mul_left'' depends on axioms: [propext, Quot.sound]
+'pmul_pscale' depends on axioms: [propext, Quot.sound]
+'pscale_pscale' depends on axioms: [propext, Quot.sound]
+'pscale_congr' depends on axioms: [propext, Quot.sound]
+'pmul_congr_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pmul_congr_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pmul_comm' depends on axioms: [propext, Quot.sound]
+'ppow_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ppow_add_kt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pscale_ppow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ppow_mul_kt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'prop21_two_a_of_b' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,214 @@
+// Leg G, Phase 4 — R23: the 9 equations' derivation, computational steps
+// checked in Singular (I1). GGHV v1 TeX 1600-1691 (§5) and 1961-2058 (§6).
+// What is checked here (all polynomial identities in the d_i / C_k):
+//  (A) D-scaling identities: (D^2)_{-k} = (C^2)_{-k} C_3^{10+2k},
+//      (D^3)_{-k} = (C^3)_{-k} C_3^{15+2k} (§5); y-power versions (§6).
+//  (B) The displayed (D~^2)_{-k} and (D~^3)_{-j} expansions, by coefficient
+//      extraction from E = u^3 D~ (u = x^{-1}), E^2, E^3 — including the
+//      §5/§6 (D~^2)_{-7} display, whose literal term "2 d_{-1} 0" and whose
+//      missing 2 d_{-10} term are BOTH flagged (see leg log).
+//  (C) The inverse coefficients (D~^{-1})_{-j} for j=1..4: 0, 0, 1, 0, so
+//      the lambda term appears only at j=3 and the F_{-4} term only at j=4.
+//  (D) The phi-shift: with phi(x) = x - t, the x^2-coefficient of phi(D)
+//      is D_2 - 3t. Hence the paper's stated shift t = D_2 gives
+//      d_2 = -2 D_2, NOT 0; the shift that gives d_2 = 0 is t = D_2/3.
+//      The displayed 9 equations are the equations for the d_2 = 0 normal
+//      form, i.e. for the CORRECTED shift. Flagged for Legs C/D (see log).
+//  (E) Bonus, E23-adjacent: monomial-bracket formula check (Singular can
+//      only do polynomial monomials; the Laurent bracket value itself is
+//      checked in the SymPy cross-check).
+// What is NOT checked here (Lean-only / presupposed — see leg log):
+//  - E11/E14/E19/E21 themselves (C_k in K[y,C_3^{-1}], D_k in K[y]);
+//  - the implication "phi(Phat), phi(Qhat) in K[x,y] => negative
+//    coefficients vanish" (definitional, not a polynomial identity);
+//  - the negative-index d_i formulas of phi(D) beyond the x^2 coefficient
+//    (series expansions; spot-checked in the SymPy cross-check).
+// Status: I1 only, never a proof / kernel verification. Singular 4.3.1.
+
+// ---------- helper: coefficient of u^n in a univariate poly ----------
+// coeffU(p, n) = (1/n!) p^{(n)}(0), computed by repeated diff + subst.
+proc coeffU(poly p, int n)
+{
+  int i; int fact; poly q;
+  q = p; fact = 1;
+  for (i = 1; i <= n; i++) { q = diff(q, u); fact = fact * i; }
+  return(subst(q, u, 0) / fact);
+}
+
+// ================= (A) D-scaling identities, §5 =================
+ring RA = 0, (c3, c3x, c2, c1, c0, cm1, cm2, cm3, cm4, cm5, cm6, cm7, cm8,
+              cm9, cm10, cm11), dp;
+// CL[i] = C_{i-12}, i = 1..15  (indices -11..3); Dlist[i] = D_{i-12}.
+list CL = list(cm11, cm10, cm9, cm8, cm7, cm6, cm5, cm4, cm3, cm2, cm1,
+               c0, c1, c2, c3x);
+list DL;
+int ii; int jj; int kk; int ll;
+for (ii = 1; ii <= 14; ii++)
+{
+  DL[ii] = CL[ii] * c3^(5 - 2*(ii-12));
+}
+DL[15] = 1;   // D_3 = C_3 * C_3^{-1} = 1 (no negative exponents in Singular)
+print("=== R23(A) §5 D-scaling: (D^2)_{-k} - (C^2)_{-k} C3^{10+2k} ===");
+for (kk = 1; kk <= 8; kk++)
+{
+  poly sD2; poly sC2;
+  sD2 = 0; sC2 = 0;
+  for (ii = 1; ii <= 15; ii++) { for (jj = 1; jj <= 15; jj++)
+  {
+    if ((ii-12) + (jj-12) == -kk)
+    {
+      sD2 = sD2 + DL[ii]*DL[jj];
+      sC2 = sC2 + CL[ii]*CL[jj];
+    }
+  } }
+  print("D2_SCALE_K:");
+  print(kk);
+  print(sD2 - sC2*c3^(10+2*kk));
+}
+print("=== R23(A) §5 D-scaling: (D^3)_{-k} - (C^3)_{-k} C3^{15+2k} ===");
+for (kk = 1; kk <= 4; kk++)
+{
+  poly sD3; poly sC3;
+  sD3 = 0; sC3 = 0;
+  for (ii = 1; ii <= 15; ii++) { for (jj = 1; jj <= 15; jj++) { for (ll = 1; ll <= 15; ll++)
+  {
+    if ((ii-12) + (jj-12) + (ll-12) == -kk)
+    {
+      sD3 = sD3 + DL[ii]*DL[jj]*DL[ll];
+      sC3 = sC3 + CL[ii]*CL[jj]*CL[ll];
+    }
+  } } }
+  print("D3_SCALE_K:");
+  print(kk);
+  print(sD3 - sC3*c3^(15+2*kk));
+}
+
+// ================= (A) D-scaling identities, §6 =================
+// D_k = C_k y^{2-k}; (D^2)_{-k} = (C^2)_{-k} y^{4+k};
+// (D^3)_{-k} = (C^3)_{-k} y^{6+k}.
+ring RB = 0, (yy, c2y, c1y, c0y, cm1y, cm2y, cm3y, cm4y, cm5y, cm6y,
+              cm7y, cm8y, cm9y, cm10y, cm11y), dp;
+// In §6, C_3 = y (l_{1,0}(C) = x^3 y), so CY[15] = yy and D_3 = 1.
+list CY = list(cm11y, cm10y, cm9y, cm8y, cm7y, cm6y, cm5y, cm4y, cm3y,
+               cm2y, cm1y, c0y, c1y, c2y, yy);
+list DY;
+for (ii = 1; ii <= 14; ii++)
+{
+  DY[ii] = CY[ii] * yy^(2-(ii-12));
+}
+DY[15] = 1;   // D_3 = C_3 * y^{-1} = y * y^{-1} = 1
+print("=== R23(A) §6 D-scaling: (D^2)_{-k} - (C^2)_{-k} y^{4+k} ===");
+for (kk = 1; kk <= 8; kk++)
+{
+  poly tD2; poly tC2;
+  tD2 = 0; tC2 = 0;
+  for (ii = 1; ii <= 15; ii++) { for (jj = 1; jj <= 15; jj++)
+  {
+    if ((ii-12) + (jj-12) == -kk)
+    {
+      tD2 = tD2 + DY[ii]*DY[jj];
+      tC2 = tC2 + CY[ii]*CY[jj];
+    }
+  } }
+  print("D2Y_SCALE_K:");
+  print(kk);
+  print(tD2 - tC2*yy^(4+kk));
+}
+print("=== R23(A) §6 D-scaling: (D^3)_{-k} - (C^3)_{-k} y^{6+k} ===");
+for (kk = 1; kk <= 4; kk++)
+{
+  poly tD3; poly tC3;
+  tD3 = 0; tC3 = 0;
+  for (ii = 1; ii <= 15; ii++) { for (jj = 1; jj <= 15; jj++) { for (ll = 1; ll <= 15; ll++)
+  {
+    if ((ii-12) + (jj-12) + (ll-12) == -kk)
+    {
+      tD3 = tD3 + DY[ii]*DY[jj]*DY[ll];
+      tC3 = tC3 + CY[ii]*CY[jj]*CY[ll];
+    }
+  } } }
+  print("D3Y_SCALE_K:");
+  print(kk);
+  print(tD3 - tC3*yy^(6+kk));
+}
+
+// ================= (B) (D~^2)_{-k} / (D~^3)_{-j} expansions =================
+// D~ = x^3 + d1 x + d0 + dm1 u + dm2 u^2 + ... (u = x^{-1}), d3 = 1, d2 = 0.
+// E = u^3 D~ = 1 + d1 u^2 + d0 u^3 + dm1 u^4 + ... + dm11 u^14.
+// (D~^2)_{-k} = coeff of u^{k+6} in E^2; (D~^3)_{-j} = coeff of u^{j+9} in E^3.
+ring RC = 0, (u, d1, d0, dm1, dm2, dm3, dm4, dm5, dm6, dm7, dm8, dm9, dm10, dm11), dp;
+poly E = 1 + d1*u^2 + d0*u^3 + dm1*u^4 + dm2*u^5 + dm3*u^6 + dm4*u^7
+         + dm5*u^8 + dm6*u^9 + dm7*u^10 + dm8*u^11 + dm9*u^12 + dm10*u^13
+         + dm11*u^14;
+poly E2 = E^2;
+poly E3 = E^3;
+print("=== R23(B) (D~^2)_{-k}: TRUE minus PAPER DISPLAY (expect 0 except k=7) ===");
+print("D2M1_DIFF (k=1):");
+print(coeffU(E2, 7) - (2*d0*dm1 + 2*d1*dm2 + 2*dm4));
+print("D2M2_DIFF (k=2):");
+print(coeffU(E2, 8) - (dm1^2 + 2*d0*dm2 + 2*d1*dm3 + 2*dm5));
+print("D2M3_DIFF (k=3):");
+print(coeffU(E2, 9) - (2*dm1*dm2 + 2*d0*dm3 + 2*d1*dm4 + 2*dm6));
+print("D2M4_DIFF (k=4):");
+print(coeffU(E2, 10) - (dm2^2 + 2*dm1*dm3 + 2*d0*dm4 + 2*d1*dm5 + 2*dm7));
+print("D2M5_DIFF (k=5):");
+print(coeffU(E2, 11) - (2*dm2*dm3 + 2*dm1*dm4 + 2*d0*dm5 + 2*d1*dm6 + 2*dm8));
+print("D2M6_DIFF (k=6, §6 display):");
+print(coeffU(E2, 12) - (dm3^2 + 2*dm2*dm4 + 2*dm1*dm5 + 2*d0*dm6 + 2*d1*dm7 + 2*dm9));
+print("D2M7_MINUS_DISPLAY (k=7, paper display WITHOUT 2 dm10; expect 2*dm10):");
+print(coeffU(E2, 13) - (2*dm3*dm4 + 2*dm2*dm5 + 2*dm1*dm6 + 2*d0*dm7 + 2*d1*dm8));
+print("D2M7_MINUS_CORRECTED (k=7, display + 2 dm10; expect 0):");
+print(coeffU(E2, 13) - (2*dm10 + 2*dm3*dm4 + 2*dm2*dm5 + 2*dm1*dm6 + 2*d0*dm7 + 2*d1*dm8));
+print("D2M8_DIFF (k=8, §6 display):");
+print(coeffU(E2, 14) - (2*dm11 + dm4^2 + 2*dm3*dm5 + 2*dm2*dm6 + 2*dm1*dm7 + 2*d0*dm8 + 2*d1*dm9));
+
+print("=== R23(B) (D~^3)_{-j}: TRUE minus PAPER DISPLAY, polynomial part (expect 0) ===");
+print("Q3M1_DIFF (j=1):");
+print(coeffU(E3, 10) - (3*d0^2*dm1 + 3*d1*dm1^2 + 6*d0*d1*dm2 + 3*dm2^2 + 3*d1^2*dm3 + 6*dm1*dm3 + 6*d0*dm4 + 6*d1*dm5 + 3*dm7));
+print("Q3M2_DIFF (j=2):");
+print(coeffU(E3, 11) - (3*d0*dm1^2 + 3*d0^2*dm2 + 6*d1*dm1*dm2 + 6*d0*d1*dm3 + 6*dm2*dm3 + 3*d1^2*dm4 + 6*dm1*dm4 + 6*d0*dm5 + 6*d1*dm6 + 3*dm8));
+print("Q3M3_DIFF (j=3, §6 display minus lambda y^8):");
+print(coeffU(E3, 12) - (dm1^3 + 6*d0*dm1*dm2 + 3*d1*dm2^2 + 3*d0^2*dm3 + 6*d1*dm1*dm3 + 3*dm3^2 + 6*d0*d1*dm4 + 6*dm2*dm4 + 3*d1^2*dm5 + 6*dm1*dm5 + 6*d0*dm6 + 6*d1*dm7 + 3*dm9));
+print("Q3M4_DIFF (j=4, polynomial part only):");
+print(coeffU(E3, 13) - (3*dm10 + 3*dm1^2*dm2 + 3*d0*dm2^2 + 6*d0*dm1*dm3 + 6*d1*dm2*dm3 + 3*d0^2*dm4 + 6*d1*dm1*dm4 + 6*dm3*dm4 + 6*d0*d1*dm5 + 6*dm2*dm5 + 3*d1^2*dm6 + 6*dm1*dm6 + 6*d0*dm7 + 6*d1*dm8));
+
+// ================= (C) inverse coefficients =================
+print("=== R23(C) 1/E mod u^5: E * Sinv - 1 has zero u^0..u^4 coefficients ===");
+poly Sinv = 1 - d1*u^2 - d0*u^3 + (d1^2 - dm1)*u^4;
+poly prod = E*Sinv - 1;
+print("INV_COEFF_U0 (expect 0):");
+print(coeffU(prod, 0));
+print("INV_COEFF_U1 (expect 0):");
+print(coeffU(prod, 1));
+print("INV_COEFF_U2 (expect 0):");
+print(coeffU(prod, 2));
+print("INV_COEFF_U3 (expect 0):");
+print(coeffU(prod, 3));
+print("INV_COEFF_U4 (expect 0):");
+print(coeffU(prod, 4));
+print("INV_COEFF_U5 (expect dm2 - 2*d0*d1: Sinv is the inverse only mod u^5):");
+print(coeffU(prod, 5) - (dm2 - 2*d0*d1));
+
+// ================= (D) phi-shift =================
+ring RD = 0, (x, D2, D1, D0, t), dp;
+poly Dtr = x^3 + D2*x^2 + D1*x + D0;
+poly Dsh = (x-t)^3 + D2*(x-t)^2 + D1*(x-t) + D0;
+print("=== R23(D) phi-shift: phi(D) with phi(x) = x - t ===");
+print("DSH_MINUS_FORMULA (expect 0):");
+print(Dsh - (x^3 + (D2-3*t)*x^2 + (D1 - 2*D2*t + 3*t^2)*x + (D0 - D1*t + D2*t^2 - t^3)));
+print("X2_COEFF_GENERAL (expect D2 - 3t):");
+print(subst(diff(diff(Dsh,x),x), x, 0)/2 - (D2 - 3*t));
+poly Dsh_tD2 = (x-D2)^3 + D2*(x-D2)^2 + D1*(x-D2) + D0;
+print("X2_COEFF_AT_T_EQ_D2 (expect -2*D2):");
+print(subst(diff(diff(Dsh_tD2,x),x), x, 0)/2);
+poly Dsh_tD2o3 = (x-(1/3)*D2)^3 + D2*(x-(1/3)*D2)^2 + D1*(x-(1/3)*D2) + D0;
+print("X2_COEFF_AT_T_EQ_D2_OVER_3 (expect 0):");
+print(subst(diff(diff(Dsh_tD2o3,x),x), x, 0)/2);
+
+// ================= (E) monomial bracket formula (E23 support) =================
+print("=== R23(E) monomial bracket [x^6 y^2, x^a y^b] coefficient (support) ===");
+ring RE = 0, (x, y), dp;
+poly br = diff(x^6*y^2,x)*diff(x^2*y^3,y) - diff(x^6*y^2,y)*diff(x^2*y^3,x);
+print("BRACKET_X6Y2_X2Y3_MINUS_14X7Y4 (expect 0: coeff 6*3-2*2=14):");
+print(br - 14*x^7*y^4);
+quit;
