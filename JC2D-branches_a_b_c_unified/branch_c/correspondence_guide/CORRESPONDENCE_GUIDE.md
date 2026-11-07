@@ -149,16 +149,19 @@ paper's own labels B0–B8 (its §11 table) and was checked against `branch_c_el
 - **Grade**: A.
 
 ### The whole chart (§10)
-- **Outside Lean (grade B)**: the rank lemma + exact finite-field ranks at two primes (1000003, 32003), two implementations (FLINT `nmod_mat`, numpy elimination), exact input checks — `chart_certificates/step3b_rank_lift.py`, `step3b_rank_lift.log`.
+- **Proved in Lean (grade A, since 2026-11-04)**: the rank lemma + exact finite-field ranks at two primes (1000003, 32003), two implementations (FLINT `nmod_mat`, numpy elimination), exact input checks — `chart_certificates/step3b_rank_lift.py`, `step3b_rank_lift.log` — now stand as independent corroboration of `challenge_target` (`GradeA.Bridge`), which proves `ChartEmptyC_T1ne0` at the concrete data.
 - **Rank-lemma premises (`GUIDE.md` §5.9)** → `branch_c/rank_lemma_check/`: 6398 packed natural-number identities (`C·M_S ≡ I` mod 32003 for the W = 24 pivot block), kernel-checked with axioms `[propext]` only; 5 negative controls rejected, 1 pass control accepted; generators matched exactly to the Lean `cond_*` (parsed from `CondsC.lean`); R irreducible (FLINT + mod-67 + degree patterns).
-- **What Lean does NOT check**: the link from the pivot-block arithmetic to `ChartEmptyC_T1ne0` (plan A1–A5, deferred).
+- **What Lean now checks**: the link from the pivot-block arithmetic to `ChartEmptyC_T1ne0` (plan A1–A5, done 2026-10-31–11-04; see the addenda above).
 
 ### Proof of the main theorem (§11)
 - **Lean**: `T1Zero/Combine.lean` —
   - `chartEmptyC_of_T1ne0`: `ChartEmptyC_T1ne0 L → ChartEmptyC L`
   - `descentClaimC_of_chartEmpty_T1ne0`
   - `main_theorem_c_of_chartEmpty_T1ne0`: the top-level theorem.
-- **Grade**: A for the implications; the remaining premise `ChartEmptyC_T1ne0` is grade B (outside Lean).
+- **Grade**: A for the implications; the premise `ChartEmptyC_T1ne0` is now
+  itself proved in Lean (`challenge_target`, 2026-11-04), so the main theorem
+  holds unconditionally as `branch_c_eliminated` (no hypotheses, standard
+  axioms).
 
 ### Epistemic status (§12)
 - Grades A/B/C per claim; see the claim registry (GUIDE.md §8, IDs C1–C11).
@@ -171,7 +174,7 @@ paper's own labels B0–B8 (its §11 table) and was checked against `branch_c_el
 | 2 | `DescentClaimC` ⇐ `ChartEmptyC` (E₄…E₋₂ eliminations) | `chart_descent_refl` | `Descent2R/Main.lean` | A |
 | 3 | Stratum b₁₁,₂₀ = 0 has no common zero | `chartEmpty_t1_zero` | `T1Zero/Main.lean` | A |
 | 4 | `ChartEmptyC` ⇐ `ChartEmptyC_T1ne0` | `chartEmptyC_of_T1ne0` | `T1Zero/Combine.lean` | A |
-| 5 | No common zero on the whole chart | `ChartEmptyC` / `ChartEmptyC_T1ne0` | `T1Zero/Combine.lean` (statement); proved outside Lean | B |
+| 5 | No common zero on the whole chart | `ChartEmptyC` / `ChartEmptyC_T1ne0` | `T1Zero/Combine.lean` (statement); proved in Lean 2026-11-04 (`challenge_target`, `GradeA.Bridge`) | A |
 | 6 | Canonical K₅ certificate size estimate | — (estimate, not a proof) | Hadamard bound (rigorous) × calibrated ratio | C |
 
 ## Rank-lemma premises (`branch_c/GUIDE.md` §5.9; paper §10) → scripts
@@ -192,13 +195,12 @@ paper's own labels B0–B8 (its §11 table) and was checked against `branch_c_el
 
 ## What is proved in Lean vs. outside Lean
 
-- **In Lean (grade A)**: statements 1–4; the 6398 pivot-block identities (C9, arithmetic only); the Muse `reduction_lemma` refutation (C7).
-- **Outside Lean (grade B)**: statement 5 (`ChartEmptyC`/`ChartEmptyC_T1ne0`) — the rank lemma with two-prime, two-implementation ranks, exact input checks, and controls; the meaning of the 6398 identities (C9-meaning); generator-to-`cond_*` matching (C10); R irreducible (C11).
+- **In Lean (grade A)**: statements 1–5; the 6398 pivot-block identities (C9, arithmetic and meaning); the Muse `reduction_lemma` refutation (C7); R irreducible over ℚ (C11, since 2026-10-12).
+- **Outside Lean (grade B)**: generator-to-`cond_*` matching (C10, I1 exact comparison). The rank lemma with two-prime, two-implementation ranks, exact input checks, and controls stands as independent corroboration (I1) of statement 5.
 - **Estimate (grade C)**: statement 6 (canonical certificate size).
 
 ## Explicit non-goals
 
 - Not the Jacobian conjecture, nor any other case of GGHV Prop. 4.3, nor the reduction to it.
-- Not a Lean proof of the stratum b₁₁,₂₀ ≠ 0 (statement 5's hard part).
 - Not an explicit K₅ certificate for the whole chart; only its existence (rank lemma).
 - Not a review of the Muse bundle (withdrawn) or the p-adic argument (closed as not needed).

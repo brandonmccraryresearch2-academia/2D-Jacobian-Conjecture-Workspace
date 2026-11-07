@@ -11,7 +11,7 @@ Brandon D. McCrary (independent researcher), 2026-10-01.
 |---|---|---|
 | `branch_c_elimination.tex` | LaTeX source (XeLaTeX; Fira Sans / Fira Mono / Fira Math) | `481dfbc948ca6b50133fff9ed684bc5d` |
 | `branch_c_elimination.pdf` | Compiled 18-page paper, all fonts embedded | `31d4b56a2ff7e87c9572aa52840754eb` |
-| `BRANCH_C_GUIDE.md` | The comprehensive v3.1 bundle guide (paper-equivalent reference document; 13 sections) | `6ab1e710d8b8d9ed05db4de2c8fa0672` |
+| `BRANCH_C_GUIDE.md` | The comprehensive v3.1 bundle guide (paper-equivalent reference document; 13 sections) | `6b88d690bcea34ce25b853f356433ada` |
 | `figures/fig1_newton_polygons.pdf` | Figure 1: branch-(c) Newton polygons N(P), N(Q) (vector) | `45287d2f6e2b5404fcd35a2519ebad16` |
 | `figures/fig2_bridges.pdf` | Figure 2: B0–B8 bridge architecture flowchart (vector) | `e117806fbc10ab8baff10c0ef10be388` |
 | `figures/fig3_omega.pdf` | Figure 3: chart geometry near Ω=0, schematic (vector) | `83d047cb4ac018ddcf4b3365ddb44bc8` |
@@ -36,9 +36,10 @@ claim registry, computational archive appendix, and AI-disclosure section.
 ## Status
 
 - The Lean-checked part (descent, t1=0 stratum) is grade A.
-- The whole-chart rank computation is proved outside Lean (grade B) under the
-  stated computational premises; the false reduction lemma is retracted and
-  replaced by the rank lemma (§5.9 of the guide, §10 of the paper).
+- The whole-chart rank computation is now proved in Lean (grade A, 2026-11-04:
+  `challenge_target`, `GradeA.Bridge`); the rank lemma (§5.9 of the guide, §10
+  of the paper) stands as independent corroboration. The false reduction lemma
+  is retracted and replaced by the rank lemma.
 - The degree-19 rigidity lemma's parity-constrained Davenport–Stothers step is
   supplied by an external certified point (grade B), not formalized in Lean
   (§3.2 of the paper).

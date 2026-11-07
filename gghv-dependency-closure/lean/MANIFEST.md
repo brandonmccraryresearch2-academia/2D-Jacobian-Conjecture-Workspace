@@ -488,7 +488,7 @@ cross-file imports, no `sorry`, no `axiom` declarations — grep-verified
 at filing: the only "sorry" hits are header-comment words). The
 `[triple]` abbreviation is `[propext, Classical.choice, Quot.sound]`.
 
-### Phase 4.1 — Leg A: `gghv_full_s2s3_2026-11-06.lean` — 29,733 bytes, 645 lines, sha256 `ed23c0e5323c6d6e`
+### Phase 4.1 — Leg A: `gghv_full_s2s3_2026-11-06.lean` — 29,986 bytes, 648 lines, sha256 `177637285a1be80e`
 
 - **Source:** `~/workspace/research/tooling/phase4_legA/`.
 - **Paper:** GGHV §2 table + §3 discards (max = 120, 84).
@@ -502,14 +502,28 @@ at filing: the only "sorry" hits are header-comment words). The
   `link_120`, `link_84`); [GGV5] enumeration completeness.
 - **Second tool:** `check_legA_2026-11-06.py`, 28 checks ALL PASS,
   exit 0 (filed in `lean/logs/`).
-- **Correction note:** Leg A's file header claims the local [GGV5] TeX
+- **Correction note (updated 2026-11-07):** Leg A's file header claimed the local [GGV5] TeX
   §6 is "Program and graphic display" and contains no Proposition 6.1
-  under that number. That claim is WRONG for the only [GGV5] source on
+  under that number. That claim was WRONG for the only [GGV5] source on
   disk and for arXiv v1 (inventory §8; TeX l.1874, PDF pdftotext
-  l.2927). The filed leg file is a dated record and is NOT rewritten;
-  do not repeat the header claim. The (8,24) red-row premise itself is
-  unaffected in substance (Prop 6.1 exists under that number in arXiv
-  v1; its numbering is UNVERIFIED for any published version).
+  l.2927). The header was corrected comment-only on 2026-11-07 per
+  inventory §8's directive ("the comb leg must correct Leg A's header claim
+  wherever it is repeated"): the false sentence was replaced by the true
+  statement ("Program and graphic display" is §4, not §6; Prop 6.1, the
+  `caso antisimetrico`, is present in arXiv 1708.07936v1; numbering
+  UNVERIFIED for any published version), with a dated correction marker in
+  the header itself. No theorem code was touched. The same correction was
+  applied to the assembly file's embedded copy of the header (its sha256
+  is now `a743629984216a33`, 155,390 bytes, 3,168 lines). This entry's
+  sha256/bytes/lines were updated to the corrected file
+  (`177637285a1be80e`, 29,986 bytes, 648 lines); the pre-correction values
+  were `ed23c0e5323c6d6e`, 29,733 bytes, 645 lines. The correction shifted
+  all subsequent line numbers in both files by +3, so line references in
+  the (dated) inventory and G1 report point 3 lines earlier than the
+  current files (e.g. `theorem21_minimal_v2` is now at l.3111, not l.3108;
+  `MinimalPremises2` at l.3047, not l.3044). The (8,24) red-row premise
+  itself is unaffected in substance (Prop 6.1 exists under that number in
+  arXiv v1; its numbering is UNVERIFIED for any published version).
 
 ### Phase 4.2 — Leg B: `gghv_full_s4_2026-11-06.lean` — 65,301 bytes, 1,378 lines, sha256 `51d169312d4841be`
 
@@ -825,14 +839,14 @@ at filing: the only "sorry" hits are header-comment words). The
   (4,12) discard — the citation must refer to the PUBLISHED version's
   §3.5 (Pro Mathematica 27 (2013) 83–98).
 
-### Phase 4.9 — Assembly: `gghv_full_assembly_2026-11-06.lean` — 155,137 bytes, 3,165 lines, sha256 `4a845f3b5e17e8bf`
+### Phase 4.9 — Assembly: `gghv_full_assembly_2026-11-06.lean` — 155,390 bytes, 3,168 lines, sha256 `a743629984216a33`
 
 - **Source:** `~/workspace/research/tooling/phase4_assembly/`.
 - **Verdict:** Theorem 2.1 CONDITIONAL from the 20-field
   `MinimalPremises2`; fields 9–10 REFINED into named chains (not
   unconditionally discharged).
 - **Axioms** (assembly run 2026-11-07 ~02:08 UTC, lean-build-3):
-  `theorem21_minimal_v2` [triple] (l.3108);
+  `theorem21_minimal_v2` [triple] (l.3111 — was l.3108 before the 2026-11-07 comment-only header correction, which shifted lines by +3);
   `link_924_derived` [triple]; `link_927_derived` [triple];
   `prop42_shape_of` [triple]; `prop41_shape_of` [propext,
   Quot.sound]. Re-verified in the same run (matching the legs' own

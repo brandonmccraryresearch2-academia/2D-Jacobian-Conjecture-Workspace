@@ -21,13 +21,17 @@ in one directory.
 
 - Branches (a,b): eliminated. Lean proves `main_theorem` (no remaining hypothesis)
   on the standard axioms; the paper is finalized through v19 (Zenodo 10.5281/zenodo.23023490).
-- Branch (c): closed **under stated computational premises not machine-checked in Lean**
-  (v3.1 verdict, GUIDE.md §1). In Lean, with no `sorry` and only the standard axioms:
-  `ChartEmptyC_T1ne0 → ChartEmptyC → DescentClaimC → ¬∃ P Q λ, λ ≠ 0 ∧ NewtonNFc P Q ∧ [P,Q] = λx²`.
-  Outside Lean (grade B): `ChartEmptyC` via the rank lemma + finite-field ranks at two primes.
-  Since 2026-10-06, `branch_c/rank_lemma_check/` checks the premises: R is irreducible, and the generators are
-  exactly the Lean conditions. The Lean kernel also checks the arithmetic, through an explicit inverse of the pivot
-  block. The grade stays B, because the link from that arithmetic to `ChartEmptyC_T1ne0` is not in Lean.
+- Branch (c): **eliminated in Lean** (2026-11-04). `branch_c_eliminated`
+  (`GradeA.Composition`, no hypotheses, standard axioms only) states that no
+  Keller pair with Newton normal form (c) exists over any field of
+  characteristic 0; it is `main_theorem_c_of_chartEmpty_T1ne0` applied to
+  `challenge_target` (`GradeA.Bridge`), the certificate interface instantiated
+  at the concrete data ρ = Fin 3199, p = 32003, w₀ = 11147, via the bridge
+  `Fpoly = Fpoly2` and the A1, A2, and six data hypotheses. The rank lemma +
+  finite-field ranks at two primes now stand as independent corroboration
+  (I1), not the sole support. Together with the branches (a),(b)
+  `main_theorem`, the GGHV Prop. 4.3 case (8,28) split is fully eliminated in
+  Lean. This does not claim (72,108) excluded unconditionally or JC(2).
 - Neither branch resolves the Jacobian conjecture; GGHV Prop. 4.3's other cases and the
   reduction to it are outside scope.
 
@@ -35,8 +39,13 @@ in one directory.
 
 - `TODO_correspondence_guide.md` — the branch-(c) correspondence guide: **done** 2026-10-07 (PR #13),
   `branch_c/correspondence_guide/CORRESPONDENCE_GUIDE.md`; section mapping corrected 2026-10-12.
-- Branch (c), grade A for `ChartEmptyC_T1ne0` (plan A1–A5, about 9–15 sessions): deferred by decision on 2026-10-06.
-  The outside replication (I3) is specified in `branch_c/rank_lemma_check/I3_REPLICATION_SPEC.md` and is still open;
+- Branch (c), grade A for `ChartEmptyC_T1ne0` (plan A1–A5): **done
+  2026-10-31–11-04** (A1 compiled 2026-10-31, A2 2026-11-01, `hsupp2`
+  2026-11-02, `challenge_target` + `branch_c_eliminated` proved 2026-11-04)
+  and filed as tracked modules `GradeA.Bridge` / `GradeA.Composition`
+  (commit `7e4db07f`, 2026-11-06; status record
+  `branch_c/grade_a/BRIDGE_STATUS_2026-11-06.md`). The outside replication
+  (I3) is specified in `branch_c/rank_lemma_check/I3_REPLICATION_SPEC.md` and is still open;
   for a blind replication use `replication/INDEPENDENT_REPLICATION_GUIDE.md` (2026-10-12), because the specification
   states its expected values.
   See `TECHNICAL_MAP.md` §9.

@@ -77,7 +77,7 @@ the guide. `branch_c/bundle_v3_1/GUIDE.md` keeps the v3.1 text byte for byte.
 | 2 | `DescentClaimC`'s hypotheses imply lower_c's twelve conditions: the E₄…E₋₂ eliminations, i.e. `DescentClaimC ⇐ ChartEmptyC`. | Lean, kernel reflection (`Descent2R`, `Bridge`); **built**, axioms audited | **A** |
 | 3 | On the stratum b₁₁,₂₀ = 0 the conditions have no common zero (`chartEmpty_t1_zero`). | Lean kernel (`T1Zero`); **built**, axioms audited, 5 negative controls fail as required | **A** |
 | 4 | `ChartEmptyC ⇐ ChartEmptyC_T1ne0` | Lean (`Combine`); **built**, axioms audited | **A** |
-| 5 | The conditions have no common zero on the whole chart. This is `ChartEmptyC`, hence also `ChartEmptyC_T1ne0`. | Outside Lean. The rank lemma plus exact finite-field ranks at two primes, with two implementations, controls and exact input checks (§5.9). Since 2026-10-06 there are three further checks (`branch_c/rank_lemma_check/`): an explicit inverse of the pivot block, checked by the Lean kernel (the arithmetic only); the generators matched exactly to the Lean conditions; and R irreducible. | **B** |
+| 5 | The conditions have no common zero on the whole chart. This is `ChartEmptyC`, hence also `ChartEmptyC_T1ne0`. | Lean, since 2026-11-04: `challenge_target` (`GradeA.Bridge`) instantiates the certificate interface at the concrete data (ρ = Fin 3199, p = 32003, w₀ = 11147) via the bridge `Fpoly = Fpoly2` and the A1, A2, and six data hypotheses. The rank lemma plus exact finite-field ranks at two primes, with two implementations, controls and exact input checks (§5.9), now stand as independent corroboration, as do the three further checks of `branch_c/rank_lemma_check/`. | **A** |
 | 6 | A canonical K₅ certificate for the whole chart is too large to build here. | Rigorous Hadamard bound; an extrapolated height estimate. | **C** (the estimate) |
 
 **Net.** Lean proves the following. All modules are built, the full verification script passes, and `#print axioms`
@@ -85,21 +85,26 @@ shows only `propext`, `Classical.choice`, `Quot.sound`.
 
 `ChartEmptyC_T1ne0 L → ¬∃ P Q λ, λ ≠ 0 ∧ NewtonNFc P Q ∧ [P,Q] = λx²`,
 
-with no `sorry` and only the standard axioms. Statement 5 supplies `ChartEmptyC_T1ne0` outside Lean, at grade B.
+with no `sorry` and only the standard axioms. Statement 5 is now proved in
+Lean as well: `challenge_target` (`GradeA.Bridge`, 2026-11-04) proves
+`ChartEmptyC_T1ne0` at the concrete data, and `branch_c_eliminated`
+(`GradeA.Composition`) states that no Keller pair with Newton normal form (c)
+exists over any field of characteristic 0.
 
-So branch (c) is closed **under the computational premises of §5.9**. They are exact finite-field rank computations,
-reproduced by two implementations at two primes, but they are not machine-checked in Lean. Branch (c) is not closed
-by Lean alone.
+So branch (c) is **eliminated in Lean** (2026-11-04). The rank computations of
+§5.9 are exact finite-field rank computations, reproduced by two
+implementations at two primes; they now stand as independent corroboration
+(I1) of the Lean proof, not as its sole support.
 
-Since 2026-10-06, the Lean kernel also checks the arithmetic of one of these computations: an explicit inverse of the
-pivot block modulo 32003. It does not check the link from that arithmetic to `ChartEmptyC_T1ne0`. That link is
-plan A1–A5, which is deferred (§11).
+Since 2026-10-06, the Lean kernel also checks the arithmetic of one of these
+computations: an explicit inverse of the pivot block modulo 32003. Since
+2026-11-04 the link from that arithmetic to `ChartEmptyC_T1ne0` is itself in
+Lean: plan A1–A5 (§11) is done.
 
 ### 1.2 What is *not* claimed
 
 - Not the Jacobian conjecture, nor any other case of GGHV Prop. 4.3, nor the reduction to it.
-- Not a Lean proof of the stratum b₁₁,₂₀ ≠ 0.
-- Not an explicit K₅ certificate for the whole chart; only its existence (§5.9).
+- Not an explicit K₅ certificate for the whole chart; only its existence (§5.9) — the stratum b₁₁,₂₀ ≠ 0 itself *is* now proved in Lean (`challenge_target`, 2026-11-04).
 - The mod-p *Gröbner / lift* certificates are certificates, not proofs: 𝔽₁₀₁, 𝔽₁₀₀₀₀₀₃, 𝔽_{109⁵}. They exclude only
   solutions integral at that prime. The *rank* argument is what lifts: full row rank is an open condition. This
   distinction is essential; see §5.9.
@@ -294,6 +299,12 @@ Grade C for the estimate; the Hadamard bound itself is rigorous.
 
 **Reserve strategy taken:** prove the *existence* of the certificate instead (step 4b).
 
+**Note (2026-11-06, Phase 4 Leg H).** The canonical K₅ certificate is still
+not built. Leg H named an explicit maximal minor for the W = 24 pivot block —
+**PARTIAL**: the filed form is a full inverse of the 3199 × 3199 pivot block,
+not a named minor, and the K₅-value is NOT DONE (inventory
+`gghv-dependency-closure/gghv_full_assembly_inventory.md` §4).
+
 ### Step 4: exact checks with FLINT (done)
 
 | Check | What it establishes | File | Log |
@@ -303,11 +314,12 @@ Grade C for the estimate; the Hadamard bound itself is rigorous.
 | 4c | the chart generators are the right polynomials: exact evaluation at 12 random points; an independent κ; exact Ω square; controls | `step3c_chart_identity.py` | `step3c_chart_identity.log` |
 | 4d | added 2026-10-06. (i) The generators are positive integer multiples of the Lean conditions of `CondsC.lean`, checked exactly from the Lean text. (ii) R is irreducible. (iii) An explicit inverse of the W = 24 pivot block mod 32003 is checked by the Lean kernel: 6398 identities, axioms `[propext]`, 5 controls rejected. (iii) checks the arithmetic, not the link to `ChartEmptyC_T1ne0`. | `branch_c/rank_lemma_check/` | `branch_c/rank_lemma_check/logs/` |
 
-### Step 5: check in Lean, or label (done for t₁ = 0; the remainder labelled precisely)
+### Step 5: check in Lean, or label (done for t₁ = 0; the remainder now proved in Lean)
 
 - **Kernel-checked:** the stratum b₁₁,₂₀ = 0 (`T1Zero`, §5.7).
-- **Labelled:** `ChartEmptyC_T1ne0`, a Lean `Prop` in `Combine.lean`. It is *proved outside Lean* (step 4b), not
-  merely supported by evidence.
+- **Proved in Lean 2026-11-04:** `ChartEmptyC_T1ne0`, a Lean `Prop` in
+  `Combine.lean`, via `challenge_target` (`GradeA.Bridge`). The rank
+  computation (step 4b) stands as independent corroboration.
 
 ---
 
@@ -320,8 +332,8 @@ Grade C for the estimate; the Hadamard bound itself is rigorous.
 | P1 degree-19 rigidity (`t0_vertex_rigidity_of_jac`, `vertex_12_24_forces_t2`, `degree19_bound_sharp`) | unchanged; used by B2 |
 | P2 Ω extraction (`e1_omega`, `omega_descent_K5`, `OmegaSquare`, `OmegaEdge`, `omega_of_jac`) | unchanged. v3 re-derives Ω inside `Descent2R`, in lower_c's normalization, as part of the uniform chain. |
 | P3 exact ranks E₂…E₋₂ (`Rank/**`) | unchanged. They are the linear-algebra backbone that `lower_c` and `Descent2R` follow. |
-| P4 `DescentClaimC` stated, not proved, with `main_theorem_c_of_claim` | now reduced in Lean to `ChartEmptyC` (B4–B5), then to `ChartEmptyC_T1ne0` (B6–B7). That statement is proved outside Lean (B8). |
-| v2 §4 "Evidence for DescentClaimC (not a proof)" | superseded by B8, a proof at grade B. The evidence items remain valid as evidence. |
+| P4 `DescentClaimC` stated, not proved, with `main_theorem_c_of_claim` | now reduced in Lean to `ChartEmptyC` (B4–B5), then to `ChartEmptyC_T1ne0` (B6–B7). That statement is now proved in Lean (`challenge_target`, 2026-11-04); B8 stands as independent corroboration. |
+| v2 §4 "Evidence for DescentClaimC (not a proof)" | superseded by B8, a proof at grade B — and since 2026-11-04 by the Lean proof (`challenge_target`, grade A). The evidence items remain valid as evidence. |
 | v2 `Bridge.lean` docstring: "proved outside Lean" | **Corrected.** When v2 was written that phrase overstated the evidence (modular certificates plus the exact slice). |
 | v2 finding: the pipeline's E₁ solve drops terms, and other `branch_c/` findings | unchanged; the corrected-commit proposal is in `v2_carryover/`, **not applied**. *Corrected 2026-10-06: it had been applied to repo main as `2b77cd4` on 2026-09-29 (`branch_c/BUILD_STATUS.md`).* |
 
@@ -548,7 +560,7 @@ the field K₅. ∎
 | numpy elimination of the pivot block (independent code) | det ≠ 0 | det ≠ 0 |
 | planted common zero, W = 24 (control) | rank 3198, inconsistent | same |
 
-**Further checks (2026-10-06, `branch_c/rank_lemma_check/`, `run.sh`, about 4.5 min).** They leave C5 at grade B.
+**Further checks (2026-10-06, `branch_c/rank_lemma_check/`, `run.sh`, about 4.5 min).** Since 2026-11-04 the link from this arithmetic to `ChartEmptyC_T1ne0` is in Lean (`challenge_target`), so C5 is grade A; these checks stand as independent corroboration.
 
 - **H3.** R is irreducible over ℚ. The lemma uses this twice: det M_S ≠ 0 makes M_S invertible over the field K₅,
   and K₅ → L is injective, which gives o₁(w) ≠ 0 (o₁ is not rational). Three arguments: FLINT factorization;
@@ -562,8 +574,7 @@ the field K₅. ∎
   - **Theorems.** 6398 `decide +kernel` theorems: one slot bound per column of C, and one identity
     Σ vₜ · Cpk_iₜ = p·Q + 2⁴⁰ʲ, with small slots of Q, per column j of M_S. Axioms: `[propext]` only.
   - **Controls.** Five are rejected.
-  - **Meaning.** The digit argument (no slot carries) turns the identities into C·M_S ≡ I (mod p). It is on paper:
-    step A1 of the deferred plan (§11).
+  - **Meaning.** The digit argument (no slot carries) turns the identities into C·M_S ≡ I (mod p). It is now in Lean: A1 (`hA1`, `GradeA.Bridge`, 2026-10-31) turns the packed identities into the matrix identity.
 - **Shared construction.** Every internal check of C5, the kernel check included, shares one construction of the
   matrix. An outside replication (I3) is specified in `branch_c/rank_lemma_check/I3_REPLICATION_SPEC.md`.
 
@@ -581,7 +592,7 @@ the field K₅. ∎
 |---|---|---|
 | Lean statements B0–B7 | the Lean 4.34.0 kernel; Mathlib v4.34.0; axioms `propext`, `Classical.choice`, `Quot.sound` | `#print axioms` (`AxiomsAuditBranchC.lean`, 53 theorems, passed); `grep`: no `sorry`, `axiom` or `native_decide` |
 | That the Lean statements formalize GGHV Prop. 4.3 case (1), branch (c) | the repository's formalization of the case analysis | human reading of `DescentClaim.lean`, `NewtonNFc`; not re-derived here |
-| B8 | the rank lemma (proof in §5.9); FLINT `nmod_mat.rank`/`rref`; our numpy elimination; Python/FLINT exact K₅ arithmetic for the chart generators | two primes; two rank implementations, on one shared matrix construction; three independent input checks (§3 step 4c); controls (§7). Since 2026-10-06 (§3 step 4d): the generators matched exactly to `CondsC.lean`; R irreducible; an explicit inverse checked by the Lean kernel. |
+| B8 | the rank lemma (proof in §5.9); FLINT `nmod_mat.rank`/`rref`; our numpy elimination; Python/FLINT exact K₅ arithmetic for the chart generators | two primes; two rank implementations, on one shared matrix construction; three independent input checks (§3 step 4c); controls (§7). Since 2026-10-06 (§3 step 4d): the generators matched exactly to `CondsC.lean`; R irreducible; an explicit inverse checked by the Lean kernel. Since 2026-11-04 the link from this arithmetic to `ChartEmptyC_T1ne0` is itself kernel-checked (`challenge_target`); these computations stand as independent corroboration (I1), not the sole support. |
 | conds_c.json = the conditions DescentClaimC implies | nothing: Lean derives them (B5, built) | the generator also asserted term-by-term equality |
 | Step 3 estimate | calibration on three slice sizes | labelled grade C; not used by any conclusion |
 
@@ -617,17 +628,17 @@ explicit premises; C heuristic or fitted; D tautological or refuted. Independenc
 | C2 | `descentClaimC_of_chartEmpty` | formal | Lean kernel, reflective; 600 identities pre-checked in Python | A | kernel-checked |
 | C3 | `chartEmpty_t1_zero` | formal | Lean kernel; certificate from step 1 (FLINT), rechecked independently in Python; 5 controls | A | kernel-checked |
 | C4 | `chartEmptyC_of_T1ne0` | formal | Lean | A | kernel-checked |
-| C5 | `ChartEmptyC` holds (all char-0 L) | derived | rank lemma + two-prime, two-implementation ranks + input checks; since 2026-10-06 also C9–C11 | **B** | I1 |
+| C5 | `ChartEmptyC` holds (all char-0 L) | derived | `challenge_target` (`GradeA.Bridge`, 2026-11-04) at the concrete data; rank lemma + two-prime, two-implementation ranks + input checks now stand as independent corroboration (I1); since 2026-10-06 also C9–C11 | **A** (since 2026-11-04; B before) | I1 |
 | C6 | the canonical certificate needs about 2 × 10⁹ digits | descriptive estimate | Hadamard bound (rigorous) × calibrated ratio (fitted, 3 points) | **C** | I0 |
 | C7 | The Muse `reduction_lemma` is inconsistent | formal | Lean counterexample (the bundle copy exits 1 under Lean 4.34.0 / Mathlib v4.34.0 because of one recovered error; the clean copy in `branch_c/muse_refutation/` builds with the same axioms) | A | kernel-checked |
 | C8 | `lower_c`'s ideal differs from the pipeline's in coordinates | descriptive | exact comparison | A (for what is compared) | I1 |
-| C9 | 6398 packed natural-number identities hold, which say C·M_S ≡ I (mod 32003) for the W = 24 pivot block | formal (identities) / derived (meaning) | Lean kernel, axioms `[propext]`; 5 controls; meaning by the digit argument (§5.9) | A (identities); B (meaning) | kernel-checked; the matrix construction is shared (I1) |
+| C9 | 6398 packed natural-number identities hold, which say C·M_S ≡ I (mod 32003) for the W = 24 pivot block | formal (identities) / formal (meaning, since 2026-11-04) | Lean kernel, axioms `[propext]`; 5 controls; meaning by the digit argument (§5.9), now in Lean as A1 (`GradeA.Bridge`) | A (identities); A (meaning, since 2026-11-04) | kernel-checked; the matrix construction is shared (I1) |
 | C10 | the rank computation's generators are positive integer multiples of the Lean conditions `cond_*` | descriptive | exact comparison, parsed from `CondsC.lean`; two controls | B | I1 |
 | C11 | R is irreducible over ℚ | derived | FLINT factorization; irreducible mod 67; degree patterns mod 5 and 23. Since 2026-10-12 kernel-checked: `Rrat_irreducible` in `grade_a/lean/GradeA/IrreducibleR.lean` | **A** (since 2026-10-12; B before) | I1 |
 
 Verbs follow HLRE control:
 - **"proves"** only for Lean-checked or exact deductions;
-- **"proves under stated computational premises"** for C5;
+- **"proves"** for C5 since 2026-11-04 (`challenge_target`; "proves under stated computational premises" was its verb before);
 - **"estimates"** for C6.
 
 **Protocol freeze.** The W = 24 rank at p = 1000003 was already known from the step-3 measurement. The lemma, the
@@ -645,8 +656,10 @@ Reviewer's assessment, as you asked:
 - **The rank lemma** is **absolutely flawless** as mathematics: three lines, standard, no hidden hypotheses beyond
   those stated.
 - **Its instance (C5)** is exactly as strong as the two finite-field rank computations and the chart-generator
-  checks. They are independent of each other, but none is in Lean. That is the one place a hostile referee can
-  still press, and the answer is an I3 replication (§11).
+  checks. They are independent of each other. Since 2026-11-04 the instance is
+  in Lean (`challenge_target`); the rank computations stand as independent
+  corroboration (I1), and the one place a hostile referee can still press is
+  an independent construction of the matrix (I3, §11).
   - *Corrected 2026-10-06.* The two elimination engines are independent, but they share one construction of the
     matrix.
   - The kernel check of an explicit inverse (C9) adds a third, machine-checked view of the arithmetic, on the same
@@ -726,12 +739,12 @@ Reviewer's assessment, as you asked:
    - **Superseded 2026-10-06; deferred by decision.**
      - **Measured.** The arithmetic core passes the kernel in about 7 CPU-minutes, without `native_decide`
        (`branch_c/rank_lemma_check/`): an explicit inverse of the pivot block, packed into natural numbers.
-     - **Remaining** (estimated at 9–15 sessions):
-       - A1: the digit argument;
-       - A2: the matrix built in Lean from `CondsC.lean`;
-       - A3: the determinant transfer through ℤ[X]/(R), with R irreducible, in Lean;
-       - A4: the chart reduction S₂ = κ;
-       - A5: integration.
+     - **Done 2026-10-31–11-04 (was: "Remaining", estimated at 9–15 sessions):**
+       - A1: the digit argument — compiled 2026-10-31 (`hA1`, `GradeA.Bridge`);
+       - A2: the matrix built in Lean from `CondsC.lean` — compiled 2026-11-01 (`hA2_chart`, `GradeA.Bridge`);
+       - A3: the determinant transfer through ℤ[X]/(R), with R irreducible, in Lean — `grade_a/` transfer + assembly (`no_common_zero_of_certificate`), 2026-10-12;
+       - A4: the chart reduction S₂ = κ — `grade_a/lean/GradeA/Chart/`, 2026-10-12;
+       - A5: integration — `challenge_target` + `branch_c_eliminated` proved 2026-11-04, filed as tracked modules `GradeA.Bridge` / `GradeA.Composition` (commit `7e4db07f`, 2026-11-06).
 4. ~~Deferred reviews: the single-prime p-adic argument (§4.4); the Muse bundle (§4.5).~~ **Closed 2026-10-06:** the
    p-adic argument is not needed (§4.4), and the Muse bundle is withdrawn, superseded by v3 (§4.5).
 5. The v2 corrected-commit proposal for `branch_c/`: apply only on Brandon's explicit word. *Corrected 2026-10-06: it

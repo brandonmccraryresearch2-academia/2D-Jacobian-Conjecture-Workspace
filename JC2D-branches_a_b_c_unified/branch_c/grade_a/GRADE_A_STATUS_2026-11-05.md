@@ -1,5 +1,12 @@
 # Grade-A status — 2026-11-05 (repair leg; supersedes GRADE_A_STATUS_2026-11-04.md)
 
+**Update 2026-11-06.** The "Scope guard" below says the bridge/composition files
+(`challenge_target`, `branch_c_eliminated`) "remain scratch, not repo-tracked
+modules" — that was true on 2026-11-05 and is superseded: they are now filed as
+tracked modules `GradeA.Bridge` / `GradeA.Composition` (commit `7e4db07f`,
+2026-11-06; status record `BRIDGE_STATUS_2026-11-06.md`). The body of this
+file is retained as the 2026-11-05 record, not rewritten.
+
 **This tree is green: the full `gradea_build` passes end to end.**
 Validated by deepest-research fact-check, 2026-11-05:
 `~/workspace/research/tooling/gradea_validation_2026-11-05.md` (GO).

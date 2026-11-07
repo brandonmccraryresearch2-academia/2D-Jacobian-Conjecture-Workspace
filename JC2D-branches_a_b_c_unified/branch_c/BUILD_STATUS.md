@@ -18,7 +18,14 @@ Full record: `bundle_v3_1/jacobian_lean/BRANCH_C_LEAN_STATUS.md`; comprehensive 
 | Axiom audit (`AxiomsAuditBranchC.lean`) | 53 theorems | passed: 52 depend on `[propext, Classical.choice, Quot.sound]`; `Omega.omega_mod101_square` on `[propext, Quot.sound]` |
 | `verify_branch_c_lean.sh` | — | passed, exit 0: prerequisite fingerprints; v2+v3 regeneration byte-identical; all 790 modules up to date; axioms; no `sorry`/`axiom`/`native_decide` |
 
-## Outside Lean (grade B)
+## Outside Lean (grade B) — now corroboration (grade A since 2026-11-04)
+
+*Note 2026-11-04.* The items below were the grade-B evidence for `ChartEmptyC`
+until 2026-11-04, when `challenge_target` (`GradeA.Bridge`) proved
+`ChartEmptyC_T1ne0` in Lean and `branch_c_eliminated` (`GradeA.Composition`)
+eliminated branch (c). The grade is now A; the rank computation, the t₁ = 0
+certificate, and the `rank_lemma_check/` premise checks stand as independent
+corroboration (I1), not the sole support.
 
 - `ChartEmptyC` (hence `ChartEmptyC_T1ne0`) via the rank lemma + full row rank of the
   W = 24 Macaulay matrix (3199 × 3199) mod p = 1000003 (w₀ = 806739) and mod p = 32003
@@ -36,7 +43,7 @@ Full record: `bundle_v3_1/jacobian_lean/BRANCH_C_LEAN_STATUS.md`; comprehensive 
     - About 7 CPU-minutes, at ≤ 1.8 GB per module.
     - Five controls are rejected.
     - The regenerated Lean files are byte-identical to `logs/MANIFEST.sha256`.
-  - The grade stays B. The kernel check covers the arithmetic, not the link to `ChartEmptyC_T1ne0`.
+  - The grade is now A (since 2026-11-04). The kernel check covers the arithmetic, and the link to `ChartEmptyC_T1ne0` is in Lean (`challenge_target`, `GradeA.Bridge`).
 - **Added 2026-10-06:** `muse_refutation/check_refutation.sh` passed. The clean copy of the refutation builds with
   exit 0, with no error and no warning, and its axioms are `[propext, reduction_lemma, Classical.choice,
   Quot.sound]`. The bundle copy reports one recovered error, an unknown `eval_one`, and exits 1.
@@ -110,3 +117,27 @@ Full record: `bundle_v3_1/jacobian_lean/BRANCH_C_LEAN_STATUS.md`; comprehensive 
   (`noncomputable axiom`, `protected axiom`). Both were rerun: 12/12 and 13/13 theorems on the standard axioms
   (`grade_a/logs/build.log`, `logs/build_chart.log`).
 - `CHECKSUMS.md5` / `CHECKSUMS.sha256` regenerated with the same rule.
+
+## 2026-11-04–06: branch (c) eliminated in Lean; grade A
+
+- A1 compiled 2026-10-31, A2 2026-11-01, `hsupp2` 2026-11-02; `challenge_target`
+  + `branch_c_eliminated` proved 2026-11-04 on lean-build-2 (no hypotheses,
+  permitted triple `[propext, Classical.choice, Quot.sound]`), re-verified
+  2026-11-06 on lean-build-3; filed as tracked modules `GradeA.Bridge` /
+  `GradeA.Composition` (commit `7e4db07f`). Status record:
+  `grade_a/BRIDGE_STATUS_2026-11-06.md`. The "grade stays B" lines in the
+  2026-10-12 sections above were true when written and are superseded by this
+  section; they are retained as the dated record.
+- The GGHV paper itself is now proved in full in Lean — CONDITIONAL, not
+  unconditional — and filed (commit `484b5a8`, 2026-11-06;
+  `gghv-dependency-closure/gghv_full_assembly_inventory.md`). The branch
+  documents were combed to match (commit recorded in the comb report).
+- `CHECKSUMS.md5` / `CHECKSUMS.sha256` regenerated 2026-11-07 with the same
+  rule (every listed file re-hashed; the list composition is unchanged). The
+  regeneration also repaired 32 entries that had gone stale since 2026-10-12
+  (the 2026-11-04/06 addenda to `correspondence_guide/CORRESPONDENCE_GUIDE.md`
+  and `grade_a/README.md`, `grade_a/build.sh`, `grade_a/lean/GradeA/Axioms.lean`,
+  `paper/branch_c_elimination.pdf`, and 27 `rank_lemma_check/logs/` files).
+  Note: `paper/README.md`'s md5 table for `branch_c_elimination.tex`/`.pdf`
+  still records the pre-rebuild values and does not match the current files —
+  flagged in the comb report, not changed here.

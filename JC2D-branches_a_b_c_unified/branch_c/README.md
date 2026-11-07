@@ -35,7 +35,7 @@ intact because `verify_branch_c_lean.sh` depends on the internal relative layout
 
 | Path | What |
 |---|---|
-| `rank_lemma_check/` | Checks of the rank lemma's instance (claim C5). (1) R is irreducible. (2) The generators equal the Lean conditions of `CondsC.lean`, exactly, up to positive integer factors. (3) An explicit inverse of the W = 24 pivot block mod 32003 is checked by the Lean kernel: 6398 identities, axioms `[propext]`, 5 controls. Also an I3 replication specification and `feasibility/`. `run.sh` takes about 4.5 min. C5 stays at grade B. |
+| `rank_lemma_check/` | Checks of the rank lemma's instance (claim C5). (1) R is irreducible. (2) The generators equal the Lean conditions of `CondsC.lean`, exactly, up to positive integer factors. (3) An explicit inverse of the W = 24 pivot block mod 32003 is checked by the Lean kernel: 6398 identities, axioms `[propext]`, 5 controls. Also an I3 replication specification and `feasibility/`. `run.sh` takes about 4.5 min. C5 is grade A since 2026-11-04 (`challenge_target`); these checks stand as independent corroboration. |
 | `muse_refutation/` | The Muse `char0_cert` bundle is withdrawn: its notice is `DEPRECATED_char0_cert.md`. A copy of the refutation builds cleanly; the bundle's copy reports one recovered error under Lean 4.34.0 and Mathlib v4.34.0. |
 | `GUIDE.md`, `paper/BRANCH_C_GUIDE.md` | Now the maintained copies of the guide, updated on 2026-10-06 (their header lists the sections). `bundle_v3_1/GUIDE.md` keeps the v3.1 text. `README.txt` and `PARTS.txt` stay byte copies of the bundle's. |
 
@@ -46,14 +46,18 @@ an independent alternative, unreviewed and unused; see `GUIDE.md` §4.4.
 
 - In Lean (no `sorry`, only `propext`, `Classical.choice`, `Quot.sound`):
   `ChartEmptyC_T1ne0 → ChartEmptyC → DescentClaimC → ¬∃ P Q λ, λ ≠ 0 ∧ NewtonNFc P Q ∧ [P,Q] = λx²`.
-  The stratum b_{11,20} = 0 is kernel-checked (`T1Zero`); `Combine` isolates exactly
-  what Lean does not check.
-- Outside Lean (grade B): `ChartEmptyC` follows from the rank lemma plus full row rank
-  of the W = 24 Macaulay matrix mod 1000003 and mod 32003 (two implementations, controls).
-  Since 2026-10-06 there are also the premise checks of `rank_lemma_check/` and a kernel check of the arithmetic.
-  The grade is unchanged.
-- Branch (c) is therefore closed **under stated computational premises not machine-checked
-  in Lean**. It is not closed by Lean alone. See `GUIDE.md` §1 for the full verdict.
+  The stratum b_{11,20} = 0 is kernel-checked (`T1Zero`); `Combine` isolates
+  the chart-emptiness premise, now itself proved in Lean.
+- Since 2026-11-04, `ChartEmptyC_T1ne0` itself is proved in Lean
+  (`challenge_target`, `GradeA.Bridge`; `branch_c_eliminated`,
+  `GradeA.Composition`): the rank lemma plus full row rank of the W = 24
+  Macaulay matrix mod 1000003 and mod 32003 (two implementations, controls)
+  now stand as independent corroboration, as do the premise checks of
+  `rank_lemma_check/` and the kernel check of the arithmetic. The grade is A.
+- Branch (c) is therefore **eliminated in Lean** (2026-11-04). Together with
+  the branches (a),(b) `main_theorem`, the GGHV Prop. 4.3 case (8,28) split is
+  fully eliminated in Lean. This does not claim (72,108) excluded
+  unconditionally or JC(2). See `GUIDE.md` §1 for the full verdict.
 
 ## Reproduction
 

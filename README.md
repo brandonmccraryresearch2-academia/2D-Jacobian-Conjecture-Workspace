@@ -55,7 +55,7 @@ conjecture to Prop. 4.3 are outside scope.
 | `branch_two_dicritical/` | **Claimed** theorem: no Keller map admits two dicritical divisors. As worded the statement is false, and the proof is incomplete (see the status section below). 6-page paper, 18 executed SymPy scripts with outputs, `verify_all.sh`, `CORRESPONDENCE.md` mapping each script to its paper statement |
 | `combined_paper_final_2026-11-04.tex`, `combined_paper_final_2026-11-04.pdf` | Combined a/b/c elimination paper (final, 2026-11-04), 67 pages, at the repository root — the canonical latest copy. The copy in `branch_two_dicritical/paper/` is archival; the two are byte-identical (`cmp` verified 2026-11-05). |
 | `tier1_blind_gghv43_nf2/` | Independent blind verification of GGHV Proposition 4.3, normal form (2): verdict DO NOT EXIST (run 2026-09-25, logged in `LOG.md`) |
-| `gghv-dependency-closure/` | GGHV dependency-closure programme: Phase 2 scoping + integrative synthesis report and annotated bibliography (2026-11-05); Phase 1 Lean modules under `lean/` (14 files + `MANIFEST.md` + 25 verification logs); Singular recomputations under `singular/` (11 scripts + 12 logs + `MANIFEST.md`); the statement-to-file map is `CORRESPONDENCE.md` — see "GGHV dependency closure" below |
+| `gghv-dependency-closure/` | GGHV dependency-closure programme: Phase 2 scoping + integrative synthesis report and annotated bibliography (2026-11-05); Phase 1 Lean modules under `lean/` (37 Lean files + `MANIFEST.md` + 78 verification logs); Singular recomputations under `singular/` (29 files + 29 logs + `MANIFEST.md`); Phase 4 full-GGHV formalization filed 2026-11-06 (inventory `gghv_full_assembly_inventory.md`, validation `validation_g1/`); the statement-to-file map is `CORRESPONDENCE.md` — see "GGHV dependency closure" below |
 | `environment.yml`, `lean.toml`, `setup.sh` | Compute environment setup (conda environment, Lean 4 toolchain) |
 
 ## Status of each line of work
@@ -132,11 +132,11 @@ supplied and kernel-verified (`branch_c/grade_a/README.md`):
 one case of one proposition. It does **not** claim "$(72,108)$ excluded
 unconditionally" and does **not** prove JC(2): those still rest on GGHV
 exhaustiveness and the reduction chain, ledgered not re-derived.
-**Repository note.** The bridge/composition files (`challenge_target`,
-`branch_c_eliminated`) were proved in scratch on lean-build-2 and remain
-scratch, not repo-tracked modules; their incorporation into this repository as
-tracked modules is still pending (see `JC2D-branches_a_b_c_unified/branch_c/grade_a/GRADE_A_STATUS_2026-11-05.md`,
-scope guard).
+**Repository note (corrected 2026-11-06).** The bridge/composition files (`challenge_target`,
+`branch_c_eliminated`) were proved in scratch on lean-build-2 and are now filed
+in this repository as tracked modules `GradeA.Bridge` and `GradeA.Composition`
+(commit `7e4db07f`, 2026-11-06; status record
+`JC2D-branches_a_b_c_unified/branch_c/grade_a/BRIDGE_STATUS_2026-11-06.md`).
 
 ### Two dicritical divisors — claimed; false as worded, and the proof is incomplete
 
@@ -185,7 +185,7 @@ on 2026-11-05: all 8 modules exit 0** — `R67Data` (12 s), `R109Data` (295 s),
 (4 s), `Macaulay` (5 s), `Axioms` (3 s) — plus the `#print axioms` check:
 **22 of 22 theorems on the standard axioms (or a subset)**, `sorryAx` absent.
 "All grade-A modules green" is true for the first time. The package is
-incorporated in this repository as commit `03f242f` (current HEAD,
+incorporated in this repository as commit `03f242f` (HEAD at the time — the tree has since advanced to `484b5a8`, the Phase 4 filing;
 "Grade-A green: full gradea_build passes on lean-build-3").
 
 What was repaired to get there (vs the first full-build attempt, which failed
@@ -223,9 +223,12 @@ excluded everywhere in this programme** — it is not a goal, a premise, or a
 conclusion of any leg.
 
 - **[GGV1] leg.** Proposition 8.2(2) proved **conditionally**; Corollary 7.4
-  proved **conditionally**; Theorem 2.1 proved from a minimal 11-field
-  premise list (`theorem21_minimal`, on `[propext]` only) — **not
-  unconditionally**. Key finding: the $(7,21)$ row **is** the $\max = 84$ row —
+  proved **conditionally** (its power-law premises are now discharged — the D2
+  power laws are proved, `coeffAt_pmul_assoc` on `[propext, Quot.sound]`,
+  `ppow_add_kt`/`ppow_mul_kt` on the permitted triple; `para_la_cota` is the
+  next attackable premise — inventory §6); Theorem 2.1 proved from a minimal
+  20-field premise list (`theorem21_minimal_v2`, on the permitted triple) —
+  **not unconditionally** (Phase 4, inventory §1). Key finding: the $(7,21)$ row **is** the $\max = 84$ row —
   `discard_84` and `discard_721` are two arguments for the **same** row, not
   two rows. The published [GGV1] §7 text is still missing (see Phase 2).
 - **[GGV*] machinery leg.** Theorem 7.3 combination + $F_9$ arithmetic
@@ -246,23 +249,35 @@ conclusion of any leg.
   [GGV5] enumeration arithmetic.
 
 **Filed modules.** The Phase 1 scratch legs are filed as tracked modules
-under `gghv-dependency-closure/lean/` (14 Lean files — the ten D1 legs, the
-D2 combine leg with its axioms companion, and the bridge/composition that
-eliminate branch (c) — plus `MANIFEST.md` with per-file theorems, grades,
-axiom counts, and carried premises, and 25 verification logs under `logs/`)
+under `gghv-dependency-closure/lean/` (37 Lean files — the Phase 1 legs, the
+D2 combine leg with its axioms companion, the bridge/composition that
+eliminate branch (c), and the Phase 4 full-proof legs and assembly — plus `MANIFEST.md` with per-file theorems, grades,
+axiom counts, and carried premises, and 78 verification logs under `logs/`)
 and `gghv-dependency-closure/singular/` (11 recomputation scripts, 12 run
 logs under `logs/`, plus `MANIFEST.md`). The statement-to-file map is
 `gghv-dependency-closure/CORRESPONDENCE.md`. The grade-A modules the bridge
 and composition import are not duplicated there; they live at
 `JC2D-branches_a_b_c_unified/branch_c/grade_a/`.
 
-**Still open** (as Lean proofs or as settled text): combined-form
-`esquina(1)`/`(2)` restatements (base merge); the $(7,21)$ coefficient
-identity; the Remark's two face laws + `alineados(2a)`; `esquina(3)`'s
-$\ell$-form; central's $[F,\ell(P)] = \ell(P)$ cancellation gap; $m, n > 1$;
-hybrid-vs-slip; the §6 $k = 2$ derivation + non-square contradiction;
-§5 rescaling + the degree-78 endgame as Lean proofs; the 9 equations' D2
-derivation; [GGV5] completeness.
+**Still open** (as Lean proofs or as settled text) — updated to the Phase 4
+verdicts (inventory `gghv_full_assembly_inventory.md`); most Phase 1 items
+are now closed: combined-form `esquina(1)`/`(2)` restatements — **KERNEL**
+(R10); the $(7,21)$ coefficient identity — **KERNEL** (R11); the Remark's two
+face laws + `alineados(2a)` — **KERNEL** (R12); `esquina(3)`'s $\ell$-form —
+**CONDITIONAL** (R8, on the common-power + cube premises); central's
+$[F,\ell(P)] = \ell(P)$ cancellation gap — **KERNEL + CONDITIONAL** (R9,
+Joseph Lemma 2.2 carried as the named `Joseph22HomogForm` premise, not
+proved); $m, n > 1$ — **KERNEL as a documented deviation** from the paper's
+$m, n \in \mathbb{N}$ (R15); hybrid-vs-slip — kernel arithmetic done, the
+question itself **OPEN** (R16); the §6 $k = 2$ derivation + non-square
+contradiction — **KERNEL** (`s6_k2`, `s6_nonsquare`), E18 as a whole
+**CONDITIONAL**; §5 rescaling + the degree-78 endgame — kernel theorems
+(`e10_rescaling`, `e10_endgame`), E10 as a whole **CONDITIONAL**; the 9
+equations' D2 derivation — **I1** on the computational steps (two tools
+jointly), Lean-only parts delimited, **not a Lean proof** (R23). Still
+**BLOCKED**: [GGV5] enumeration completeness; Prop 2.1(2a)→(2b). Still **NOT
+FOUND / NOT PROVED**: Joseph Lemma 2.2 (text not located); `Lema Joseph`
+(not proved); the published [GGV1] §7 text (missing).
 
 ## Phase 2 synthesis — scoping + integrative review (2026-11-05)
 
@@ -496,6 +511,10 @@ grade-A incorporation (commit `03f242f`), the D2 combine proved, and the
 Singular leg complete, and the Phase 2 synthesis has landed. The deck lives
 in the GGHV dependency-closure goal workspace, not in this repository:
 `~/workspace/goals/gghv-dependency-closure/files/planar-jacobian-progress-deck/planar-jacobian-progress-deck.pptx`.
+
+## Phase 4 — GGHV paper proved in full in Lean, CONDITIONAL (2026-11-06)
+
+The GGHV paper (arXiv:2204.14178v1) is now proved in full in Lean — **CONDITIONAL, not unconditional** — and filed in this repository (commit `484b5a8`, 2026-11-06). **Honest headline: no numbered environment is fully proved unconditionally; Theorem 2.1 is CONDITIONAL from the 20-field `MinimalPremises2`. Nothing here proves JC(2), proves Theorem R, or excludes (72,108) unconditionally.** The definitive per-item verdict record is `gghv-dependency-closure/gghv_full_assembly_inventory.md`; the independent validation is `gghv-dependency-closure/validation_g1/g1_validation_report_2026-11-07.md` (CONDITIONAL GO); the per-file record is `gghv-dependency-closure/lean/MANIFEST.md` (§ Phase 4). The statement-to-file map is `gghv-dependency-closure/CORRESPONDENCE.md` (§ Phase 4). **BLOCKED**: [GGV5] enumeration completeness; Prop 2.1(2a)→(2b); [GGV6] Thm 7.3 NOT PROVED as a theorem. Leg H named an explicit maximal minor — **PARTIAL** (inverse form, not a named minor; K₅-value NOT DONE).
 
 ## Papers
 

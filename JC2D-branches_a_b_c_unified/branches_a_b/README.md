@@ -48,8 +48,11 @@ proves, independently of GGHV Proposition 4.3:
   (8,16) alone. Same three axioms.
 
 Conditional on GGHV Proposition 4.3, this eliminates branch (a,b). Branch (c)
-(normal form (1)) is **not** addressed and remains open, as does the full
-planar Jacobian conjecture.
+(normal form (1)) is not addressed by this package; it was eliminated in Lean
+on 2026-11-04 (`branch_c_eliminated`, no hypotheses, standard axioms) — see
+`../branch_c/`. GGHV Proposition 4.3 itself is now proved in full in Lean —
+CONDITIONAL (`prop43_conditional`, `gghv-dependency-closure/`). The full
+planar Jacobian conjecture remains open.
 
 ## Repository layout
 

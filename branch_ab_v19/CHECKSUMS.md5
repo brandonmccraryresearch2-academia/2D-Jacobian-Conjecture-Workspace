@@ -29,7 +29,7 @@ e1c023cda4380c6baac6aedb6fcd1f5c  ./lean/Jacobian/Descent/E3red/r3_18_34.lean
 63a4578a35b182b4b6bcf530d4bb0653  ./lean/Jacobian/Descent/E2/F0.lean
 a3af24b4f960be76d1a526ac83c83daa  ./lean/Jacobian/Descent/E2red/r2_9_17.lean
 815a422f136ef255e4fb856ca9dea662  ./lean/Jacobian/Descent/E2red/r2_5_9.lean
-d8c62e8f5924eb688f08420351889186  ./paper/branch_ab_elimination_v3.pdf
+c49528f7722edb7ae8ab22cc4f1b6ed6  ./paper/branch_ab_elimination_v3.pdf
 deea23f39c082bd2fd95ba314666434a  ./lean/certgen/k5point.py
 d2d3ce8705a09cb890c64628d080c7b9  ./lean/Jacobian/ChartProof/Stage2_g4.lean
 23f2d97609d9aebbe4b961dab7015ac5  ./scripts/e5_exact_counts_m35.py
@@ -42,7 +42,7 @@ ae8317a7919d2bf1e17b8341543cae68  ./lean/Jacobian/ChartProof/Stage2_g6b.lean
 65984b2b7f2483fedfc3b115fa70030c  ./lean/Jacobian/Descent/E4/z_b_6_10.lean
 12460d57f4a788f2f905269e44974cb2  ./lean/lakefile.toml
 ef94d88392d52d6c5b6da7887ef3bccd  ./lean/certgen/chartproof/cp_common.py
-bb6f9ee803da91702541eeb45fa5c942  ./paper/branch_ab_elimination_v3.aux
+07a7174cd18c613054cc461d43dacdd3  ./paper/branch_ab_elimination_v3.aux
 3b5837f66c199e133393c89ffa68d051  ./lean/Jacobian/ChartProof/Stage4.lean
 f1af0d7bfd733a5a5f1349ab5fa7b520  ./lean/CLASSIFICATION_STATUS.md
 083edcc1012e3dade80da17edbbcff21  ./lean/Jacobian/Descent/E2red/r2_8_15.lean
@@ -122,8 +122,8 @@ cc44212b9037e449d487c7ec69efe905  ./lean/Jacobian/Descent/E3/x_a_2_4.lean
 1cdf617d22091f9b7e38c493cc42f9c2  ./lean/Jacobian/Descent/E3red/r3_13_24.lean
 3fffd33bc66376c4493b65f075e12ad4  ./lean/Jacobian/Descent/E2red/r2_2_3.lean
 da59a60987b8a1bbd38545fcb5bd7067  ./lean/certgen/make_cert.py
-9134b0f6c839001615299459a658cd00  ./paper/branch_ab_elimination_v3.log
-cc32dc1c5bc7bbb146138cd417b768c0  ./lean/README.md
+2ff200a1c45046fb0ec53f85b727eb92  ./paper/branch_ab_elimination_v3.log
+0979b65e9889642ec775243eef7ae670  ./lean/README.md
 8ead9c9f0b8719b7578f6f05f43969a1  ./lean/Jacobian/Descent/E4/z_b_9_16.lean
 f23d354c6cf460b595e31c94e538043d  ./lean/lean-toolchain
 e4787fa55a3d4356aed140c3c6a7f38e  ./lean/Jacobian/Descent/E4/z_b_5_8.lean

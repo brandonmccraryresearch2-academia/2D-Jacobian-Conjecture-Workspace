@@ -41,10 +41,13 @@ carried; NO `theorem21_unconditional` is claimed.
   (Leg F, not landed).
 - E2 red rows: NOT proved — the cited arguments live in [GGV4] §3.5, [M],
   [H] (rows 1–2), [GGV3] §5 (rows 3–4), [GGV5] Prop 6.1 (row 6). The local
-  [GGV5] TeX (1708.07936, §6 = "Program and graphic display") does not
-  contain a Proposition 6.1 under that number, and formalising any of these
-  discards needs the cited papers' Newton-polygon machinery (regular corners,
-  complete chains) — that is Leg F's R20, not landed. Each red row is
+  [GGV5] TeX (1708.07936) labels "Program and graphic display" as §4, not §6;
+  Proposition 6.1 (the `caso antisimetrico`) is present in arXiv 1708.07936v1
+  (§6, TeX l.1874, PDF pdftotext l.2927); its numbering is UNVERIFIED for any
+  published version. Formalising any of these discards needs the cited papers'
+  Newton-polygon machinery (regular corners, complete chains) — that is Leg F's
+  R20, not landed. [Corrected 2026-11-07 per inventory §8: the original header
+  sentence mislabelled the section and denied Prop 6.1.] Each red row is
   therefore carried as ONE explicit named field of `RedRowPremises`, and
   `red_rows_eliminated` proves the five row eliminations CONDITIONALLY on
   those fields. Nothing here claims a red row is unconditionally discarded.

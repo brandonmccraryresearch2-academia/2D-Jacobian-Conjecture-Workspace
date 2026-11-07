@@ -43,11 +43,11 @@ a16faf520c98951b85d4a436d6feb2e1  ./outputs/middle_e2.out
 b3f7c9f6f3761f7d0ac90789b9479971  ./paper/SUPERSEDED_2026-11-04.md
 d0b76db3521153781ff935d218a02427  ./paper/combined_paper_final_2026-11-04.pdf
 3ee925d7ba630bc2f64eb4a1bd377c7d  ./paper/combined_paper_final_2026-11-04.tex
-5ef121241a27195be3bb382c06059dd4  ./paper/two_dicritical_closure.pdf
+b9e142bf7eda8c1b761ce1b9b5716117  ./paper/two_dicritical_closure.pdf
 e70e43efbf4f6bcc551907b6012c2efe  ./paper/two_dicritical_closure.tex
-13762d93c8666f61f27ac3a90ee9d1b2  ./paper/two_dicritical_closure_rewrite.pdf
+d610ba34bdf824de19415f84d89e6130  ./paper/two_dicritical_closure_rewrite.pdf
 7308afde5a7963abfcd5c4190382c478  ./paper/two_dicritical_closure_rewrite.tex
-839eb03028a450b8b62c3ceba7c8039e  ./paper/validation_report_2026-11-04.md
+20c350c86899d5dcf07bf253cb95244f  ./paper/validation_report_2026-11-04.md
 d8d0ba973faddee1e8e7652e0a1cdbf7  ./restatement_checks.log
 efa3aa889ac3053510c9a9c575a72f5e  ./restatement_checks.py
 03407f7c30a68b519359a6ed967b7776  ./scripts/at_degree_bound.py

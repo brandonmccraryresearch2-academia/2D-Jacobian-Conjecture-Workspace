@@ -8,8 +8,10 @@ Started 2026-10-12. This folder follows the corrected architecture of
 `ChartEmptyC_T1ne0 L` for every field `L` of characteristic 0 from hypotheses that are finite computations on concrete
 data: the Macaulay data (rows, pivot columns, support), **A1** (`Cinv * MS = 1` modulo `p`) and **A2** (`MS` is the
 evaluated Macaulay block, up to one nonzero scale per generator). The chart reduction, the bridge to the Macaulay
-form and the transfer to characteristic 0 are kernel-checked. `ChartEmptyC_T1ne0` stays grade B until the data and
-A1, A2 are supplied ("What remains").
+form and the transfer to characteristic 0 are kernel-checked. `ChartEmptyC_T1ne0` stayed grade B until the data and
+A1, A2 were supplied — they now are ("What was supplied", below); `challenge_target` was proved 2026-11-04 and
+`branch_c_eliminated` with it, filed as tracked modules `GradeA.Bridge` / `GradeA.Composition` (commit `7e4db07f`,
+2026-11-06; status record `BRIDGE_STATUS_2026-11-06.md`). The grade is A.
 
 ## What is proved here (Lean 4.34.0, Mathlib v4.34.0; no `sorry`; standard axioms only)
 
@@ -79,9 +81,12 @@ which does not exist.
   See `BRIDGE_STATUS_2026-11-06.md`. Run 2026-11-06 on lean-build-3 against
   the overlay project: all checks passed.
 
-## What remains for `ChartEmptyC_T1ne0` (grade B today)
+## What was supplied for `ChartEmptyC_T1ne0` (grade A since 2026-11-04; grade B before)
 
-The hypotheses of `chartEmptyC_T1ne0_of_certificate`, for p = 32003 and w₀ = 11147. Nothing else is missing.
+**Completed 2026-10-31–11-04.** The hypotheses of `chartEmptyC_T1ne0_of_certificate`, for p = 32003 and w₀ = 11147,
+are all supplied and kernel-verified: A1 compiled 2026-10-31, A2 2026-11-01, `hsupp2` 2026-11-02,
+`challenge_target` + `branch_c_eliminated` proved 2026-11-04, filed as tracked modules (commit `7e4db07f`).
+The list below is retained as the record of what was supplied.
 
 1. **The generators and the chart reduction: done** (above).
 2. **The rows, the pivot columns, the support condition.**

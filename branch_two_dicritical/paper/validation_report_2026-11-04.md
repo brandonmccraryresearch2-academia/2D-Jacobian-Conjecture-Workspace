@@ -308,3 +308,18 @@ proofs are scratch files pending incorporation. What finalization asserts is
 narrower: the *text* is now consistent with the proved result and its scope,
 which is exactly what this gate was asked to certify. Incorporation is a
 separate, named next step, not a silently assumed one.
+
+## Addendum 2026-11-06 — incorporation done
+
+The "pending incorporation" above is now done, and the Devil's-advocate
+objection no longer applies. The bridge/composition files
+(`challenge_target`, `branch_c_eliminated`) were filed in this repository as
+tracked modules `GradeA.Bridge` / `GradeA.Composition` (commit `7e4db07f`,
+2026-11-06; status record
+`JC2D-branches_a_b_c_unified/branch_c/grade_a/BRIDGE_STATUS_2026-11-06.md`),
+kernel re-verified on lean-build-3. The body of this report is retained as
+the 2026-11-04 record, not rewritten. (Only GGHV correctness/exhaustiveness
+remains conditional — that line in the report is unchanged and still true:
+the GGHV paper itself is now proved in full in Lean, CONDITIONAL, filed as
+commit `484b5a8`, 2026-11-06; see
+`gghv-dependency-closure/gghv_full_assembly_inventory.md`.)

@@ -114,17 +114,24 @@ equations from the C/F/D expansions (the elimination shows only that *if* the
   see `branch_two_dicritical/CORRESPONDENCE.md` and the README status
   section.
 
-## Still open
+## Still open — updated to the Phase 4 verdicts (2026-11-07)
 
 The full still-open list is in the README ("GGHV dependency closure" section)
-and in `lean/MANIFEST.md` / `singular/MANIFEST.md` per file. In one line each:
-combined-form esquina(1)/(2) restatements; the (7, 21) coefficient identity;
-the Remark's two face laws + `alineados(2a)`; esquina(3)'s `ℓ`-form;
-central's `[F, ℓ(P)] = ℓ(P)` cancellation gap; `m, n > 1`; hybrid-vs-slip;
-the §6 `k = 2` derivation + non-square contradiction; §5 rescaling + the
-degree-78 endgame as Lean proofs; the 9 equations' D2 derivation; [GGV5]
-completeness; Joseph Lemma 2.2 (not located); `Lema Joseph` (not proved);
-the published [GGV1] §7 text (missing).
+and in `lean/MANIFEST.md` / `singular/MANIFEST.md` per file. Most Phase 1
+items are now closed — in one line each: combined-form esquina(1)/(2)
+restatements — **KERNEL** (R10); the (7, 21) coefficient identity —
+**KERNEL** (R11); the Remark's two face laws + `alineados(2a)` — **KERNEL**
+(R12); esquina(3)'s `ℓ`-form — **CONDITIONAL** (R8); central's
+`[F, ℓ(P)] = ℓ(P)` cancellation gap — **KERNEL + CONDITIONAL** (R9); `m, n >
+1` — **KERNEL as a documented deviation** (R15); hybrid-vs-slip — kernel
+arithmetic done, question **OPEN** (R16); the §6 `k = 2` derivation +
+non-square contradiction — **KERNEL**, E18 as a whole **CONDITIONAL**; §5
+rescaling + the degree-78 endgame — kernel theorems, E10 as a whole
+**CONDITIONAL**; the 9 equations' D2 derivation — **I1** on the computational
+steps, Lean-only parts delimited, not a Lean proof (R23). Still **BLOCKED**:
+[GGV5] completeness; Prop 2.1(2a)→(2b); [GGV6] Thm 7.3 NOT PROVED. Still
+open: Joseph Lemma 2.2 (not located); `Lema Joseph` (not proved); the
+published [GGV1] §7 text (missing).
 
 ---
 
@@ -143,7 +150,7 @@ logs, carried premises, exclusions — is in `lean/MANIFEST.md` (§ Phase
 
 | File (`lean/`) | Paper statement | Headline theorem(s) | Grade and axioms |
 |---|---|---|---|
-| `gghv_full_s2s3_2026-11-06.lean` | GGHV §2 table + §3 discards | `gghv_table_full` []; `discard_84_row` / `discard_120_row` [] | KERNEL table arithmetic; red rows CONDITIONAL (carried to Leg F); completeness BLOCKED. 21 theorems: 10 [] + 4 [propext] + 5 [triple] + 2 [propext, Quot.sound]. Leg A's header claim about the [GGV5] TeX §6 is WRONG (inventory §8) — do not repeat it. |
+| `gghv_full_s2s3_2026-11-06.lean` | GGHV §2 table + §3 discards | `gghv_table_full` []; `discard_84_row` / `discard_120_row` [] | KERNEL table arithmetic; red rows CONDITIONAL (carried to Leg F); completeness BLOCKED. 21 theorems: 10 [] + 4 [propext] + 5 [triple] + 2 [propext, Quot.sound]. Leg A's header claim about the [GGV5] TeX §6 was WRONG (inventory §8) and was corrected comment-only 2026-11-07 per inventory §8's directive (new sha256 in `lean/MANIFEST.md`); the inventory §8 determination stands as the record of the original error. |
 | `gghv_full_s4_2026-11-06.lean` | GGHV §4, Props 4.1–4.4 + PSP algorithm (E5–E9) | `prop41_conditional`; `prop42_conditional`; `prop43_conditional`; `prop44_conditional`; `psp_183` | E5–E8 CONDITIONAL on named `Prop4xPremises`; E9 KERNEL output, correctness CONDITIONAL. `prop41`/`prop43` [propext, Quot.sound]; `prop42`/`prop44` [triple]; `psp_183` [propext]. Second tool 20/20 ALL PASS. |
 | `gghv_full_s5_2026-11-06.lean` | GGHV §5, Thm 5.1 + `calculo de C` (E10–E17) | `thm51_conditional`; `cor52_conditional`; `e13_f_separable`; `e16_principal` | E10 CONDITIONAL; E11 PARTIAL; E12 PARTIAL; E13 KERNEL; E14 CONDITIONAL; E15 KERNEL arithmetic + CONDITIONAL bounds; E16 KERNEL (elimination only), derivation OPEN; E17 CONDITIONAL. 39 decls: 30 [triple] + 5 [propext, Quot.sound] + 2 [propext] + 2 []. |
 | `gghv_full_s5_axioms_2026-11-06.lean` | (axioms-print companion to the §5 file) | 39 `#print axioms` lines | No new theorems. Log `s5_axioms.log`. |
