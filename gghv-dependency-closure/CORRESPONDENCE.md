@@ -190,6 +190,8 @@ referenced by path + sha256 only, never re-filed.
 the prior GradeA verification (commit 7e4db07f), NOT re-verified by
 gate G1.
 
+**HLRE v5 §15 amendment (filed 2026-11-07):** `HLRE-v5-section15-AMENDMENT-2026-11-06.md` amends the §15 closing paragraph and reference [9] of HLRE v5 (McCrary & Muse, 24 Sep 2026; approved as written 2026-11-06; grade A retained; [9] is the combined paper). The filed v5 PDF itself is untouched.
+
 ## Singular scripts → recomputations (Phase 4)
 
 | File (`singular/`) | Recomputation | Result |
